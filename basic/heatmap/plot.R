@@ -18,8 +18,9 @@
 ############# Section 1 ##########################
 # input options, data and configuration section
 ##################################################
+library(ggpubr)
 {
-  pkgs <- c("ComplexHeatmap", "RColorBrewer")
+  pkgs <- c("ggplotify", "ComplexHeatmap", "RColorBrewer")
   pacman::p_load(pkgs, character.only = TRUE)
 
   data <- data[!is.na(data[, 1]), ]
