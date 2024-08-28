@@ -1,6 +1,6 @@
 {
   "data": {
-    "datTable": {
+    "1-data": {
       "type": "hiplot-textarea",
       "required": true,
       "label": "messages.common.dataTable"

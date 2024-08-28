@@ -90,7 +90,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       )
     )', conf$extra$setsLabel)
     eval(parse(text = cmd))
-    ht = UpSet(m,
+    ht <- UpSet(m,
       comb_col = conf$extra$comColor,
       bg_col = conf$extra$bgCol,
       bg_pt_col = conf$extra$bgPtCol,
@@ -103,8 +103,8 @@ pacman::p_load(pkgs, character.only = TRUE)
       right_annotation = NULL,
       show_row_names = FALSE
     )
-      ht = draw(ht)
-      od = column_order(ht)
+      ht <- draw(ht)
+      od <- column_order(ht)
       decorate_annotation(conf$extra$combLabel, {
           grid.text(cs[od], x = seq_along(cs), y = unit(cs[od], "native") + unit(2, "pt"), 
               default.units = "native", just = c("left", "bottom"), 

@@ -1,0 +1,42 @@
+INFO [2024-08-26 08:49:30] Task started: basic/heatmap.
+INFO [2024-08-26 08:49:30] Reading parameters......
+List of 3
+ $ data   :List of 3
+  ..$ 1-countData :List of 2
+  .. ..$ value: chr "public/demo/heatmap/countData.txt"
+  .. ..$ link : chr ""
+  ..$ 2-sampleInfo:List of 2
+  .. ..$ value: chr "public/demo/heatmap/sampleInfo.txt"
+  .. ..$ link : chr ""
+  ..$ 3-geneInfo  :List of 2
+  .. ..$ value: chr "public/demo/heatmap/geneInfo.txt"
+  .. ..$ link : chr ""
+ $ general:List of 9
+  ..$ cmd            : chr ""
+  ..$ imageExportType:List of 2
+  .. ..$ : chr "jpeg"
+  .. ..$ : chr "pdf"
+  ..$ size           :List of 2
+  .. ..$ width : int 8
+  .. ..$ height: int 6
+  ..$ title          : chr "Heatmap Plot"
+  ..$ palette        : chr "starry2"
+  ..$ palette2       : chr "starry2"
+  ..$ fontsizeRow    : int 6
+  ..$ fontsizeCol    : int 10
+  ..$ font           : chr "Arial"
+ $ extra  :List of 13
+  ..$ color           : chr "custom"
+  ..$ cluster_rows    : logi TRUE
+  ..$ cluster_cols    : logi TRUE
+  ..$ display_numbers : logi FALSE
+  ..$ number_color    : chr "#000000"
+  ..$ scale           : chr "none"
+  ..$ hc_method       : chr "ward.D2"
+  ..$ hc_distance_rows: chr "euclidean"
+  ..$ hc_distance_cols: chr "euclidean"
+  ..$ top_var         : int 100
+  ..$ color_low       : chr "#0060BF"
+  ..$ color_mid       : chr "#FFFFFF"
+  ..$ color_high      : chr "#CA1111"
+NULL
