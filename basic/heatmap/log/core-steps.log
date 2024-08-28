@@ -1,0 +1,29 @@
+      Group Age
+M1  Control  23
+M2  Control  34
+M3  Control  25
+M4  Control  52
+M5  Control  36
+M6   Cancer  28
+M7   Cancer  31
+M8   Cancer  22
+M9   Cancer  29
+M10  Cancer  34
+$Group
+  Control    Cancer 
+"#323232" "#1B6393" 
+
+$Age
+ [1] "#0060BF" "#0A66C1" "#146CC4" "#1F73C6" "#2979C9" "#3480CC" "#3E86CE"
+ [8] "#488DD1" "#5393D3" "#5D9AD6" "#68A0D9" "#72A7DB" "#7CADDE" "#87B4E0"
+[15] "#91BAE3" "#9CC1E6" "#A6C7E8" "#B0CEEB" "#BBD4EE" "#C5DBF0" "#D0E1F3"
+[22] "#DAE8F5" "#E4EEF8" "#EFF5FB" "#F9FBFD" "#FDFAFA" "#FBF0F0" "#F9E6E6"
+[29] "#F7DDDD" "#F5D3D3" "#F3C9C9" "#F0BFBF" "#EEB6B6" "#ECACAC" "#EAA2A2"
+[36] "#E89999" "#E68F8F" "#E38585" "#E17B7B" "#DF7272" "#DD6868" "#DB5E5E"
+[43] "#D95555" "#D64B4B" "#D44141" "#D23737" "#D02E2E" "#CE2424" "#CC1A1A"
+[50] "#CA1111"
+
+$Pathway
+    Cancer Metabolism 
+ "#323232"  "#1B6393" 
+
