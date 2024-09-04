@@ -7,7 +7,15 @@
     }
   },
   "dataArg": {
-    "datTable": [{"label": "X"}, {"label": "Group", "required": false}]
+    "datTable": [
+      {
+        "label": "X"
+      },
+      {
+        "label": "Group",
+        "required": false
+      }
+    ]
   },
   "extra": {
     "type": {
@@ -17,7 +25,10 @@
         "zh_cn": "统计期望"
       },
       "items": [
-        "parametric", "nonparametric", "robust", "bayes"
+        "parametric",
+        "nonparametric",
+        "robust",
+        "bayes"
       ],
       "class": "col-12 col-md-4"
     },
@@ -28,7 +39,10 @@
         "zh_cn": "效应大小类型"
       },
       "items": [
-        "biased", "eta", "unbiased", "omega"
+        "biased",
+        "eta",
+        "unbiased",
+        "omega"
       ],
       "class": "col-12 col-md-4"
     },
@@ -39,7 +53,8 @@
         "zh_cn": "中心线类型"
       },
       "items": [
-        "mean", "median"
+        "mean",
+        "median"
       ],
       "class": "col-12 col-md-4"
     },

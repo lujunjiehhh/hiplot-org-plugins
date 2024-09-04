@@ -3,7 +3,9 @@
     "zh_cn": "矩阵气泡图",
     "en": "Matrix Bubble"
   },
-  "alias": ["Matrix-Bubble"],
+  "alias": [
+    "Matrix-Bubble"
+  ],
   "intro": {
     "zh_cn": "气泡图可视化",
     "en": "Display matrix bubble"

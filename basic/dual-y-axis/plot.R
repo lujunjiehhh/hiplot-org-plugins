@@ -35,18 +35,19 @@
 {
   p <- ggplot(data, aes(x = x)) +
     geom_line(aes(y = data[, 2]), size = conf$extra$line_size,
-      color = conf$extra$line1_color) +
+              color = conf$extra$line1_color) +
     geom_line(aes(y = data[, 3] / as.numeric(conf$extra$coeff)),
-      size = conf$extra$line_size,
-      color = conf$extra$line2_color) +
+              size = conf$extra$line_size,
+              color = conf$extra$line2_color) +
     scale_y_continuous(
       # Features of the first axis
       name = colnames(data)[2],
       # Add a second axis and specify its features
-      sec.axis = sec_axis(~ . * as.numeric(conf$extra$coeff),
-      name = colnames(data)[3])
+      sec.axis = sec_axis(~. * as.numeric(conf$extra$coeff),
+                          name = colnames(data)[3])
     ) +
-    ggtitle(conf$general$title) + xlab(x_lab)
+    ggtitle(conf$general$title) +
+    xlab(x_lab)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

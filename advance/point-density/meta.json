@@ -3,7 +3,9 @@
     "zh_cn": "点图合并密度图 Shiny",
     "en": "Point-density Shiny"
   },
-  "alias": ["Point-Density"],
+  "alias": [
+    "Point-Density"
+  ],
   "intro": {
     "zh_cn": "统计可视化分析",
     "en": "Statistical Visualization Analysis"

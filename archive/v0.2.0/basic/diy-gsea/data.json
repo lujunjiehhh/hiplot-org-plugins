@@ -19,7 +19,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 7,
           "height": 4

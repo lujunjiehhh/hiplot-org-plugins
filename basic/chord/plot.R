@@ -25,7 +25,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   # check alpha
   keep_vars <- c(keep_vars, "alpha_usr", "color_num", "grid_color")
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -50,91 +52,91 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # color_num <- length(union(rownames(mat), colnames(mat)))
   grid_color <- get_hiplot_color(conf$general$palette, color_num,
-    conf$general$paletteCustom)
+                                 conf$general$paletteCustom)
   data <- as.matrix(data)
   p <- list()
   if (conf$extra$label_dir == "hor") {
     p <- as.ggplot(function() {
       chordDiagram(data,
-        grid.col = grid_color,
-        grid.border = NULL,
-        transparency = alpha_usr,
-        # col = colorRamp2(c(min(mat),max(mat)),c("green","blue"),transparency = 0.5),
-        row.col = NULL,
-        column.col = NULL,
-        order = NULL,
-        directional = conf$extra$directional, # 1, -1, 0, 2
-        direction.type = conf$extra$direction_type, # diffHeight and arrows
-        diffHeight = convert_height(2, "mm"),
-        reduce = 1e-5,
-        xmax = NULL,
-        self.link = 2,
-        symmetric = FALSE,
-        keep.diagonal = FALSE,
-        preAllocateTracks = NULL,
-        annotationTrack = c("name", "grid", "axis"),
-        annotationTrackHeight = convert_height(c(conf$extra$dist_name, conf$extra$width_circle), "mm"),
-        link.border = NA,
-        link.lwd = par("lwd"),
-        link.lty = par("lty"),
-        link.sort = FALSE,
-        link.decreasing = TRUE,
-        # link.arr.length = ifelse(link.arr.type == "big.arrow", 0.02, 0.4),
-        # link.arr.width = link.arr.length/2,
-        # link.arr.type = "triangle",
-        # link.arr.lty = par("lty"),
-        # link.arr.lwd = par("lwd"),
-        # link.arr.col = par("col"),
-        link.largest.ontop = FALSE,
-        link.visible = conf$extra$link_visible,
-        link.rank = NULL,
-        link.overlap = FALSE,
-        scale = conf$extra$scale,
-        group = NULL,
-        big.gap = 10,
-        small.gap = 1
+                   grid.col = grid_color,
+                   grid.border = NULL,
+                   transparency = alpha_usr,
+                   # col = colorRamp2(c(min(mat),max(mat)),c("green","blue"),transparency = 0.5),
+                   row.col = NULL,
+                   column.col = NULL,
+                   order = NULL,
+                   directional = conf$extra$directional, # 1, -1, 0, 2
+                   direction.type = conf$extra$direction_type, # diffHeight and arrows
+                   diffHeight = convert_height(2, "mm"),
+                   reduce = 1e-5,
+                   xmax = NULL,
+                   self.link = 2,
+                   symmetric = FALSE,
+                   keep.diagonal = FALSE,
+                   preAllocateTracks = NULL,
+                   annotationTrack = c("name", "grid", "axis"),
+                   annotationTrackHeight = convert_height(c(conf$extra$dist_name, conf$extra$width_circle), "mm"),
+                   link.border = NA,
+                   link.lwd = par("lwd"),
+                   link.lty = par("lty"),
+                   link.sort = FALSE,
+                   link.decreasing = TRUE,
+                   # link.arr.length = ifelse(link.arr.type == "big.arrow", 0.02, 0.4),
+                   # link.arr.width = link.arr.length/2,
+                   # link.arr.type = "triangle",
+                   # link.arr.lty = par("lty"),
+                   # link.arr.lwd = par("lwd"),
+                   # link.arr.col = par("col"),
+                   link.largest.ontop = FALSE,
+                   link.visible = conf$extra$link_visible,
+                   link.rank = NULL,
+                   link.overlap = FALSE,
+                   scale = conf$extra$scale,
+                   group = NULL,
+                   big.gap = 10,
+                   small.gap = 1
       )
     })
   } else if (conf$extra$label_dir == "ver") {
     p <- as.ggplot(function() {
       chordDiagram(data,
-        grid.col = grid_color,
-        grid.border = NULL,
-        transparency = alpha_usr,
-        # col = colorRamp2(c(min(mat),max(mat)),c("green","blue"),transparency = 0.5),
-        row.col = NULL,
-        column.col = NULL,
-        order = NULL,
-        directional = conf$extra$directional, # 1, -1, 0, 2
-        direction.type = conf$extra$direction_type, # diffHeight and arrows
-        diffHeight = convert_height(2, "mm"),
-        reduce = 1e-5,
-        xmax = NULL,
-        self.link = 2,
-        symmetric = FALSE,
-        keep.diagonal = FALSE,
-        preAllocateTracks = 1,
-        annotationTrack = "grid",
-        annotationTrackHeight = convert_height(c(conf$extra$dist_name, conf$extra$width_circle), "mm"),
-        link.border = NA,
-        link.lwd = par("lwd"),
-        link.lty = par("lty"),
-        link.sort = FALSE,
-        link.decreasing = TRUE,
-        # link.arr.length = ifelse(link.arr.type == "big.arrow", 0.02, 0.4),
-        # link.arr.width = link.arr.length/2,
-        # link.arr.type = "triangle",
-        # link.arr.lty = par("lty"),
-        # link.arr.lwd = par("lwd"),
-        # link.arr.col = par("col"),
-        link.largest.ontop = FALSE,
-        link.visible = conf$extra$link_visible,
-        link.rank = NULL,
-        link.overlap = FALSE,
-        scale = conf$extra$scale,
-        group = NULL,
-        big.gap = 10,
-        small.gap = 1
+                   grid.col = grid_color,
+                   grid.border = NULL,
+                   transparency = alpha_usr,
+                   # col = colorRamp2(c(min(mat),max(mat)),c("green","blue"),transparency = 0.5),
+                   row.col = NULL,
+                   column.col = NULL,
+                   order = NULL,
+                   directional = conf$extra$directional, # 1, -1, 0, 2
+                   direction.type = conf$extra$direction_type, # diffHeight and arrows
+                   diffHeight = convert_height(2, "mm"),
+                   reduce = 1e-5,
+                   xmax = NULL,
+                   self.link = 2,
+                   symmetric = FALSE,
+                   keep.diagonal = FALSE,
+                   preAllocateTracks = 1,
+                   annotationTrack = "grid",
+                   annotationTrackHeight = convert_height(c(conf$extra$dist_name, conf$extra$width_circle), "mm"),
+                   link.border = NA,
+                   link.lwd = par("lwd"),
+                   link.lty = par("lty"),
+                   link.sort = FALSE,
+                   link.decreasing = TRUE,
+                   # link.arr.length = ifelse(link.arr.type == "big.arrow", 0.02, 0.4),
+                   # link.arr.width = link.arr.length/2,
+                   # link.arr.type = "triangle",
+                   # link.arr.lty = par("lty"),
+                   # link.arr.lwd = par("lwd"),
+                   # link.arr.col = par("col"),
+                   link.largest.ontop = FALSE,
+                   link.visible = conf$extra$link_visible,
+                   link.rank = NULL,
+                   link.overlap = FALSE,
+                   scale = conf$extra$scale,
+                   group = NULL,
+                   big.gap = 10,
+                   small.gap = 1
       )
       circos.trackPlotRegion(
         track.index = 1,
@@ -143,11 +145,11 @@ pacman::p_load(pkgs, character.only = TRUE)
           ylim <- get.cell.meta.data("ylim")
           sector.name <- get.cell.meta.data("sector.index")
           circos.text(mean(xlim),
-            ylim[1] + conf$extra$dist_label,
-            sector.name,
-            facing = "clockwise",
-            niceFacing = TRUE,
-            adj = c(0, 0.5)
+                      ylim[1] + conf$extra$dist_label,
+                      sector.name,
+                      facing = "clockwise",
+                      niceFacing = TRUE,
+                      adj = c(0, 0.5)
           )
           circos.axis(
             h = "top",

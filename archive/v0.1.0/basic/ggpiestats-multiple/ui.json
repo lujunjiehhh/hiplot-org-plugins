@@ -7,6 +7,14 @@
     }
   },
   "dataArg": {
-    "datTable": [{"label": "X"}, {"label": "Group", "required": false}]
+    "datTable": [
+      {
+        "label": "X"
+      },
+      {
+        "label": "Group",
+        "required": false
+      }
+    ]
   }
 }

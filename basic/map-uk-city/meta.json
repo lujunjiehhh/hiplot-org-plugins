@@ -3,7 +3,9 @@
     "zh_cn": "英国地图 (城市)",
     "en": "UK Map (City)"
   },
-  "alias": ["UK-City"],
+  "alias": [
+    "UK-City"
+  ],
   "intro": {
     "zh_cn": "用于展示英国地图 (市)",
     "en": "Display the map of UK (City)"

@@ -3,7 +3,9 @@
     "zh_cn": "Upset 图",
     "en": "Upset Plot"
   },
-  "alias": ["UpSet-Topology"],
+  "alias": [
+    "UpSet-Topology"
+  ],
   "intro": {
     "zh_cn": "用于展示数据集间交叉关系",
     "en": "Data sets cross-relationships"

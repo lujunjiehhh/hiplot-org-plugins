@@ -3,7 +3,9 @@
     "zh_cn": "等高线图 (矩阵)",
     "en": "Contour (Matrix)"
   },
-  "alias": ["Contour-Graph"],
+  "alias": [
+    "Contour-Graph"
+  ],
   "intro": {
     "zh_cn": "展示海拔等信息",
     "en": "Display the altitude"

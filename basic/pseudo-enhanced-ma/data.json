@@ -3,7 +3,9 @@
   "tool": "pseudo-enhanced-ma",
   "maxPlex": 1,
   "params": {
-    "textarea": {"datTable":""},
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "data": {
         "datTable": {
@@ -13,7 +15,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 8,
           "height": 8
@@ -36,7 +41,10 @@
       },
       "extra": {
         "fc_cutoff": 1,
-        "yrange": [0, 12],
+        "yrange": [
+          0,
+          12
+        ],
         "subtitle": "",
         "p_cutoff": "1e-05",
         "pointSize": 3.5,

@@ -3,7 +3,9 @@
     "zh_cn": "双侧标准化图",
     "en": "Diverging Scale"
   },
-  "alias": ["Diverging-Scale"],
+  "alias": [
+    "Diverging-Scale"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

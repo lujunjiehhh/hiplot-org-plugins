@@ -2,14 +2,26 @@
   "module": "basic",
   "tool": "bivariate",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": [] }, { "value": "" }]
+        "datTable": [
+          {
+            "value": []
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 8,
           "height": 5
@@ -39,8 +51,17 @@
       },
       "dataArg": {
         "datTable": [
-          { "value": ["day", "time", "gender", "tip"] },
-          { "value": "smoker" }
+          {
+            "value": [
+              "day",
+              "time",
+              "gender",
+              "tip"
+            ]
+          },
+          {
+            "value": "smoker"
+          }
         ]
       }
     },

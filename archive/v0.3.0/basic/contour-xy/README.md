@@ -10,5 +10,7 @@
 
 - Interpretation of case statistics graphics
 
-  Just as contour lines in geography represent different heights, different contour lines in contour maps represent different densities. The closer to the center, the smaller contour loop is, and the higher the regional data density is. For example, the data density of yellow area is the highest, while that of blue area is the lowest.
+  Just as contour lines in geography represent different heights, different contour lines in contour maps represent
+  different densities. The closer to the center, the smaller contour loop is, and the higher the regional data density
+  is. For example, the data density of yellow area is the highest, while that of blue area is the lowest.
 

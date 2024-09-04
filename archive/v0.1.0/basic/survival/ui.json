@@ -61,7 +61,10 @@
       "type": "select",
       "label": "messages.basic.survival.surv_median_line",
       "items": [
-        "none", "hv", "h", "v"
+        "none",
+        "hv",
+        "h",
+        "v"
       ],
       "class": "col-12 col-md-4"
     },
@@ -69,7 +72,8 @@
       "type": "select",
       "label": "messages.basic.survival.conf_int_style",
       "items": [
-        "ribbon", "step"
+        "ribbon",
+        "step"
       ],
       "class": "col-12 col-md-4"
     },
@@ -77,7 +81,9 @@
       "type": "select",
       "label": "messages.basic.survival.function",
       "items": [
-        "pct", "event", "cumhaz"
+        "pct",
+        "event",
+        "cumhaz"
       ],
       "class": "col-12 col-md-4"
     },
@@ -87,7 +93,9 @@
         "en": "Time Label",
         "zh_cn": "横轴时间标签"
       },
-      "items": ["Time"],
+      "items": [
+        "Time"
+      ],
       "class": "col-12 col-md-6"
     },
     "ylab": {
@@ -96,7 +104,9 @@
         "en": "Surv Label",
         "zh_cn": "纵轴生存标签"
       },
-      "items": ["Survival probability"],
+      "items": [
+        "Survival probability"
+      ],
       "class": "col-12 col-md-6"
     }
   }

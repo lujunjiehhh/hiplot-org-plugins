@@ -2,13 +2,18 @@
   "module": "basic",
   "tool": "map-africa",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 28,
           "height": 30

@@ -3,7 +3,9 @@
     "zh_cn": "Cluster Shiny",
     "en": "Cluster Shiny"
   },
-  "alias": ["Hierarchic-Cluster"],
+  "alias": [
+    "Hierarchic-Cluster"
+  ],
   "intro": {
     "zh_cn": "Shiny 聚类分析",
     "en": "Interactive cluster analysis"

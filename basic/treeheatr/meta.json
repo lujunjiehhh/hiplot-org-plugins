@@ -3,7 +3,9 @@
     "zh_cn": "热图决策树",
     "en": "Treeheatr"
   },
-  "alias": ["Decision-Tree"],
+  "alias": [
+    "Decision-Tree"
+  ],
   "intro": {
     "zh_cn": "决策树可视化",
     "en": "Decision tree visualizations"

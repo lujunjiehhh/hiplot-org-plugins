@@ -7,7 +7,14 @@
     }
   },
   "dataArg": {
-    "datTable": [{"label": "X"}, {"label": "Y"}]
+    "datTable": [
+      {
+        "label": "X"
+      },
+      {
+        "label": "Y"
+      }
+    ]
   },
   "general": {
     "imageExportType": {
@@ -18,7 +25,10 @@
     "type": {
       "type": "select",
       "label": "messages.common.type",
-      "items": ["bar", "lollipop"],
+      "items": [
+        "bar",
+        "lollipop"
+      ],
       "class": "col-12"
     },
     "lineSize": {

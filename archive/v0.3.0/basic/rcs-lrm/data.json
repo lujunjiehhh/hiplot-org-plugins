@@ -2,14 +2,26 @@
   "module": "basic",
   "tool": "rcs-lrm",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": ""}, { "value": ""}]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 4,
           "height": 2.5
@@ -36,7 +48,14 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "main" }, { "value": "group"}]
+        "datTable": [
+          {
+            "value": "main"
+          },
+          {
+            "value": "group"
+          }
+        ]
       },
       "general": {
         "title": ""

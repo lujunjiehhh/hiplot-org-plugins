@@ -2,11 +2,16 @@
   "module": "basic",
   "tool": "density",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 4,
           "height": 2.5

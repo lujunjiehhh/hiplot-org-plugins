@@ -3,7 +3,9 @@
     "zh_cn": "简单可变相关热图",
     "en": "Simplified Correlation Heatmap"
   },
-  "alias": ["Cor-Heatmap-Simple"],
+  "alias": [
+    "Cor-Heatmap-Simple"
+  ],
   "intro": {
     "zh_cn": "提供一个简单化版本的相关热图可视化",
     "en": "Simplified variables correlation heatmap"

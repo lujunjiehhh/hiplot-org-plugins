@@ -2,10 +2,22 @@
   "module": "basic",
   "tool": "ggscatterstats",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
@@ -35,7 +47,17 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "rating" }, { "value": "length" }, { "value": "genre" }]
+        "datTable": [
+          {
+            "value": "rating"
+          },
+          {
+            "value": "length"
+          },
+          {
+            "value": "genre"
+          }
+        ]
       },
       "general": {
         "title": ""

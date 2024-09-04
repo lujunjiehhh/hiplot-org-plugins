@@ -14,7 +14,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   gvar <- conf$dataArg[[1]][[1]]$value  # the column to set groups
   dvar <- conf$dataArg[[1]][[2]]$value # the column to set continuous variable
-  
+
   # logical values: TRUE or FALSE
   # 按中位数对组排序：默认 FALSE
   set_order <- conf$extra$order_by_median
@@ -30,10 +30,10 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   p <- show_group_distribution(
     data,
-    gvar = gvar, 
+    gvar = gvar,
     dvar = dvar,
     order_by_fun = set_order
-  ) + 
+  ) +
     ggtitle(conf$general$title)
 
   # 下面这些设置没什么意义

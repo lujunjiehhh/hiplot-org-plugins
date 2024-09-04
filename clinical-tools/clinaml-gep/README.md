@@ -3,17 +3,17 @@
 - Introduction
 
   Bagging models to predict the GEP-defined AML subtypes.
-  
+
   G1: PML-RARA
-  
+
   G2: CBFB-MYH11
-  
+
   G3: RUNX1-RUNXT1
-  
+
   G4: Bialleic CEBPA
-  
+
   G5: ...
-  
+
   G6: NPM1/KMT2A/NUP98...
 
 - Extra parameters

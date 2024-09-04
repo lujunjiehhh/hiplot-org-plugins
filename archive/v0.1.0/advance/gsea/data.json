@@ -61,12 +61,19 @@
           "link": ""
         },
         "3-gmt": {
-          "value": ["public/db/msigdb/v7.2/c2.cp.kegg.v7.2.symbols.gmt"],
-          "link": [""]
+          "value": [
+            "public/db/msigdb/v7.2/c2.cp.kegg.v7.2.symbols.gmt"
+          ],
+          "link": [
+            ""
+          ]
         }
       },
       "extra": {
-        "test_groups": ["MUT", "WT"]
+        "test_groups": [
+          "MUT",
+          "WT"
+        ]
       }
     }
   }

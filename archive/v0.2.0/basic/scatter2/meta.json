@@ -3,7 +3,9 @@
     "zh_cn": "散点图2",
     "en": "Scatter2"
   },
-  "alias": ["Scatter-Cat"],
+  "alias": [
+    "Scatter-Cat"
+  ],
   "intro": {
     "zh_cn": "可用于展示变量之间的关系",
     "en": "Display the variables"

@@ -1,6 +1,7 @@
 ## [Group-comparison Heatmap](/basic/group-comparison)
 
-This plugin provides a way to compare multiple variables across multiple (>2) groups and visualize the result with heatmap.
+This plugin provides a way to compare multiple variables across multiple (>2) groups and visualize the result with
+heatmap.
 
 When the reference group is not set, let's say you have A,B,C 3 groups, then this plugin will
 

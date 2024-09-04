@@ -3,7 +3,9 @@
     "zh_cn": "世界地图",
     "en": "World Map"
   },
-  "alias": ["World-Map"],
+  "alias": [
+    "World-Map"
+  ],
   "intro": {
     "zh_cn": "用于展示世界地图",
     "en": "Display the map of the world"

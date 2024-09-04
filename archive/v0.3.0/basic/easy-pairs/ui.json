@@ -8,8 +8,14 @@
   },
   "dataArg": {
     "datTable": [
-      {"label": "Columns", "required": false},
-      {"label": "Color By", "required": false}
+      {
+        "label": "Columns",
+        "required": false
+      },
+      {
+        "label": "Color By",
+        "required": false
+      }
     ]
   },
   "general": {

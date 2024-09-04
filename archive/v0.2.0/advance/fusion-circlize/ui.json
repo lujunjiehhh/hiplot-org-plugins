@@ -36,7 +36,10 @@
         "en": "Label Side",
         "zh_cn": "标签位置"
       },
-      "items": ["inside", "outside"],
+      "items": [
+        "inside",
+        "outside"
+      ],
       "class": "col-12"
     },
     "ideogram_height": {

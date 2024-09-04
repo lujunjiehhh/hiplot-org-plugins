@@ -3,7 +3,9 @@
     "zh_cn": "马赛克比例图",
     "en": "Mosaic Ratio Plot"
   },
-  "alias": ["Mosaic-Chart"],
+  "alias": [
+    "Mosaic-Chart"
+  ],
   "intro": {
     "zh_cn": "展示数据占比",
     "en": "Display the data ratio"

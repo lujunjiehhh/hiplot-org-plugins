@@ -21,7 +21,10 @@
       "general": {
         "cmd": "",
         "cliMode": true,
-        "imageExportType": ["pdf", "jpeg"]
+        "imageExportType": [
+          "pdf",
+          "jpeg"
+        ]
       },
       "extra": {
         "sigma.p": 0,

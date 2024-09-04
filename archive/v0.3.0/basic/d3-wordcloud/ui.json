@@ -7,19 +7,21 @@
     }
   },
   "general": {
-     "imageExportType": {
-       "svg": false,
-       "ppt": false,
-       "eps": false,
-       "tif": false
-     }
+    "imageExportType": {
+      "svg": false,
+      "ppt": false,
+      "eps": false,
+      "tif": false
+    }
   },
   "extra": {
     "sizeScale": {
       "type": "select",
       "label": "messages.basic.common.sizeScale",
       "items": [
-        "linear", "sqrt", "log"
+        "linear",
+        "sqrt",
+        "log"
       ],
       "class": "col-12 col-md-6"
     },
@@ -27,7 +29,9 @@
       "type": "select",
       "label": "messages.basic.common.colorScale",
       "items": [
-        "linear", "sqrt", "log"
+        "linear",
+        "sqrt",
+        "log"
       ],
       "class": "col-12 col-md-6"
     },
@@ -35,7 +39,8 @@
       "type": "select",
       "label": "messages.basic.common.spiral",
       "items": [
-        "archimedean", "rectangular"
+        "archimedean",
+        "rectangular"
       ],
       "class": "col-12"
     },

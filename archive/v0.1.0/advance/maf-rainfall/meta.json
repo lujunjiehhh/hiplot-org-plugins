@@ -3,7 +3,9 @@
     "zh_cn": "Maftools 雨图",
     "en": "Maftools Rainfall"
   },
-  "alias": ["Maf-Rainfall"],
+  "alias": [
+    "Maf-Rainfall"
+  ],
   "intro": {
     "zh_cn": "突变数据可视化应用",
     "en": "Genetic Mutations Visualization"

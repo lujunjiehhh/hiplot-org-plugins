@@ -82,7 +82,11 @@
         "en": "Platform",
         "zh_cn": "数据生成平台"
       },
-      "items": ["SNP_6.0", "Illumina_WES", "SNP_250K_STY"],
+      "items": [
+        "SNP_6.0",
+        "Illumina_WES",
+        "SNP_250K_STY"
+      ],
       "class": "col-12 col-md-6"
     },
     "max.as.seg.count": {

@@ -3,7 +3,9 @@
     "zh_cn": "基因 ID 转化工具",
     "en": "Gene ID Convertor"
   },
-  "alias": ["ID-Convert"],
+  "alias": [
+    "ID-Convert"
+  ],
   "intro": {
     "zh_cn": "格式转换工具",
     "en": "Format Convertor"

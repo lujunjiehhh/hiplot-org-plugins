@@ -11,7 +11,11 @@
       "type": "select",
       "label": "messages.common.sort",
       "class": "col-12 col-md-6",
-      "items": ["no", "desc", "asc"]
+      "items": [
+        "no",
+        "desc",
+        "asc"
+      ]
     },
     "groupcolor1": {
       "type": "color-picker",

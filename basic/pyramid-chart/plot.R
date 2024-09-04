@@ -38,7 +38,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   )
   eval(parse(text = cmd))
 
-  p <- p + xlab(colnames(data)[1]) + ylab(colnames(data)[3])
+  p <- p +
+    xlab(colnames(data)[1]) +
+    ylab(colnames(data)[3])
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

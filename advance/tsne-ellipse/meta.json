@@ -3,7 +3,9 @@
     "zh_cn": "t-SNE 椭圆 Shiny",
     "en": "t-SNE Ellipse Shiny"
   },
-  "alias": ["Prettify-tSNE"],
+  "alias": [
+    "Prettify-tSNE"
+  ],
   "intro": {
     "zh_cn": "t-SNE 降维",
     "en": "Interactive t-SNE Visulization"

@@ -12,7 +12,10 @@
   },
   "src": "",
   "href": "/basic/simple-funnel-diagram",
-  "tag": ["vue", "lxs"],
+  "tag": [
+    "vue",
+    "lxs"
+  ],
   "meta": {
     "score": 4,
     "author": "Xiaosheng",

@@ -47,10 +47,11 @@ pacman::p_load(pkgs, character.only = TRUE)
     theme(plot.title = element_text(hjust = 0.5))
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

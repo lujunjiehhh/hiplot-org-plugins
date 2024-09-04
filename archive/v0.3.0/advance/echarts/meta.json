@@ -3,7 +3,9 @@
     "zh_cn": "Echarts Shiny",
     "en": "Echarts Shiny"
   },
-  "alias": ["Custom-Echarts"],
+  "alias": [
+    "Custom-Echarts"
+  ],
   "intro": {
     "zh_cn": "Javascript 交互式可视化",
     "en": "Interactive Javascript Visulization"

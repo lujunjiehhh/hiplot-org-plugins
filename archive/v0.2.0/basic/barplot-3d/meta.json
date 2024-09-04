@@ -3,7 +3,9 @@
     "zh_cn": "三维柱状图",
     "en": "3D Barplot"
   },
-  "alias": ["3D-Bar"],
+  "alias": [
+    "3D-Bar"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

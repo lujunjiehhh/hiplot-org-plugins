@@ -3,7 +3,9 @@
     "zh_cn": "统计分布图",
     "en": "Vistributions"
   },
-  "alias": ["Prob-Dist"],
+  "alias": [
+    "Prob-Dist"
+  ],
   "intro": {
     "zh_cn": "统计分布可视化",
     "en": "Visualization of statistical distribution"

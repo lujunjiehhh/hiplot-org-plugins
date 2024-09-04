@@ -3,7 +3,9 @@
     "zh_cn": "神经网络",
     "en": "Neural Network"
   },
-  "alias": ["Basic-NeuralNetwork"],
+  "alias": [
+    "Basic-NeuralNetwork"
+  ],
   "intro": {
     "zh_cn": "拓扑学网路图",
     "en": "Topological and network"

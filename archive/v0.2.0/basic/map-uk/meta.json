@@ -3,7 +3,9 @@
     "zh_cn": "英国地图",
     "en": "UK Map"
   },
-  "alias": ["UK-Map"],
+  "alias": [
+    "UK-Map"
+  ],
   "intro": {
     "zh_cn": "用于展示英国地图",
     "en": "Display the map of UK"

@@ -3,7 +3,9 @@
     "zh_cn": "复合热图 (预览版)",
     "en": "Complex Heatmap (Dev)"
   },
-  "alias": ["Complex-Heatmap"],
+  "alias": [
+    "Complex-Heatmap"
+  ],
   "intro": {
     "zh_cn": "多组学数据矩阵展示",
     "en": "Multi-omics matrix display"

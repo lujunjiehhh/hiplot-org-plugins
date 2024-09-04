@@ -28,16 +28,16 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     print("Error: Input data should be 3 columns!")
   }
-  
+
   # rename data colnames
-  colnames(data) <- c("date","key","value")
-  
+  colnames(data) <- c("date", "key", "value")
+
   # set the offset type, default is"silhouette"
   offset <- conf$extra$offset
-  
+
   # set the interpolate type, default is "cardinal"
   interpolate <- conf$extra$interpolate
-  
+
   # set the color palettes
   # The diverging palettes are: BrBG PiYG PRGn PuOr RdBu RdGy RdYlBu RdYlGn Spectral
   palettes <- conf$general$paletteCont
@@ -50,11 +50,11 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
-  
+
   # Make the streamgraph plot
   p <- streamgraph(data, key = "key", value = "value", date = "date",
                    offset = offset, interpolate = interpolate,
-                   interactive = F, scale = "date") %>% 
+                   interactive = F, scale = "date") %>%
     sg_fill_brewer(palette = palettes)
 }
 

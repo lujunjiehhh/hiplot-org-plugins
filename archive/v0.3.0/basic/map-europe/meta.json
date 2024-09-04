@@ -3,7 +3,9 @@
     "zh_cn": "欧洲地图",
     "en": "Europe Map"
   },
-  "alias": ["Europe-Map"],
+  "alias": [
+    "Europe-Map"
+  ],
   "intro": {
     "zh_cn": "用于展示欧洲国家地图",
     "en": "Display the map of the Europe"

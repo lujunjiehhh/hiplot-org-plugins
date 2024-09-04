@@ -3,7 +3,9 @@
     "zh_cn": "GGtree-MSA",
     "en": "GGtree-MSA"
   },
-  "alias": ["GGtree-MSA"],
+  "alias": [
+    "GGtree-MSA"
+  ],
   "intro": {
     "zh_cn": "进化树可视化",
     "en": "Visualization of phylogenetic tree"

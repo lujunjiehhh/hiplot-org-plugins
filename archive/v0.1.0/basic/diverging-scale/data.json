@@ -2,14 +2,26 @@
   "module": "basic",
   "tool": "diverging-scale",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 4,
           "height": 3.5
@@ -34,7 +46,14 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "hp" }, { "value": "model" }]
+        "datTable": [
+          {
+            "value": "hp"
+          },
+          {
+            "value": "model"
+          }
+        ]
       },
       "general": {
         "title": ""

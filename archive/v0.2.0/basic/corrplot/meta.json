@@ -3,7 +3,9 @@
     "zh_cn": "相关性热图 (Corrplot)",
     "en": "Corrplot"
   },
-  "alias": ["Corrplot"],
+  "alias": [
+    "Corrplot"
+  ],
   "intro": {
     "zh_cn": "相关性矩阵展示",
     "en": "Display of correlation matrix"

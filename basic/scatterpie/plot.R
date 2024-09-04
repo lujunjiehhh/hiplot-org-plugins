@@ -33,14 +33,14 @@ pacman::p_load(pkgs, character.only = TRUE)
   if (data_format != "long") {
     p <- ggplot() +
       geom_scatterpie(aes_string(x = x, y = y),
-        data = data,
-        cols = colnames(data)[-c(1, 2)]
+                      data = data,
+                      cols = colnames(data)[-c(1, 2)]
       )
   } else {
     p <- ggplot() +
       geom_scatterpie(aes_string(x = x, y = y),
-        data = data,
-        cols = colnames(data)[3], long_format = TRUE
+                      data = data,
+                      cols = colnames(data)[3], long_format = TRUE
       )
   }
 
@@ -48,10 +48,11 @@ pacman::p_load(pkgs, character.only = TRUE)
     ggtitle(conf$general$title)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

@@ -22,7 +22,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 # input options, data and configuration section
 ##################################################
 {
-  data[,2] <- as.numeric(data[,2])
+  data[, 2] <- as.numeric(data[, 2])
   data <- data.table(data)
   dt_world <- readRDS(file.path(script_dir, "map-world/world.rds"))
   colnames(data)[1] <- "region"
@@ -32,7 +32,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   data <- as.data.frame(data)
   data2 <- as.data.frame(data2)
   data2$group <- as.numeric(data2$group)
-  data2[,colnames(data)[2]] <- as.numeric(data2[,colnames(data)[2]])
+  data2[, colnames(data)[2]] <- as.numeric(data2[, colnames(data)[2]])
   data2 <- subset(data2, region != "Antarctica")
 }
 
@@ -45,13 +45,13 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   colors <- get_hiplot_color(conf$general$paletteCont)
   p <- ggplot(data2) +
-    geom_polygon(aes(x = long, y = lat, group = group, fill = data2[,colnames(data)[2]]),
-                alpha = 0.9, size = 0.5)+
-    geom_path(aes(x = long, y = lat, group = group), 
-             color = "black", size = 0.2) +
+    geom_polygon(aes(x = long, y = lat, group = group, fill = data2[, colnames(data)[2]]),
+                 alpha = 0.9, size = 0.5) +
+    geom_path(aes(x = long, y = lat, group = group),
+              color = "black", size = 0.2) +
     scale_fill_gradientn(colours = colors,
-    na.value = "grey10",
-    limits = c(0, max(data2[,colnames(data)[2]]) * 1.2)) +
+                         na.value = "grey10",
+                         limits = c(0, max(data2[, colnames(data)[2]]) * 1.2)) +
     ggtitle(conf$general$title)
   ## set theme
   theme <- conf$general$theme

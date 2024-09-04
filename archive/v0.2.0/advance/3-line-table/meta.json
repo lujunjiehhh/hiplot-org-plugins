@@ -3,7 +3,9 @@
     "zh_cn": "三线表",
     "en": "Three Line Table"
   },
-  "alias": ["Table-Three"],
+  "alias": [
+    "Table-Three"
+  ],
   "intro": {
     "zh_cn": "表格操作",
     "en": "Table Operation"

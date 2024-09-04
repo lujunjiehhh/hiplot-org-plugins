@@ -32,7 +32,8 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
-  p2 <- function () {
+
+  p2 <- function() {
     # functions to draw half violin
     "%||%" <- function(a, b) {
       if (!is.null(a)) {
@@ -41,16 +42,17 @@ pacman::p_load(pkgs, character.only = TRUE)
         b
       }
     }
+
     geom_flat_violin <-
       function(mapping = NULL,
-              data = NULL,
-              stat = "ydensity",
-              position = "dodge",
-              trim = TRUE,
-              scale = "area",
-              show.legend = NA,
-              inherit.aes = TRUE,
-              ...) {
+               data = NULL,
+               stat = "ydensity",
+               position = "dodge",
+               trim = TRUE,
+               scale = "area",
+               show.legend = NA,
+               inherit.aes = TRUE,
+               ...) {
         ggplot2::layer(
           data = data,
           mapping = mapping,
@@ -73,7 +75,8 @@ pacman::p_load(pkgs, character.only = TRUE)
         Geom,
         setup_data = function(data, params) {
           data$width <- data$width %||%
-            params$width %||% (resolution(data$x, FALSE) * 0.9)
+            params$width %||%
+            (resolution(data$x, FALSE) * 0.9)
 
           # ymin, ymax, xmin, and xmax define the bounding rectangle for each group
           data %>%
@@ -90,8 +93,8 @@ pacman::p_load(pkgs, character.only = TRUE)
         draw_group = function(data, panel_scales, coord) {
           # Find the points for the line to go all the way around
           data <- base::transform(data,
-            xminv = x,
-            xmaxv = x + violinwidth * (xmax - x)
+                                  xminv = x,
+                                  xmaxv = x + violinwidth * (xmax - x)
           )
 
           # Make sure it's sorted properly to draw the outline
@@ -103,7 +106,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
           # Close the polygon: set first and last point the same
           # Needed for coord_polar and such
-          newdata <- rbind(newdata, newdata[1, ])
+          newdata <- rbind(newdata, newdata[1,])
 
           ggplot2:::ggname(
             "geom_flat_violin",
@@ -123,48 +126,50 @@ pacman::p_load(pkgs, character.only = TRUE)
         ),
 
         required_aes = c("x", "y")
-    )
+      )
     p <- ggplot(data = data, aes(Group, Value, fill = Group)) +
-    geom_flat_violin(
-      alpha = conf$general$alpha,
-      scale = "count",
-      trim = FALSE
-    ) +
-    geom_boxplot(
-      width = 0.05,
-      fill = "white",
-      alpha = conf$general$alpha,
-      outlier.colour = NA,
-      position = position_nudge(0.05)
-    ) +
-    stat_summary(
-      fun = mean,
-      geom = "point",
-      fill = "white",
-      shape = 21,
-      size = 2,
-      position = position_nudge(0.05)
-    ) +
-    geom_dotplot(
-      alpha = conf$general$alpha,
-      binaxis = "y",
-      dotsize = 0.5,
-      stackdir = "down",
-      binwidth = 0.1,
-      position = position_nudge(-0.025)
-    ) +
-    theme(legend.position = "none") +
-    xlab(colnames(data)[2]) +
-    ylab(colnames(data)[1]) +
-    guides(fill = F) +
-    ggtitle(conf$general$title)
+      geom_flat_violin(
+        alpha = conf$general$alpha,
+        scale = "count",
+        trim = FALSE
+      ) +
+      geom_boxplot(
+        width = 0.05,
+        fill = "white",
+        alpha = conf$general$alpha,
+        outlier.colour = NA,
+        position = position_nudge(0.05)
+      ) +
+      stat_summary(
+        fun = mean,
+        geom = "point",
+        fill = "white",
+        shape = 21,
+        size = 2,
+        position = position_nudge(0.05)
+      ) +
+      geom_dotplot(
+        alpha = conf$general$alpha,
+        binaxis = "y",
+        dotsize = 0.5,
+        stackdir = "down",
+        binwidth = 0.1,
+        position = position_nudge(-0.025)
+      ) +
+      theme(legend.position = "none") +
+      xlab(colnames(data)[2]) +
+      ylab(colnames(data)[1]) +
+      guides(fill = F) +
+      ggtitle(conf$general$title)
     return(p)
   }
+
   ## add color palette
-  p <- p2() + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p2() +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
   ## set theme
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

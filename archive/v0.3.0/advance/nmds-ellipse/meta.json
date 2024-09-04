@@ -3,7 +3,9 @@
     "zh_cn": "NMDS Ellipse",
     "en": "NMDS Ellipse"
   },
-  "alias": ["Prettify-NMDS"],
+  "alias": [
+    "Prettify-NMDS"
+  ],
   "intro": {
     "zh_cn": "非度量多维尺度分析",
     "en": "Non-metric Multidimensional Scaling Visualization"

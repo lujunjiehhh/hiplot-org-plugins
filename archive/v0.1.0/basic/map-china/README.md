@@ -2,7 +2,8 @@
 
 - Introduction
 
-  A map of China is a statistical chart on a map of China showing the distribution of a set of variables in different provinces within China.
+  A map of China is a statistical chart on a map of China showing the distribution of a set of variables in different
+  provinces within China.
 
 - Analysis of case data
 
@@ -10,5 +11,6 @@
 
 - Interpretation of case statistics graphics
 
-  The graph shows the distribution of variable values in different provinces in China. The redder the color, the higher the value, and the closer the color is to green, the lower the value.
+  The graph shows the distribution of variable values in different provinces in China. The redder the color, the higher
+  the value, and the closer the color is to green, the lower the value.
 

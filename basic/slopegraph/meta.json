@@ -3,7 +3,9 @@
     "zh_cn": "斜面图",
     "en": "Slopegraph"
   },
-  "alias": ["Basic-Slopegraph"],
+  "alias": [
+    "Basic-Slopegraph"
+  ],
   "intro": {
     "zh_cn": "用于展示数据变化",
     "en": "Display the data change"

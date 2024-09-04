@@ -3,7 +3,9 @@
     "zh_cn": "面积图",
     "en": "Area"
   },
-  "alias": ["Area-Chart"],
+  "alias": [
+    "Area-Chart"
+  ],
   "intro": {
     "zh_cn": "展示数据占比",
     "en": "Display the data distribution"

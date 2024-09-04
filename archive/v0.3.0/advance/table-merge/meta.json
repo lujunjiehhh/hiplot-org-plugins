@@ -3,7 +3,9 @@
     "zh_cn": "合并表格",
     "en": "Table Merge"
   },
-  "alias": ["Table-Merge"],
+  "alias": [
+    "Table-Merge"
+  ],
   "intro": {
     "zh_cn": "表格操作",
     "en": "Table Operation"

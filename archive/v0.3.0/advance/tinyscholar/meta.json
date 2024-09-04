@@ -3,7 +3,9 @@
     "zh_cn": "Tinyscholar",
     "en": "Tinyscholar"
   },
-  "alias": ["Scholar-Citation"],
+  "alias": [
+    "Scholar-Citation"
+  ],
   "intro": {
     "zh_cn": "谷歌学术作者引用展示",
     "en": "Google scholar author citations"

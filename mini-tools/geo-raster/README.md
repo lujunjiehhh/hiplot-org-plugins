@@ -6,18 +6,22 @@ Calculate the grid coefficient of variation (Coefficient of Variation, CV)
 
 Analysis principle:
 
-The coefficient of variation is a statistic that measures the degree of variation of the observed sequence value. It can well reflect the degree of difference in spatial data changes in the time series, and evaluate the stability of the data time series.
+The coefficient of variation is a statistic that measures the degree of variation of the observed sequence value. It can
+well reflect the degree of difference in spatial data changes in the time series, and evaluate the stability of the data
+time series.
 
 The calculation formula is: CV=σ/μ
 
-In the formula: σ is the standard deviation and μ is the arithmetic mean. The greater the CV, the greater the data fluctuation.
+In the formula: σ is the standard deviation and μ is the arithmetic mean. The greater the CV, the greater the data
+fluctuation.
 
 Instructions:
 
 Just upload multi-band TIFF raster data.
 
 Experimental data
-The experimental data comes from the global 2.5-minute resolution grid dataset of cumulative precipitation from 2001 to 2005 of the National Earth System Science Data Center
+The experimental data comes from the global 2.5-minute resolution grid dataset of cumulative precipitation from 2001 to
+2005 of the National Earth System Science Data Center
 
 GeoData: http://www.geodata.cn
 

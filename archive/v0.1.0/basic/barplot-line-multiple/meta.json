@@ -3,7 +3,9 @@
     "zh_cn": "多柱状图和线图",
     "en": "Multiple Barplot&Line"
   },
-  "alias": ["Multi-Line&Bar"],
+  "alias": [
+    "Multi-Line&Bar"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

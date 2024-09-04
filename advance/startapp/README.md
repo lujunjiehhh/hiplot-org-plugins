@@ -1,13 +1,15 @@
 # START App
 
-This is the code to run the app described in the manuscript: 
+This is the code to run the app described in the manuscript:
 
-[Nelson, JW, Sklenar J, Barnes AP, Minnier J. (2016) "The START App: A Web-Based RNAseq Analysis and Visualization Resource." Bioinformatics.  doi: 10.1093/bioinformatics/btw624.](http://bioinformatics.oxfordjournals.org/content/early/2016/09/27/bioinformatics.btw624.abstract)
+[Nelson, JW, Sklenar J, Barnes AP, Minnier J. (2016) "The START App: A Web-Based RNAseq Analysis and Visualization Resource." Bioinformatics. doi: 10.1093/bioinformatics/btw624.](http://bioinformatics.oxfordjournals.org/content/early/2016/09/27/bioinformatics.btw624.abstract)
 
 The app is hosted on Shinyapps.io here:
 <https://kcvi.shinyapps.io/START/>
 
-To run this app locally on your machine, download R or RStudio and run the following commands once to set up the environment:
+To run this app locally on your machine, download R or RStudio and run the following commands once to set up the
+environment:
+
 ```
 
 install.packages(c("reshape2","ggplot2","ggthemes","gplots","ggvis","dplyr","tidyr","DT",
@@ -26,14 +28,15 @@ shiny::runGitHub("STARTapp", "jminnier")
 ```
 
 Jonathan Nelson, Jiri Sklenar, Anthony Barnes, Jessica Minnier.
-*The Knight Cardiovascular Institute and OHSU-PSU School of Public Health, Oregon Health & Science University, Portland, OR 97239-3098, USA.*
+*The Knight Cardiovascular Institute and OHSU-PSU School of Public Health, Oregon Health & Science University, Portland,
+OR 97239-3098, USA.*
 
-We would appreciate reports of any issues with the app via the issues option of 
+We would appreciate reports of any issues with the app via the issues option of
 [Github](https://github.com/jminnier/STARTapp) or by emailing start.app.help-at-gmail.com.
 
 # Instructions
 
-Instructions can be found here: <https://github.com/jminnier/STARTapp/blob/master/instructions/Instructions.md> 
+Instructions can be found here: <https://github.com/jminnier/STARTapp/blob/master/instructions/Instructions.md>
 
 # Licensing
 
@@ -58,20 +61,19 @@ information.
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     You may contact the author of this code, Jessica Minnier, at <minnier@ohsu.edu>
-    
+
 # Code adapted for use in app:
 
 - Linear regression p-value extraction code from <https://github.com/ohsu-computational-biology/R-utils>
 - `voom` method to allow linear analysis of RNA-seq read counts (Law et al 2014)
 - DESeq2 vignette for improving PCA plots (Love et al 2014)
 
-
 Law, CW, Chen, Y, Shi, W, and Smyth, GK (2014). Voom: precision weights unlock
 linear model analysis tools for RNA-seq read counts. Genome Biology 15, R29.
 
 Love MI, Huber W, and Anders S (2014). Moderated
-  estimation of fold change and dispersion for RNA-Seq data with DESeq2.
-  Genome Biology, 15, 550.
+estimation of fold change and dispersion for RNA-Seq data with DESeq2.
+Genome Biology, 15, 550.
 
 # DOI
 

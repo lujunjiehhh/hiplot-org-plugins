@@ -3,14 +3,21 @@
     "zh_cn": "DoAbsolute",
     "en": "DoAbsolute"
   },
-  "alias": ["Absolute-CNV"],
+  "alias": [
+    "Absolute-CNV"
+  ],
   "intro": {
     "zh_cn": "ABSOLUTE 批量处理（支持并行）",
     "en": "ABSOLUTE for multiple samples in parallel way"
   },
   "src": "https://s1.imagehub.cc/images/2021/02/19/DoAbsolute.called.ABSOLUTE.plots-tuya.jpg",
   "href": "/advance/doabsolute",
-  "tag": ["vue", "copynumber", "CNV", "ABSOLUTE"],
+  "tag": [
+    "vue",
+    "copynumber",
+    "CNV",
+    "ABSOLUTE"
+  ],
   "meta": {
     "score": 5,
     "author": "Shixiang Wang | Hiplot team",

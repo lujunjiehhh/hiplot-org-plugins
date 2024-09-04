@@ -3,7 +3,9 @@
     "zh_cn": "分组丝带图",
     "en": "Multi Ribbon"
   },
-  "alias": ["Multi-Ribbon"],
+  "alias": [
+    "Multi-Ribbon"
+  ],
   "intro": {
     "zh_cn": "分组丝带图 Shiny",
     "en": "Multi-ribbon Shiny"

@@ -27,8 +27,8 @@ pacman::p_load(pkgs, character.only = TRUE)
   usr_ylab1 <- colnames(data)[3]
   usr_ylab2 <- colnames(data)[4]
   usr_ylab <- paste(strsplit(usr_ylab1, "")[[1]][
-    list_same_string_position(usr_ylab1, usr_ylab2)
-  ], sep = "", collapse = "")
+                      list_same_string_position(usr_ylab1, usr_ylab2)
+                    ], sep = "", collapse = "")
 
   # rename colnames
   colnames(data) <- c("group", "xvalue", "yvalue1", "yvalue2")
@@ -57,10 +57,11 @@ pacman::p_load(pkgs, character.only = TRUE)
     ggtitle(conf$general$title)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

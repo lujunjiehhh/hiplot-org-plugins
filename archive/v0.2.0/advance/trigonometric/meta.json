@@ -3,7 +3,9 @@
     "zh_cn": "三角函数可视化",
     "en": "Trigonometric Function Visualiztion"
   },
-  "alias": ["trigonometric"],
+  "alias": [
+    "trigonometric"
+  ],
   "intro": {
     "zh_cn": "三角函数可视化",
     "en": "Trigonometric Function Visualiztion"

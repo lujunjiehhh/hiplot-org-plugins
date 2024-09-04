@@ -74,12 +74,13 @@ pacman::p_load(pkgs, character.only = TRUE)
     p <- p + geom_rocci()
   }
 
-  p <- p + geom_abline(
-    slope = 1,
-    intercept = 0,
-    color = "red",
-    linetype = 2
-  ) +
+  p <- p +
+    geom_abline(
+      slope = 1,
+      intercept = 0,
+      color = "red",
+      linetype = 2
+    ) +
     labs(
       title = "ROC Dependence Time",
       x = "False positive rate",
@@ -90,26 +91,27 @@ pacman::p_load(pkgs, character.only = TRUE)
   theme2 <- conf$general$theme
   p <- choose_ggplot_theme(p, theme2)
 
-  p <- p + theme(
-    text = element_text(
-      family = conf$general$font
-    ),
-    plot.title = element_text(
-      size = conf$general$titleSize,
-      hjust = 0.5
-    ),
-    axis.title = element_text(
-      size = conf$general$axisTitleSize
-    ),
-    legend.position = conf$general$legendPos,
-    legend.direction = conf$general$legendDir,
-    legend.title = element_text(
-      size = conf$general$legendTitleSize
-    ),
-    legend.text = element_text(
-      size = conf$general$legendTextSize
-    )
-  ) +
+  p <- p +
+    theme(
+      text = element_text(
+        family = conf$general$font
+      ),
+      plot.title = element_text(
+        size = conf$general$titleSize,
+        hjust = 0.5
+      ),
+      axis.title = element_text(
+        size = conf$general$axisTitleSize
+      ),
+      legend.position = conf$general$legendPos,
+      legend.direction = conf$general$legendDir,
+      legend.title = element_text(
+        size = conf$general$legendTitleSize
+      ),
+      legend.text = element_text(
+        size = conf$general$legendTextSize
+      )
+    ) +
     # annotate("text",
     #   x = conf$extra$anno_x,
     #   y = conf$extra$anno_y,
@@ -126,16 +128,16 @@ pacman::p_load(pkgs, character.only = TRUE)
   auc <- levels(factor(mroc$AUC))
   for (i in 1:length(auc)) {
     p <- p + annotate("text",
-      x = conf$extra$anno_x,
-      y = conf$extra$anno_y + 0.05 * i, ## 注释text的位置
-      col = get_hiplot_color(
-        conf$general$palette, 7,
-        conf$general$paletteCustom
-      )[i],
-      label = paste(
-        paste(paste(mtime[i], conf$extra$time_unit, sep = " "), " = "),
-        round(as.numeric(auc[i]), 2)
-      )
+                      x = conf$extra$anno_x,
+                      y = conf$extra$anno_y + 0.05 * i, ## 注释text的位置
+                      col = get_hiplot_color(
+                        conf$general$palette, 7,
+                        conf$general$paletteCustom
+                      )[i],
+                      label = paste(
+                        paste(paste(mtime[i], conf$extra$time_unit, sep = " "), " = "),
+                        round(as.numeric(auc[i]), 2)
+                      )
     )
   }
 }

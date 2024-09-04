@@ -37,7 +37,9 @@
       "type": "select",
       "label": "messages.common.genomeVersion",
       "items": [
-        "hg19", "hg38", "mm10"
+        "hg19",
+        "hg38",
+        "mm10"
       ],
       "class": "col-12 col-md-4"
     },
@@ -45,7 +47,10 @@
       "type": "select",
       "label": "messages.common.mode",
       "items": [
-        "SBS", "DBS", "ID", "MAF"
+        "SBS",
+        "DBS",
+        "ID",
+        "MAF"
       ],
       "class": "col-12 col-md-4"
     },

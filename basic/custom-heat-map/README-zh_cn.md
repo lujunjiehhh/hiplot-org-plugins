@@ -17,11 +17,11 @@
 - 特殊参数
 
   low_color：较低的值的颜色
-  
+
   high_color：较高的值的颜色
-  
+
   text_size：行名和列名字体大小
-  
+
   circle_size：热图中圆圈大小
   
   

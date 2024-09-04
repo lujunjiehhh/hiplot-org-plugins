@@ -3,7 +3,9 @@
     "zh_cn": "点图（标准差）",
     "en": "Point (SD)"
   },
-  "alias": ["Point-SD"],
+  "alias": [
+    "Point-SD"
+  ],
   "intro": {
     "zh_cn": "展示组间差异",
     "en": "Display differences between groups"

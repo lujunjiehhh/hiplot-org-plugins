@@ -3,7 +3,9 @@
     "zh_cn": "Pathview",
     "en": "Pathview"
   },
-  "alias": ["Pathway-Visual"],
+  "alias": [
+    "Pathway-Visual"
+  ],
   "intro": {
     "zh_cn": "基因通路表达模式",
     "en": "Expression pattern of gene pathway"

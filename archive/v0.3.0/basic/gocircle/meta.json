@@ -3,7 +3,9 @@
     "zh_cn": "GO圈图",
     "en": "GOCircle Plot"
   },
-  "alias": ["GO-Circle"],
+  "alias": [
+    "GO-Circle"
+  ],
   "intro": {
     "zh_cn": "GO圈图可视化",
     "en": "GOCircle plot visualization"

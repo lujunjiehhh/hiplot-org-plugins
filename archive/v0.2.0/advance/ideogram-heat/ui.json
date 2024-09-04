@@ -28,7 +28,12 @@
         "en": "Genome Version",
         "zh_ch": "基因组版本"
       },
-      "items": ["hg38", "hg19", "mm10", "mm9"],
+      "items": [
+        "hg38",
+        "hg19",
+        "mm10",
+        "mm9"
+      ],
       "required": true,
       "clearable": true,
       "class": "col-12 col-md-6"

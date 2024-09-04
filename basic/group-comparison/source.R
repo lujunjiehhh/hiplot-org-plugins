@@ -90,17 +90,17 @@ plotentry <- function(data,
   rv <- group_enrichment(data, grp_vars, enrich_vars, cross, co_method, ref_group)
   if (length(unique(rv$grp_var)) == 1) {
     p <- show_group_enrichment(rv,
-      return_list = TRUE,
-      scales = scales, add_text_annotation = add_text_annotation,
-      fill_by_p_value = fill_by_p_value, use_fdr = use_fdr, cut_p_value = cut_p_value,
-      cluster_row = cluster_row
+                               return_list = TRUE,
+                               scales = scales, add_text_annotation = add_text_annotation,
+                               fill_by_p_value = fill_by_p_value, use_fdr = use_fdr, cut_p_value = cut_p_value,
+                               cluster_row = cluster_row
     )
     p <- p[[1]]
   } else {
     p <- show_group_enrichment(rv,
-      scales = scales, add_text_annotation = add_text_annotation,
-      fill_by_p_value = fill_by_p_value, use_fdr = use_fdr, cut_p_value = cut_p_value,
-      cluster_row = cluster_row
+                               scales = scales, add_text_annotation = add_text_annotation,
+                               fill_by_p_value = fill_by_p_value, use_fdr = use_fdr, cut_p_value = cut_p_value,
+                               cluster_row = cluster_row
     )
   }
   return(p)

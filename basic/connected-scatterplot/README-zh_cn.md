@@ -7,9 +7,9 @@
 - 特殊参数
 
   label_ratio: 图像展示的标签比例，0为不展示标签，1为展示所有标签
-  
+
   line_color: 连线颜色
-  
+
   arrow_size: 箭头大小 0为不绘制箭头
-  
+
   label_size: 标签大小

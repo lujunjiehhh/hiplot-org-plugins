@@ -1,14 +1,17 @@
 # Raincloud-shiny
 
 <p>Raincloud-shiny is a Shiny-powered web GUI interface to create RainCloudPlots. A demo is hosted [here](https://gabrifc.shinyapps.io/raincloudplots/).</p>
-	
+
 ![Raincloud plots shiny app](https://raw.githubusercontent.com/gabrifc/raincloud-shiny/master/rainCloudPlots.PNG)
 
 <p>The idea behind Raincloud plots was introduced by <a href='https://micahallen.org/2018/03/15/introducing-raincloud-plots/'>Micah Allen on his blog</a>. My coworkers and I found it really interesting to display our data, so I made this shiny app to provide a smooth transition to R and ggplot.</p>
 <p>More information about Raincloud plots can be found on the <a href='https://wellcomeopenresearch.org/articles/4-63/v1'>in the published article</a>.</p>
 
 ## Citing RainCloudPlots
-Please refer to the [original RainCloudPlots source](https://github.com/RainCloudPlots/RainCloudPlots#citing-raincloudplots) for citations and licenses.
+
+Please refer to
+the [original RainCloudPlots source](https://github.com/RainCloudPlots/RainCloudPlots#citing-raincloudplots) for
+citations and licenses.
 
 ## Credits
 

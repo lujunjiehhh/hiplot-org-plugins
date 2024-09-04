@@ -28,13 +28,15 @@ Detail: https://github.com/chrisamiller/fishplot
 
   Border Width: a numeric width for the border line around this polygon
 
-  Padding Pecent: the amount of "ramp-up" to the left of the first timepoint. Given as a fraction of the total plot width. Default 0.2
+  Padding Pecent: the amount of "ramp-up" to the left of the first timepoint. Given as a fraction of the total plot
+  width. Default 0.2
 
   Vline: add timepoints vline
 
-  Clone Label: add clone name 
+  Clone Label: add clone name
 
-  Fix Missing: whether to "correct" clones that have zero values at timepoints between non-zero values. (the clone must still have been present if it came back)
+  Fix Missing: whether to "correct" clones that have zero values at timepoints between non-zero values. (the clone must
+  still have been present if it came back)
 
   Vline of Color: Color of timepoints vline
 

@@ -1,15 +1,15 @@
 - [Circle Packing](/basic/circle-packing)
 
-  * Introduction
+    * Introduction
 
-    Circle packing is a visualization method used to display the differences in quantity among different categories.
+      Circle packing is a visualization method used to display the differences in quantity among different categories.
 
-  - Special Parameters
+    - Special Parameters
 
-    add_label: Whether to add labels inside the circles.
+      add_label: Whether to add labels inside the circles.
 
-    alpha: Transparency of the circles' colors.
+      alpha: Transparency of the circles' colors.
 
-    min_text_size: Minimum font size for labels.
+      min_text_size: Minimum font size for labels.
 
-    max_text_size: Maximum font size for labels.
+      max_text_size: Maximum font size for labels.

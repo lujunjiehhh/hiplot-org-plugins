@@ -85,7 +85,7 @@ call_pcatools <- function(datTable, sampleInfo,
   row.names(sampleInfo) <- sampleInfo[, 1]
   data3 <<- pca(datTable, metadata = sampleInfo, removeVar = (100 - top_var) / 100)
 
-  for (i in c("screeplotComponents", "pairsplotComponents", "plotloadingsComponents", 
+  for (i in c("screeplotComponents", "pairsplotComponents", "plotloadingsComponents",
               "eigencorplotComponents")) {
     if (ncol(data3$rotated) < get(i)) {
       assign(i, ncol(data3$rotated))
@@ -120,33 +120,33 @@ call_pcatools <- function(datTable, sampleInfo,
     legendPosition = "none"
   )
   params_biplot <- list(data3,
-    showLoadings = TRUE,
-    lengthLoadingsArrowsFactor = 1.5,
-    sizeLoadingsNames = 4,
-    colLoadingsNames = "red4",
-    # other parameters
-    lab = NULL,
-    hline = 0, vline = c(-25, 0, 25),
-    vlineType = c("dotdash", "solid", "dashed"),
-    gridlines.major = FALSE, gridlines.minor = FALSE,
-    pointSize = 5,
-    legendLabSize = 16, legendIconSize = 8.0,
-    drawConnectors = FALSE,
-    title = "PCA bi-plot",
-    subtitle = "PC1 versus PC2",
-    caption = "27 PCs ≈ 80%",
-    returnPlot = TRUE,
-    legendPosition = conf$general$legendPos
+                        showLoadings = TRUE,
+                        lengthLoadingsArrowsFactor = 1.5,
+                        sizeLoadingsNames = 4,
+                        colLoadingsNames = "red4",
+                        # other parameters
+                        lab = NULL,
+                        hline = 0, vline = c(-25, 0, 25),
+                        vlineType = c("dotdash", "solid", "dashed"),
+                        gridlines.major = FALSE, gridlines.minor = FALSE,
+                        pointSize = 5,
+                        legendLabSize = 16, legendIconSize = 8.0,
+                        drawConnectors = FALSE,
+                        title = "PCA bi-plot",
+                        subtitle = "PC1 versus PC2",
+                        caption = "27 PCs ≈ 80%",
+                        returnPlot = TRUE,
+                        legendPosition = conf$general$legendPos
   )
   if (!is.null(biplotShapeBy) && biplotShapeBy != "") {
     params_biplot$shape <- biplotShapeBy
     params_pairsplot$shape <- biplotShapeBy
-    t <- params_biplot[[1]]$metadata[,biplotShapeBy]
-    params_biplot[[1]]$metadata[,biplotShapeBy] <- factor(t,
-      levels = t[!duplicated(t)]
+    t <- params_biplot[[1]]$metadata[, biplotShapeBy]
+    params_biplot[[1]]$metadata[, biplotShapeBy] <- factor(t,
+                                                           levels = t[!duplicated(t)]
     )
-    params_pairsplot[[1]]$metadata[,biplotShapeBy] <- factor(t,
-      levels = t[!duplicated(t)]
+    params_pairsplot[[1]]$metadata[, biplotShapeBy] <- factor(t,
+                                                              levels = t[!duplicated(t)]
     )
   }
   if (!is.null(biplotColBy) && biplotColBy != "") {
@@ -160,12 +160,12 @@ call_pcatools <- function(datTable, sampleInfo,
       conf$general$palette, -1,
       conf$general$paletteCustom
     )
-    t1 <- params_biplot[[1]]$metadata[,biplotColBy]
-    params_biplot[[1]]$metadata[,biplotColBy] <- factor(t1,
-      levels = t1[!duplicated(t1)]
+    t1 <- params_biplot[[1]]$metadata[, biplotColBy]
+    params_biplot[[1]]$metadata[, biplotColBy] <- factor(t1,
+                                                         levels = t1[!duplicated(t1)]
     )
-    params_pairsplot[[1]]$metadata[,biplotColBy] <- factor(t1,
-      levels = t1[!duplicated(t1)]
+    params_pairsplot[[1]]$metadata[, biplotColBy] <- factor(t1,
+                                                            levels = t1[!duplicated(t1)]
     )
   }
 
@@ -251,6 +251,7 @@ call_pcatools <- function(datTable, sampleInfo,
 
   return(p)
 }
+
 # ====================== Plugin Caller ======================
 
 p <- call_pcatools(

@@ -16,17 +16,17 @@ pacman::p_load(pkgs, character.only = TRUE)
   keep_vars <- c(keep_vars, "mod")
   conf$extra$hide_layer_size <- as.numeric(conf$extra$hide_layer_size)
   f <- sprintf("%s ~ %s",
-    paste0(conf$dataArg[[1]][[1]]$value, collapse = "+"),
-    paste0(conf$dataArg[[1]][[2]]$value, collapse = "+"))
+               paste0(conf$dataArg[[1]][[1]]$value, collapse = "+"),
+               paste0(conf$dataArg[[1]][[2]]$value, collapse = "+"))
   print(f)
   params <- list(as.formula(f), data = data,
-    size = conf$extra$hide_layer_size,
-    maxint = conf$extra$maxint,
-    decay = conf$extra$decay)
+                 size = conf$extra$hide_layer_size,
+                 maxint = conf$extra$maxint,
+                 decay = conf$extra$decay)
   if (conf$extra$mode %in% c("linout", "entropy", "softmax", "censored")) {
     params[[conf$extra$mode]] <- TRUE
   }
-  params$rlang <- 1/max(abs(data[, conf$dataArg[[1]][[2]]$value]))
+  params$rlang <- 1 / max(abs(data[, conf$dataArg[[1]][[2]]$value]))
   mod <- do.call(nnet, params)
 }
 
@@ -34,7 +34,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
-  p <- as.ggplot(function(){
+  p <- as.ggplot(function() {
     plotnet(mod)
   })
 }

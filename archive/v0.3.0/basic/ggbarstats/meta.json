@@ -3,7 +3,9 @@
     "zh_cn": "Barstats",
     "en": "Barstats"
   },
-  "alias": ["Stats-Stack"],
+  "alias": [
+    "Stats-Stack"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

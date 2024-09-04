@@ -18,7 +18,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "theme": "default",
         "size": {
           "width": 6,
@@ -50,10 +53,18 @@
       "dataArg": {
         "datTable": [
           {
-            "value": ["mpg", "cyl", "disp"]
+            "value": [
+              "mpg",
+              "cyl",
+              "disp"
+            ]
           },
           {
-            "value": ["wt", "hp", "drat"]
+            "value": [
+              "wt",
+              "hp",
+              "drat"
+            ]
           }
         ]
       },

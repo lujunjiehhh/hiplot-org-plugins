@@ -2,42 +2,39 @@
 
 - ### Function Introduction
 
-    A high-quality drawing tool designed for Manhattan plot of genomic analysis.
-    
+  A high-quality drawing tool designed for Manhattan plot of genomic analysis.
+
 - ### Data Structure
 
-    Data frame.
-    
-    \<1st-col\>: (String) SNP ID.
-    
-    \<2nd-col\>: (Numeric) chromsome ID.
-    
-    \<3rd-col\>: (Numeric) position.
-    
-    \<4th-col\>~\<nth-col\>: (Numeric)
-    
-    
-    
+  Data frame.
+
+  \<1st-col\>: (String) SNP ID.
+
+  \<2nd-col\>: (Numeric) chromsome ID.
+
+  \<3rd-col\>: (Numeric) position.
+
+  \<4th-col\>~\<nth-col\>: (Numeric)
+
 
 - ### Parameters Details
 
-    **Upload | Download**
-    
-    Browser: users can read and upload local computer files
-    
-    Example Download: sample data download
-    
-    Result Download: the result image or all files are compressed and downloaded
-    
-    Width: the width of the output image (the default is inches, such as 12 x 7 inch in the standard)
-    
-    Height: the height of the output image (the default is inches, such as 12 x 7 inch)
-    
-    DPI: image resolution (300dpi is higher image quality by default)
-    
-    Format: image format selection, all images provide PDF, PNG and other major scientific research formats
-    
-    
+  **Upload | Download**
+
+  Browser: users can read and upload local computer files
+
+  Example Download: sample data download
+
+  Result Download: the result image or all files are compressed and downloaded
+
+  Width: the width of the output image (the default is inches, such as 12 x 7 inch in the standard)
+
+  Height: the height of the output image (the default is inches, such as 12 x 7 inch)
+
+  DPI: image resolution (300dpi is higher image quality by default)
+
+  Format: image format selection, all images provide PDF, PNG and other major scientific research formats
+
     **Calculation | drawing**
     
     Title: the title of the image, which can replace the default title of the image
@@ -76,9 +73,8 @@
     Main beautification parameters: https://ggplot2.tidyverse.org/reference/
     
     For more special parameters, please refer to: https://ggplot2.tidyverse.org/reference/theme.html
-    
 
 - ### Reference Packages
 
-    CMplot: (Maintainer: LiLin-Yin \<ylilin@163.com\>)
+  CMplot: (Maintainer: LiLin-Yin \<ylilin@163.com\>)
 

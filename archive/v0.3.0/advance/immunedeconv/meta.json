@@ -3,7 +3,9 @@
     "zh_cn": "Immunedeconv",
     "en": "Immunedeconv"
   },
-  "alias": ["Immune-Analysis"],
+  "alias": [
+    "Immune-Analysis"
+  ],
   "intro": {
     "zh_cn": "免疫浸润分析",
     "en": "Immunoinfiltration analysis"

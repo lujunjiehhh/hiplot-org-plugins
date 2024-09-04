@@ -2,7 +2,9 @@
   "module": "basic",
   "tool": "mosaic",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "data": {
         "datTable": {
@@ -11,11 +13,18 @@
         }
       },
       "dataArg": {
-        "datTable": [{"value": []}]
+        "datTable": [
+          {
+            "value": []
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 8,
           "height": 5
@@ -38,7 +47,15 @@
         }
       },
       "dataArg": {
-        "datTable": [{"value": ["Survived", "PassengerClass", "Gender"]}]
+        "datTable": [
+          {
+            "value": [
+              "Survived",
+              "PassengerClass",
+              "Gender"
+            ]
+          }
+        ]
       },
       "general": {
         "title": "Mosaic Ratio Plot"

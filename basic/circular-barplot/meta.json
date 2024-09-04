@@ -3,7 +3,9 @@
     "zh_cn": "环状条形图",
     "en": "Circular Barplot"
   },
-  "alias": ["Polar-Bar"],
+  "alias": [
+    "Polar-Bar"
+  ],
   "intro": {
     "zh_cn": "绘制环状条形图",
     "en": "Drawing circular barplot"

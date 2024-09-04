@@ -3,7 +3,9 @@
     "zh_cn": "基因聚类趋势图",
     "en": "Gene Cluster Trend"
   },
-  "alias": ["Gene-Trend"],
+  "alias": [
+    "Gene-Trend"
+  ],
   "intro": {
     "zh_cn": "基因表达聚类趋势分析",
     "en": "Gene expression clustering"

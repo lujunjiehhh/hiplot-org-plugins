@@ -10,7 +10,7 @@
     "imageExportType": {
       "ppt": false
     }
- },
+  },
   "extra": {
     "shape": {
       "type": "select",
@@ -18,7 +18,11 @@
         "en": "Shape",
         "zh_cn": "形状"
       },
-      "items": ["spline", "polygon", "bezier"],
+      "items": [
+        "spline",
+        "polygon",
+        "bezier"
+      ],
       "class": "col-12 col-md-4"
     },
     "bg_type": {
@@ -27,7 +31,10 @@
         "en": "Background Type",
         "zh_cn": "背景颜色类型"
       },
-      "items": ["gradient", "solid"],
+      "items": [
+        "gradient",
+        "solid"
+      ],
       "class": "col-12 col-md-4"
     },
     "unit": {
@@ -36,7 +43,12 @@
         "en": "Time Unit",
         "zh_cn": "时间单位"
       },
-      "items": ["Hour", "Day", "Month", "Year"],
+      "items": [
+        "Hour",
+        "Day",
+        "Month",
+        "Year"
+      ],
       "class": "col-12 col-md-4"
     },
     "border": {

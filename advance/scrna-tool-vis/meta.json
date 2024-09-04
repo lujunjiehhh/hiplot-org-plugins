@@ -3,7 +3,9 @@
     "zh_cn": "scRNAtoolVis",
     "en": "scRNAtoolVis"
   },
-  "alias": ["scRNAtoolVis"],
+  "alias": [
+    "scRNAtoolVis"
+  ],
   "intro": {
     "zh_cn": "单细胞数据可视化",
     "en": "Visualization of scRNA-Seq data"

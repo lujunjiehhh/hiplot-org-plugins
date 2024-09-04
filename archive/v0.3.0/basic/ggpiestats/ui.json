@@ -7,7 +7,15 @@
     }
   },
   "dataArg": {
-    "datTable": [{"label": "X"}, {"label": "Y", "required": false}]
+    "datTable": [
+      {
+        "label": "X"
+      },
+      {
+        "label": "Y",
+        "required": false
+      }
+    ]
   },
   "extra": {
     "paired": {

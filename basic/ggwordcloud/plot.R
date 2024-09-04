@@ -68,7 +68,7 @@ if (conf$extra$gradient) {
 } else {
   palette <- distinctColorPalette(length(unique(data[, 2])))
   ref_cols <- get_hiplot_color(conf$general$palette, 15,
-  conf$general$paletteCustom)
+                               conf$general$paletteCustom)
   palette[(length(palette) - length(ref_cols)):length(palette)]
   if (length(palette) > 15) {
     background_len <- 1:(length(palette) - 15)

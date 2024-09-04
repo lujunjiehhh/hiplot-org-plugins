@@ -3,7 +3,9 @@
     "zh_cn": "Withinstats",
     "en": "Withinstats"
   },
-  "alias": ["Complex-Violin"],
+  "alias": [
+    "Complex-Violin"
+  ],
   "intro": {
     "zh_cn": "展示配对组间差异",
     "en": "Display pairwise differences between groups"

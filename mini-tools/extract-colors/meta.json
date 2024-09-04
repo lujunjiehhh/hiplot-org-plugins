@@ -3,7 +3,9 @@
     "zh_cn": "颜色提取工具",
     "en": "Extract Colors"
   },
-  "alias": ["Extract-Colors"],
+  "alias": [
+    "Extract-Colors"
+  ],
   "intro": {
     "zh_cn": "色板生成",
     "en": "Palette generator"

@@ -2,10 +2,19 @@
   "module": "basic",
   "tool": "ggpiestats-multiple",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
@@ -26,7 +35,14 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "am" }, { "value": "cyl" }]
+        "datTable": [
+          {
+            "value": "am"
+          },
+          {
+            "value": "cyl"
+          }
+        ]
       },
       "general": {
         "title": ""

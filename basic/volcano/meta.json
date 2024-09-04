@@ -3,7 +3,9 @@
     "zh_cn": "火山图",
     "en": "Volcano"
   },
-  "alias": ["DEG-Volcano"],
+  "alias": [
+    "DEG-Volcano"
+  ],
   "intro": {
     "zh_cn": "差异表达基因可视化",
     "en": "Visualization of differentially expressed genes"

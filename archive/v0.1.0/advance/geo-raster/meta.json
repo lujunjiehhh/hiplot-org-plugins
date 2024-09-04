@@ -3,7 +3,9 @@
     "zh_cn": "Geo 光栅图",
     "en": "Geo Raster"
   },
-  "alias": ["Geo-Rainfall"],
+  "alias": [
+    "Geo-Rainfall"
+  ],
   "intro": {
     "zh_cn": "地图数据可视化",
     "en": "Map Data Visulization"

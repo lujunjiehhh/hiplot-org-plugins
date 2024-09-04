@@ -3,14 +3,20 @@
     "zh_cn": "Cox 模型森林图",
     "en": "Cox Models Forest"
   },
-  "alias": ["Cox-Model"],
+  "alias": [
+    "Cox-Model"
+  ],
   "intro": {
     "zh_cn": "用于生存数据分析",
     "en": "Used for survival data analysis"
   },
   "src": "https://s1.imagehub.cc/images/2020/08/31/18-aLsT6U-tuya.jpg",
   "href": "/basic/ezcox",
-  "tag": ["vue", "model", "survival"],
+  "tag": [
+    "vue",
+    "model",
+    "survival"
+  ],
   "meta": {
     "score": 5,
     "author": "Hiplot Team | Shixiang Wang",

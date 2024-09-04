@@ -23,8 +23,8 @@ pacman::p_load(pkgs, character.only = TRUE)
 # input options, data and configuration section
 ##################################################
 {
-  parts <- data[,2]
-  names(parts) <- data[,1]
+  parts <- data[, 2]
+  names(parts) <- data[, 1]
 }
 
 ############# Section 2 #############
@@ -32,18 +32,19 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   p <- waffle(
-      parts, rows = conf$extra$rows,
-      size = conf$extra$size,
-      legend_pos = conf$extra$legendPos
+    parts, rows = conf$extra$rows,
+    size = conf$extra$size,
+    legend_pos = conf$extra$legendPos
   )
 
   p <- p + ggtitle(conf$general$title)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-    conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-    conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## set theme
   theme <- conf$general$theme

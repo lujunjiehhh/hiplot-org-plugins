@@ -3,7 +3,9 @@
     "zh_cn": "双Y轴图",
     "en": "Dual Y Axis Chart"
   },
-  "alias": ["Bi-YAxis"],
+  "alias": [
+    "Bi-YAxis"
+  ],
   "intro": {
     "zh_cn": "展示变量之间的关系",
     "en": "Display the relationship between variables"

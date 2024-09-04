@@ -25,7 +25,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   name_val <- colnames(data)[2:ncol(data)]
   num_value <- ncol(data) - 1
   col <- get_hiplot_color(conf$general$palette, num_value,
-    conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   # check arguments
   # smooth or not
@@ -46,23 +46,23 @@ pacman::p_load(pkgs, character.only = TRUE)
       for (i in 1:num_value) {
         if (i == 1) {
           roc_data <- roc(data[, 1], data[, i + 1],
-            percent = T, plot = T, grid = conf$extra$grid, lty = i, quiet = T,
-            print.auc = F, col = col[i], smooth = smooth,
-            main = conf$general$title
+                          percent = T, plot = T, grid = conf$extra$grid, lty = i, quiet = T,
+                          print.auc = F, col = col[i], smooth = smooth,
+                          main = conf$general$title
           )
           text(30, 50, "AUC", font = 2, col = "darkgray")
           text(30, 50 - 10 * i,
-            paste(name_val[i], ":", sprintf("%0.4f", as.numeric(roc_data$auc))),
-            col = col[i]
+               paste(name_val[i], ":", sprintf("%0.4f", as.numeric(roc_data$auc))),
+               col = col[i]
           )
         } else {
           roc_data <- roc(data[, 1], data[, i + 1],
-            percent = T, plot = T, grid = conf$extra$grid, add = T, lty = i, quiet = T,
-            print.auc = F, col = col[i]
+                          percent = T, plot = T, grid = conf$extra$grid, add = T, lty = i, quiet = T,
+                          print.auc = F, col = col[i]
           )
           text(30, 50 - 10 * i,
-            paste(name_val[i], ":", sprintf("%0.4f", as.numeric(roc_data$auc))),
-            col = col[i]
+               paste(name_val[i], ":", sprintf("%0.4f", as.numeric(roc_data$auc))),
+               col = col[i]
           )
         }
       }
@@ -74,23 +74,23 @@ pacman::p_load(pkgs, character.only = TRUE)
       par(mfrow = c(1, num_value), pty = "s")
       for (i in 1:num_value) {
         roc_data <- roc(data[, 1], data[, i + 1],
-          percent = T, plot = T, grid = conf$extra$grid, quiet = T,
-          print.auc = F, col = col[i]
+                        percent = T, plot = T, grid = conf$extra$grid, quiet = T,
+                        print.auc = F, col = col[i]
         )
         sens_ci <- ci.se(roc_data,
-          boot.n = 100, conf.level = 0.95,
-          specificities = seq(0, 100, 5)
+                         boot.n = 100, conf.level = 0.95,
+                         specificities = seq(0, 100, 5)
         )
         plot(sens_ci,
-          type = interval,
-          xlim = c(0, 100), ylim = c(0, 100),
-          col = transparentColor(col[i], 100)
+             type = interval,
+             xlim = c(0, 100), ylim = c(0, 100),
+             col = transparentColor(col[i], 100)
         )
 
         text(30, 40, "AUC", font = 2, col = "darkgray")
         text(30, 30,
-          paste(name_val[i], ":", sprintf("%0.4f", as.numeric(roc_data$auc))),
-          col = col[i]
+             paste(name_val[i], ":", sprintf("%0.4f", as.numeric(roc_data$auc))),
+             col = col[i]
         )
       }
     })
@@ -99,14 +99,14 @@ pacman::p_load(pkgs, character.only = TRUE)
   ## Performance ##
   get_roc_performance <- function(rocdata) {
     performance <- coords(roc_data, "best",
-      best.method = "youden",
-      ret = c(
-        "threshold", "sensitivity", "specificity",
-        "npv", "ppv", "tpr", "fpr",
-        "tnr", "fnr", "fdr", "accuracy",
-        "precision", "youden"
-      ),
-      transpose = F
+                          best.method = "youden",
+                          ret = c(
+                            "threshold", "sensitivity", "specificity",
+                            "npv", "ppv", "tpr", "fpr",
+                            "tnr", "fnr", "fdr", "accuracy",
+                            "precision", "youden"
+                          ),
+                          transpose = F
     )
     res <- t(as.data.frame(performance))
     auc <- as.numeric(roc_data$auc)
@@ -120,7 +120,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     roc_data_all <- NULL
     for (i in 1:num_value) {
       roc_data <- roc(data[, 1], data[, i + 1],
-        percent = T, plot = F
+                      percent = T, plot = F
       )
       roc_data_all <- c(roc_data_all, roc_data)
       perf <- get_roc_performance(roc_data)
@@ -138,31 +138,31 @@ pacman::p_load(pkgs, character.only = TRUE)
     perf_all <- perf_all[, c(ncol(perf_all), 1:(ncol(perf_all) - 1))]
     addWorksheet(wb, "Model.Performance")
     writeData(wb, "Model.Performance", perf_all,
-      colNames = TRUE, rowNames = FALSE
+              colNames = TRUE, rowNames = FALSE
     )
   }
   ## Delong Comparisons ##
-  if(num_value >= 2){
+  if (num_value >= 2) {
     if (conf$extra$compare) {
       pair <- t(combn(2:ncol(data), 2))
-  
+
       compair_result <- NULL
       for (i in 1:nrow(pair)) {
         name1 <- colnames(data)[pair[i, 1]]
         compair_result[["Model1ROC"]] <- c(compair_result[["Model1ROC"]], name1)
         roc1 <- roc(data[, 1], data[, pair[i, 1]],
-          percent = T, plot = F
+                    percent = T, plot = F
         )
-  
+
         name2 <- colnames(data)[pair[i, 2]]
         compair_result[["Model2.ROC"]] <- c(compair_result[["Model2.ROC"]], name2)
         roc2 <- roc(data[, 1], data[, pair[i, 2]],
-          percent = T, plot = F
+                    percent = T, plot = F
         )
-  
+
         pv <- roc.test(roc1, roc2,
-          reuse.auc = FALSE,
-          boot.n = 1000, boot.stratified = F
+                       reuse.auc = FALSE,
+                       boot.n = 1000, boot.stratified = F
         )[["p.value"]]
         compair_result[["Pvalue.Delong.test"]] <-
           c(compair_result[["Pvalue.Delong.test"]], pv)
@@ -170,7 +170,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       compair_result <- as.data.frame(compair_result)
       addWorksheet(wb, "Delong.Comparision")
       writeData(wb, "Delong.Comparision", compair_result,
-        colNames = TRUE, rowNames = FALSE
+                colNames = TRUE, rowNames = FALSE
       )
     }
   }

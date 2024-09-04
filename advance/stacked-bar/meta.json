@@ -3,7 +3,9 @@
     "zh_cn": "堆积柱状图 Shiny",
     "en": "Stacked Bar Shiny"
   },
-  "alias": ["Stack-Bar"],
+  "alias": [
+    "Stack-Bar"
+  ],
   "intro": {
     "zh_cn": "柱状图 Shiny 应用",
     "en": "Barplot Shiny Application"

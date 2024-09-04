@@ -3,7 +3,9 @@
     "zh_cn": "Shiny ggcorrplot2",
     "en": "Shiny ggcorrplot2"
   },
-  "alias": ["Correlation-Heatmap"],
+  "alias": [
+    "Correlation-Heatmap"
+  ],
   "intro": {
     "zh_cn": "Shiny 相关性热图",
     "en": "Correlation Heatmap Shiny"

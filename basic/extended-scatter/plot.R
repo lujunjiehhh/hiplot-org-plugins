@@ -41,7 +41,8 @@ extended_scatter <- function(data, x, y, size, group, add_rug, rug_alpha, rug_si
                              marginal_type, marginal_fill, marginal_color, marginal_size, marginal_bins) {
   # classic plot :
   p <- ggplot(data, aes_string(x = x, y = y, color = group, size = size)) +
-    geom_point()+theme(legend.position = "none")
+    geom_point() +
+    theme(legend.position = "none")
 
   if (add_rug) {
     p <- p + geom_rug(alpha = rug_alpha, size = rug_size, col = rug_color)

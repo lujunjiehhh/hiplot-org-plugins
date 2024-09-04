@@ -31,22 +31,22 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   if (conf$general$palette == "default") {
-        p <- ggplot(
-        data = data,
-        aes_string(
-          x = colnames(data)[1], y = colnames(data)[2],
-          size = colnames(data)[3]
-        )
+    p <- ggplot(
+      data = data,
+      aes_string(
+        x = colnames(data)[1], y = colnames(data)[2],
+        size = colnames(data)[3]
       )
+    )
   } else {
     p <- ggplot(
-        data = data,
-        aes_string(
-          x = colnames(data)[1], y = colnames(data)[2],
-          size = colnames(data)[3],
-          color = colnames(data)[2]
-        )
+      data = data,
+      aes_string(
+        x = colnames(data)[1], y = colnames(data)[2],
+        size = colnames(data)[3],
+        color = colnames(data)[2]
       )
+    )
   }
   p <- p +
     geom_point(alpha = conf$general$alpha) +
@@ -77,21 +77,21 @@ pacman::p_load(pkgs, character.only = TRUE)
         size = conf$general$legendTitleSize
       ),
       axis.text.x = element_text(
-        angle=conf$general$xAxisTextAngle,
-        hjust=conf$general$xAxisHjust,
-        vjust=conf$general$xAxisVjust
+        angle = conf$general$xAxisTextAngle,
+        hjust = conf$general$xAxisHjust,
+        vjust = conf$general$xAxisVjust
       )
     )
   if (ncol(data) == 4) {
     data[, 4] <- factor(data[, 4], levels = unique(data[, 4]))
     eval(parse(text = sprintf(
       paste0("p <- p + facet_grid(~%s,",
-      "scales = 'fixed', margins = F)"),
+             "scales = 'fixed', margins = F)"),
       colnames(data)[4]
     )))
   }
   p <- p + return_hiplot_palette_color(conf$general$palette,
-    conf$general$paletteCustom)
+                                       conf$general$paletteCustom)
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)
   p <- set_complex_general_theme(p)

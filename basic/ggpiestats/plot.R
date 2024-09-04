@@ -39,10 +39,10 @@ pacman::p_load(pkgs, character.only = TRUE)
   prog <- "ggpiestats"
   cmd <- sprintf("p <- %s(data = data, x = %s,
     %s%s)",
-      prog,
-      axis[1],
-      ifelse(axis[2] != "", sprintf("y = %s,", axis[2]), ""),
-      cmd_extra)
+                 prog,
+                 axis[1],
+                 ifelse(axis[2] != "", sprintf("y = %s,", axis[2]), ""),
+                 cmd_extra)
   eval(parse(text = cmd))
   p <- set_palette_theme(eval(parse(text = cmd)), conf)
 }

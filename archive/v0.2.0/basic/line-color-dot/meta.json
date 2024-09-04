@@ -3,7 +3,9 @@
     "zh_cn": "线图（颜色点）",
     "en": "Line (Color Dot)"
   },
-  "alias": ["Line-ColorDot"],
+  "alias": [
+    "Line-ColorDot"
+  ],
   "intro": {
     "zh_cn": "展示变量间关系",
     "en": "Display the variables"

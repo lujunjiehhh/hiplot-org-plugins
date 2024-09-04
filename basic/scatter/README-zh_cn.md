@@ -10,7 +10,8 @@
 
 - 案例统计图形分析
 
-  Value1 表示横轴，Value2 表示纵轴，图示表示治疗方案一中 Value1 与 Value2 两个变量呈正相关： 即 Value1 变大时， Value2 随之变大； 治疗方案二中两个变量则呈负相关： 即 Value1 变大时，Value2 随之变小。
+  Value1 表示横轴，Value2 表示纵轴，图示表示治疗方案一中 Value1 与 Value2 两个变量呈正相关： 即 Value1 变大时， Value2 随之变大；
+  治疗方案二中两个变量则呈负相关： 即 Value1 变大时，Value2 随之变小。
 
 - 特殊参数
 

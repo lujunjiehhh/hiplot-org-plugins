@@ -22,7 +22,11 @@
       "extra": {
         "measure": "ZCOR",
         "refline": "0",
-        "level": [90, 95, 99],
+        "level": [
+          90,
+          95,
+          99
+        ],
         "exprs": []
       }
     }
@@ -35,7 +39,10 @@
         "paletteCustom": "#FFFFFF, #AC0303, #D73B02"
       },
       "extra": {
-        "exprs": ["ri = ri", "ni = ni"]
+        "exprs": [
+          "ri = ri",
+          "ni = ni"
+        ]
       }
     },
     "textarea": {

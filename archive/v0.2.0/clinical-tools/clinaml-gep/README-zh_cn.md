@@ -3,17 +3,17 @@
 - 简介
 
   集成模型用于预测 AML 基因表达亚型。
-  
+
   G1: PML-RARA
-  
+
   G2: CBFB-MYH11
-  
+
   G3: RUNX1-RUNXT1
-  
+
   G4: Bialleic CEBPA
-  
+
   G5: ...
-  
+
   G6: NPM1/KMT2A/NUP98...
 
 - 额外参数

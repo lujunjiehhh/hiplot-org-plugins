@@ -3,7 +3,9 @@
     "zh_cn": "miRNA-Gene 预测",
     "en": "miRNA-Gene Prediction"
   },
-  "alias": ["miRNA-Prediction"],
+  "alias": [
+    "miRNA-Prediction"
+  ],
   "intro": {
     "zh_cn": "miRNA 功能分析工具",
     "en": "miRNA Functional Analysis"

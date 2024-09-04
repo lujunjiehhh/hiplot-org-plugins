@@ -2,18 +2,29 @@
   "module": "basic",
   "tool": "pyramid-chart2",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
         "datTable": [
-          { "value": "" },
-          { "value": "" },
-          { "value": "" }
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
         ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 7,
           "height": 5
@@ -41,9 +52,15 @@
       "config": {
         "dataArg": {
           "datTable": [
-            { "value": "age" },
-            { "value": "Gender" },
-            { "value": ""}
+            {
+              "value": "age"
+            },
+            {
+              "value": "Gender"
+            },
+            {
+              "value": ""
+            }
           ]
         },
         "general": {
@@ -58,16 +75,30 @@
       "config": {
         "dataArg": {
           "datTable": [
-            { "value": "age" },
-            { "value": "Gender" },
-            { "value": "outcome"}
+            {
+              "value": "age"
+            },
+            {
+              "value": "Gender"
+            },
+            {
+              "value": "outcome"
+            }
           ]
         },
         "general": {
           "title": ""
         },
         "extra": {
-          "age_breaks": [0, 10, 20, 30, 40, 50, 100]
+          "age_breaks": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            100
+          ]
         }
       }
     }

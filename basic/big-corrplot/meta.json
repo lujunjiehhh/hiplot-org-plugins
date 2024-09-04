@@ -3,7 +3,9 @@
     "zh_cn": "大样本相关性热图 (Corrplot) ",
     "en": "Corrplot Big Data"
   },
-  "alias": ["Corrplot-Big-Data"],
+  "alias": [
+    "Corrplot-Big-Data"
+  ],
   "intro": {
     "zh_cn": "相关性矩阵展示",
     "en": "Display of correlation matrix"

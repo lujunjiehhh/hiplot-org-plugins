@@ -3,7 +3,9 @@
     "zh_cn": "扇形图",
     "en": "Fan Plot"
   },
-  "alias": ["Fan-Diagram"],
+  "alias": [
+    "Fan-Diagram"
+  ],
   "intro": {
     "zh_cn": "用于展示数据占比",
     "en": "Display the data ratio"

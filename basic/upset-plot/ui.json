@@ -32,7 +32,10 @@
         "en": "Data Types",
         "zh_cn": "数据类型"
       },
-      "items": ["list", "binary"],
+      "items": [
+        "list",
+        "binary"
+      ],
       "class_func": "this.params.config.extra.type === 'list'?'col-12 col-md-6':'col-12'"
     },
     "mode": {
@@ -42,7 +45,11 @@
         "en": "Mode",
         "zh_cn": "模式"
       },
-      "items": ["distinct", "intersect", "union"],
+      "items": [
+        "distinct",
+        "intersect",
+        "union"
+      ],
       "class": "col-12 col-md-6",
       "if_func": "this.params.config.extra.type === 'list'"
     },
@@ -52,7 +59,11 @@
         "en": "Reorder Sets",
         "zh_cn": "集合重排序"
       },
-      "items": ["asc", "desc", "none"],
+      "items": [
+        "asc",
+        "desc",
+        "none"
+      ],
       "class": "col-12 col-md-6"
     },
     "reorderComb": {
@@ -61,7 +72,12 @@
         "en": "Reorder Comb",
         "zh_cn": "组合重排序"
       },
-      "items": ["degree-asc", "degree-desc", "asc", "desc"],
+      "items": [
+        "degree-asc",
+        "degree-desc",
+        "asc",
+        "desc"
+      ],
       "class": "col-12 col-md-6"
     },
     "ptSize": {

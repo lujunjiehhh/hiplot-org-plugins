@@ -2,11 +2,16 @@
   "module": "basic",
   "tool": "barplot-line-multiple",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 8,
           "height": 5
@@ -26,19 +31,19 @@
         "axisTextFontSize": 10,
         "legendTitleSize": 10,
         "legendTextSize": 10,
-        "xlab":"X Lable",
-        "ylab":"Value",
+        "xlab": "X Lable",
+        "ylab": "Value",
         "transformX": "",
         "transformY": "",
         "xbreaks": [],
         "ybreaks": []
       },
       "extra": {
-        "legend_title":"",
-        "plot_type":"line",
-        "line_size":1,
-        "point_size":3,
-        "bar_colour":"#000000"
+        "legend_title": "",
+        "plot_type": "line",
+        "line_size": 1,
+        "point_size": 3,
+        "bar_colour": "#000000"
       }
     }
   },

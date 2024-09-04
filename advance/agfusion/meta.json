@@ -3,7 +3,9 @@
     "zh_cn": "AGFusion",
     "en": "AGFusion"
   },
-  "alias": ["Gene-Fusion"],
+  "alias": [
+    "Gene-Fusion"
+  ],
   "intro": {
     "zh_cn": "融合基因可视化",
     "en": "Visualization of fusion genes"

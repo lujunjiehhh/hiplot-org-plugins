@@ -3,7 +3,9 @@
     "zh_cn": "二分类变量 Meta 分析",
     "en": "Meta-analysis of Binary Data"
   },
-  "alias": ["Meta-Binary"],
+  "alias": [
+    "Meta-Binary"
+  ],
   "intro": {
     "zh_cn": "Meta 分析",
     "en": "Meta analysis"

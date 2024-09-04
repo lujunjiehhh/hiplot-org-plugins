@@ -5,7 +5,10 @@
       "required": true,
       "label": "messages.common.dataTable",
       "icon": "mdi-file",
-      "exts": ["txt", "gct"],
+      "exts": [
+        "txt",
+        "gct"
+      ],
       "enable-download": true,
       "enable-preview": true,
       "enable-upload": true
@@ -24,6 +27,5 @@
     }
   },
   "extra": {
-    
   }
 }

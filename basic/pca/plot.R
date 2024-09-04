@@ -19,23 +19,26 @@ pkgs <- c("gmodels", "ggpubr", "openxlsx")
 pacman::p_load(pkgs, character.only = TRUE)
 
 export_pptx <- function(x, outfn, width, height) {
+
   step3 <- function(e) {
     warning("Not support PPTX export yet.")
   }
+
   step2 <- function(e) {
     tryCatch(
       graph2ppt(ggdraw(x),
-        file = outfn,
-        width = width, height = height,
-        append = TRUE
+                file = outfn,
+                width = width, height = height,
+                append = TRUE
       ),
       error = step3
     )
   }
-    graph2ppt(x,
-      file = outfn, width = width,
-      height = height, append = TRUE
-    )
+
+  graph2ppt(x,
+            file = outfn, width = width,
+            height = height, append = TRUE
+  )
 }
 
 ############# Section 1 ##########################
@@ -57,7 +60,7 @@ export_pptx <- function(x, outfn, width, height) {
   } else {
     colorBy <- sample.info[match(colnames(data), sample.info[, 1]), axis[1]]
     colorBy <- factor(colorBy,
-    level = colorBy[!duplicated(colorBy)])
+                      level = colorBy[!duplicated(colorBy)])
   }
   pca_data <- data.frame(
     sample = rownames(pca_info$rotation),
@@ -79,8 +82,8 @@ export_pptx <- function(x, outfn, width, height) {
 #####################################
 {
   params <- list(data = pca_data, x = "PC1", y = "PC2",
-    size = 2, palette = "lancet")
-  
+                 size = 2, palette = "lancet")
+
   if (!is.null(axis[1]) && axis[1] != "") {
     params$color = "colorBy"
   }
@@ -92,10 +95,11 @@ export_pptx <- function(x, outfn, width, height) {
     ggtitle(conf$general$title)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## set theme
   theme <- conf$general$theme

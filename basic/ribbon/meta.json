@@ -3,7 +3,9 @@
     "zh_cn": "丝带图",
     "en": "Ribbon"
   },
-  "alias": ["Ribbon-Chart"],
+  "alias": [
+    "Ribbon-Chart"
+  ],
   "intro": {
     "zh_cn": "展示数据层次关系",
     "en": "Display data hierarchy"

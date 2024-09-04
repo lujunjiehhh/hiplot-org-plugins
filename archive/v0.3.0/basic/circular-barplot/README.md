@@ -6,11 +6,13 @@
 
 - Analysis of case data
 
-  The loaded data have three columns, with the first represent individual items, the second for different groups and the third for data values.
+  The loaded data have three columns, with the first represent individual items, the second for different groups and the
+  third for data values.
 
 - Interpretation of case statistics graphics
 
-  As shown in the example figure, four different groups with every individual items are showed with circular bars. Each bars are colored by their groups, and the data values and item names were labeled on the end of the bars. 
+  As shown in the example figure, four different groups with every individual items are showed with circular bars. Each
+  bars are colored by their groups, and the data values and item names were labeled on the end of the bars.
 
 - Extra Parameters
 

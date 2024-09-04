@@ -3,7 +3,9 @@
     "zh_cn": "美洲地图",
     "en": "Americas Map"
   },
-  "alias": ["Americas-Map"],
+  "alias": [
+    "Americas-Map"
+  ],
   "intro": {
     "zh_cn": "用于展示美洲国家地图",
     "en": "Display the map of the Americas"

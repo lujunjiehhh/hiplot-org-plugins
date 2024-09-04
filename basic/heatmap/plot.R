@@ -23,7 +23,7 @@ library(ggpubr)
   pkgs <- c("ggplotify", "ComplexHeatmap", "RColorBrewer")
   pacman::p_load(pkgs, character.only = TRUE)
 
-  data <- data[!is.na(data[, 1]), ]
+  data <- data[!is.na(data[, 1]),]
   idx <- duplicated(data[, 1])
   data[idx, 1] <- paste0(data[idx, 1], "--dup-", cumsum(idx)[idx])
   for (i in 2:ncol(data)) {
@@ -66,7 +66,7 @@ library(ggpubr)
     sample_info_reorder <- as.data.frame(sample.info[match(
       colnames(data),
       rownames(sample.info)
-    ), ])
+    ),])
     colnames(sample_info_reorder) <- colnames(sample.info)
     rownames(sample_info_reorder) <- colnames(data)
   }, error = function(e) {
@@ -81,7 +81,7 @@ library(ggpubr)
     gene_info_reorder <- as.data.frame(gene_info[match(
       rownames(data),
       rownames(gene_info)
-    ), ])
+    ),])
     colnames(gene_info_reorder) <- colnames(gene_info)
     rownames(gene_info_reorder) <- rownames(data)
   }, error = function(e) {
@@ -114,19 +114,19 @@ library(ggpubr)
     conf$extra$display_numbers <- FALSE
   }
   params <- list(data[row.names(data) %in% top_var_genes,],
-    color = col, border_color = NA,
-    fontsize_row = conf$general$fontsizeRow,
-    fontsize_col = conf$general$fontsizeCol,
-    main = conf$general$title,
-    cluster_rows = conf$extra$cluster_rows,
-    cluster_cols = conf$extra$cluster_cols,
-    scale = conf$extra$scale,
-    clustering_method = conf$extra$hc_method,
-    clustering_distance_cols = conf$extra$hc_distance_cols,
-    clustering_distance_rows = conf$extra$hc_distance_rows,
-    fontfamily = conf$general$font,
-    display_numbers = conf$extra$display_numbers,
-    number_color = conf$extra$number_color
+                 color = col, border_color = NA,
+                 fontsize_row = conf$general$fontsizeRow,
+                 fontsize_col = conf$general$fontsizeCol,
+                 main = conf$general$title,
+                 cluster_rows = conf$extra$cluster_rows,
+                 cluster_cols = conf$extra$cluster_cols,
+                 scale = conf$extra$scale,
+                 clustering_method = conf$extra$hc_method,
+                 clustering_distance_cols = conf$extra$hc_distance_cols,
+                 clustering_distance_rows = conf$extra$hc_distance_rows,
+                 fontfamily = conf$general$font,
+                 display_numbers = conf$extra$display_numbers,
+                 number_color = conf$extra$number_color
   )
   annotation_colors <- list()
   if (is.null(conf$general$palette) || !is.character(conf$general$palette)) {
@@ -138,35 +138,35 @@ library(ggpubr)
   if (!is.null(sample_info_reorder)) {
     params$annotation_col <- sample_info_reorder
     print(sample_info_reorder)
-    for(i in colnames(sample_info_reorder)) {
-      if (is.numeric(sample_info_reorder[,i])) {
+    for (i in colnames(sample_info_reorder)) {
+      if (is.numeric(sample_info_reorder[, i])) {
         annotation_colors[[i]] <- col
       } else {
         ref <- get_hiplot_color(conf$general$palette,
-          length(unique(sample_info_reorder[,i])),
-          conf$general$paletteCustom)
+                                length(unique(sample_info_reorder[, i])),
+                                conf$general$paletteCustom)
         annotation_colors[[i]] <- ref
-        names(annotation_colors[[i]]) <- unique(sample_info_reorder[,i])
+        names(annotation_colors[[i]]) <- unique(sample_info_reorder[, i])
       }
     }
   }
   if (!is.null(gene_info_reorder)) {
     params$annotation_row <- gene_info_reorder
-    for(i in colnames(gene_info_reorder)) {
-      if (is.numeric(gene_info_reorder[,i])) {
+    for (i in colnames(gene_info_reorder)) {
+      if (is.numeric(gene_info_reorder[, i])) {
         annotation_colors[[i]] <- col
       } else {
         ref <- get_hiplot_color(conf$general$palette2,
-          length(unique(gene_info_reorder[,i])),
-          conf$general$paletteCustom2)
+                                length(unique(gene_info_reorder[, i])),
+                                conf$general$paletteCustom2)
         annotation_colors[[i]] <- ref
-        names(annotation_colors[[i]]) <- unique(gene_info_reorder[,i])
+        names(annotation_colors[[i]]) <- unique(gene_info_reorder[, i])
       }
     }
   }
   print(annotation_colors)
   params$annotation_colors <- annotation_colors
-  p <- as.ggplot(function(){print(do.call(ComplexHeatmap::pheatmap, params))})
+  p <- as.ggplot(function() { print(do.call(ComplexHeatmap::pheatmap, params)) })
 }
 
 ############# Section 3 #############

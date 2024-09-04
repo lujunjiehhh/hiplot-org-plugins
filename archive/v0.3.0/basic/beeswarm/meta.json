@@ -3,7 +3,9 @@
     "zh_cn": "蜜蜂群图",
     "en": "Beeswarm"
   },
-  "alias": ["Bee-Scatter"],
+  "alias": [
+    "Bee-Scatter"
+  ],
   "intro": {
     "zh_cn": "展示数据分布等信息",
     "en": "Display the data distribution"

@@ -3,7 +3,9 @@
     "zh_cn": "GTF小工具",
     "en": "GTFtools"
   },
-  "alias": ["GTF-Tools"],
+  "alias": [
+    "GTF-Tools"
+  ],
   "intro": {
     "zh_cn": "GTF 相关文件",
     "en": "GTF operations"

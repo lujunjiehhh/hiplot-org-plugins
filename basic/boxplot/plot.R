@@ -66,31 +66,31 @@
 #####################################
 {
   if (ncol(data) == 2) {
-    if (length(unique(data[,2])) > 100) {
+    if (length(unique(data[, 2])) > 100) {
       stop("Unique values of the second column should < 100")
     }
     p <- ggboxplot(data,
-      x = usr_cname[2],
-      y = usr_cname[1],
-      notch = conf$extra$notch,
-      color = usr_cname[2],
-      add = add_point,
-      xlab = usr_cname[2],
-      ylab = usr_cname[1],
-      palette = get_hiplot_color(conf$general$palette, -1,
-        conf$general$paletteCustom),
-      title = conf$general$title
+                   x = usr_cname[2],
+                   y = usr_cname[1],
+                   notch = conf$extra$notch,
+                   color = usr_cname[2],
+                   add = add_point,
+                   xlab = usr_cname[2],
+                   ylab = usr_cname[1],
+                   palette = get_hiplot_color(conf$general$palette, -1,
+                                              conf$general$paletteCustom),
+                   title = conf$general$title
     )
     theme <- conf$general$theme
     p <- choose_ggplot_theme(p, theme)
 
     p <- p + theme(
-        plot.title = element_text(
-          hjust = 0.5,
-          vjust = 0.5
-        ),
-        legend.position = conf$general$legendPos
-      )
+      plot.title = element_text(
+        hjust = 0.5,
+        vjust = 0.5
+      ),
+      legend.position = conf$general$legendPos
+    )
     if (pval != "none") {
       p <- p + stat_compare_means(
         comparisons = my_comparisons,
@@ -98,19 +98,19 @@
       )
     }
   } else {
-    if (length(unique(data[,2])) > 100) {
+    if (length(unique(data[, 2])) > 100) {
       stop("Unique values of the second column should < 100")
     }
-    if (length(unique(data[,3])) > 100) {
+    if (length(unique(data[, 3])) > 100) {
       stop("Unique values of the 3th column should < 100")
     }
     # ncol = 3
     if (conf$extra$order_by_table) {
       data[, usr_cname[3]] <- factor(data[, usr_cname[3]],
-        level = data[
-          !duplicated(data[, usr_cname[3]]),
-          usr_cname[3]
-        ]
+                                     level = data[
+                                       !duplicated(data[, usr_cname[3]]),
+                                       usr_cname[3]
+                                     ]
       )
     }
     p <- ggboxplot(
@@ -124,18 +124,18 @@
       xlab = usr_cname[3],
       ylab = usr_cname[1],
       palette = get_hiplot_color(conf$general$palette, -1,
-        conf$general$paletteCustom),
+                                 conf$general$paletteCustom),
       title = conf$general$title
     )
     theme <- conf$general$theme
     p <- choose_ggplot_theme(p, theme)
     p <- p + theme(
-        plot.title = element_text(
-          hjust = 0.5,
-          vjust = 0.5
-        ),
-        legend.position = conf$general$legendPos
-      )
+      plot.title = element_text(
+        hjust = 0.5,
+        vjust = 0.5
+      ),
+      legend.position = conf$general$legendPos
+    )
     if (pval != "none") {
       p <- p + stat_compare_means(
         comparisons = my_comparisons,

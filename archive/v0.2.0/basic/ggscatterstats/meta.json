@@ -3,7 +3,9 @@
     "zh_cn": "Scatterstats",
     "en": "Scatterstats"
   },
-  "alias": ["Stats-Scatter"],
+  "alias": [
+    "Stats-Scatter"
+  ],
   "intro": {
     "zh_cn": "展示数据分布及和关联",
     "en": "Display data distribution and corelation"

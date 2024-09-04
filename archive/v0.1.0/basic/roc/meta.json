@@ -3,7 +3,9 @@
     "zh_cn": "ROC 曲线",
     "en": "ROC"
   },
-  "alias": ["ROC-Curve"],
+  "alias": [
+    "ROC-Curve"
+  ],
   "intro": {
     "zh_cn": "模型比较",
     "en": "Model comparison"

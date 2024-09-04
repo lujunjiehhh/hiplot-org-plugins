@@ -3,7 +3,9 @@
     "zh_cn": "GGGenes",
     "en": "GGGenes"
   },
-  "alias": ["Gene-Position"],
+  "alias": [
+    "Gene-Position"
+  ],
   "intro": {
     "zh_cn": "基因可视化",
     "en": "Gene Visualization"

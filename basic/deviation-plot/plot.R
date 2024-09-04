@@ -6,20 +6,20 @@ deviation_plot <- function(data, key, value, sort_method) {
   data[["z_score"]] <- (data[[value]] - mean(data[[value]])) / sd(data[[value]])
   # define level
   data[["Group"]] <- factor(ifelse(data[["z_score"]] < 0, "low", "high"),
-    levels = c("low", "high")
+                            levels = c("low", "high")
   )
   # plot
   p <- ggbarplot(data,
-    x = key,
-    y = "z_score",
-    fill = "Group",
-    color = "white",
-    sort.val = sort_method,
-    sort.by.groups = FALSE,
-    x.text.angle = 90,
-    xlab = key,
-    ylab = value,
-    rotate = TRUE
+                 x = key,
+                 y = "z_score",
+                 fill = "Group",
+                 color = "white",
+                 sort.val = sort_method,
+                 sort.by.groups = FALSE,
+                 x.text.angle = 90,
+                 xlab = key,
+                 ylab = value,
+                 rotate = TRUE
   )
   p <- set_palette_theme(p, conf)
   return(p)

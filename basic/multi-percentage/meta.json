@@ -3,7 +3,9 @@
     "zh_cn": "多百分比图",
     "en": "Multi-percentage"
   },
-  "alias": ["multi-percentage"],
+  "alias": [
+    "multi-percentage"
+  ],
   "intro": {
     "zh_cn": "展示数据分布",
     "en": "Display the distribution of data"

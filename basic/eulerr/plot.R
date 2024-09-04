@@ -32,14 +32,14 @@ pacman::p_load(pkgs, character.only = TRUE)
   names(genes) <- as.character(data[, 1])
   euler_set <- euler(genes)
   fill <- get_hiplot_color(conf$general$palette, length(genes),
-    conf$general$paletteCustom)
+                           conf$general$paletteCustom)
   p <- as.ggplot(
     plot(euler_set,
-      labels = list(col = rep("white", length(genes))),
-      fills = list(fill = fill),
-      quantities = list(type = c("percent", "counts"),
-      col = rep("white", length(genes))),
-      main = conf$general$title
+         labels = list(col = rep("white", length(genes))),
+         fills = list(fill = fill),
+         quantities = list(type = c("percent", "counts"),
+                           col = rep("white", length(genes))),
+         main = conf$general$title
     )
   )
 }

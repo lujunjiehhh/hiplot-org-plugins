@@ -11,7 +11,8 @@
       "type": "select",
       "label": "messages.basic.corHeatmap.correlation",
       "items": [
-        "row", "col"
+        "row",
+        "col"
       ],
       "class": "col-12 col-md-4"
     },
@@ -19,7 +20,9 @@
       "type": "select",
       "label": "messages.basic.corHeatmap.half",
       "items": [
-        "upper", "lower", "full"
+        "upper",
+        "lower",
+        "full"
       ],
       "class": "col-12 col-md-4"
     },
@@ -27,7 +30,8 @@
       "type": "select",
       "label": "messages.basic.common.shape",
       "items": [
-        "circle", "square"
+        "circle",
+        "square"
       ],
       "class": "col-12 col-md-4"
     },
@@ -53,7 +57,9 @@
         "zh_cn": "相关计算方法"
       },
       "items": [
-        "pearson", "spearman", "kendall"
+        "pearson",
+        "spearman",
+        "kendall"
       ],
       "class": "col-12 col-md-4"
     },
@@ -61,7 +67,8 @@
       "type": "select",
       "label": "messages.basic.corHeatmap.insig",
       "items": [
-        "on", "off"
+        "on",
+        "off"
       ],
       "class": "col-12 col-md-4"
     },
@@ -69,7 +76,8 @@
       "type": "select",
       "label": "messages.basic.corHeatmap.insig_type",
       "items": [
-        "pch", "blank"
+        "pch",
+        "blank"
       ],
       "class": "col-12 col-md-6",
       "if_func": "this.params.config.extra.insig === 'on'"
@@ -78,7 +86,11 @@
       "type": "select",
       "label": "messages.basic.corHeatmap.pch_col",
       "items": [
-        "black","red","green","blue","purple"
+        "black",
+        "red",
+        "green",
+        "blue",
+        "purple"
       ],
       "class": "col-12 col-md-6",
       "if_func": "this.params.config.extra.insig === 'on'"

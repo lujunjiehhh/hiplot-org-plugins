@@ -3,7 +3,9 @@
     "zh_cn": "Shiny GO (富集)",
     "en": "Shiny GO (Enrich)"
   },
-  "alias": ["GOwithEnrichment"],
+  "alias": [
+    "GOwithEnrichment"
+  ],
   "intro": {
     "zh_cn": "GO 富集分析",
     "en": "GO enrichment analysis"

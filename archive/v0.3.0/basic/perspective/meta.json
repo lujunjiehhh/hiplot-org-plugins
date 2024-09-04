@@ -3,7 +3,9 @@
     "zh_cn": "透视图",
     "en": "Perspective"
   },
-  "alias": ["3D-Perspective"],
+  "alias": [
+    "3D-Perspective"
+  ],
   "intro": {
     "zh_cn": "展示多维数据",
     "en": "Display multidimensional data"

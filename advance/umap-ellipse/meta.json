@@ -3,7 +3,9 @@
     "zh_cn": "UMAP 椭圆 Shiny",
     "en": "UMAP Ellipse Shiny"
   },
-  "alias": ["Prettify-UMAP"],
+  "alias": [
+    "Prettify-UMAP"
+  ],
   "intro": {
     "zh_cn": "UMAP 降维",
     "en": "Interactive UMAP Visulization"

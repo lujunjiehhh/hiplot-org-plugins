@@ -6,11 +6,12 @@
 
 - Analysis of case data
 
-  The loaded data are  the gene names and the expression of each sample.
+  The loaded data are the gene names and the expression of each sample.
 
 - Interpretation of case statistics graphics
 
-   Red indicates positive correlation between two genes, blue indicates negative correlation between two genes, and the number in each cell indicates correlation coefficient.
+  Red indicates positive correlation between two genes, blue indicates negative correlation between two genes, and the
+  number in each cell indicates correlation coefficient.
 
 - Extra parameters
 

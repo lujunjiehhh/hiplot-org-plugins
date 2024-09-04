@@ -48,7 +48,8 @@ pacman::p_load(pkgs, character.only = TRUE)
     arrange(desc(Group)) %>%
     mutate(prop = Value / sum(data$Value) * 100) %>%
     mutate(ypos = Value / length(unique(Group)) +
-      c(0, cumsum(Value)[-length(Value)]) + 5)
+      c(0, cumsum(Value)[-length(Value)]) +
+      5)
   p <- ggplot(data, aes(x = "", y = Value, fill = Group)) +
     geom_col(width = 1) +
     geom_bar(
@@ -65,10 +66,10 @@ pacman::p_load(pkgs, character.only = TRUE)
     scale_fill_discrete(
       breaks = data$Group,
       labels = paste(data$Group,
-        " (",
-        round(data$Value / sum(data$Value) * 100, 2),
-        "%)",
-        sep = ""
+                     " (",
+                     round(data$Value / sum(data$Value) * 100, 2),
+                     "%)",
+                     sep = ""
       )
     ) +
     blank_theme +
@@ -78,15 +79,16 @@ pacman::p_load(pkgs, character.only = TRUE)
     )), color = "white", fontface = "bold")
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)
   p <- p +
-    ggtitle(conf$general$title) + 
+    ggtitle(conf$general$title) +
     theme(plot.title = element_text(hjust = 0.5, vjust = -1))
 }
 

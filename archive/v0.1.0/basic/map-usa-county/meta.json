@@ -3,7 +3,9 @@
     "zh_cn": "美国地图 (县)",
     "en": "USA Map (County)"
   },
-  "alias": ["USA-County"],
+  "alias": [
+    "USA-County"
+  ],
   "intro": {
     "zh_cn": "用于展示美国地图 (县级)",
     "en": "Display the map of USA county"

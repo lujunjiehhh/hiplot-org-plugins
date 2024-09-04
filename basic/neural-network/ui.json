@@ -41,7 +41,13 @@
         "en": "Mode",
         "zh_cn": "模式"
       },
-      "items": ["logistic", "linout", "entropy", "softmax", "censored"],
+      "items": [
+        "logistic",
+        "linout",
+        "entropy",
+        "softmax",
+        "censored"
+      ],
       "class": "col-12 col-md-4",
       "required": true
     },

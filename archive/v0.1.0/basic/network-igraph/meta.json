@@ -3,7 +3,9 @@
     "zh_cn": "网路图 (igraph)",
     "en": "Network (igraph)"
   },
-  "alias": ["Basic-Network"],
+  "alias": [
+    "Basic-Network"
+  ],
   "intro": {
     "zh_cn": "拓扑学网路图",
     "en": "Topological and network"

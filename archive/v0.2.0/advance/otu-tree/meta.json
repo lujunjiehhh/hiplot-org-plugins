@@ -3,7 +3,9 @@
     "zh_cn": "OTU-Tree Shiny",
     "en": "OTU-Tree Shiny"
   },
-  "alias": ["OTU-Tree"],
+  "alias": [
+    "OTU-Tree"
+  ],
   "intro": {
     "zh_cn": "扩增子/宏基因组 OTU 丰度图",
     "en": "Amplicon/Metagenome OTU abundance"

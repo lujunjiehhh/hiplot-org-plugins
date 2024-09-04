@@ -23,13 +23,16 @@ pacman::p_load(pkgs, character.only = TRUE)
 # input options, data and configuration section
 ##################################################
 {
-  add_palette <- function (p) {
+
+  add_palette <- function(p) {
     ## add color palette
-    p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+    p <- p +
+      return_hiplot_palette_color(conf$general$palette,
+                                  conf$general$paletteCustom) +
       return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                            conf$general$paletteCustom)
   }
+
 }
 
 ############# Section 2 #############
@@ -37,7 +40,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   colors <- get_hiplot_color(conf$general$paletteCont, -1,
-    conf$general$paletteCustom)
+                             conf$general$paletteCustom)
   pobj <- list()
   if ("vis_dat" %in% conf$extra$mode)
     pobj[["p1"]] <- add_palette(vis_dat(data)) + ggtitle(':vis_dat')
@@ -45,14 +48,15 @@ pacman::p_load(pkgs, character.only = TRUE)
     pobj[["p2"]] <- add_palette(vis_guess(data)) + ggtitle(':vis_guess')
   if ("vis_miss" %in% conf$extra$mode)
     pobj[["p3"]] <- vis_miss(data, cluster = conf$extra$missingClust,
-    sort_miss = conf$extra$missingSort) + ggtitle(':vis_miss')
+                             sort_miss = conf$extra$missingSort) + ggtitle(':vis_miss')
   if ("vis_expect" %in% conf$extra$mode)
-    pobj[["p4"]] <- add_palette(eval(parse(text = 
-      sprintf("vis_expect(data, ~.x %s)", conf$extra$expect)))) + 
+    pobj[["p4"]] <- add_palette(eval(parse(text =
+                                             sprintf("vis_expect(data, ~.x %s)", conf$extra$expect)))) +
       ggtitle(':vis_expect')
   if ("vis_cor" %in% conf$extra$mode)
-    pobj[["p5"]] <- vis_cor(data) + 
-      scale_fill_gradientn(colours = colors) + ggtitle(':vis_cor')
+    pobj[["p5"]] <- vis_cor(data) +
+      scale_fill_gradientn(colours = colors) +
+      ggtitle(':vis_cor')
   if ("vis_value" %in% conf$extra$mode)
     pobj[["p6"]] <- data %>%
       select_if(is.numeric) %>%
@@ -64,8 +68,8 @@ pacman::p_load(pkgs, character.only = TRUE)
     p <- pobj[[1]]
   } else {
     pstr <- paste0(sprintf("pobj[[%s]]", 1:length(pobj)), collapse = " + ")
-    p <- eval(parse(text = 
-      sprintf("%s + plot_layout(ncol = conf$extra$ncol) +
+    p <- eval(parse(text =
+                      sprintf("%s + plot_layout(ncol = conf$extra$ncol) +
     plot_annotation(tag_levels = 'A')", pstr)))
   }
   p <- p & choose_ggplot_theme2(conf$general$theme)

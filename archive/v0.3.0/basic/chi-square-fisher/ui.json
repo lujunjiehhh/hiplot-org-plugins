@@ -13,7 +13,10 @@
         "en": "Loop Method",
         "zh_cn": "循环方法"
       },
-      "items": ["row", "col"]
+      "items": [
+        "row",
+        "col"
+      ]
     },
     "addMean": {
       "type": "switch",

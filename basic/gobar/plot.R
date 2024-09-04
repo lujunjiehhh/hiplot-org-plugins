@@ -29,17 +29,17 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     stop("Error: Input data should be 8 columns!")
   }
-  
+
   # rename data colnames
-  colnames(data) <- c("category","ID","term","count","genes","logFC","adj_pval","zscore")
+  colnames(data) <- c("category", "ID", "term", "count", "genes", "logFC", "adj_pval", "zscore")
   data <- data[!is.na(data$adj_pval),]
   data$adj_pval <- as.numeric(data$adj_pval)
   data$zscore <- as.numeric(data$zscore)
   # zscore = (up-down)/sqrt(count)
-  
+
   # set the plot display("single" or "multiple" plot)
   display <- conf$extra$display
-  
+
   # set the color palettes
   # The diverging palettes are: BrBG PiYG PRGn PuOr RdBu RdGy RdYlBu RdYlGn Spectral
   pal <- conf$general$paletteCont
@@ -60,7 +60,7 @@ pacman::p_load(pkgs, character.only = TRUE)
              order.by.zscore = T,
              title = conf$general$title,
              zsc.col = colors
-             ) + 
+  ) +
     theme(plot.title = element_text(hjust = 0.5))
 
 }

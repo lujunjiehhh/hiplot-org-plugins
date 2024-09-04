@@ -72,7 +72,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   p <- p +
     scale_fill_gradientn(colours = colors,
-    limits = c(0, max(data$freq) * 1.2)) +
+                         limits = c(0, max(data$freq) * 1.2)) +
     scale_y_reverse() +
     scale_x_continuous(
       breaks = breaks * 1000000,

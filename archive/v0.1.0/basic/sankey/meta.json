@@ -3,7 +3,9 @@
     "zh_cn": "桑基图",
     "en": "Sankey"
   },
-  "alias": ["Sankey-Chart"],
+  "alias": [
+    "Sankey-Chart"
+  ],
   "intro": {
     "zh_cn": "关系与数据流量",
     "en": "Relationship and flow data"

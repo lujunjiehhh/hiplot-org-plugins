@@ -40,8 +40,8 @@ pacman::p_load(pkgs, character.only = TRUE)
   options(datadist = "dd")
   for (i in 3:5) {
     fit <- lrm(as.formula(paste0("group~rcs(main,nk=i,inclx = T)+", ex, collapse = "+")),
-      data = data,
-      x = TRUE
+               data = data,
+               x = TRUE
     )
     tmp <- AIC(fit)
     if (i == 3) {
@@ -54,8 +54,8 @@ pacman::p_load(pkgs, character.only = TRUE)
     }
   }
   fit <- lrm(as.formula(paste0("group~rcs(main,nk=nk,inclx = T)+", ex, collapse = "+")),
-    data = data,
-    x = TRUE
+             data = data,
+             x = TRUE
   )
 
   # cutoff_value = "Median"

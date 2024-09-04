@@ -3,7 +3,9 @@
     "zh_cn": "金字塔图",
     "en": "Pyramid Chart"
   },
-  "alias": ["Pyramid-Chart"],
+  "alias": [
+    "Pyramid-Chart"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

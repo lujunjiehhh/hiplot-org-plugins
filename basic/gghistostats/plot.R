@@ -58,10 +58,10 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   cmd <- sprintf("p <- %s(data = data, x = %s,
     %s%s)",
-      prog,
-      axis[1],
-      ifelse(axis[2] != "", sprintf("grouping.var = %s,", axis[2]), ""),
-      cmd_extra)
+                 prog,
+                 axis[1],
+                 ifelse(axis[2] != "", sprintf("grouping.var = %s,", axis[2]), ""),
+                 cmd_extra)
   eval(parse(text = cmd))
   p <- p + plot_annotation(title = conf$general$title)
   ## add theme

@@ -28,7 +28,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   colnames(data) <- c("value", "group")
   data$group <- factor(data$group,
-    levels = unique(data$group)[length(unique(data$group)):1])
+                       levels = unique(data$group)[length(unique(data$group)):1])
 }
 
 ############# Section 2 #############
@@ -54,13 +54,14 @@ pacman::p_load(pkgs, character.only = TRUE)
     theme(legend.position = "none") +
     ggtitle(conf$general$title) +
     guides(color = guide_legend(reverse = TRUE),
-      fill = guide_legend(reverse = TRUE))
+           fill = guide_legend(reverse = TRUE))
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

@@ -3,7 +3,9 @@
     "zh_cn": "主成分分析",
     "en": "PCA"
   },
-  "alias": ["Basic-PCA"],
+  "alias": [
+    "Basic-PCA"
+  ],
   "intro": {
     "zh_cn": "常规降维",
     "en": "Dimension reduction methods"

@@ -31,16 +31,16 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   params <- list(data, obs = obs, mod = mod, group = group,
-    main = conf$general$title)
+                 main = conf$general$title)
   for (i in names(conf$extra)) {
     if (i %in% c("annotate", "text_obs")) {
       conf$extra[[i]] <- str_replace_all(conf$extra[[i]],
-        "\\\\n", "\n")
+                                         "\\\\n", "\n")
     }
     params[[str_replace_all(i, "_", ".")]] <- conf$extra[[i]]
   }
-  params$cols <- get_hiplot_color(conf$general$palette, -1, 
-    conf$general$paletteCustom)
+  params$cols <- get_hiplot_color(conf$general$palette, -1,
+                                  conf$general$paletteCustom)
   p <- do.call(TaylorDiagram, params)
   p <- gridExtra::grid.arrange(p$plot)
 }

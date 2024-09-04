@@ -3,7 +3,9 @@
     "zh_cn": "GO 条形图",
     "en": "GOBar Plot"
   },
-  "alias": ["GO-KEGG-Bar"],
+  "alias": [
+    "GO-KEGG-Bar"
+  ],
   "intro": {
     "zh_cn": "GO 条形图可视化",
     "en": "GOBar plot visualization"

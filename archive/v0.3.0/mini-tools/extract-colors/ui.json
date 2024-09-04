@@ -8,7 +8,14 @@
         "en": "Image Files"
       },
       "icon": "mdi-file",
-      "exts": ["tiff", "tif", "png", "jpg", "jpeg", "webp"],
+      "exts": [
+        "tiff",
+        "tif",
+        "png",
+        "jpg",
+        "jpeg",
+        "webp"
+      ],
       "enable-download": true,
       "enable-preview": true,
       "enable-upload": true
@@ -20,7 +27,7 @@
     }
   },
   "extra": {
-    "num_col" : {
+    "num_col": {
       "type": "slider",
       "label": {
         "zh_cn": "提取颜色数",

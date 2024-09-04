@@ -3,7 +3,9 @@
     "zh_cn": "GO/KEGG 富集分析",
     "en": "GO/KEGG Analysis"
   },
-  "alias": ["GO-KEGG"],
+  "alias": [
+    "GO-KEGG"
+  ],
   "intro": {
     "zh_cn": "GO/KEGG 富集分析 (clusterProfiler)",
     "en": "GO/KEGG analysis by clusterProfiler"

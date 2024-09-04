@@ -3,7 +3,9 @@
     "zh_cn": "中国地图 2",
     "en": "China Map 2"
   },
-  "alias": ["China-Map2"],
+  "alias": [
+    "China-Map2"
+  ],
   "intro": {
     "zh_cn": "用于展示中国地图",
     "en": "Display the map of China"

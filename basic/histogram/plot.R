@@ -70,7 +70,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   ## add color palette
   p <- p + return_hiplot_palette(conf$general$palette,
-  conf$general$paletteCustom)
+                                 conf$general$paletteCustom)
 
   ## add theme
   theme <- conf$general$theme

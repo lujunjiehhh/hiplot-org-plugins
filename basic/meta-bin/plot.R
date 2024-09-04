@@ -25,8 +25,8 @@ pacman::p_load(pkgs, character.only = TRUE)
   for (i in seq_len(length(conf$dataArg[[1]]))) {
     assign(label_vars[i], conf$dataArg[[1]][[i]]$value)
   }
-  
-  data[, "Study"] <- data[,Study]
+
+  data[, "Study"] <- data[, Study]
   data[, "ev.exp"] <- data[, ev.exp]
   data[, "n.exp"] <- data[, n.exp]
   data[, "ev.cont"] <- data[, ev.cont]
@@ -40,12 +40,12 @@ pacman::p_load(meta)
 #           plot section
 #####################################
 {
-  m1 <- metabin(ev.exp, n.exp, 
+  m1 <- metabin(ev.exp, n.exp,
                 ev.cont, n.cont,
                 studlab = Study,
                 data = data)
-  
-  p <- as.ggplot(function(){
+
+  p <- as.ggplot(function() {
     meta::forest(m1, layout = conf$extra[["layout"]])
   })
 }

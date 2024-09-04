@@ -3,7 +3,9 @@
     "zh_cn": "PCA/t-SNE Shiny",
     "en": "PCA/t-SNE Shiny"
   },
-  "alias": ["PCA-tSNE"],
+  "alias": [
+    "PCA-tSNE"
+  ],
   "intro": {
     "zh_cn": "PCA/t-SNE 分析",
     "en": "Interactive PCA/t-SNE analysis"

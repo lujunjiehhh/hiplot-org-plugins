@@ -38,7 +38,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   # Accent, Dark2, Paired, Pastel1, Pastel2, Set1, Set2, Set3
   pal <- conf$general$palette
   colors <- get_hiplot_color(pal, nrow(data) + 1,
-        conf$general$paletteCustom)
+                             conf$general$paletteCustom)
 
   # set the plot title
   title <- conf$general$title
@@ -65,27 +65,28 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # 绘制瀑布图
   p <- waterfall(data,
-    rect_text_labels = data$value,
-    rect_text_size = sizes,
-    rect_text_labels_anchor = "centre",
-    calc_total = totals,
-    total_axis_text = "Total",
-    total_rect_text = sum(data$value),
-    total_rect_color = "steelblue",
-    total_rect_text_color = "black",
-    rect_width = widths,
-    rect_border = "black",
-    draw_lines = TRUE,
-    linetype = ltys,
-    fill_by_sign = signs,
-    fill_colours = colors,
-    scale_y_to_waterfall = T
+                 rect_text_labels = data$value,
+                 rect_text_size = sizes,
+                 rect_text_labels_anchor = "centre",
+                 calc_total = totals,
+                 total_axis_text = "Total",
+                 total_rect_text = sum(data$value),
+                 total_rect_color = "steelblue",
+                 total_rect_text_color = "black",
+                 rect_width = widths,
+                 rect_border = "black",
+                 draw_lines = TRUE,
+                 linetype = ltys,
+                 fill_by_sign = signs,
+                 fill_colours = colors,
+                 scale_y_to_waterfall = T
   )
   # 添加主题设置
-  p <- p + theme(
-    axis.text = element_text(size = 12),
-    plot.title = element_text(hjust = 0.5)
-  ) +
+  p <- p +
+    theme(
+      axis.text = element_text(size = 12),
+      plot.title = element_text(hjust = 0.5)
+    ) +
     labs(x = raw_colnames[1], y = raw_colnames[2], title = title)
 
   ## select themes

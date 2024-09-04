@@ -3,7 +3,9 @@
     "zh_cn": "韦恩图",
     "en": "Venn"
   },
-  "alias": ["Venn-Topology"],
+  "alias": [
+    "Venn-Topology"
+  ],
   "intro": {
     "zh_cn": "用于展示数据集间交叉关系",
     "en": "Data sets cross-relationships"

@@ -39,8 +39,12 @@
         "theme": "default",
         "title": "",
         "xlab": "Expected",
-        "xbreaks": ["auto"],
-        "ybreaks": ["auto"]
+        "xbreaks": [
+          "auto"
+        ],
+        "ybreaks": [
+          "auto"
+        ]
       },
       "extra": {
         "family": "poisson",
@@ -62,7 +66,12 @@
             "value": "los"
           },
           {
-            "value": ["hmo", "died", "age80", "type"]
+            "value": [
+              "hmo",
+              "died",
+              "age80",
+              "type"
+            ]
           },
           {
             "value": "type",

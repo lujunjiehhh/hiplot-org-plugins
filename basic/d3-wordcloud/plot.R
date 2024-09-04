@@ -32,19 +32,19 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 params <- list(data[, 1], data[, 2],
-  padding = conf$extra$padding,
-  rotate.min = conf$extra$rotateMin,
-  rotate.max = conf$extra$rotateMax,
-  size.scale = conf$extra$sizeScale,
-  color.scale = conf$extra$colorScale,
-  spiral = conf$extra$spiral,
-  font = conf$general$font,
-  rangesizefont = conf$extra$rangesizefont
+               padding = conf$extra$padding,
+               rotate.min = conf$extra$rotateMin,
+               rotate.max = conf$extra$rotateMax,
+               size.scale = conf$extra$sizeScale,
+               color.scale = conf$extra$colorScale,
+               spiral = conf$extra$spiral,
+               font = conf$general$font,
+               rangesizefont = conf$extra$rangesizefont
 )
 
 if (conf$general$palette != "default") {
   params$colors <- get_hiplot_color(conf$general$palette, -1,
-    conf$general$paletteCustom)
+                                    conf$general$paletteCustom)
   params$colors <- str_replace(params$colors, "FF$", "")
 }
 

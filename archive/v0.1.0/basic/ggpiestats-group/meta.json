@@ -3,7 +3,9 @@
     "zh_cn": "Piestats Group",
     "en": "Piestats Group"
   },
-  "alias": ["Stats-PieGroup"],
+  "alias": [
+    "Stats-PieGroup"
+  ],
   "intro": {
     "zh_cn": "展示数据占比",
     "en": "Display data percent"

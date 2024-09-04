@@ -66,13 +66,14 @@ pacman::p_load(pkgs, character.only = TRUE)
     ), collapse = ", ")
   )
   eval(parse(text = cmd))
-  
-  if(conf$extra$flip == "hor"){
-    p <- p + geom_alluvium(
-      alpha = conf$general$alpha,
-      aes(fill = data1[, colnames(data1) == conf$extra$ribbonColor]),
-      width = 0, reverse = FALSE
-    ) +
+
+  if (conf$extra$flip == "hor") {
+    p <- p +
+      geom_alluvium(
+        alpha = conf$general$alpha,
+        aes(fill = data1[, colnames(data1) == conf$extra$ribbonColor]),
+        width = 0, reverse = FALSE
+      ) +
       scale_x_discrete(limits = usr_axis, expand = c(0.02, 0.1)) +
       ylab("") +
       scale_fill_discrete(name = conf$extra$ribbonColor) +
@@ -91,12 +92,13 @@ pacman::p_load(pkgs, character.only = TRUE)
       ) +
       ggtitle(conf$general$title) +
       guides(fill = guide_legend(title = conf$extra$ribbonColor))
-  }else if(conf$extra$flip == "ver"){
-    p <- p + geom_alluvium(
-      alpha = conf$general$alpha,
-      aes(fill = data1[, colnames(data1) == conf$extra$ribbonColor]),
-      width = 0, reverse = FALSE
-    ) +
+  }else if (conf$extra$flip == "ver") {
+    p <- p +
+      geom_alluvium(
+        alpha = conf$general$alpha,
+        aes(fill = data1[, colnames(data1) == conf$extra$ribbonColor]),
+        width = 0, reverse = FALSE
+      ) +
       scale_x_discrete(limits = usr_axis, expand = c(0.02, 0.1)) +
       ylab("") +
       scale_fill_discrete(name = conf$extra$ribbonColor) +
@@ -117,10 +119,11 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

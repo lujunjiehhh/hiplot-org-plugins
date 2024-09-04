@@ -2,36 +2,35 @@
 
 - ### 功能介绍
 
-    基于多种聚类算法，对数据进行聚类，并将聚类结果可视化。
-    
+  基于多种聚类算法，对数据进行聚类，并将聚类结果可视化。
+
 - ### 数据结构
 
-    数据帧。
+  数据帧。
 
-    \<第1列\>：（字符串）行名称。
-    
-    \<第2列\>~ \<第n列\>：（数字）变量。
-    
-    
+  \<第1列\>：（字符串）行名称。
+
+  \<第2列\>~ \<第n列\>：（数字）变量。
+
+
 - ### 参数详解
-    
-    **上传|下载**
-    
-    Browser: 用户本地电脑文件读取并上传
-    
-    Example Download: 示例数据下载
-    
-    Result Download: 结果图像或者所有文件压缩下载
-    
-    Width: 输出图像的宽度（默认为英寸如标准为12 x 7 inch）
-    
-    Height: 输出图像的高度（默认为英寸如标准为12 x 7 inch）
-    
-    DPI: 图像分辨率（默认300dpi为较高图像质量）
-    
-    Format: 图像格式选择，所有图像提供PDF，PNG等主要科研需要格式
-    
-    
+
+  **上传|下载**
+
+  Browser: 用户本地电脑文件读取并上传
+
+  Example Download: 示例数据下载
+
+  Result Download: 结果图像或者所有文件压缩下载
+
+  Width: 输出图像的宽度（默认为英寸如标准为12 x 7 inch）
+
+  Height: 输出图像的高度（默认为英寸如标准为12 x 7 inch）
+
+  DPI: 图像分辨率（默认300dpi为较高图像质量）
+
+  Format: 图像格式选择，所有图像提供PDF，PNG等主要科研需要格式
+
     **计算|绘图**
     
     Title: 图像的标题，可以替换图像默认的标题
@@ -70,8 +69,7 @@
     主要美化参数：https://ggplot2.tidyverse.org/reference/
     
     更多特殊参数可以参考：https://ggplot2.tidyverse.org/reference/theme.html
-    
-    
+
 - ### 引用模块
-    
-    factoextra: (Maintainer: Alboukadel Kassambara \<alboukadel.kassambara@gmail.com\>)
+
+  factoextra: (Maintainer: Alboukadel Kassambara \<alboukadel.kassambara@gmail.com\>)

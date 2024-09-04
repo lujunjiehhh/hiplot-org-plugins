@@ -64,7 +64,7 @@
       ),
       out_pdf,
       ifelse(grid_mode, conf$extra$fig_per_page,
-        paste(conf$extra$ncol, conf$extra$nrow)),
+             paste(conf$extra$ncol, conf$extra$nrow)),
       tmp_merge_pdf
     )
     system(cmds)

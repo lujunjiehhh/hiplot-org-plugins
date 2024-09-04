@@ -3,7 +3,9 @@
     "zh_cn": "简易 SOM",
     "en": "Easy SOM"
   },
-  "alias": ["Easy-SOM"],
+  "alias": [
+    "Easy-SOM"
+  ],
   "intro": {
     "zh_cn": "模型可视化",
     "en": "Model visualization"

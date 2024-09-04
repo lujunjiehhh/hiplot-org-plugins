@@ -3,7 +3,9 @@
     "zh_cn": "漏斗图",
     "en": "Funnel Plot"
   },
-  "alias": ["Funnel-Plot"],
+  "alias": [
+    "Funnel-Plot"
+  ],
   "intro": {
     "zh_cn": "效应偏倚分析",
     "en": "Analysis of effect bias"

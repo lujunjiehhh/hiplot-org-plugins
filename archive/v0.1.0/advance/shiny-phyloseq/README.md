@@ -1,8 +1,7 @@
-
 # Shiny-phyloseq
 
 [Shiny-phyloseq](http://joey711.github.io/shiny-phyloseq/)
-is an interactive web application that provides 
+is an interactive web application that provides
 a graphical user interface to the microbiome analysis package for R,
 called [phyloseq](http://joey711.github.io/phyloseq/).
 For details about using the phyloseq package directly,
@@ -16,17 +15,16 @@ in any work that benefits from this code or application.
 
 ### The App
 
-McMurdie and Holmes (2014) [Shiny-phyloseq: Web Application for Interactive Microbiome Analysis with Provenance Tracking](http://bioinformatics.oxfordjournals.org/content/early/2014/10/02/bioinformatics.btu616).
+McMurdie and Holmes (
+2014) [Shiny-phyloseq: Web Application for Interactive Microbiome Analysis with Provenance Tracking](http://bioinformatics.oxfordjournals.org/content/early/2014/10/02/bioinformatics.btu616).
 
 Bioinformatics (Oxford, England), 31(2), 282–283.
 DOI 10.1093/bioinformatics/btu616
 
-
-
 ### "Under the Hood"
 
 McMurdie and Holmes (2013)
-[phyloseq: An R package for reproducible interactive analysis and graphics of microbiome census data](http://dx.plos.org/10.1371/journal.pone.0061217). 
+[phyloseq: An R package for reproducible interactive analysis and graphics of microbiome census data](http://dx.plos.org/10.1371/journal.pone.0061217).
 
 PLoS ONE 8(4):e61217.
 
@@ -48,12 +46,11 @@ Make sure that you first have installed
 
 The following R code will launch Shiny-phyloseq on most systems.
 
-
 ```r
-install.packages("shiny") 
-shiny::runGitHub("shiny-phyloseq","joey711")
+install.packages("shiny")
+shiny::runGitHub("shiny-phyloseq", "joey711")
 ```
 
-See the 
+See the
 [Shiny-phyloseq installation instructions](http://joey711.github.io/shiny-phyloseq/Install.html),
 for further details.

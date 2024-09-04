@@ -3,7 +3,9 @@
     "zh_cn": "饼图矩阵",
     "en": "Pie Matrix"
   },
-  "alias": ["Stats-PieMatrix"],
+  "alias": [
+    "Stats-PieMatrix"
+  ],
   "intro": {
     "zh_cn": "展示数据占比",
     "en": "Display data percent"

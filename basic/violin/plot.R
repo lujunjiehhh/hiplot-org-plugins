@@ -25,7 +25,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   ## check conf
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -56,7 +58,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     print("Error: Input data should be 2 or 3 columns!")
   }
-  data[,1] <- as.numeric(data[,1])
+  data[, 1] <- as.numeric(data[, 1])
 }
 
 ############# Section 2 #############
@@ -74,14 +76,14 @@ pacman::p_load(pkgs, character.only = TRUE)
     }
 
     p <- ggviolin(data,
-      x = usr_cname[2], y = usr_cname[1],
-      fill = usr_cname[2], add = add_box,
-      xlab = usr_cname[2], ylab = usr_cname[1],
-      add.params = list(fill = "white"),
-      palette = get_hiplot_color(conf$general$palette, -1,
-        conf$general$paletteCustom),
-      title = conf$general$title,
-      alpha = conf$general$alpha
+                  x = usr_cname[2], y = usr_cname[1],
+                  fill = usr_cname[2], add = add_box,
+                  xlab = usr_cname[2], ylab = usr_cname[1],
+                  add.params = list(fill = "white"),
+                  palette = get_hiplot_color(conf$general$palette, -1,
+                                             conf$general$paletteCustom),
+                  title = conf$general$title,
+                  alpha = conf$general$alpha
     )
 
     if (pval != "none") {
@@ -104,7 +106,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       xlab = usr_cname[3], ylab = usr_cname[1],
       add.params = list(fill = "white"),
       palette = get_hiplot_color(conf$general$palette, -1,
-        conf$general$paletteCustom),
+                                 conf$general$paletteCustom),
       title = conf$general$title,
       alpha = conf$general$alpha
     )

@@ -3,7 +3,9 @@
     "zh_cn": "颜色组柱状图",
     "en": "Barplot Color Group"
   },
-  "alias": ["Enrich-Bar"],
+  "alias": [
+    "Enrich-Bar"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

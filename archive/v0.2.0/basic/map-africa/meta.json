@@ -3,7 +3,9 @@
     "zh_cn": "非洲地图",
     "en": "Africa Map"
   },
-  "alias": ["Africa-Map"],
+  "alias": [
+    "Africa-Map"
+  ],
   "intro": {
     "zh_cn": "用于展示非洲国家地图",
     "en": "Display the map of the Africa"

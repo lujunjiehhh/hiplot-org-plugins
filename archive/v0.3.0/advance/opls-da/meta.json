@@ -3,7 +3,9 @@
     "zh_cn": "正交偏最小二乘-判别分析",
     "en": "Orthogonal PLS-DA"
   },
-  "alias": ["OPLS-DA"],
+  "alias": [
+    "OPLS-DA"
+  ],
   "intro": {
     "zh_cn": "判别分析",
     "en": "Discrimination Analysis"

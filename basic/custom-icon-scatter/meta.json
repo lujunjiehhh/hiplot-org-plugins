@@ -12,7 +12,11 @@
   },
   "src": "",
   "href": "/basic/custom-icon-scatter",
-  "tag": ["vue", "scatter", "lxs"],
+  "tag": [
+    "vue",
+    "scatter",
+    "lxs"
+  ],
   "meta": {
     "score": 4.5,
     "author": "Xiaosheng",

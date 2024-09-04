@@ -31,13 +31,19 @@
         "en": "Cor Method"
       },
       "class": "col-12 col-md-6",
-      "items": ["pearson", "spearman"]
+      "items": [
+        "pearson",
+        "spearman"
+      ]
     },
     "vis_method": {
       "type": "select",
       "label": "messages.basic.common.shape",
       "class": "col-12 col-md-6",
-      "items": ["square", "circle"]
+      "items": [
+        "square",
+        "circle"
+      ]
     },
     "lab": {
       "type": "switch",

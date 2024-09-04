@@ -3,7 +3,9 @@
     "zh_cn": "双变量图",
     "en": "Bivariate Chart"
   },
-  "alias": ["Bivariate"],
+  "alias": [
+    "Bivariate"
+  ],
   "intro": {
     "zh_cn": "展示双变量关系",
     "en": "Display the bivariate"

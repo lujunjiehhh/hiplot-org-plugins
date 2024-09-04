@@ -28,26 +28,26 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     stop("Error: Input data should be 8 columns!")
   }
-  
+
   # rename data colnames
-  colnames(data) <- c("category","ID","term","count","genes","logFC","adj_pval","zscore")
+  colnames(data) <- c("category", "ID", "term", "count", "genes", "logFC", "adj_pval", "zscore")
   data <- data[!is.na(data$adj_pval),]
   data$adj_pval <- as.numeric(data$adj_pval)
   data$zscore <- as.numeric(data$zscore)
   # zscore = (up-down)/sqrt(count)
-  
+
   # set the plot display("single" or "multiple" plot)
   display <- conf$extra$display
-  
+
   # set the labeling threshold
   label_threshold <- conf$extra$label_threshold
-  
+
   # set the labeling ID
   label_id <- conf$extra$label_id
-  
+
   # set the table legend
   table_legend <- conf$extra$table_legend
-  
+
   # set the color palettes
   # The diverging palettes are: BrBG PiYG PRGn PuOr RdBu RdGy RdYlBu RdYlGn Spectral
   pal <- conf$general$paletteCont
@@ -63,19 +63,19 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   # Make the GOBar plot
-  p <- function () {
+  p <- function() {
     GOBubble(data,
-                display = display,
-                title = conf$general$title,
-                colour = as.vector(colors),
-                labels = label_threshold, 
-                ID = label_id,
-                table.legend = table_legend,
-                table.col = T,
-                bg.col = F) + 
-    theme(plot.title = element_text(hjust = 0.5))
+             display = display,
+             title = conf$general$title,
+             colour = as.vector(colors),
+             labels = label_threshold,
+             ID = label_id,
+             table.legend = table_legend,
+             table.col = T,
+             bg.col = F) +
+      theme(plot.title = element_text(hjust = 0.5))
   }
-  
+
   if (table_legend && display != 'multiple') {
     p <- as.ggplot(p)
   } else {

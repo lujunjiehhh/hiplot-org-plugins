@@ -27,29 +27,29 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     stop("Error: Input data should be 8 columns!")
   }
-  
+
   # rename data colnames
-  colnames(data) <- c("category","ID","term","count","genes","logFC","adj_pval","zscore")
+  colnames(data) <- c("category", "ID", "term", "count", "genes", "logFC", "adj_pval", "zscore")
   data <- data[!is.na(data$adj_pval),]
   data$adj_pval <- as.numeric(data$adj_pval)
   data$zscore <- as.numeric(data$zscore)
   # zscore = (up-down)/sqrt(count)
-  
+
   # set the displayed GO term number
   nsub <- conf$extra$nsub
-  
+
   # set the label size
   label_size <- conf$extra$label_size
-  
+
   # set the radius of inner circle
   rad1 <- conf$extra$rad1
-  
+
   # set the radius of outer circle
   rad2 <- conf$extra$rad2
-  
+
   # set the table legend
   table_legend <- conf$extra$table_legend
-  
+
   # set the color palettes
   # The diverging palettes are: BrBG PiYG PRGn PuOr RdBu RdGy RdYlBu RdYlGn Spectral
   pal <- conf$general$paletteCont
@@ -67,15 +67,15 @@ pacman::p_load(pkgs, character.only = TRUE)
   # Make the GOBar plot
   p <- function() {
     GOCircle(data,
-                title = conf$general$title,
-                nsub = nsub,
-                rad1 = rad1,
-                rad2 = rad2,
-                table.legend = table_legend,
-                zsc.col = colors,
-                label.size = label_size
-                ) + 
-    theme(plot.title = element_text(hjust = 0.5))
+             title = conf$general$title,
+             nsub = nsub,
+             rad1 = rad1,
+             rad2 = rad2,
+             table.legend = table_legend,
+             zsc.col = colors,
+             label.size = label_size
+    ) +
+      theme(plot.title = element_text(hjust = 0.5))
   }
 
   if (table_legend) {

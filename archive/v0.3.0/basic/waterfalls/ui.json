@@ -40,7 +40,14 @@
         "zh_cn": "线条类型",
         "en": "Line Type"
       },
-      "items": [1, 2, 3, 4, 5 ,6],
+      "items": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "class": "col-12"
     },
     "calc_total": {

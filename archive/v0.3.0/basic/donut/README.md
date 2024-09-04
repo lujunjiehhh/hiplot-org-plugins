@@ -2,7 +2,8 @@
 
 - Introduction
 
-  The donut is a variant of the pie chart, with a blank center allowing for additional information about the data as a whole to be included. Doughnut charts are similar to pie charts in that their aim is to illustrate proportions.
+  The donut is a variant of the pie chart, with a blank center allowing for additional information about the data as a
+  whole to be included. Doughnut charts are similar to pie charts in that their aim is to illustrate proportions.
 
 - Analysis of case data
 

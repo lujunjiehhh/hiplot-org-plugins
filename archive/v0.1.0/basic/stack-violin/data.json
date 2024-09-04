@@ -2,7 +2,10 @@
   "module": "basic",
   "tool": "stack-violin",
   "params": {
-    "textarea": {"1-expmat": "", "2-genelist": "" },
+    "textarea": {
+      "1-expmat": "",
+      "2-genelist": ""
+    },
     "config": {
       "data": {
         "1-expmat": {
@@ -12,7 +15,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 7,
           "height": 10

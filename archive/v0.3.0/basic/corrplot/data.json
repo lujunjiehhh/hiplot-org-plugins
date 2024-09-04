@@ -14,7 +14,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 9,
           "height": 9
@@ -34,7 +37,11 @@
         "pch_col": "black",
         "order_method": "hclust",
         "hc_method": "ward.D2",
-        "sig_level": [0.05, 0.01, 0.001],
+        "sig_level": [
+          0.05,
+          0.01,
+          0.001
+        ],
         "lab": false,
         "color_low": "#4477AA",
         "color_mid": "#FFFFFF",

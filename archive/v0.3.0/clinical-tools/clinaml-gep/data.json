@@ -10,7 +10,10 @@
       "general": {
         "cmds": "",
         "taskname": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "cliMode": true,
         "size": {
           "width": 6,
@@ -21,10 +24,19 @@
       },
       "extra": {
         "mode": "deseq2",
-        "model": ["xgboost"],
-        "model_sva": ["yes"],
-        "model_counter": ["featurecounts"],
-        "model_folds": [3, 5]
+        "model": [
+          "xgboost"
+        ],
+        "model_sva": [
+          "yes"
+        ],
+        "model_counter": [
+          "featurecounts"
+        ],
+        "model_folds": [
+          3,
+          5
+        ]
       }
     }
   },
@@ -43,9 +55,16 @@
       "config": {
         "extra": {
           "model": "autogluon",
-          "model_sva": ["yes"],
-          "model_counter": ["featurecounts"],
-          "model_folds": [1, 10]
+          "model_sva": [
+            "yes"
+          ],
+          "model_counter": [
+            "featurecounts"
+          ],
+          "model_folds": [
+            1,
+            10
+          ]
         }
       }
     },
@@ -54,9 +73,28 @@
         "extra": {
           "model": "xgboost",
           "mode": "log2tpm",
-          "model_sva": ["yes", "no"],
-          "model_counter": ["featurecounts", "htseq", "kallisto", "salmon"],
-          "model_folds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          "model_sva": [
+            "yes",
+            "no"
+          ],
+          "model_counter": [
+            "featurecounts",
+            "htseq",
+            "kallisto",
+            "salmon"
+          ],
+          "model_folds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
         }
       },
       "textarea": {

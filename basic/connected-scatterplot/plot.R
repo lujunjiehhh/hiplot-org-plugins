@@ -3,7 +3,7 @@ library(dplyr)
 library(ggrepel)
 
 connected_scatterplot <- function(data, x, y, label, label_ratio, line_color, arrow_size, label_size) {
-cat("00000000000000000000000000000")
+  cat("00000000000000000000000000000")
   cat(data[[x]], data[[y]], data[[label]])
 
   cat("11111111111111111111111")
@@ -44,7 +44,7 @@ p <- connected_scatterplot(
   label_ratio = conf$extra$label_ratio,
   line_color = conf$extra$line_color,
   arrow_size = conf$extra$arrow_size,
-    label_size = conf$extra$label_size
+  label_size = conf$extra$label_size
 )
 
 p <- set_complex_general_theme(set_palette_theme(p, conf))

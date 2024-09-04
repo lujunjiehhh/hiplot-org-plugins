@@ -3,7 +3,9 @@
     "zh_cn": "法国地图 (镇)",
     "en": "France Map (Town)"
   },
-  "alias": ["France-Town"],
+  "alias": [
+    "France-Town"
+  ],
   "intro": {
     "zh_cn": "用于展示法国地图",
     "en": "Display the map of France"

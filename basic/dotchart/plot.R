@@ -33,19 +33,20 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   p <- ggdotchart(data,
-    x = usr_xlab, y = usr_ylab, group = group_lab, color = group_lab,
-    rotate = T, sorting = "descending",
-    y.text.col = F, add = "segments", dot.size = 2
+                  x = usr_xlab, y = usr_ylab, group = group_lab, color = group_lab,
+                  rotate = T, sorting = "descending",
+                  y.text.col = F, add = "segments", dot.size = 2
   ) +
     xlab(usr_xlab) +
     ylab(usr_ylab) +
     ggtitle(conf$general$title)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

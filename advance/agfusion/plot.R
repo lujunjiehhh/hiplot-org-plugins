@@ -34,14 +34,14 @@
 {
   pdfs <- c()
   for (i in 1:nrow(data)) {
-    tmpOutDir <- paste0(outdir, '/', data[i,1], '-', data[i,1])
+    tmpOutDir <- paste0(outdir, '/', data[i, 1], '-', data[i, 1])
     cmds <- paste(
       "conda activate agfusion; unset DISPLAY;",
       "agfusion annotate --type pdf",
-      "-g5", data[i,1],
-      "-g3", data[i,2],
-      "-j5", data[i,3],
-      "-j3", data[i,4],
+      "-g5", data[i, 1],
+      "-g3", data[i, 2],
+      "-j5", data[i, 3],
+      "-j3", data[i, 4],
       "-o", tmpOutDir,
       "-db", db,
       ifelse(conf$extra$wt, "--WT", "")

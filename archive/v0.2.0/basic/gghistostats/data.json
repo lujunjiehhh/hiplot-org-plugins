@@ -2,10 +2,19 @@
   "module": "basic",
   "tool": "gghistostats",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
@@ -36,7 +45,14 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "budget" }, { "value": "genre" }]
+        "datTable": [
+          {
+            "value": "budget"
+          },
+          {
+            "value": "genre"
+          }
+        ]
       },
       "general": {
         "title": ""

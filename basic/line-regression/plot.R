@@ -23,13 +23,13 @@ pacman::p_load(pkgs, character.only = TRUE)
 ##################################################
 {
   if (ncol(data) == 2) {
-    data[,"Group"] <- "default" 
+    data[, "Group"] <- "default"
   }
   cnames <- colnames(data)
   colnames(data) <- c("value1", "value2", "group")
   data$group <- factor(data$group, levels = unique(data$group))
-  data[,1] <- transform_val(conf$general$transformX, data[,1])
-  data[,2] <- transform_val(conf$general$transformY, data[,2])
+  data[, 1] <- transform_val(conf$general$transformX, data[, 1])
+  data[, 2] <- transform_val(conf$general$transformY, data[, 2])
   keep_vars <- c(keep_vars, "cnames", "repels", "equation")
 }
 
@@ -37,23 +37,25 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
+
   equation <- function(x, add_p = FALSE) {
     xs <- summary(x)
     lm_coef <- list(
       a = as.numeric(round(coef(x)[1], digits = 2)),
       b = as.numeric(round(coef(x)[2], digits = 2)),
       r2 = round(xs$r.squared, digits = 2),
-      pval = xs$coef[2, 4] 
+      pval = xs$coef[2, 4]
     )
     if (add_p) {
       lm_eq <- substitute(italic(y) == a + b %.% italic(x) * "," ~ ~
-    italic(R)^2 ~ "=" ~ r2 * "," ~ ~ italic(p) ~ "=" ~ pval, lm_coef)
+        italic(R)^2 ~ "=" ~ r2 * "," ~ ~italic(p) ~ "=" ~ pval, lm_coef)
     } else {
       lm_eq <- substitute(italic(y) == a + b %.% italic(x) * "," ~ ~
-    italic(R)^2 ~ "=" ~ r2, lm_coef)
+        italic(R)^2 ~ "=" ~ r2, lm_coef)
     }
     as.expression(lm_eq)
   }
+
   # plots
   p <- ggplot(data, aes(x = value1, y = value2, colour = group)) +
     geom_point(show.legend = TRUE) +
@@ -69,7 +71,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   ## add annotations for each group using ggrepel
   repels <- rep("", nrow(data))
   for (g in unique(data$group)) {
-    fit <- lm(value2 ~ value1, data = data[data$group == g, ])
+    fit <- lm(value2 ~ value1, data = data[data$group == g,])
     v <- max(data[data$group == g, "value2"])
     repels[which(data$value2 == v)[1]] <- equation(fit, add_p = conf$extra$add_p)
   }
@@ -104,7 +106,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   ## add color palette
   if (conf$general$palette != "default") {
     p <- p + return_hiplot_palette_color(conf$general$palette,
-    conf$general$paletteCustom)
+                                         conf$general$paletteCustom)
   }
 
   ## set theme

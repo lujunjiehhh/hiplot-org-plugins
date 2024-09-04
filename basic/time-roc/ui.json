@@ -16,7 +16,9 @@
       "type": "select",
       "label": "messages.basic.common.time_unit",
       "items": [
-        "Year", "Month", "Day"
+        "Year",
+        "Month",
+        "Day"
       ],
       "class": "col-12"
     },

@@ -3,7 +3,9 @@
     "zh_cn": "Lasso Ridge",
     "en": "Lasso Ridge"
   },
-  "alias": ["Lasso-Ridge"],
+  "alias": [
+    "Lasso-Ridge"
+  ],
   "intro": {
     "zh_cn": "LASSO & 岭回归",
     "en": "LASSO & RIDGE Regression"

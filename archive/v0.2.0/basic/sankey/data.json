@@ -2,14 +2,26 @@
   "module": "basic",
   "tool": "sankey",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": [] }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": []
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 4,
           "height": 2.5
@@ -40,7 +52,17 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "Freq" }, { "value": ["Class", "Sex"] }]
+        "datTable": [
+          {
+            "value": "Freq"
+          },
+          {
+            "value": [
+              "Class",
+              "Sex"
+            ]
+          }
+        ]
       },
       "general": {
         "title": "Sankey plot"

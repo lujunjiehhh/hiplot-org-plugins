@@ -3,7 +3,9 @@
     "zh_cn": "直方图",
     "en": "Histogram"
   },
-  "alias": ["Inter-Histogram"],
+  "alias": [
+    "Inter-Histogram"
+  ],
   "intro": {
     "zh_cn": "展示数据分布",
     "en": "Display data distribution"

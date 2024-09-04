@@ -12,7 +12,10 @@
   },
   "src": "",
   "href": "/basic/barcode-plot",
-  "tag": ["vue", "lxs"],
+  "tag": [
+    "vue",
+    "lxs"
+  ],
   "meta": {
     "score": 5,
     "author": "Xiaosheng",

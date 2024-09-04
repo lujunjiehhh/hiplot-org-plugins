@@ -41,10 +41,10 @@
   setwd(outdir)
   cmd <- "bioextr --mode plain"
   cmd <- sprintf(paste(cmd,
-      ifelse(conf$extra$extract_url, "--call-urls", ""),
-      ifelse(nrow(data) > 0, "--call-cor", ""),
-      "--keywords-file %s -t 30 '%s' > result.json", sep = " "),
-    kw, paste0(infiles, collapse = "' '"))
+                       ifelse(conf$extra$extract_url, "--call-urls", ""),
+                       ifelse(nrow(data) > 0, "--call-cor", ""),
+                       "--keywords-file %s -t 30 '%s' > result.json", sep = " "),
+                 kw, paste0(infiles, collapse = "' '"))
   system_safe(cmd)
   file.remove(kw)
 
@@ -67,8 +67,8 @@
     }
     addWorksheet(wb, "Main")
     writeData(wb, "Main",
-      dat,
-      colNames = TRUE, rowNames = FALSE
+              dat,
+              colNames = TRUE, rowNames = FALSE
     )
     file.remove("result.csv")
   }

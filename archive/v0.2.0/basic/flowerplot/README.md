@@ -2,7 +2,7 @@
 
 - Introduction
 
-  The flowerplot is used to display  all possible logical relations between a finite collection of different sets .
+  The flowerplot is used to display all possible logical relations between a finite collection of different sets .
 
 - Analysis of case data
 

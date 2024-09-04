@@ -37,7 +37,8 @@
             "/public/demo/pdf-collage/bubble.pdf",
             "/public/demo/pdf-collage/go-bar.pdf",
             "/public/demo/pdf-collage/barplot.pdf",
-            "/public/demo/pdf-collage/diverging-scale.pdf"],
+            "/public/demo/pdf-collage/diverging-scale.pdf"
+          ],
           "link": []
         }
       }

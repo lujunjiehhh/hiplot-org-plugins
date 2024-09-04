@@ -2,11 +2,12 @@
 
 - Introduction
 
-  The pie chart is a statistical chart designed to clearly show the percentage of each data group by the size of the pie.
+  The pie chart is a statistical chart designed to clearly show the percentage of each data group by the size of the
+  pie.
 
 - Analysis of case data
 
-  The loaded data are  different groups and their data.
+  The loaded data are different groups and their data.
 
 - Interpretation of case statistics graphics
 

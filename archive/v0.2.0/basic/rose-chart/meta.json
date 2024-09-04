@@ -3,7 +3,9 @@
     "zh_cn": "玫瑰图",
     "en": "Rose Chart"
   },
-  "alias": ["Rose-Chart"],
+  "alias": [
+    "Rose-Chart"
+  ],
   "intro": {
     "zh_cn": "展示数据分布",
     "en": "Display the data distribution"

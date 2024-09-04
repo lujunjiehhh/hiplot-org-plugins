@@ -3,7 +3,9 @@
     "zh_cn": "Maftools 突变瀑布图",
     "en": "Maftools Oncoplots"
   },
-  "alias": ["Maf-Oncoplot"],
+  "alias": [
+    "Maf-Oncoplot"
+  ],
   "intro": {
     "zh_cn": "突变数据可视化应用",
     "en": "Genetic Mutations Visualization"

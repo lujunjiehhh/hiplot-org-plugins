@@ -3,7 +3,9 @@
     "zh_cn": "森林图",
     "en": "Forestplot"
   },
-  "alias": ["Risk-Forest"],
+  "alias": [
+    "Risk-Forest"
+  ],
   "intro": {
     "zh_cn": "森林图可视化",
     "en": "Forest Visualization"

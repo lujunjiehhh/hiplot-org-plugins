@@ -2,7 +2,8 @@
 
 - Introduction
 
-  An extended scatter plot adds marginal plots to the basic scatter plot to provide a more comprehensive view of the data distribution.
+  An extended scatter plot adds marginal plots to the basic scatter plot to provide a more comprehensive view of the
+  data distribution.
 
 - Special Parameters
 

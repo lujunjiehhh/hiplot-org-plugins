@@ -49,16 +49,16 @@ pacman::p_load(pkgs, character.only = TRUE)
 {
   p <- as.ggplot(function() {
     print(heat_tree(data,
-      target_lab = target_lab,
-      task = conf$extra$task,
-      show = conf$extra$show,
-      heat_rel_height = conf$extra$heat_rel_height,
-      panel_space = conf$extra$panel_space,
-      clust_samps = conf$extra$clust_samps,
-      clust_target = conf$extra$clust_target,
-      lev_fac = conf$extra$lev_fac,
-      cont_legend = conf$extra$legend_cont, # cont
-      cate_legend = conf$extra$legend_cate # cate
+                    target_lab = target_lab,
+                    task = conf$extra$task,
+                    show = conf$extra$show,
+                    heat_rel_height = conf$extra$heat_rel_height,
+                    panel_space = conf$extra$panel_space,
+                    clust_samps = conf$extra$clust_samps,
+                    clust_target = conf$extra$clust_target,
+                    lev_fac = conf$extra$lev_fac,
+                    cont_legend = conf$extra$legend_cont, # cont
+                    cate_legend = conf$extra$legend_cate # cate
     ))
   })
 }

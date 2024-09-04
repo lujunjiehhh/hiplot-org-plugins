@@ -49,8 +49,8 @@ pacman::p_load(pkgs, character.only = TRUE)
     geom_polygon() +
     geom_path() +
     scale_fill_gradientn(colours = colors,
-    na.value = "grey10",
-    limits = c(0, max(china_map_pop$value) * 1.2)) +
+                         na.value = "grey10",
+                         limits = c(0, max(china_map_pop$value) * 1.2)) +
     ggtitle(conf$general$title)
   ## set theme
   theme <- conf$general$theme

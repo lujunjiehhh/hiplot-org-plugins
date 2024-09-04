@@ -3,7 +3,9 @@
     "zh_cn": "系统树图",
     "en": "Dendrogram"
   },
-  "alias": ["Phylogenetic-Tree"],
+  "alias": [
+    "Phylogenetic-Tree"
+  ],
   "intro": {
     "zh_cn": "聚类方法",
     "en": "Clustering method"

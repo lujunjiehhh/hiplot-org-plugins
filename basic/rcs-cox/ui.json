@@ -29,7 +29,10 @@
       "type": "select",
       "label": "messages.basic.common.cutoff",
       "class": "col-12",
-      "items": ["Define", "Median"]
+      "items": [
+        "Define",
+        "Median"
+      ]
     },
     "line_color": {
       "type": "color-picker",

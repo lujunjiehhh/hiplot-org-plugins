@@ -28,9 +28,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   group <- unlist(conf$dataArg[[1]][[5]]$value)
 
   for (i in factor_vars) {
-    data[,i] <- factor(data[,i], levels = unique(data[,i]))
+    data[, i] <- factor(data[, i], levels = unique(data[, i]))
   }
-  data[,target] <- as.numeric(data[,target])
+  data[, target] <- as.numeric(data[, target])
 
   if (conf$extra$label == "NA") {
     conf$extra$label <- NA
@@ -53,21 +53,21 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
-  mod<- eval(parse(text =
-    sprintf('glm(%s ~ %s, family="%s", data=data)',
-     target, paste0(vars, collapse = " + "),
-     conf$extra$family)
+  mod <- eval(parse(text =
+                      sprintf('glm(%s ~ %s, family="%s", data=data)',
+                              target, paste0(vars, collapse = " + "),
+                              conf$extra$family)
   ))
 
   print(summary(mod))
 
-  params <- list(title = conf$general$title, numerator = data[,target],
-    denominator = data[,denominator], group = data[,group])
+  params <- list(title = conf$general$title, numerator = data[, target],
+                 denominator = data[, denominator], group = data[, group])
   for (i in names(conf$extra)) {
     params[[i]] <- conf$extra[[i]]
   }
-  params$plot_cols <- get_hiplot_color(conf$general$palette, -1, 
-    conf$general$paletteCustom)
+  params$plot_cols <- get_hiplot_color(conf$general$palette, -1,
+                                       conf$general$paletteCustom)
   p <- do.call(funnel_plot, params)
   p <- plot(p)
   theme <- conf$general$theme

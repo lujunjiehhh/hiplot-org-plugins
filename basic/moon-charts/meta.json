@@ -3,7 +3,9 @@
     "zh_cn": "月亮饼图",
     "en": "Moon charts"
   },
-  "alias": ["Moon-Chart"],
+  "alias": [
+    "Moon-Chart"
+  ],
   "intro": {
     "zh_cn": "用于展示数据占比",
     "en": "Display the data ratio"

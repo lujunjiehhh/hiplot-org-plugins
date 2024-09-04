@@ -33,21 +33,21 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   col <- get_hiplot_color(conf$general$palette, -1,
-    conf$general$paletteCustom)
+                          conf$general$paletteCustom)
   p <- NULL
-  for (i in unique(data[,axis[2]])) {
-    data_tmp <- data[data[,axis[2]] == i,]
-    x <- table(data_tmp[,axis[1]])
-    ptmp <- as.ggplot(function(){
-      par(oma=c(0,0,0,0))
+  for (i in unique(data[, axis[2]])) {
+    data_tmp <- data[data[, axis[2]] == i,]
+    x <- table(data_tmp[, axis[1]])
+    ptmp <- as.ggplot(function() {
+      par(oma = c(0, 0, 0, 0))
       pie(x,
-        labels = sprintf("%s\n(n=%s, %s%%)", names(x), x,
-          round(x / sum(x) * 100, conf$general$digits)),
-        col = col,
-        main = paste0(axis[2], ":", i),
-        edges = conf$extra$edges,
-        radius = conf$extra$radius,
-        clockwise = conf$extra$clockwise
+          labels = sprintf("%s\n(n=%s, %s%%)", names(x), x,
+                           round(x / sum(x) * 100, conf$general$digits)),
+          col = col,
+          main = paste0(axis[2], ":", i),
+          edges = conf$extra$edges,
+          radius = conf$extra$radius,
+          clockwise = conf$extra$clockwise
       )
     })
     if (is.null(p)) {

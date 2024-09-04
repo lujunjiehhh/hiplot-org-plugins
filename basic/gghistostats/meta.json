@@ -3,7 +3,9 @@
     "zh_cn": "Histostats",
     "en": "Histostats"
   },
-  "alias": ["Stats-Histogram"],
+  "alias": [
+    "Stats-Histogram"
+  ],
   "intro": {
     "zh_cn": "展示数据分布及统计推断",
     "en": "Display data distribution and inference"

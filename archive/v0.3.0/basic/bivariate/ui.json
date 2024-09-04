@@ -8,8 +8,12 @@
   },
   "dataArg": {
     "datTable": [
-      {"label": "Explanatory"},
-      {"label": "Outcome"}
+      {
+        "label": "Explanatory"
+      },
+      {
+        "label": "Outcome"
+      }
     ]
   },
   "general": {

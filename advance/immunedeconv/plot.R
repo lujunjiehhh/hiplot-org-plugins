@@ -22,8 +22,8 @@ pacman::p_load(tibble)
 pacman::p_load(openxlsx)
 pacman::p_load(configr)
 pkgs <- c("immunedeconv", "dplyr",
-  "tidyr", "tibble", "openxlsx", "configr",
-  "ggplot2")
+          "tidyr", "tibble", "openxlsx", "configr",
+          "ggplot2")
 pacman::p_load(pkgs, character.only = TRUE)
 
 ############# Section 1 ##########################
@@ -54,7 +54,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     expr_mat <- dataset_racle$expr_mat
   }
-  expr_mat <- expr_mat[!duplicated(expr_mat[, 1]), ]
+  expr_mat <- expr_mat[!duplicated(expr_mat[, 1]),]
   rownames(expr_mat) <- expr_mat[, 1]
   expr_mat <- expr_mat[, -1]
 }
@@ -65,8 +65,8 @@ pacman::p_load(pkgs, character.only = TRUE)
 {
   if (conf$extra$method == "quantiseq") {
     res <- deconvolute(expr_mat, "quantiseq",
-      tumor = conf$extra$tumor,
-      scale_mrna = conf$extra$scale_mrna, arrays = conf$extra$arrays
+                       tumor = conf$extra$tumor,
+                       scale_mrna = conf$extra$scale_mrna, arrays = conf$extra$arrays
     )
     dat <- res %>%
       gather(sample, fraction, -cell_type)
@@ -97,13 +97,13 @@ pacman::p_load(pkgs, character.only = TRUE)
     )
 
     conf$extra$timer_cancer_type <- names(cancer_type[
-      sapply(cancer_type, function(x) {
-        return(x == conf$extra$timer_cancer_type)
-      })
-    ])
+                                            sapply(cancer_type, function(x) {
+                                              return(x == conf$extra$timer_cancer_type)
+                                            })
+                                          ])
     res <- deconvolute(expr_mat, conf$extra$method,
-      indications = rep(conf$extra$timer_cancer_type, ncol(expr_mat)),
-      scale_mrna = conf$extra$scale_mrna, arrays = conf$extra$arrays
+                       indications = rep(conf$extra$timer_cancer_type, ncol(expr_mat)),
+                       scale_mrna = conf$extra$scale_mrna, arrays = conf$extra$arrays
     )
     dat <- res %>%
       gather(sample, score, -cell_type)
@@ -117,10 +117,11 @@ pacman::p_load(pkgs, character.only = TRUE)
       ggtitle(conf$general$title)
   }
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## add theme
   theme <- conf$general$theme

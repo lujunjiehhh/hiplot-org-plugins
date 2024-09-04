@@ -3,7 +3,9 @@
     "zh_cn": "偏最小二乘-判别分析",
     "en": "Partial Least Squares (PLS)-DA"
   },
-  "alias": ["PLS-DA"],
+  "alias": [
+    "PLS-DA"
+  ],
   "intro": {
     "zh_cn": "判别分析",
     "en": "Discrimination Analysis (DA)"

@@ -3,7 +3,9 @@
     "zh_cn": "Betweenstats",
     "en": "Betweenstats"
   },
-  "alias": ["Stats-Violin"],
+  "alias": [
+    "Stats-Violin"
+  ],
   "intro": {
     "zh_cn": "展示组间差异",
     "en": "Display differences between groups"

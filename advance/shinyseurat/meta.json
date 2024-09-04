@@ -3,7 +3,9 @@
     "zh_cn": "Shinyseurat",
     "en": "Shinyseurat"
   },
-  "alias": ["ShinySeurat"],
+  "alias": [
+    "ShinySeurat"
+  ],
   "intro": {
     "zh_cn": "Seurat 单细胞数据分析",
     "en": "Seurat Single Cell Data Analysis"

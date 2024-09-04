@@ -28,7 +28,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.double(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.double(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -39,7 +41,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     stop("Input data should be 1 or 2 columns!")
   }
-  data[,2] <- factor(data[,2], levels = unique(data[,2]))
+  data[, 2] <- factor(data[, 2], levels = unique(data[, 2]))
 }
 
 ############# Section 2 #############
@@ -54,7 +56,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     data["group_add_by_code"] <- "g1"
     p <- ggplot(data, aes_(as.name(colnames(data[1])))) +
       geom_density(aes(fill = group_add_by_code),
-        col = "white", alpha = alpha_usr
+                   col = "white", alpha = alpha_usr
       ) +
       guides(fill = F) +
       ggtitle(conf$general$title)
@@ -81,7 +83,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   ## add color palette
   p <- p + return_hiplot_palette(conf$general$palette,
-  conf$general$paletteCustom)
+                                 conf$general$paletteCustom)
 
   ## add theme
   theme <- conf$general$theme

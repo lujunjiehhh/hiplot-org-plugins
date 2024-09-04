@@ -3,7 +3,9 @@
     "zh_cn": "tSNE",
     "en": "tSNE"
   },
-  "alias": ["Basic-tSNE"],
+  "alias": [
+    "Basic-tSNE"
+  ],
   "intro": {
     "zh_cn": "降维方法，常用于单细胞数据分析",
     "en": "Dimension reduction methods"

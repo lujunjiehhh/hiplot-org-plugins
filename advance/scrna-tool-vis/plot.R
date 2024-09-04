@@ -28,12 +28,12 @@ data2 <- read_data(data2)
 data2$cluster <- as.character(data2$cluster)
 print(head(data))
 print(head(data2))
-col <- get_hiplot_color(conf$general$palette,-1,
-        conf$general$paletteCustom)
+col <- get_hiplot_color(conf$general$palette, -1,
+                        conf$general$paletteCustom)
 p <- NULL
 if ("jjDotPlot" %in% conf$extra$mode) {
   p <- jjDotPlot(object = data,
-          gene = data2$gene)
+                 gene = data2$gene)
 }
 if ("jjVolcano" %in% conf$extra$mode && is.null(p)) {
   p <- jjVolcano(diffData = data2)
@@ -43,12 +43,12 @@ if ("jjVolcano" %in% conf$extra$mode && is.null(p)) {
 
 if ("markerVocalno" %in% conf$extra$mode && is.null(p)) {
   p <- markerVocalno(markers = data2,
-                topn = 5,
-                labelCol = col)
+                     topn = 5,
+                     labelCol = col)
 } else if ("markerVocalno" %in% conf$extra$mode) {
   p <- p + markerVocalno(markers = data2,
-                topn = 5,
-                labelCol = col)
+                         topn = 5,
+                         labelCol = col)
 }
 
 export_single(p)

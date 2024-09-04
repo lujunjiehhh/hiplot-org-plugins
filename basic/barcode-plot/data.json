@@ -18,7 +18,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["pdf", "jpeg"],
+        "imageExportType": [
+          "pdf",
+          "jpeg"
+        ],
         "theme": "theme_bw",
         "size": {
           "width": 8,
@@ -28,11 +31,11 @@
         "title": ""
       },
       "extra": {
-       "width" : 0.01,
-       "height" : 0.9,
-       "color" : "#283593",
-       "x_label" : "Sales",
-       "y_label" : "Region"
+        "width": 0.01,
+        "height": 0.9,
+        "color": "#283593",
+        "x_label": "Sales",
+        "y_label": "Region"
       }
     }
   },

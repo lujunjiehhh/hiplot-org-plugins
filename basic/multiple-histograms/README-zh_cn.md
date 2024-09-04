@@ -7,7 +7,7 @@
 - 特殊参数
 
   alpha: 直方图颜色透明度
-  
+
   binwidth: 每个柱形的宽度
-  
+
   frame_color: 直方图的边框颜色

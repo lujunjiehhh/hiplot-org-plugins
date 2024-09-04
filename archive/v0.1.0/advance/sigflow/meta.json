@@ -3,7 +3,9 @@
     "zh_cn": "Sigflow",
     "en": "Sigflow"
   },
-  "alias": ["Maf-Signature"],
+  "alias": [
+    "Maf-Signature"
+  ],
   "intro": {
     "zh_cn": "突变 Signature 分析",
     "en": "Mutation signature analysis"

@@ -3,7 +3,9 @@
     "zh_cn": "箱式图",
     "en": "Boxplot"
   },
-  "alias": ["Box-Scatter"],
+  "alias": [
+    "Box-Scatter"
+  ],
   "intro": {
     "zh_cn": "展示组间差异",
     "en": "Display differences between groups"

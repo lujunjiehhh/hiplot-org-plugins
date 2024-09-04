@@ -12,7 +12,13 @@
         "en": "Statistics Distribution"
       },
       "class": "col-12 col-md-6",
-      "items": ["normal", "binom", "f", "t", "chisquare"]
+      "items": [
+        "normal",
+        "binom",
+        "f",
+        "t",
+        "chisquare"
+      ]
     },
     "plot": {
       "type": "autocomplete",
@@ -21,7 +27,11 @@
         "en": "Type of Plots"
       },
       "class": "col-12 col-md-6",
-      "items": ["plot", "perc", "prob"]
+      "items": [
+        "plot",
+        "perc",
+        "prob"
+      ]
     },
     "mean": {
       "type": "slider",
@@ -113,7 +123,13 @@
         "zh_cn": "成功概率",
         "en": "Probability of Success"
       },
-      "items": ["lower", "upper", "interval", "exact", "both"],
+      "items": [
+        "lower",
+        "upper",
+        "interval",
+        "exact",
+        "both"
+      ],
       "class": "col-12",
       "if_func": "this.params.config.extra.plot === 'perc' && this.params.config.extra.type === 'binom' ",
       "step": 0.0001,
@@ -161,7 +177,13 @@
         "zh_cn": "单侧或双侧概率",
         "en": "Lower, Upper Tail or Both"
       },
-      "items": ["lower", "upper", "both", "exact", "interval"],
+      "items": [
+        "lower",
+        "upper",
+        "both",
+        "exact",
+        "interval"
+      ],
       "class": "col-12",
       "if_func": "this.params.config.extra.plot !== 'plot'",
       "max": 9999

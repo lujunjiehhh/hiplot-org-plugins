@@ -37,21 +37,21 @@ pacman::p_load(pkgs, character.only = TRUE)
     label.repel = TRUE,
     k = conf$general$digits"
   prog <- "ggpiestats"
-  g <- unique(data[,axis[2]])
+  g <- unique(data[, axis[2]])
   print(g)
   for (i in 1:length(g)) {
-    fil <- data[,axis[2]] == g[i]
+    fil <- data[, axis[2]] == g[i]
     cmd <- sprintf("p <- %s(data = data[fil,],
     x = %s, 
     title= paste('', axis[2], g[i], sep = ':'),
     %s)",
-      prog,
-      axis[1],
-      cmd_extra)
+                   prog,
+                   axis[1],
+                   cmd_extra)
     assign(paste0("p", i), set_palette_theme(eval(parse(text = cmd)), conf))
   }
   cmd <- sprintf("p <- %s + plot_layout(ncol=%s) + plot_annotation(title = conf$general$title)",
-  paste0("p", 1:length(g), collapse = " + "), conf$extra$ncol)
+                 paste0("p", 1:length(g), collapse = " + "), conf$extra$ncol)
   eval(parse(text = cmd))
 }
 

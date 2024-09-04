@@ -3,7 +3,9 @@
     "zh_cn": "Cola",
     "en": "Cola"
   },
-  "alias": ["Cola"],
+  "alias": [
+    "Cola"
+  ],
   "intro": {
     "zh_cn": "聚类分析",
     "en": "Clustering Analysis"

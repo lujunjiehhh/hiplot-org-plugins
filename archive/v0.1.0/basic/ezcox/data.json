@@ -21,7 +21,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 6,
           "height": 4
@@ -40,10 +43,15 @@
       "dataArg": {
         "1-data": [
           {
-            "value": ["sex", "ph.ecog"]
+            "value": [
+              "sex",
+              "ph.ecog"
+            ]
           },
           {
-            "value": ["age"]
+            "value": [
+              "age"
+            ]
           },
           {
             "value": []

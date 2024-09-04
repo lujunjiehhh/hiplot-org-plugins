@@ -5,7 +5,10 @@
       "required": true,
       "label": "messages.common.dataTable",
       "icon": "mdi-file",
-      "exts": ["txt", "gct"],
+      "exts": [
+        "txt",
+        "gct"
+      ],
       "enable-download": true,
       "enable-preview": true,
       "enable-upload": true
@@ -18,7 +21,9 @@
         "zh_cn": "样本分组"
       },
       "icon": "mdi-file",
-      "exts": ["cls"],
+      "exts": [
+        "cls"
+      ],
       "enable-download": true,
       "enable-preview": true,
       "enable-upload": true
@@ -32,7 +37,9 @@
       },
       "multiple": true,
       "icon": "mdi-file",
-      "exts": ["gmt"],
+      "exts": [
+        "gmt"
+      ],
       "enable-download": true,
       "enable-preview": true,
       "enable-upload": true
@@ -46,7 +53,11 @@
   "extra": {
     "cli_version": {
       "type": "select",
-      "items": ["4.1.0", "4.2.3", "4.3.2"],
+      "items": [
+        "4.1.0",
+        "4.2.3",
+        "4.3.2"
+      ],
       "label": {
         "en": "GSEA Version",
         "zh_cn": "GSEA 版本"
@@ -56,8 +67,12 @@
     },
     "mode": {
       "type": "select",
-      "items": ["Max_probe", "Median_of_probes",
-      "Mean_of_probes", "Sum_of_probes"],
+      "items": [
+        "Max_probe",
+        "Median_of_probes",
+        "Mean_of_probes",
+        "Sum_of_probes"
+      ],
       "label": {
         "en": "Collapsing Mode",
         "zh_cn": "折叠模式"
@@ -66,7 +81,10 @@
     },
     "norm": {
       "type": "select",
-      "items": ["meandiv", "none"],
+      "items": [
+        "meandiv",
+        "none"
+      ],
       "label": {
         "en": "Normalization Mode",
         "zh_cn": "标准化模式"
@@ -75,7 +93,10 @@
     },
     "rnd_type": {
       "type": "select",
-      "items": ["no_balance", "equalize_and_balance"],
+      "items": [
+        "no_balance",
+        "equalize_and_balance"
+      ],
       "label": {
         "en": "Randomization Mode",
         "zh_cn": "随机化模式"
@@ -84,8 +105,12 @@
     },
     "scoring_scheme": {
       "type": "select",
-      "items": ["classic", "weighted",
-      "weighted_p2", "weighted_p1.5"],
+      "items": [
+        "classic",
+        "weighted",
+        "weighted_p2",
+        "weighted_p1.5"
+      ],
       "label": {
         "en": "Enrichment Statistic",
         "zh_cn": "富集统计"
@@ -94,10 +119,17 @@
     },
     "metric": {
       "type": "select",
-      "items": ["Signal2Noise", "tTest",
-      "Ratio_of_Classes", "Diff_of_Classes",
-      "log2_Ratio_of_Classes", "Euclidean",
-      "Manhattan", "Cosine", "Pearson"],
+      "items": [
+        "Signal2Noise",
+        "tTest",
+        "Ratio_of_Classes",
+        "Diff_of_Classes",
+        "log2_Ratio_of_Classes",
+        "Euclidean",
+        "Manhattan",
+        "Cosine",
+        "Pearson"
+      ],
       "label": {
         "en": "Metrics for Ranking Genes",
         "zh_cn": "基因排名指标"
@@ -106,7 +138,10 @@
     },
     "sort": {
       "type": "select",
-      "items": ["real", "abs"],
+      "items": [
+        "real",
+        "abs"
+      ],
       "label": {
         "en": "Gene List Sorting Mode",
         "zh_cn": "基因列表排序模式"
@@ -115,7 +150,10 @@
     },
     "order": {
       "type": "select",
-      "items": ["descending", "ascending"],
+      "items": [
+        "descending",
+        "ascending"
+      ],
       "label": {
         "en": "Gene List Ordering Mode",
         "zh_cn": "基因列表升降序模式"

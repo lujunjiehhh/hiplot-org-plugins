@@ -3,7 +3,9 @@
     "zh_cn": "柱状图",
     "en": "Barplot"
   },
-  "alias": ["Bar-Chart"],
+  "alias": [
+    "Bar-Chart"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

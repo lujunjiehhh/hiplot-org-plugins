@@ -13,7 +13,10 @@
         "zh_cn": "拓扑结构",
         "en": "Topology"
       },
-      "items": ["rectangular", "hexagonal"],
+      "items": [
+        "rectangular",
+        "hexagonal"
+      ],
       "class": "col-12"
     },
     "xdim": {

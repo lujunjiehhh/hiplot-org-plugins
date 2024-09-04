@@ -23,20 +23,22 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   top_number <- conf$extra$topnum
 
-  data <- data[!is.na(data[, 1]) & !is.na(data[, 2]) &
-    !is.na(data[, 3]), ]
-  data <- data[!is.null(data[, 1]) & !is.null(data[, 2]) &
-    !is.null(data[, 3]), ]
+  data <- data[!is.na(data[, 1]) &
+                 !is.na(data[, 2]) &
+                 !is.na(data[, 3]),]
+  data <- data[!is.null(data[, 1]) &
+                 !is.null(data[, 2]) &
+                 !is.null(data[, 3]),]
   # remove unnecessary words
   data[, term] <- capitalize(str_remove(data[, term], pattern = "\\w+:\\d+\\W"))
-  
+
   if (conf$extra$coord_flip || is.null(conf$extra$coord_flip)) {
     levs <- data[, term][length(data[, term]):1]
   } else {
     levs <- data[, term][1:length(data[, term])]
   }
   data[, term] <- factor(data[, term],
-    levels = levs
+                         levels = levs
   )
   data <- data[, c(term, count, type)]
   colnames(data) <- c("term", "count", "type")
@@ -57,13 +59,13 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
- p <- ggplot(data = data2, aes(x = term, y = count, fill = type)) +
-  geom_bar(stat = "identity", width = 0.8) + 
-  theme_bw() +
-  xlab(term) +
-  ylab(count) +
-  guides(fill = guide_legend(title=type)) +
-  ggtitle(conf$general$title)
+  p <- ggplot(data = data2, aes(x = term, y = count, fill = type)) +
+    geom_bar(stat = "identity", width = 0.8) +
+    theme_bw() +
+    xlab(term) +
+    ylab(count) +
+    guides(fill = guide_legend(title = type)) +
+    ggtitle(conf$general$title)
 
   if (conf$extra$coord_flip || is.null(conf$extra$coord_flip)) {
     p <- p + coord_flip()
@@ -71,7 +73,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   ## add color palette
   p <- p + return_hiplot_palette(conf$general$palette,
-    conf$general$paletteCustom)
+                                 conf$general$paletteCustom)
 
   ## add theme
   theme <- conf$general$theme

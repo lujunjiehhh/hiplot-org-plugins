@@ -3,7 +3,9 @@
     "zh_cn": "CEMitool",
     "en": "CEMitool"
   },
-  "alias": ["Module-Net"],
+  "alias": [
+    "Module-Net"
+  ],
   "intro": {
     "zh_cn": "基因共表达模块分析",
     "en": "Co-expression modules analysis"

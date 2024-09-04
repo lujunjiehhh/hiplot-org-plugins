@@ -22,7 +22,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 # input options, data and configuration section
 ##################################################
 {
-  data <- data[!is.na(data[, 1]), ]
+  data <- data[!is.na(data[, 1]),]
   idx <- duplicated(data[, 1])
   data[idx, 1] <- paste0(data[idx, 1], "--dup-", cumsum(idx)[idx])
   print(data)
@@ -34,6 +34,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   rownames(data) <- data[, 1]
   data <- data[, -1]
+
   str2num_df <- function(x) {
     final <- NULL
     for (i in seq_len(ncol(x))) {
@@ -42,6 +43,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     colnames(final) <- colnames(x)
     return(final)
   }
+
   cor_method <- conf$extra$cor_method
   # calculate correlations and p values
   if (conf$extra$insig == "on") {

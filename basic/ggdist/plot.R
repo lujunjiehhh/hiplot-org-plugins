@@ -51,12 +51,14 @@ pacman::p_load(pkgs, character.only = TRUE)
       scale = .5
     ) +
     geom_point(aes_(x = as.name(colnames(data[2]))),
-      data = data, pch = "|", size = 2,
-      position = position_nudge(y = -.15)
+               data = data, pch = "|", size = 2,
+               position = position_nudge(y = -.15)
     )
 
   p <- p + ggtitle(conf$general$title)
-  p <- p + xlab(colnames(data)[2]) + ylab(colnames(data)[1])
+  p <- p +
+    xlab(colnames(data)[2]) +
+    ylab(colnames(data)[1])
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)
   p <- set_complex_general_theme(p)

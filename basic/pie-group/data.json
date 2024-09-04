@@ -2,10 +2,19 @@
   "module": "basic",
   "tool": "pie-group",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
@@ -33,7 +42,14 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "genre" }, { "value": "mpaa" }]
+        "datTable": [
+          {
+            "value": "genre"
+          },
+          {
+            "value": "mpaa"
+          }
+        ]
       },
       "general": {
         "title": ""

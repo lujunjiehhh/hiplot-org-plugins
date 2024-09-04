@@ -3,7 +3,9 @@
     "zh_cn": "连续变量 Meta 分析",
     "en": "Meta-analysis of Continuous Data"
   },
-  "alias": ["Meta-Continuous"],
+  "alias": [
+    "Meta-Continuous"
+  ],
   "intro": {
     "zh_cn": "Meta 分析",
     "en": "Meta analysis"

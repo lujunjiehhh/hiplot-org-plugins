@@ -1,4 +1,3 @@
-
 # ====================== Plugin Caller ======================
 
 p <- ggboxplot(
@@ -26,11 +25,13 @@ p <- ggboxplot(
 if (conf$extra$add_sig_label) {
   # "p.signif"
   # "center"
-  p <- p + stat_compare_means(
-    label = conf$extra$sig_label_type,
-    label.x.npc = conf$extra$sig_label_position,
-    method = conf$extra$sig_method
-  ) + scale_y_continuous(expand = expansion(mult = c(0.2, 0.2)))
+  p <- p +
+    stat_compare_means(
+      label = conf$extra$sig_label_type,
+      label.x.npc = conf$extra$sig_label_position,
+      method = conf$extra$sig_method
+    ) +
+    scale_y_continuous(expand = expansion(mult = c(0.2, 0.2)))
 }
 
 p <- set_complex_general_theme(set_palette_theme(p, conf))

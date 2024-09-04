@@ -10,7 +10,9 @@
       "required": false,
       "label": "messages.basic.ggwordcloud.inmask",
       "icon": "mdi-file",
-      "exts": ["png"],
+      "exts": [
+        "png"
+      ],
       "enable-download": true,
       "enable-preview": true,
       "enable-upload": true

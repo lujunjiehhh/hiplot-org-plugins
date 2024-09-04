@@ -2,11 +2,16 @@
   "module": "basic",
   "tool": "pyramid-stack2",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 9,
           "height": 7
@@ -23,7 +28,12 @@
       "general": {
         "title": "Porridge temperature by age and sex of bear",
         "xlab": "Value",
-        "xbreaks": [0, 10, 20, 30]
+        "xbreaks": [
+          0,
+          10,
+          20,
+          30
+        ]
       }
     },
     "textarea": {

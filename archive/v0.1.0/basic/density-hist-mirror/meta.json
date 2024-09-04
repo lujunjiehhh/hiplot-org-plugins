@@ -3,7 +3,9 @@
     "zh_cn": "镜像密度图和直方图",
     "en": "Mirror Density & Histogram"
   },
-  "alias": ["Mirror-Density-Histogram"],
+  "alias": [
+    "Mirror-Density-Histogram"
+  ],
   "intro": {
     "zh_cn": "展示数据分布",
     "en": "Display data distribution"

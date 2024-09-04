@@ -3,7 +3,9 @@
     "zh_cn": "渐变散点图",
     "en": "Gradient Scatter"
   },
-  "alias": ["Scatter-Gradient"],
+  "alias": [
+    "Scatter-Gradient"
+  ],
   "intro": {
     "zh_cn": "可用于展示变量之间的关系",
     "en": "Display the variables"

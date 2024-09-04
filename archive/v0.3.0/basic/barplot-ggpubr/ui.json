@@ -41,79 +41,54 @@
       "class": "col-12 col-md-4"
     },
     "fill": {
-
     },
     "size": {
-
     },
     "width": {
-
     },
     "xlab": {
-
     },
     "ylab": {
-
     },
     "facet.by": {
-
     },
     "panel.labs": {
-
     },
     "short.panel.labs": {
-
     },
     "select": {
-
     },
     "remove": {
-
     },
     "order": {
-
     },
     "add": {
-
     },
     "add.params": {
-
     },
     "error.plot": {
-
     },
     "label": {
-
     },
     "lab.col": {
-
     },
     "lab.size": {
-
     },
     "lab.pos": {
-
     },
     "lab.vjust": {
-
     },
     "lab.hjust": {
-
     },
     "lab.nb.digits": {
-
     },
     "sort.val": {
-
     },
     "sort.by.groups": {
-
     },
     "top": {
-
     },
     "position": {
-
     }
   }
 }

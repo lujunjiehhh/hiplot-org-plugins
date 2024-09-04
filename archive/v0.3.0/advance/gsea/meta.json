@@ -3,7 +3,9 @@
     "zh_cn": "Broad GSEA",
     "en": "Broad GSEA"
   },
-  "alias": ["Multi-GSEA"],
+  "alias": [
+    "Multi-GSEA"
+  ],
   "intro": {
     "zh_cn": "基因富集分析",
     "en": "Gene set enrichment analysis"

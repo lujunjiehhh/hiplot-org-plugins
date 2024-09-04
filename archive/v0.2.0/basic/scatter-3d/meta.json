@@ -3,7 +3,9 @@
     "zh_cn": "三维散点图",
     "en": "3D Scatter"
   },
-  "alias": ["3D-Scatter"],
+  "alias": [
+    "3D-Scatter"
+  ],
   "intro": {
     "zh_cn": "可用于展示三个变量之间的关系",
     "en": "Display the variables"

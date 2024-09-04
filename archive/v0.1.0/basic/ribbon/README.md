@@ -10,5 +10,6 @@
 
 - Interpretation of case statistics graphics
 
-  Each color represents a different grouping, through which broken lines can be seen the change of each group of data over time.
+  Each color represents a different grouping, through which broken lines can be seen the change of each group of data
+  over time.
 

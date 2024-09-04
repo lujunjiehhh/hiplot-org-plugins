@@ -19,7 +19,10 @@
       "general": {
         "cmd": "",
         "palette": "jco",
-        "imageExportType": ["pdf", "jpeg"],
+        "imageExportType": [
+          "pdf",
+          "jpeg"
+        ],
         "size": {
           "width": 4,
           "height": 4

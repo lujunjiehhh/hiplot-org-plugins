@@ -3,7 +3,9 @@
     "zh_cn": "表格宽数据转长数据",
     "en": "Table Melt"
   },
-  "alias": ["Table-Melt"],
+  "alias": [
+    "Table-Melt"
+  ],
   "intro": {
     "zh_cn": "表格操作",
     "en": "Table Operation"

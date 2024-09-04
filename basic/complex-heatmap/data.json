@@ -2,14 +2,24 @@
   "module": "basic",
   "tool": "complex-heatmap",
   "params": {
-    "textarea": { "1-plotData": "", "2-colorData": "" },
+    "textarea": {
+      "1-plotData": "",
+      "2-colorData": ""
+    },
     "config": {
       "dataArg": {
-        "1-plotData": [{ "value": [] }]
+        "1-plotData": [
+          {
+            "value": []
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 8,
           "height": 10
@@ -31,7 +41,14 @@
     {
       "config": {
         "dataArg": {
-          "1-plotData": [{ "value": ["KRAS", "GBP4"] }]
+          "1-plotData": [
+            {
+              "value": [
+                "KRAS",
+                "GBP4"
+              ]
+            }
+          ]
         }
       },
       "textarea": {

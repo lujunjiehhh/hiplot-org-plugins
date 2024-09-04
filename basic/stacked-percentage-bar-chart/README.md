@@ -2,7 +2,8 @@
 
 * Case Data Analysis
 
-  The case data represents the sales percentage of three different products in a shopping mall over the course of one week.
+  The case data represents the sales percentage of three different products in a shopping mall over the course of one
+  week.
 
 * Data Table
 

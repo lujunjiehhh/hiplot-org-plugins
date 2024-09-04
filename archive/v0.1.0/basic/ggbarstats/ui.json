@@ -7,7 +7,18 @@
     }
   },
   "dataArg": {
-    "datTable": [{"label": "X"}, {"label": "Y"}, {"label": "Group", "required": false}]
+    "datTable": [
+      {
+        "label": "X"
+      },
+      {
+        "label": "Y"
+      },
+      {
+        "label": "Group",
+        "required": false
+      }
+    ]
   },
   "general": {
     "imageExportType": {

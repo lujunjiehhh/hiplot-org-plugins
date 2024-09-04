@@ -3,7 +3,9 @@
     "zh_cn": "诺莫图 (逻辑回归)",
     "en": "Nomogram (Logistic)"
   },
-  "alias": ["Nomo-Diagram-Logistic"],
+  "alias": [
+    "Nomo-Diagram-Logistic"
+  ],
   "intro": {
     "zh_cn": "逻辑回归结果可视化",
     "en": "Logistic regression visualization"

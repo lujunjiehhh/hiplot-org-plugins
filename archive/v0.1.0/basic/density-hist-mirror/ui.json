@@ -28,8 +28,11 @@
       },
       "items": [
         "gaussian",
-        "rectangular", "triangular", "epanechnikov",
-        "biweight", "cosine",
+        "rectangular",
+        "triangular",
+        "epanechnikov",
+        "biweight",
+        "cosine",
         "optcosine"
       ],
       "if_func": "!this.params.config.extra.hist",

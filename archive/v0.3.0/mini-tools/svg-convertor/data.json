@@ -13,7 +13,10 @@
       "general": {
         "cmds": "",
         "taskname": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "cliMode": true
       }
     }

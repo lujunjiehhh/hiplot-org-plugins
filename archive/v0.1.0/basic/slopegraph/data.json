@@ -2,14 +2,29 @@
   "module": "basic",
   "tool": "slopegraph",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 7,
           "height": 5
@@ -25,7 +40,17 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "year" }, { "value": "lifeExp" }, { "value": "country" }]
+        "datTable": [
+          {
+            "value": "year"
+          },
+          {
+            "value": "lifeExp"
+          },
+          {
+            "value": "country"
+          }
+        ]
       },
       "general": {
         "title": "Slope Graph",

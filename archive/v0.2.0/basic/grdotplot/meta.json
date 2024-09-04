@@ -3,7 +3,9 @@
     "zh_cn": "分组排序点图",
     "en": "Group Rank Dotplot"
   },
-  "alias": ["Group-Rank-DotChart"],
+  "alias": [
+    "Group-Rank-DotChart"
+  ],
   "intro": {
     "zh_cn": "不同组别连续变量样本值及分布比较",
     "en": "Values distribution for different groups"

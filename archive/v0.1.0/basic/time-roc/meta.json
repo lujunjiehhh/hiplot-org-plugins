@@ -3,7 +3,9 @@
     "zh_cn": "时间依赖 ROC",
     "en": "Time ROC"
   },
-  "alias": ["Time-ROC"],
+  "alias": [
+    "Time-ROC"
+  ],
   "intro": {
     "zh_cn": "ROC 曲线",
     "en": "ROC curve with time"

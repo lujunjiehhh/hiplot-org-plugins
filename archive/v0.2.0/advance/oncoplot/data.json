@@ -23,12 +23,29 @@
         }
       },
       "dataArg": {
-        "1-mafData": [{ "value": "" }, {"value": "Hugo_Symbol"}, {"value": "Variant_Classification"}],
-        "2-metaData": [{ "value": "" }]
+        "1-mafData": [
+          {
+            "value": ""
+          },
+          {
+            "value": "Hugo_Symbol"
+          },
+          {
+            "value": "Variant_Classification"
+          }
+        ],
+        "2-metaData": [
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 11,
           "height": 10
@@ -80,16 +97,32 @@
       },
       "config": {
         "dataArg": {
-          "1-mafData": [{ "value": "" }],
-          "2-metaData": [{ "value": "" }]
+          "1-mafData": [
+            {
+              "value": ""
+            }
+          ],
+          "2-metaData": [
+            {
+              "value": ""
+            }
+          ]
         }
       }
     },
     {
       "config": {
         "dataArg": {
-          "1-mafData": [{ "value": "" }],
-          "2-metaData": [{ "value": "Overall_Survival_Status" }]
+          "1-mafData": [
+            {
+              "value": ""
+            }
+          ],
+          "2-metaData": [
+            {
+              "value": "Overall_Survival_Status"
+            }
+          ]
         },
         "extra": {
           "add_pathway_row": false
@@ -105,13 +138,33 @@
           }
         },
         "extra": {
-          "sample_class_order": [0, 1],
-          "gene_class_order": ["A", "B", "C", "D", "E", "F", "G", "H"],
+          "sample_class_order": [
+            0,
+            1
+          ],
+          "gene_class_order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
           "order_mode": "pathway_first_simple"
         },
         "dataArg": {
-          "1-mafData": [{ "value": "gene_class" }],
-          "2-metaData": [{ "value": "Overall_Survival_Status" }]
+          "1-mafData": [
+            {
+              "value": "gene_class"
+            }
+          ],
+          "2-metaData": [
+            {
+              "value": "Overall_Survival_Status"
+            }
+          ]
         }
       }
     },
@@ -124,14 +177,34 @@
           }
         },
         "extra": {
-          "sample_class_order": [0, 1],
-          "gene_class_order": ["A", "B", "C", "D", "E", "F", "G", "H"],
+          "sample_class_order": [
+            0,
+            1
+          ],
+          "gene_class_order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
           "order_mode": "pathway_first",
           "add_pathway_row": true
         },
         "dataArg": {
-          "1-mafData": [{ "value": "gene_class" }],
-          "2-metaData": [{ "value": "Overall_Survival_Status" }]
+          "1-mafData": [
+            {
+              "value": "gene_class"
+            }
+          ],
+          "2-metaData": [
+            {
+              "value": "Overall_Survival_Status"
+            }
+          ]
         }
       }
     },

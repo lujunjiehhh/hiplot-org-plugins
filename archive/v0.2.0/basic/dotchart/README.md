@@ -10,5 +10,6 @@
 
 - Interpretation of case statistics graphics
 
-  Each color represents a different grouping, so that the differences in gene expression values can be intuitively understood.
+  Each color represents a different grouping, so that the differences in gene expression values can be intuitively
+  understood.
 

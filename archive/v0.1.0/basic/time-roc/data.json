@@ -2,11 +2,17 @@
   "module": "basic",
   "tool": "time-roc",
   "params": {
-    "textarea": { "1-datTable": "", "2-timeTable": "" },
+    "textarea": {
+      "1-datTable": "",
+      "2-timeTable": ""
+    },
     "config": {
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 4.5,
           "height": 3.5

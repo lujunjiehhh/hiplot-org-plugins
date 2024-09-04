@@ -28,7 +28,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -57,7 +59,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       aes_(x = as.name(colnames(data[1])), y = as.name(colnames(data[2])))
     ) +
       geom_point(size = conf$extra$point_size,
-      alpha = alpha_usr, aes(group = group_add_by_code)) +
+                 alpha = alpha_usr, aes(group = group_add_by_code)) +
       guides(fill = F) +
       ggtitle(conf$general$title)
   } else {
@@ -77,7 +79,7 @@ pacman::p_load(pkgs, character.only = TRUE)
         ggtitle(conf$general$title)
 
       if (length(unique(data[[3]])) > 6) {
-        p <- p + scale_shape_manual(values=0:25)
+        p <- p + scale_shape_manual(values = 0:25)
       }
 
     } else {
@@ -95,7 +97,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   ## add color palette
   p <- p + return_hiplot_palette_color(conf$general$palette,
-    conf$general$paletteCustom)
+                                       conf$general$paletteCustom)
 
   ## add theme
   theme <- conf$general$theme

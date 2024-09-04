@@ -3,7 +3,9 @@
     "zh_cn": "议会图",
     "en": "Parliament"
   },
-  "alias": ["Rainbow-Scatter"],
+  "alias": [
+    "Rainbow-Scatter"
+  ],
   "intro": {
     "zh_cn": "展示数据占比",
     "en": "Display the data ratio"

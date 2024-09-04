@@ -8,7 +8,9 @@
         "en": "Files"
       },
       "icon": "mdi-file",
-      "exts": ["svg"],
+      "exts": [
+        "svg"
+      ],
       "enable-download": true,
       "enable-preview": true,
       "enable-upload": true

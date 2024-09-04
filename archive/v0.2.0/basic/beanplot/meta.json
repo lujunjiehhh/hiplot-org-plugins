@@ -3,7 +3,9 @@
     "zh_cn": "豆荚图",
     "en": "Beanplot"
   },
-  "alias": ["Base-Beanplot"],
+  "alias": [
+    "Base-Beanplot"
+  ],
   "intro": {
     "zh_cn": "展示组间差异",
     "en": "Display differences between groups"

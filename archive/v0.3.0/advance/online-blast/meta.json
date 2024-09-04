@@ -3,7 +3,9 @@
     "zh_cn": "在线 Blast",
     "en": "Online Blast"
   },
-  "alias": ["Online-Blast"],
+  "alias": [
+    "Online-Blast"
+  ],
   "intro": {
     "zh_cn": "序列比对分析",
     "en": "Sequence alignments analysis"

@@ -44,8 +44,11 @@
       },
       "items": [
         "gaussian",
-        "rectangular", "triangular", "epanechnikov",
-        "biweight", "cosine",
+        "rectangular",
+        "triangular",
+        "epanechnikov",
+        "biweight",
+        "cosine",
         "optcosine"
       ],
       "class": "col-12 col-md-4"

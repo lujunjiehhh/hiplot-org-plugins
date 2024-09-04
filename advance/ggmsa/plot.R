@@ -41,7 +41,9 @@ pacman::p_load(pkgs, character.only = TRUE)
     }
     params[[i]] <- conf$extra[[i]]
   }
-  p <- do.call(ggmsa, params) + geom_seqlogo() + geom_msaBar()
+  p <- do.call(ggmsa, params) +
+    geom_seqlogo() +
+    geom_msaBar()
 }
 
 ############# Section 3 #############

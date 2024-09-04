@@ -2,14 +2,23 @@
   "module": "basic",
   "tool": "treeheatr",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": ""}]
+        "datTable": [
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 6,
           "height": 3
@@ -31,7 +40,11 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "species" }]
+        "datTable": [
+          {
+            "value": "species"
+          }
+        ]
       }
     },
     "textarea": {

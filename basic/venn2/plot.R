@@ -38,17 +38,18 @@ pacman::p_load(pkgs, character.only = TRUE)
   params$opacity <- conf$general$alpha
   params$ggplot <- TRUE
   params$zcolor <- get_hiplot_color(conf$general$palette, length(data_venn),
-        conf$general$paletteCustom)
-  p <- as.ggplot(function(){
+                                    conf$general$paletteCustom)
+  p <- as.ggplot(function() {
     print(do.call(venn, params))
-  }) + ggtitle(conf$general$title) +
-  theme(plot.title = element_text(hjust = 0.5))
+  }) +
+    ggtitle(conf$general$title) +
+    theme(plot.title = element_text(hjust = 0.5))
 
   venn_partitions <- VennDiagram::get.venn.partitions(data_venn)
   wb <- createWorkbook()
   addWorksheet(wb, "venn_partitions")
   writeData(wb, "venn_partitions", venn_partitions,
-    colNames = TRUE, rowNames = FALSE
+            colNames = TRUE, rowNames = FALSE
   )
 }
 

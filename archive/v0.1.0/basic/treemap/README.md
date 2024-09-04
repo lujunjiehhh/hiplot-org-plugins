@@ -6,7 +6,7 @@
 
 - Analysis of case data
 
-  The loaded data are  different groups and their data.
+  The loaded data are different groups and their data.
 
 - Interpretation of case statistics graphics
 

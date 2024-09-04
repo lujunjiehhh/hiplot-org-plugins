@@ -3,7 +3,9 @@
     "zh_cn": "线图（误差线）",
     "en": "Line (errorbar)"
   },
-  "alias": ["Line-Errorbar"],
+  "alias": [
+    "Line-Errorbar"
+  ],
   "intro": {
     "zh_cn": "展示变量间关系",
     "en": "Display the variables"

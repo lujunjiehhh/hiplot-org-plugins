@@ -3,7 +3,9 @@
     "zh_cn": "滑珠图",
     "en": "Dotchart"
   },
-  "alias": ["Dot-Chart"],
+  "alias": [
+    "Dot-Chart"
+  ],
   "intro": {
     "zh_cn": "常用数据展示方式",
     "en": "Common way to show digital dramas"

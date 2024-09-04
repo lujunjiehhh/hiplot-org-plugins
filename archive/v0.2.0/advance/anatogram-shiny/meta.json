@@ -3,7 +3,9 @@
     "zh_cn": "Anatogram Shiny",
     "en": "Anatogram Shiny"
   },
-  "alias": ["Anatomical-Map"],
+  "alias": [
+    "Anatomical-Map"
+  ],
   "intro": {
     "zh_cn": "解剖医学图绘制",
     "en": "Anatogram"

@@ -29,9 +29,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   print(conf$extra$perplexity)
   print(conf$extra$theta)
   tsne_info <- Rtsne(t(data),
-    perplexity = conf$extra$perplexity,
-    theta = conf$extra$theta,
-    check_duplicates = FALSE
+                     perplexity = conf$extra$perplexity,
+                     theta = conf$extra$theta,
+                     check_duplicates = FALSE
   )
   colnames(tsne_info$Y) <- c("tSNE_1", "tSNE_2")
 
@@ -47,7 +47,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     colorBy <- sample.info[match(colnames(data), sample.info[, 1]), axis[1]]
     colorBy <- factor(colorBy,
-    level = colorBy[!duplicated(colorBy)])
+                      level = colorBy[!duplicated(colorBy)])
     tsne_data$colorBy = colorBy
   }
   if (is.null(axis[2]) ||
@@ -66,7 +66,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   params <- list(data = tsne_data, x = "tSNE_1", y = "tSNE_2",
-    size = 2, palette = "lancet")
+                 size = 2, palette = "lancet")
 
   if (!is.null(axis[1]) && axis[1] != "") {
     params$color = "colorBy"
@@ -79,10 +79,11 @@ pacman::p_load(pkgs, character.only = TRUE)
     ggtitle(conf$general$title)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## set theme
   theme <- conf$general$theme

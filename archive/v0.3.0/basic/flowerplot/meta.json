@@ -3,7 +3,9 @@
     "zh_cn": "花瓣图",
     "en": "Flower plot"
   },
-  "alias": ["Base-Flowerplot"],
+  "alias": [
+    "Base-Flowerplot"
+  ],
   "intro": {
     "zh_cn": "绘制多集合花瓣图",
     "en": "Flower plot with multiple sets"

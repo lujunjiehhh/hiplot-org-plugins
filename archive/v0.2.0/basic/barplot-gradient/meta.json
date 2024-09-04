@@ -3,7 +3,9 @@
     "zh_cn": "渐变柱状图",
     "en": "Barplot Gradient"
   },
-  "alias": ["GOterm-Bar"],
+  "alias": [
+    "GOterm-Bar"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

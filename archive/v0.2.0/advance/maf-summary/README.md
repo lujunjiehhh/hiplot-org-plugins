@@ -2,32 +2,31 @@
 
 - ### Function Introduction
 
-    Mutation Annotation Format (MAF) Summary and Visualization.
-    
+  Mutation Annotation Format (MAF) Summary and Visualization.
+
 - ### Data Structure
 
-    MAF format: Mutation Annotation Format.
-    
-    
+  MAF format: Mutation Annotation Format.
+
+
 - ### Parameters Details
 
-    **Upload | Download**
-    
-    Browser: users can read and upload local computer files
-    
-    Example Download: sample data download
-    
-    Result Download: the result image or all files are compressed and downloaded
-    
-    Width: the width of the output image (the default is inches, such as 12 x 7 inch in the standard)
-    
-    Height: the height of the output image (the default is inches, such as 12 x 7 inch)
-    
-    DPI: image resolution (300dpi is higher image quality by default)
-    
-    Format: image format selection, all images provide PDF, PNG and other major scientific research formats
-    
-    
+  **Upload | Download**
+
+  Browser: users can read and upload local computer files
+
+  Example Download: sample data download
+
+  Result Download: the result image or all files are compressed and downloaded
+
+  Width: the width of the output image (the default is inches, such as 12 x 7 inch in the standard)
+
+  Height: the height of the output image (the default is inches, such as 12 x 7 inch)
+
+  DPI: image resolution (300dpi is higher image quality by default)
+
+  Format: image format selection, all images provide PDF, PNG and other major scientific research formats
+
     **Calculation | drawing**
     
     Title: the title of the image, which can replace the default title of the image
@@ -66,9 +65,8 @@
     Main beautification parameters: https://ggplot2.tidyverse.org/reference/
     
     For more special parameters, please refer to: https://ggplot2.tidyverse.org/reference/theme.html
-    
 
 - ### Reference Packages
 
-    maftools: (Maintainer: Anand Mayakonda <anand_mt@hotmail.com>)
+  maftools: (Maintainer: Anand Mayakonda <anand_mt@hotmail.com>)
 

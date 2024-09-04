@@ -28,25 +28,25 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     print("Error: Input data should be at least 2 columns!")
   }
-  
+
   # set the start angle of rotation in degress
   # angle <- conf$extra$angle
-  
+
   # set the radii of the ellipses along the x-axes
   # a <- conf$extra$a
-  
+
   # set the radii of the ellipses along the y-axes
   # b <- conf$extra$b
-  
+
   # set the radius of the circle
   # r <- conf$extra$r
-  
+
   # set the radius of the central circle
   # circle_col <- conf$extra$circle_col
-  
+
   # set the label text cex
   # lab_size <- conf$extra$label_text_cex
-  
+
   # set the color palettes
   # The diverging palettes are: BrBG PiYG PRGn PuOr RdBu RdGy RdYlBu RdYlGn Spectral
   # ellipse_col_pal <- conf$general$paletteCont
@@ -64,17 +64,17 @@ pacman::p_load(pkgs, character.only = TRUE)
     ellipse_col <- get_hiplot_color(conf$general$palette, -1, conf$general$paletteCustom)
   }
   # Make the flower plot
-  p <- as.ggplot(function(){
+  p <- as.ggplot(function() {
     flowerplot(
-    flower_dat = data,
-    angle = conf$extra$angle,
-    a = conf$extra$a,
-    b = conf$extra$b,
-    r = conf$extra$r,
-    ellipse_col = ellipse_col,
-    circle_col = conf$extra$circle_col,
-    label_text_cex = conf$extra$label_text_cex
-  )})
+      flower_dat = data,
+      angle = conf$extra$angle,
+      a = conf$extra$a,
+      b = conf$extra$b,
+      r = conf$extra$r,
+      ellipse_col = ellipse_col,
+      circle_col = conf$extra$circle_col,
+      label_text_cex = conf$extra$label_text_cex
+    ) })
 }
 
 ############# Section 3 #############

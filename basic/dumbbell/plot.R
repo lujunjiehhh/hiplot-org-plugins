@@ -28,21 +28,22 @@ pacman::p_load(pkgs, character.only = TRUE)
        aes(y = reorder(%s, %s),
            x = %s,
            xend = %s))", colnames(data)[1],
-           colnames(data)[2], colnames(data)[2],
-           colnames(data)[3])
+                            colnames(data)[2], colnames(data)[2],
+                            colnames(data)[3])
   ))
   colors <- get_hiplot_color(conf$general$palette, -1, conf$general$paletteCustom)
-  p <- p + geom_dumbbell(size = conf$extra$line_size,
-                size_x = conf$extra$point_size, 
-                size_xend = conf$extra$point_size,
-                colour = conf$extra$line_color, 
-                colour_x = colors[1], 
-                colour_xend = colors[2]) +
-  labs(
-    title = conf$general$title,
-    x = conf$general$xlab,
-    y = colnames(data)[1]
-  )
+  p <- p +
+    geom_dumbbell(size = conf$extra$line_size,
+                  size_x = conf$extra$point_size,
+                  size_xend = conf$extra$point_size,
+                  colour = conf$extra$line_color,
+                  colour_x = colors[1],
+                  colour_xend = colors[2]) +
+    labs(
+      title = conf$general$title,
+      x = conf$general$xlab,
+      y = colnames(data)[1]
+    )
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

@@ -33,13 +33,13 @@
   data[, 1] <- capitalize(str_remove(data[, 1], pattern = "\\w+:\\d+\\W"))
   if (is.character(conf$extra$transform) && conf$extra$transform != "") {
     ylab <- sprintf("%s (%s)", conf$extra$transform,
-        colnames(data)[2])
+                    colnames(data)[2])
   } else {
     ylab <- colnames(data)[2]
   }
   if (is.character(conf$extra$transform2) && conf$extra$transform2 != "") {
     cleg <- sprintf("%s (%s)", conf$extra$transform2,
-        colnames(data)[3])
+                    colnames(data)[3])
   } else {
     cleg <- colnames(data)[3]
   }
@@ -58,10 +58,10 @@
 {
   #data <- data[data[, 3] < 0.05, ]
   if (conf$extra$order_by_input) {
-    data <- data[1:conf$extra$topnum, ]
+    data <- data[1:conf$extra$topnum,]
     data[, 1] <- factor(data[, 1], level = rev(unique(data[, 1])))
   } else {
-    data <- data[order(data[1:conf$extra$topnum, 3]), ]
+    data <- data[order(data[1:conf$extra$topnum, 3]),]
     data[, 1] <- factor(data[, 1], level = unique(data[, 1]))
   }
   p <- ggplot(data, aes_(

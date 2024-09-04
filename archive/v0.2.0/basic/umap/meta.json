@@ -3,7 +3,9 @@
     "zh_cn": "UMAP",
     "en": "UMAP"
   },
-  "alias": ["Basic-UMAP"],
+  "alias": [
+    "Basic-UMAP"
+  ],
   "intro": {
     "zh_cn": "降维方法，常用于单细胞数据分析",
     "en": "Dimension reduction methods"

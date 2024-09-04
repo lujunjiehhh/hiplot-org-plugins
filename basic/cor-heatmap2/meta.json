@@ -3,7 +3,9 @@
     "zh_cn": "相关性热图 2",
     "en": "Correlation Heatmap 2"
   },
-  "alias": ["Cor-Heatmap2"],
+  "alias": [
+    "Cor-Heatmap2"
+  ],
   "intro": {
     "zh_cn": "相关性矩阵展示",
     "en": "Display of correlation matrix"

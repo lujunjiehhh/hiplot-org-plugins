@@ -3,7 +3,9 @@
     "zh_cn": "等高线图 (XY)",
     "en": "Contour (XY)"
   },
-  "alias": ["Map-Contour"],
+  "alias": [
+    "Map-Contour"
+  ],
   "intro": {
     "zh_cn": "展示海拔等信息",
     "en": "Display the altitude"

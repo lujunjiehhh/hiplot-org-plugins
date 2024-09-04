@@ -1,6 +1,6 @@
 ## [Gantt](/basic/gantt)
 
-- Introduction 
+- Introduction
 
   The Gantt chart is a type of bar chart that illustrates a project schedule.
 
@@ -10,5 +10,6 @@
 
 - Interpretation of case statistics graphics
 
-  The horizontal axis represents the time schedule, the vertical axis represents 4 patients, and the 3 colors represent 3 treatments. The figure can observe the time schedule of different treatments for each patient.
+  The horizontal axis represents the time schedule, the vertical axis represents 4 patients, and the 3 colors represent
+  3 treatments. The figure can observe the time schedule of different treatments for each patient.
 

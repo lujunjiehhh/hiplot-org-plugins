@@ -3,7 +3,9 @@
     "zh_cn": "雷达图",
     "en": "Radar"
   },
-  "alias": ["Radar-Chart"],
+  "alias": [
+    "Radar-Chart"
+  ],
   "intro": {
     "zh_cn": "展示技能强弱",
     "en": "Display the variables"

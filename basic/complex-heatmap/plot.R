@@ -22,7 +22,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 # input options, data and configuration section
 ##################################################
 {
-  keep_vars_ref <- ls() 
+  keep_vars_ref <- ls()
   row.names(data) <- data[, 1]
   data <- data[, -1]
   axis_raw <- conf$dataArg[[1]][[1]][["value"]]
@@ -36,7 +36,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   cols <- c()
   for (i in 1:nrow(data2)) {
-    cols[data2[i,1]] <- data2[i,2]
+    cols[data2[i, 1]] <- data2[i, 2]
   }
   col_meta <- list()
   col_meta_pre <- list()
@@ -45,7 +45,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     ref <- unique(data[, i])
     ref <- ref[!is.na(ref) & ref != ""]
     if (any(is.numeric(ref)) & length(ref) > 2) {
-      col_meta_pre[[colnames(data)[i]]] <- col_fun_cont(data[,i])
+      col_meta_pre[[colnames(data)[i]]] <- col_fun_cont(data[, i])
     } else if (length(ref) == 2 & any(is.numeric(ref))) {
       col_meta_pre[[colnames(data)[i]]] <- col_tag
       items <- c(items, ref)
@@ -104,21 +104,21 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   ha <- do.call(HeatmapAnnotation, params)
   hlist <- Heatmap(heat_mat,
-        col = col_fun_cont(heat_mat, cols = conf$extra$color_key),
-        name = "Expression",
-        gap = 0,
-        clustering_distance_columns = conf$extra$hc_distance_cols,
-        clustering_distance_rows = conf$extra$hc_distance_rows,
-        clustering_method_columns = conf$extra$hc_method,
-        show_row_dend = TRUE, show_column_dend = TRUE,
-        show_row_names = FALSE,
-        row_title_gp = gpar(col = "#FFFFFF00"),
-        cluster_rows = TRUE,
-        cluster_columns = TRUE,
-        bottom_annotation = ha,
-        show_heatmap_legend = TRUE,
-        heatmap_legend_param = list(direction = "horizontal")
-      )
+                   col = col_fun_cont(heat_mat, cols = conf$extra$color_key),
+                   name = "Expression",
+                   gap = 0,
+                   clustering_distance_columns = conf$extra$hc_distance_cols,
+                   clustering_distance_rows = conf$extra$hc_distance_rows,
+                   clustering_method_columns = conf$extra$hc_method,
+                   show_row_dend = TRUE, show_column_dend = TRUE,
+                   show_row_names = FALSE,
+                   row_title_gp = gpar(col = "#FFFFFF00"),
+                   cluster_rows = TRUE,
+                   cluster_columns = TRUE,
+                   bottom_annotation = ha,
+                   show_heatmap_legend = TRUE,
+                   heatmap_legend_param = list(direction = "horizontal")
+  )
   p1 <- as.ggplot(
     function() {
       p <- draw(hlist, annotation_legend_side = "right", heatmap_legend_side = "top")
@@ -131,23 +131,23 @@ pacman::p_load(pkgs, character.only = TRUE)
   p2 <- as.ggplot(
     function() {
       params <- list(mut_mat,
-        get_type = function(x) strsplit(x, "/")[[1]],
-        alter_fun = alter_fun, col = cols, row_order = 1:nrow(mut_mat),
-        show_column_names = TRUE,
-        show_pct = TRUE,
-        right_annotation = NULL,
-        top_annotation = NULL,
-        border = TRUE,
-        heatmap_legend_param = list(direction = "horizontal"),
-        show_heatmap_legend = FALSE)
+                     get_type = function(x) strsplit(x, "/")[[1]],
+                     alter_fun = alter_fun, col = cols, row_order = 1:nrow(mut_mat),
+                     show_column_names = TRUE,
+                     show_pct = TRUE,
+                     right_annotation = NULL,
+                     top_annotation = NULL,
+                     border = TRUE,
+                     heatmap_legend_param = list(direction = "horizontal"),
+                     show_heatmap_legend = FALSE)
       if (conf$extra$sync_mut_order) {
         params$column_order <- unlist(column_order(hlist))
       } else {
         mut_mat2 <- mut_mat
         for (i in 1:ncol(mut_mat)) {
-          mut_mat2[,i] <- sapply(strsplit(mut_mat2[,i], "/"), function(x) {
-            if (length(x) == 0) return (0)
-            if (is.na(x) | x == "0" | x == '') return (0)
+          mut_mat2[, i] <- sapply(strsplit(mut_mat2[, i], "/"), function(x) {
+            if (length(x) == 0) return(0)
+            if (is.na(x) | x == "0" | x == '') return(0)
             y <- cols[names(cols) %in% unique(mut_mat)]
             x <- sort(unique(x), decreasing = TRUE)
             sum(match(x, names(y))^2, na.rm = TRUE)
@@ -184,7 +184,7 @@ pacman::p_load(pkgs, character.only = TRUE)
           legend_gp = gpar(fill = col_meta_pre[[i]])
         )
       } else {
-         legend_tmp[[i]] <- Legend(
+        legend_tmp[[i]] <- Legend(
           at = unique(data[, i]), title = i,
           direction = "horizontal",
           legend_gp = gpar(fill = col_meta_pre[[i]])

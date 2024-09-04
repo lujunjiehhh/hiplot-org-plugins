@@ -3,7 +3,9 @@
     "zh_cn": "校准曲线",
     "en": "Calibration Curve"
   },
-  "alias": ["Calibration-Curve"],
+  "alias": [
+    "Calibration-Curve"
+  ],
   "intro": {
     "zh_cn": "评价模型一致性/校准度",
     "en": "calibration curve for models"

@@ -3,7 +3,9 @@
     "zh_cn": "金字塔堆叠图",
     "en": "Pyramid Stack2"
   },
-  "alias": ["Pyramid-Stack2"],
+  "alias": [
+    "Pyramid-Stack2"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

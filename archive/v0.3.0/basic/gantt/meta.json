@@ -3,7 +3,9 @@
     "zh_cn": "甘特图",
     "en": "Gantt"
   },
-  "alias": ["Gantt-Graph"],
+  "alias": [
+    "Gantt-Graph"
+  ],
   "intro": {
     "zh_cn": "内在关系随着时间进展的情况",
     "en": "Display the flow data"

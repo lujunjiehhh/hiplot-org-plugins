@@ -33,7 +33,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -78,8 +80,8 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # Compute a good label
   data$label <- paste0(data[, 1], "\n",
-    "(", data[, 2], ", ", sprintf("%2.2f%%", 100 * data[, 2] / sum(data[, 2])), ")",
-    sep = ""
+                       "(", data[, 2], ", ", sprintf("%2.2f%%", 100 * data[, 2] / sum(data[, 2])), ")",
+                       sep = ""
   )
 
   # plot
@@ -95,13 +97,13 @@ pacman::p_load(pkgs, character.only = TRUE)
     ggtitle(conf$general$title) +
     theme(plot.title = element_text(hjust = 0.5)) +
     scale_fill_manual(values = add_alpha(get_hiplot_color(conf$general$palette,
-      nrow(data), conf$general$paletteCustom), alpha_usr))
+                                                          nrow(data), conf$general$paletteCustom), alpha_usr))
 
   # show labels
   if (lab.show) {
     p <- p +
       geom_text(x = 5 + (4 - conf$extra$width) / 3,
-      aes(y = labelPosition, label = label), size = 4) +
+                aes(y = labelPosition, label = label), size = 4) +
       theme(legend.position = "none")
   }
 }

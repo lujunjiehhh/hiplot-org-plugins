@@ -2,36 +2,35 @@
 
 - ### 功能介绍
 
-    冗余分析（RDA）是回归分析与主成分分析相结合的一种分类方法，也是多元响应回归分析的推广。
-    
+  冗余分析（RDA）是回归分析与主成分分析相结合的一种分类方法，也是多元响应回归分析的推广。
+
 - ### 数据结构
 
-    \<1st table\>：（数据框）物种数据
-    
-    \<2nd table\>：（数据框）环境数据
-    
-    \<3rd table\>：（数据框）简单分组数据。
-    
+  \<1st table\>：（数据框）物种数据
+
+  \<2nd table\>：（数据框）环境数据
+
+  \<3rd table\>：（数据框）简单分组数据。
+
 
 - ### 参数详解
-    
-    **上传|下载**
-    
-    Browser: 用户本地电脑文件读取并上传
-    
-    Example Download: 示例数据下载
-    
-    Result Download: 结果图像或者所有文件压缩下载
-    
-    Width: 输出图像的宽度（默认为英寸如标准为12 x 7 inch）
-    
-    Height: 输出图像的高度（默认为英寸如标准为12 x 7 inch）
-    
-    DPI: 图像分辨率（默认300dpi为较高图像质量）
-    
-    Format: 图像格式选择，所有图像提供PDF，PNG等主要科研需要格式
-    
-    
+
+  **上传|下载**
+
+  Browser: 用户本地电脑文件读取并上传
+
+  Example Download: 示例数据下载
+
+  Result Download: 结果图像或者所有文件压缩下载
+
+  Width: 输出图像的宽度（默认为英寸如标准为12 x 7 inch）
+
+  Height: 输出图像的高度（默认为英寸如标准为12 x 7 inch）
+
+  DPI: 图像分辨率（默认300dpi为较高图像质量）
+
+  Format: 图像格式选择，所有图像提供PDF，PNG等主要科研需要格式
+
     **计算|绘图**
     
     Title: 图像的标题，可以替换图像默认的标题
@@ -70,8 +69,7 @@
     主要美化参数：https://ggplot2.tidyverse.org/reference/
     
     更多特殊参数可以参考：https://ggplot2.tidyverse.org/reference/theme.html
-    
-    
+
 - ### 引用模块
-    
-    vegan: (Maintainer: Jari Oksanen \<jhoksane@gmail.com\>)
+
+  vegan: (Maintainer: Jari Oksanen \<jhoksane@gmail.com\>)

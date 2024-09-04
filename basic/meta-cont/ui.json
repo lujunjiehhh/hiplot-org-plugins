@@ -39,7 +39,11 @@
         "zh_cn": "布局"
       },
       "class": "col-12",
-      "items": ["meta", "RevMan5", "JAMA"]
+      "items": [
+        "meta",
+        "RevMan5",
+        "JAMA"
+      ]
     }
   }
 }

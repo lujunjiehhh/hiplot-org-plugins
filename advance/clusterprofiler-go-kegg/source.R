@@ -1,27 +1,27 @@
-pkgs <- c("clusterProfiler", "DOSE", "enrichplot", "ggplot2", 
-  "openxlsx", "ReactomePA", "AnnotationHub", "MeSHDbi", "meshes")
+pkgs <- c("clusterProfiler", "DOSE", "enrichplot", "ggplot2",
+          "openxlsx", "ReactomePA", "AnnotationHub", "MeSHDbi", "meshes")
 pacman::p_load(pkgs, character.only = TRUE)
 
 species = list("org.Ag.eg.db" = "Arabidopsis",
-        "org.At.tair.db" = "Arabidopsis thaliana",
-        "org.Bt.eg.db" = "Bovine",
-        "org.Ce.eg.db" = "Annelida",
-        "org.Cf.eg.db" = "Canis lupus familiaris",
-        "org.Dm.eg.db" = "Diptera",
-        "org.Dr.eg.db" = "Danio rerio",
-        "org.EcK12.eg.db" = "E coli strain K12",
-        "org.EcSakai.eg.db" = "E coli strain Sakai",
-        "org.Gg.eg.db" = "Chicken",
-        "org.Hs.eg.db" = "Homo sapiens",
-        "org.Mm.eg.db" = "Mouse",
-        "org.Mmu.eg.db" = "Mus musculus",
-        "org.Mxanthus.db" = "Myxococcus xanthus DK 1622",
-        "org.Pf.plasmo.db" = "Plasmodium falciparum",
-        "org.Pt.eg.db" = "Pan troglodytes",
-        "org.Rn.eg.db" = "Rattus",
-        "org.Sc.sgd.db" = "Saccharomyces cerevisiae",
-        "org.Ss.eg.db" = "Sus domesticus",
-        "org.Xl.eg.db" = "Xenopus laevis")
+               "org.At.tair.db" = "Arabidopsis thaliana",
+               "org.Bt.eg.db" = "Bovine",
+               "org.Ce.eg.db" = "Annelida",
+               "org.Cf.eg.db" = "Canis lupus familiaris",
+               "org.Dm.eg.db" = "Diptera",
+               "org.Dr.eg.db" = "Danio rerio",
+               "org.EcK12.eg.db" = "E coli strain K12",
+               "org.EcSakai.eg.db" = "E coli strain Sakai",
+               "org.Gg.eg.db" = "Chicken",
+               "org.Hs.eg.db" = "Homo sapiens",
+               "org.Mm.eg.db" = "Mouse",
+               "org.Mmu.eg.db" = "Mus musculus",
+               "org.Mxanthus.db" = "Myxococcus xanthus DK 1622",
+               "org.Pf.plasmo.db" = "Plasmodium falciparum",
+               "org.Pt.eg.db" = "Pan troglodytes",
+               "org.Rn.eg.db" = "Rattus",
+               "org.Sc.sgd.db" = "Saccharomyces cerevisiae",
+               "org.Ss.eg.db" = "Sus domesticus",
+               "org.Xl.eg.db" = "Xenopus laevis")
 
 ref_mode <- list(
   BP = "enrichGO", MF = "enrichGO", CC = "enrichGO",
@@ -44,9 +44,9 @@ ref_title <- list(
 
 get_species <- function(x) {
   if (x %in% names(species)) {
-    return (species[[x]])
+    return(species[[x]])
   } else {
-    return (x)
+    return(x)
   }
 }
 
@@ -54,14 +54,14 @@ run_go_kegg <- function(data, conf) {
   # convert id
   if (str_detect(data[1], "^ENS")) {
     entrezid <- bitr(data,
-      fromType = "ENSEMBL", toType = "ENTREZID",
-      OrgDb = org_db, drop = T
+                     fromType = "ENSEMBL", toType = "ENTREZID",
+                     OrgDb = org_db, drop = T
     )
     data <- entrezid[, 2]
   } else if (str_detect(data[1], "^[A-Za-z]")) {
     entrezid <- bitr(unique(c(data, toupper(data))),
-      fromType = "SYMBOL", toType = "ENTREZID",
-      OrgDb = org_db, drop = T
+                     fromType = "SYMBOL", toType = "ENTREZID",
+                     OrgDb = org_db, drop = T
     )
     data <- entrezid[, 2]
   }
@@ -104,9 +104,9 @@ run_go_kegg <- function(data, conf) {
     enrich_res[[i]] <- eval(parse(text = cmd))
     if (i %in% c("KEGG", "WikiPathways", "MeSH")) {
       ref <- tryCatch(bitr(enrich_res[[i]]@gene,
-        fromType = "ENTREZID", toType = "SYMBOL",
-        OrgDb = org_db, drop = T
-      ), error = function(e) {})
+                           fromType = "ENTREZID", toType = "SYMBOL",
+                           OrgDb = org_db, drop = T
+      ), error = function(e) { })
       if (!is.null(ref)) {
         final <- ref[, 2]
         names(final) <- ref[, 1]
@@ -147,7 +147,9 @@ plot_grid_enrich_res <- function(pobj) {
   if (is.null(p)) {
     p <- ggplot()
   } else {
-    p <- p + plot_layout(ncol = 1) +  plot_annotation(tag_levels = 'A')
+    p <- p +
+      plot_layout(ncol = 1) +
+      plot_annotation(tag_levels = 'A')
   }
   return(p)
 }
@@ -158,11 +160,11 @@ plot_enrich_res <- function(res, title) {
   for (i in names(res)) {
     pobj[[i]] <- tryCatch({
       dotplot(res[[i]], showCategory = conf$extra$showCategory, orderBy = "x") +
-      ggtitle(ref_title[[i]])
-    }, error = function(e) {ggplot()}, warning = function(w) {ggplot()})
+        ggtitle(ref_title[[i]])
+    }, error = function(e) { ggplot() }, warning = function(w) { ggplot() })
     pobj[[i]] <- tryCatch({
-      pobj[[i]] + scale_y_discrete(labels = function(x) {str_wrap(x, width = 65)})
-    }, error = function(e){ggplot()}, warning = function(w) {ggplot()})
+      pobj[[i]] + scale_y_discrete(labels = function(x) { str_wrap(x, width = 65) })
+    }, error = function(e) { ggplot() }, warning = function(w) { ggplot() })
     pobj[[i]] <- choose_ggplot_theme(pobj[[i]], theme)
   }
   p <- plot_grid_enrich_res(pobj) + plot_annotation(title = title)
@@ -173,11 +175,11 @@ plot_enrich_res <- function(res, title) {
     for (i in names(res)) {
       pobj1[[i]] <- tryCatch({
         barplot(res[[i]], showCategory = conf$extra$showCategory) +
-        ggtitle(ref_title[[i]])
-      }, error = function(e) {ggplot()}, warning = function(w) {ggplot()})
+          ggtitle(ref_title[[i]])
+      }, error = function(e) { ggplot() }, warning = function(w) { ggplot() })
       pobj1[[i]] <- tryCatch({
-        pobj1[[i]] + scale_y_discrete(labels = function(x) {str_wrap(x, width = 65)})
-      }, error = function(e){ggplot()}, warning = function(w) {ggplot()})
+        pobj1[[i]] + scale_y_discrete(labels = function(x) { str_wrap(x, width = 65) })
+      }, error = function(e) { ggplot() }, warning = function(w) { ggplot() })
       pobj1[[i]] <- choose_ggplot_theme(pobj1[[i]], theme)
     }
     p1 <- plot_grid_enrich_res(pobj1) + plot_annotation(title = title)
@@ -188,7 +190,7 @@ plot_enrich_res <- function(res, title) {
   if (conf$extra$drawEnrichmentMap) {
     for (i in names(res)) {
       pobj2[[i]] <- tryCatch(emapplot(pairwise_termsim(res[[i]]),
-        layout = "kk"
+                                      layout = "kk"
       ) + ggtitle(ref_title[[i]]), error = function(e) {
         return(ggplot())
       })
@@ -202,13 +204,14 @@ plot_enrich_res <- function(res, title) {
   if (conf$extra$drawCnetPlot) {
     for (i in names(res)) {
       pobj3[[i]] <- tryCatch(cnetplot(pairwise_termsim(res[[i]]),
-        circular = TRUE, colorEdge = TRUE,
-        showCategory = conf$extra$showCategory
-      ) + ggtitle(ref_title[[i]]) +
-        return_hiplot_palette_color(conf$general$palette,
-          conf$general$paletteCustom) +
-        return_hiplot_palette(conf$general$palette,
-          conf$general$paletteCustom), error = function(e) {
+                                      circular = TRUE, colorEdge = TRUE,
+                                      showCategory = conf$extra$showCategory
+      ) +
+                               ggtitle(ref_title[[i]]) +
+                               return_hiplot_palette_color(conf$general$palette,
+                                                           conf$general$paletteCustom) +
+                               return_hiplot_palette(conf$general$palette,
+                                                     conf$general$paletteCustom), error = function(e) {
         return(ggplot())
       })
       pobj3[[i]] <- choose_ggplot_theme(pobj3[[i]], theme)
@@ -221,17 +224,17 @@ plot_enrich_res <- function(res, title) {
   if (!is.null(conf$extra$drawTreePlot) && conf$extra$drawTreePlot) {
     for (i in names(res)) {
       pobj4[[i]] <- tryCatch(treeplot(pairwise_termsim(res[[i]]),
-        hclust_method = conf$extra$hclustMethod,
-        nClusterTree = conf$extra$nClusterTree,
-        hilight = conf$extra$hilightTree,
-        group_color = get_hiplot_color(conf$general$palette,
-          conf$extra$nClusterTree, conf$general$paletteCustom)
+                                      hclust_method = conf$extra$hclustMethod,
+                                      nClusterTree = conf$extra$nClusterTree,
+                                      hilight = conf$extra$hilightTree,
+                                      group_color = get_hiplot_color(conf$general$palette,
+                                                                     conf$extra$nClusterTree, conf$general$paletteCustom)
       ) + ggtitle(ref_title[[i]]), error = function(e) {
         return(ggplot())
       }) + theme(
         text = element_text(
           family = conf$general$font
-      ))
+        ))
       pobj2[[i]] <- choose_ggplot_theme(pobj2[[i]], theme)
     }
     p4 <- plot_grid_enrich_res(pobj4) + plot_annotation(title = title)

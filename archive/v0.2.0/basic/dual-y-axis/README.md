@@ -6,7 +6,8 @@ The dual Y-axis graph can put two groups of data with larger orders of magnitude
 
 - Analysis of case data
 
-The loaded data is divided into three columns, the first column is the value of the x-axis, the second column is the value of the left Y-axis, and the third column is the value of the right Y-axis.
+The loaded data is divided into three columns, the first column is the value of the x-axis, the second column is the
+value of the left Y-axis, and the third column is the value of the right Y-axis.
 
 - Interpretation of case statistics graphics
 

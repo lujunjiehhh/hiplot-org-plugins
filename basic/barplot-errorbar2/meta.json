@@ -3,7 +3,9 @@
     "zh_cn": "误差线柱状图2",
     "en": "Barplot (errorbar2)"
   },
-  "alias": ["Bar-Error2"],
+  "alias": [
+    "Bar-Error2"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

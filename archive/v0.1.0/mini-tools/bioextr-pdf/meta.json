@@ -3,7 +3,9 @@
     "zh_cn": "PDF 文本提取",
     "en": "PDF Text-Extract"
   },
-  "alias": ["PDF-Extract"],
+  "alias": [
+    "PDF-Extract"
+  ],
   "intro": {
     "zh_cn": "文本挖掘",
     "en": "Text mining"

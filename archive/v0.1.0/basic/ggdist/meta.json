@@ -3,7 +3,9 @@
     "zh_cn": "分布图",
     "en": "Dist Plot"
   },
-  "alias": ["Cloud-Rain"],
+  "alias": [
+    "Cloud-Rain"
+  ],
   "intro": {
     "zh_cn": "展示多数据分布关系",
     "en": "Display the data distribution"

@@ -31,7 +31,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   # check conf arguments
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -49,7 +51,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   for (i in 1:nrow(mat)) {
     for (j in seq_len(ncol(mat))) {
       mat[i, j] <- data[, 1][data[, 2] == rownames(mat)[i] &
-        data[, 3] == colnames(mat)[j]]
+                               data[, 3] == colnames(mat)[j]]
     }
   }
 
@@ -65,7 +67,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       ticktype = "detailed", space = 0.3, d = 2, cex.axis = 0.3,
       colvar = as.numeric(as.factor(data[, 2])), alpha = conf$general$alpha,
       col = get_hiplot_color(conf$general$palette, length(unique(data[, 2])),
-        conf$general$paletteCustom)
+                             conf$general$paletteCustom)
     )
 
     # Use text3D to label x axis

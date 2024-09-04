@@ -3,7 +3,9 @@
     "zh_cn": "Fusion-Circlize",
     "en": "Fusion-Circlize"
   },
-  "alias": ["Multi-Fusion"],
+  "alias": [
+    "Multi-Fusion"
+  ],
   "intro": {
     "zh_cn": "融合基因可视化",
     "en": "Visualization of fusion genes"

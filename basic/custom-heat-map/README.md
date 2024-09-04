@@ -12,7 +12,8 @@ Custom Heatmap, directly plot a heatmap based on the given data.
 
   The first row represents the column headers, and each subsequent row contains specific data.
 
-  The title of the first column is `name`, please do not modify this column header (`name`), each subsequent row represents the row names.
+  The title of the first column is `name`, please do not modify this column header (`name`), each subsequent row
+  represents the row names.
 
 - Special Parameters
 

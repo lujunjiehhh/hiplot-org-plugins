@@ -22,8 +22,8 @@
       },
       {
         "label": {
-        "en": "Transformed Color Column",
-        "zh_cn": "变换颜色映射列"
+          "en": "Transformed Color Column",
+          "zh_cn": "变换颜色映射列"
         }
       }
     ]
@@ -57,7 +57,14 @@
         "zh_cn": "变换函数"
       },
       "class": "col-12 col-md-6",
-      "items": ["-log10", "-log2", "-exp", "exp", "log2", "log10"]
+      "items": [
+        "-log10",
+        "-log2",
+        "-exp",
+        "exp",
+        "log2",
+        "log10"
+      ]
     },
     "pq_value": {
       "type": "combobox",
@@ -66,7 +73,11 @@
         "zh_cn": "颜色图例标题"
       },
       "class": "col-12 col-md-6",
-      "items": ["Q Value", "P Value", "FDR"]
+      "items": [
+        "Q Value",
+        "P Value",
+        "FDR"
+      ]
     },
     "show_percent": {
       "type": "switch",

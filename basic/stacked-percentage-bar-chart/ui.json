@@ -21,7 +21,7 @@
     ]
   },
   "extra": {
-    "x_label" : {
+    "x_label": {
       "type": "text-field",
       "label": {
         "en": "X Label",
@@ -29,7 +29,7 @@
       },
       "class": "col-12 col-md-6"
     },
-    "y_label" : {
+    "y_label": {
       "type": "text-field",
       "label": {
         "en": "Y Label",

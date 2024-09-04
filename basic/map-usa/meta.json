@@ -3,7 +3,9 @@
     "zh_cn": "美国地图 (州)",
     "en": "USA Map (States)"
   },
-  "alias": ["USA-States"],
+  "alias": [
+    "USA-States"
+  ],
   "intro": {
     "zh_cn": "用于展示美国地图",
     "en": "Display the map of USA"

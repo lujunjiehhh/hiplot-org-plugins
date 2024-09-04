@@ -3,7 +3,9 @@
     "zh_cn": "离群值处理",
     "en": "Outlier Process"
   },
-  "alias": ["Outlier-Value"],
+  "alias": [
+    "Outlier-Value"
+  ],
   "intro": {
     "zh_cn": "表格操作",
     "en": "Table Operation"

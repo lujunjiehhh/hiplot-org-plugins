@@ -32,34 +32,38 @@
     }
   },
   "dataArg": {
-    "1-mafData": [{
-      "label": {
-        "en": "Gene Class",
-        "zh_cn": "基因分类"
+    "1-mafData": [
+      {
+        "label": {
+          "en": "Gene Class",
+          "zh_cn": "基因分类"
+        },
+        "required": false
       },
-      "required":false
-    },
-    {
-      "label": {
-        "en": "Gene Symbol Column",
-        "zh_cn": "基因列"
+      {
+        "label": {
+          "en": "Gene Symbol Column",
+          "zh_cn": "基因列"
+        },
+        "required": true
       },
-      "required":true
-    },
-    {
-      "label": {
-        "en": "Classification Column",
-        "zh_cn": "类型列"
-      },
-      "required":true
-    }],
-    "2-metaData": [{
-      "label": {
-        "en": "Sample Class",
-        "zh_cn": "样本分类"
-      },
-      "required":false
-    }]
+      {
+        "label": {
+          "en": "Classification Column",
+          "zh_cn": "类型列"
+        },
+        "required": true
+      }
+    ],
+    "2-metaData": [
+      {
+        "label": {
+          "en": "Sample Class",
+          "zh_cn": "样本分类"
+        },
+        "required": false
+      }
+    ]
   },
   "general": {
     "imageExportType": {
@@ -108,7 +112,8 @@
         "zh_cn": "右侧注释"
       },
       "items": [
-        "barplot", "none"
+        "barplot",
+        "none"
       ],
       "class": "col-12 col-md-4"
     },
@@ -119,7 +124,8 @@
         "zh_cn": "顶部注释"
       },
       "items": [
-        "barplot", "none"
+        "barplot",
+        "none"
       ],
       "class": "col-12 col-md-4"
     },
@@ -131,7 +137,25 @@
       },
       "multiple": true,
       "clearable": true,
-      "items": ["3'Flank", "3'UTR", "5'Flank", "5'UTR", "Frame_Shift_Del", "Frame_Shift_Ins", "IGR", "In_Frame_Del", "In_Frame_Ins", "Intron", "Missense_Mutation", "Nonsense_Mutation", "RNA", "Silent", "Splice_Region", "Splice_Site", "Targeted_Region"],
+      "items": [
+        "3'Flank",
+        "3'UTR",
+        "5'Flank",
+        "5'UTR",
+        "Frame_Shift_Del",
+        "Frame_Shift_Ins",
+        "IGR",
+        "In_Frame_Del",
+        "In_Frame_Ins",
+        "Intron",
+        "Missense_Mutation",
+        "Nonsense_Mutation",
+        "RNA",
+        "Silent",
+        "Splice_Region",
+        "Splice_Site",
+        "Targeted_Region"
+      ],
       "class": "col-12"
     },
     "order_mode": {
@@ -140,7 +164,13 @@
         "en": "Order Mode",
         "zh_cn": "排序模式"
       },
-      "items": ["freq_first_simple", "freq_first", "pathway_first_simple", "pathway_first", "raw"],
+      "items": [
+        "freq_first_simple",
+        "freq_first",
+        "pathway_first_simple",
+        "pathway_first",
+        "raw"
+      ],
       "class": "col-12 col-md-6"
     },
     "white_genes": {

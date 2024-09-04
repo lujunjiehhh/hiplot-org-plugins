@@ -16,18 +16,17 @@ custom_icon_scatter <- function(data, x, y, size, symbol, label_name, svg_path, 
   }
 
   p <- draw_data |>
-      e_charts(x) |>
-      e_scatter(
-        y,
-        size,
-        symbol = svg_path,
-        name = label_name
-      ) |>
-      e_theme(theme)
+    e_charts(x) |>
+    e_scatter(
+      y,
+      size,
+      symbol = svg_path,
+      name = label_name
+    ) |>
+    e_theme(theme)
 
   return(p)
 }
-
 
 
 # ====================== Plugin Caller ======================

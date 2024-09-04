@@ -3,7 +3,9 @@
     "zh_cn": "Genome Circos",
     "en": "Genome Circos"
   },
-  "alias": ["Genome-Visual"],
+  "alias": [
+    "Genome-Visual"
+  ],
   "intro": {
     "zh_cn": "基因组圈图",
     "en": "Genome Circos Plot"

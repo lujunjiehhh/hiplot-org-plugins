@@ -10,7 +10,13 @@
 
 - Interpretation of case statistics graphics
 
-  Bar charts are used to display category data with rectangular bars whose height or length is proportional to the value they represent. Bar charts can be drawn vertically or horizontally. The bar chart shows the comparison between the discrete categories. One axis of the chart shows the specific categories to be compared, and the other axis represents the measurements. Some bar charts show bars that can also show the values of multiple measurement variables. The bar chart shows the different effects of low, medium, and high doses in different treatment groups (groups 1 to 4). Group 1 had the best effect with medium dose treatment, group 2 had the best effect with high dose treatment, group 3 had no significant difference with dose treatment, and group 4 had the best effect with high dose treatment.
+  Bar charts are used to display category data with rectangular bars whose height or length is proportional to the value
+  they represent. Bar charts can be drawn vertically or horizontally. The bar chart shows the comparison between the
+  discrete categories. One axis of the chart shows the specific categories to be compared, and the other axis represents
+  the measurements. Some bar charts show bars that can also show the values of multiple measurement variables. The bar
+  chart shows the different effects of low, medium, and high doses in different treatment groups (groups 1 to 4). Group
+  1 had the best effect with medium dose treatment, group 2 had the best effect with high dose treatment, group 3 had no
+  significant difference with dose treatment, and group 4 had the best effect with high dose treatment.
 
 - Extra Parameters
 

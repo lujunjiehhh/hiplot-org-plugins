@@ -3,7 +3,9 @@
     "zh_cn": "GO气泡图",
     "en": "GOBubble Plot"
   },
-  "alias": ["GO-Bubble"],
+  "alias": [
+    "GO-Bubble"
+  ],
   "intro": {
     "zh_cn": "GO气泡图可视化",
     "en": "GOBubble plot visualization"

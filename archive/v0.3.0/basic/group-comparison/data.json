@@ -21,7 +21,10 @@
         "cliMode": true,
         "title": "",
         "theme": "theme_bw",
-        "imageExportType": ["pdf", "png"],
+        "imageExportType": [
+          "pdf",
+          "png"
+        ],
         "size": {
           "width": 3,
           "height": 2
@@ -48,7 +51,10 @@
             "value": "g1"
           },
           {
-            "value": ["e1", "e2"]
+            "value": [
+              "e1",
+              "e2"
+            ]
           }
         ]
       }

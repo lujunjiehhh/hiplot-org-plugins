@@ -3,14 +3,20 @@
     "zh_cn": "GGPubr 箱线图",
     "en": "GGPubr Boxplot"
   },
-  "alias": ["Box-Scatter"],
+  "alias": [
+    "Box-Scatter"
+  ],
   "intro": {
     "zh_cn": "特性丰富的箱线图（GGPubr 接口）",
     "en": "Feature-rich boxplot (GGPubr interface)"
   },
   "src": "https://s1.imagehub.cc/images/2021/11/07/ggpubr-boxplot-0.bu5rqxjg77s-1-tuya.jpg",
   "href": "/basic/ggpubr-boxplot",
-  "tag": ["vue", "boxplot", "comparison"],
+  "tag": [
+    "vue",
+    "boxplot",
+    "comparison"
+  ],
   "meta": {
     "score": 4,
     "author": "Hiplot team | Shixiang Wang",

@@ -24,15 +24,17 @@ pacman::p_load(pkgs, character.only = TRUE)
 # input options, data and configuration section
 ##################################################
 {
-  data <- data[!is.na(data[, 1]), ]
+  data <- data[!is.na(data[, 1]),]
   idx <- duplicated(data[, 1])
   data[idx, 1] <- paste0(data[idx, 1], "--dup-", cumsum(idx)[idx])
   rownames(data) <- data[, 1]
   data <- data[, -1]
+
   str2num_df <- function(x) {
     x[] <- lapply(x, function(l) as.numeric(l))
     x
   }
+
   cor_method <- conf$extra$cor_method
   # calculate correlations and p values
   if (str_detect(toupper(conf$extra$correlation), "^R")) {
@@ -56,12 +58,12 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   color_key <- c(conf$extra$color_low, conf$extra$color_mid,
-    conf$extra$color_high)
+                 conf$extra$color_high)
   col <- colorRampPalette(color_key)(50)
-  p <- as.ggplot(function(){
+  p <- as.ggplot(function() {
     conf$extra$heat_eng <- str_remove_all(conf$extra$heat_eng, ";")
     fun <- eval(parse(text = paste0(conf$extra$heat_eng)))
-    if (conf$extra$heat_eng %in% 
+    if (conf$extra$heat_eng %in%
       c("ComplexHeatmap::pheatmap", "pheatmap::pheatmap")) {
       x <- do.call(fun, list(
         corr, color = col,
@@ -77,39 +79,44 @@ pacman::p_load(pkgs, character.only = TRUE)
       ))
     } else if (conf$extra$heat_eng == "ComplexHeatmap::Heatmap") {
       params <- list(corr,
-          col = col,
-          clustering_distance_rows = conf$extra$hc_distance_rows,
-          clustering_method_rows = conf$extra$hc_method,
-          clustering_distance_columns = conf$extra$hc_distance_cols,
-          clustering_method_columns = conf$extra$hc_method,
-          show_column_dend = FALSE,
-          show_row_dend = FALSE,
-          column_names_gp = gpar(fontsize = conf$general$fontsizeCol),
-          row_names_gp = gpar(fontsize = conf$general$fontsizeRow)
-        )
+                     col = col,
+                     clustering_distance_rows = conf$extra$hc_distance_rows,
+                     clustering_method_rows = conf$extra$hc_method,
+                     clustering_distance_columns = conf$extra$hc_distance_cols,
+                     clustering_method_columns = conf$extra$hc_method,
+                     show_column_dend = FALSE,
+                     show_row_dend = FALSE,
+                     column_names_gp = gpar(fontsize = conf$general$fontsizeCol),
+                     row_names_gp = gpar(fontsize = conf$general$fontsizeRow)
+      )
       if (conf$extra$display_numbers) {
+
         params$cell_fun <- function(j, i, x, y, width, height, fill) {
-          grid.text(sprintf("%.2f", corr[i, j]), x, y, 
-            gp = gpar(fontsize = 0.8 * conf$general$fontsizeRow))
+          grid.text(sprintf("%.2f", corr[i, j]), x, y,
+                    gp = gpar(fontsize = 0.8 * conf$general$fontsizeRow))
         }
+
       }
       x <- do.call(fun, params)
     } else if (conf$extra$heat_eng == "gplots::heatmap.2") {
-      myclust <- function(x){
+
+      myclust <- function(x) {
         hclust(x, method = conf$extra$hc_method)
       }
+
       distfun <- function(x) {
         dist(x, method = conf$extra$hc_distance_rows)
       }
+
       params <- list(corr,
-        hclustfun = myclust,
-        distfun = distfun,
-        dendrogram='none', Rowv=TRUE, Colv=TRUE, trace='none',
-        scale = 'none', col = col,
-        cexRow = conf$general$fontsizeRow / 10,
-        cexCol = conf$general$fontsizeCol / 10,
-        keysize=1,
-        sepwidth=c(0,0)
+                     hclustfun = myclust,
+                     distfun = distfun,
+                     dendrogram = 'none', Rowv = TRUE, Colv = TRUE, trace = 'none',
+                     scale = 'none', col = col,
+                     cexRow = conf$general$fontsizeRow / 10,
+                     cexCol = conf$general$fontsizeCol / 10,
+                     keysize = 1,
+                     sepwidth = c(0, 0)
       )
       if (conf$extra$display_numbers) {
         params$cellnote <- corr

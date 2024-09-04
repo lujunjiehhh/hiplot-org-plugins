@@ -25,7 +25,10 @@
       "general": {
         "cmd": "",
         "theme": "theme_bw",
-        "imageExportType": ["pdf", "jpeg"],
+        "imageExportType": [
+          "pdf",
+          "jpeg"
+        ],
         "size": {
           "width": 7,
           "height": 4

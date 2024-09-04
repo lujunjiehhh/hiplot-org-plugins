@@ -25,7 +25,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   ## check conf
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -42,39 +44,39 @@ pacman::p_load(pkgs, character.only = TRUE)
   groups <- unique(data[, 2])
   ngroups <- length(groups)
   p <- ggviolin(data,
-    x = colnames(data)[2],
-    y = colnames(data)[1],
-    color = colnames(data)[3],
-    add = conf$extra$add_geom,
-    add.params = list(
-      fill = "white",
-      size = 1
-    ),
-    title = conf$general$title,
-    xlab = colnames(data)[2],
-    ylab = colnames(data)[1],
-    fill = colnames(data)[3],
-    palette = get_hiplot_color(conf$general$palette, -1,
-      conf$general$paletteCustom),
-    alpha = alpha_usr,
-    trim = F
+                x = colnames(data)[2],
+                y = colnames(data)[1],
+                color = colnames(data)[3],
+                add = conf$extra$add_geom,
+                add.params = list(
+                  fill = "white",
+                  size = 1
+                ),
+                title = conf$general$title,
+                xlab = colnames(data)[2],
+                ylab = colnames(data)[1],
+                fill = colnames(data)[3],
+                palette = get_hiplot_color(conf$general$palette, -1,
+                                           conf$general$paletteCustom),
+                alpha = alpha_usr,
+                trim = F
   )
 
   if (conf$extra$stat_method != "none") {
     p <- p + stat_compare_means(aes(group = data[, colnames(data)[3]]),
-      method = conf$extra$stat_method,
-      # label = "p.val",
-      vjust = conf$extra$stat_pos,
-      label.x.npc = "left",
-      label.y.npc = "top",
-      tip.length = 0.03,
-      bracket.size = 0.3,
-      step.increase = 0,
-      position = "identity",
-      na.rm = FALSE,
-      show.legend = NA,
-      inherit.aes = TRUE,
-      geom = "text"
+                                method = conf$extra$stat_method,
+                                # label = "p.val",
+                                vjust = conf$extra$stat_pos,
+                                label.x.npc = "left",
+                                label.y.npc = "top",
+                                tip.length = 0.03,
+                                bracket.size = 0.3,
+                                step.increase = 0,
+                                position = "identity",
+                                na.rm = FALSE,
+                                show.legend = NA,
+                                inherit.aes = TRUE,
+                                geom = "text"
     )
   }
 

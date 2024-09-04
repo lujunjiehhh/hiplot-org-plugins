@@ -24,7 +24,10 @@
         "title": "Complex Boxplot",
         "theme": "theme_stata",
         "palette": "npg",
-        "imageExportType": ["pdf", "png"],
+        "imageExportType": [
+          "pdf",
+          "png"
+        ],
         "size": {
           "width": 10,
           "height": 6
@@ -57,10 +60,10 @@
         "scales": "fixed",
         "notch": false,
         "repel": false,
-        "add_sig_label":true,
-        "sig_method":"wilcox",
-        "sig_label_type":"p.signif",
-        "sig_label_position":"center"
+        "add_sig_label": true,
+        "sig_method": "wilcox",
+        "sig_label_type": "p.signif",
+        "sig_label_position": "center"
       }
     }
   },
@@ -72,7 +75,9 @@
             "value": "supp"
           },
           {
-            "value": ["len"]
+            "value": [
+              "len"
+            ]
           },
           {
             "value": "dose"

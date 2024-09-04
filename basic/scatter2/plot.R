@@ -22,13 +22,13 @@ pacman::p_load(pkgs, character.only = TRUE)
 ##################################################
 {
   x <- unlist(conf$dataArg[[1]][[1]]$value)
-  data[,x] <- transform_val(conf$general$transformX, data[,x])
+  data[, x] <- transform_val(conf$general$transformX, data[, x])
   y <- unlist(conf$dataArg[[1]][[2]]$value)
-  data[,y] <- transform_val(conf$general$transformY, data[,y])
+  data[, y] <- transform_val(conf$general$transformY, data[, y])
   group <- unlist(conf$dataArg[[1]][[3]]$value)
   size <- unlist(conf$dataArg[[1]][[4]]$value)
   if (size != "") {
-    data[,size] <- transform_val(conf$general$transformS, data[,size])
+    data[, size] <- transform_val(conf$general$transformS, data[, size])
   }
   facet <- unlist(conf$dataArg[[1]][[5]]$value)
 }
@@ -38,18 +38,19 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   p <- plot_xy_CatGroup_hiplot(data,
-                xcol = x,
-                ycol = y,
-                CatGroup = group,
-                s_alpha = conf$general$alpha,
-                symthick = conf$extra$point_thick,
-                symsize = conf$extra$point_size,
-                symsize_col = size,
-                shape = ifelse(conf$extra$type, group, 21)) +
-     xlab(x) + ylab(y) +
-     guides(fill = guide_legend(title = group),
-       color = guide_legend(title = group)) +
-     ggtitle(conf$general$title)
+                               xcol = x,
+                               ycol = y,
+                               CatGroup = group,
+                               s_alpha = conf$general$alpha,
+                               symthick = conf$extra$point_thick,
+                               symsize = conf$extra$point_size,
+                               symsize_col = size,
+                               shape = ifelse(conf$extra$type, group, 21)) +
+    xlab(x) +
+    ylab(y) +
+    guides(fill = guide_legend(title = group),
+           color = guide_legend(title = group)) +
+    ggtitle(conf$general$title)
   if (size != "") {
     p <- p + guides(size = guide_legend(title = size))
   }
@@ -61,12 +62,13 @@ pacman::p_load(pkgs, character.only = TRUE)
   if (facet != "") {
     p <- p + facet_wrap(facet)
   }
-  
+
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-    conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## add theme
   theme <- conf$general$theme

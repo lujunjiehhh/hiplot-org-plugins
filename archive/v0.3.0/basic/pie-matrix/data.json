@@ -2,10 +2,22 @@
   "module": "basic",
   "tool": "pie-matrix",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
@@ -27,7 +39,17 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "genre" }, { "value": "mpaa" }, { "value": "status" }]
+        "datTable": [
+          {
+            "value": "genre"
+          },
+          {
+            "value": "mpaa"
+          },
+          {
+            "value": "status"
+          }
+        ]
       },
       "general": {
         "title": ""

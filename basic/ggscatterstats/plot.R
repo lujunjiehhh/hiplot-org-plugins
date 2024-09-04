@@ -36,18 +36,18 @@ pacman::p_load(pkgs, character.only = TRUE)
 {
   set.seed(123)
   params <- list(data = data,
-    effsize.type = conf$extra$effsizeType,
-    type = conf$extra$type,
-    xfill = conf$extra$xfill,
-    yfill = conf$extra$yfill,
-    k = conf$general$digits,
-    plotgrid.args = list(ncol = conf$extra$ncol))
+                 effsize.type = conf$extra$effsizeType,
+                 type = conf$extra$type,
+                 xfill = conf$extra$xfill,
+                 yfill = conf$extra$yfill,
+                 k = conf$general$digits,
+                 plotgrid.args = list(ncol = conf$extra$ncol))
   if (conf$extra$boxplot) params$marginal.type = "boxplot"
-  
+
   prog = "ggscatterstats"
   if (axis[3] != "") {
     prog <- "grouped_ggscatterstats"
-    if (length(unique(data[,axis[3]])) > 100) {
+    if (length(unique(data[, axis[3]])) > 100) {
       stop("Unique values of group should < 100")
     }
   }
@@ -58,9 +58,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   params$x <- axis[1]
   params$y <- axis[2]
-  if(axis[3] != "") params$grouping.var = axis[3]
+  if (axis[3] != "") params$grouping.var = axis[3]
   p <- do.call(prog, params)
-  if(axis[3] == "") p <- ggplotify::as.ggplot(p)
+  if (axis[3] == "") p <- ggplotify::as.ggplot(p)
   p <- p + plot_annotation(title = conf$general$title)
   ## add theme
   theme <- conf$general$theme

@@ -3,7 +3,9 @@
     "zh_cn": "热图",
     "en": "Heatmap"
   },
-  "alias": ["Inter-Heatmap"],
+  "alias": [
+    "Inter-Heatmap"
+  ],
   "intro": {
     "zh_cn": "数值矩阵展示",
     "en": "Numerical matrix display"

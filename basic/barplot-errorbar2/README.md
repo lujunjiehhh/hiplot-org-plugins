@@ -2,4 +2,4 @@
 
 - ### Function Introduction
 
-    Bar plot with error-lines and groups.
+  Bar plot with error-lines and groups.

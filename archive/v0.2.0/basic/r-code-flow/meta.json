@@ -3,7 +3,9 @@
     "zh_cn": "R 脚本逻辑可视化",
     "en": "R Script Flow"
   },
-  "alias": ["Rscript Flow"],
+  "alias": [
+    "Rscript Flow"
+  ],
   "intro": {
     "zh_cn": "展示 R 脚本执行逻辑",
     "en": "Flow diagrams the logic of R scripts"

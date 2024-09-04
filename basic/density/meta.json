@@ -3,7 +3,9 @@
     "zh_cn": "密度图",
     "en": "Density"
   },
-  "alias": ["Density-Area"],
+  "alias": [
+    "Density-Area"
+  ],
   "intro": {
     "zh_cn": "展示数据分布",
     "en": "Display data distribution"

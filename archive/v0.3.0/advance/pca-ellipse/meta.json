@@ -3,7 +3,9 @@
     "zh_cn": "PCA 椭圆 Shiny",
     "en": "PCA Ellipse Shiny"
   },
-  "alias": ["Prettify-PCA"],
+  "alias": [
+    "Prettify-PCA"
+  ],
   "intro": {
     "zh_cn": "PCA 分析",
     "en": "Interactive PCA analysis"

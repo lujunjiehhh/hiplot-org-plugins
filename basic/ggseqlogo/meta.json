@@ -3,7 +3,9 @@
     "zh_cn": "序列 Logo",
     "en": "Seqlogo"
   },
-  "alias": ["Sequence-Logo"],
+  "alias": [
+    "Sequence-Logo"
+  ],
   "intro": {
     "zh_cn": "展示序列 Motif",
     "en": "Display sequence motif"

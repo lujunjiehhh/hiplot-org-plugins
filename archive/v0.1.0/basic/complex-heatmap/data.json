@@ -2,14 +2,24 @@
   "module": "basic",
   "tool": "complex-heatmap",
   "params": {
-    "textarea": { "1-plotData": "", "2-geneInfo": "" },
+    "textarea": {
+      "1-plotData": "",
+      "2-geneInfo": ""
+    },
     "config": {
       "dataArg": {
-        "1-plotData": [{ "value": []}]
+        "1-plotData": [
+          {
+            "value": []
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 8,
           "height": 10
@@ -22,7 +32,14 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "1-plotData": [{ "value": ["KRAS", "GBP4"]}]
+        "1-plotData": [
+          {
+            "value": [
+              "KRAS",
+              "GBP4"
+            ]
+          }
+        ]
       },
       "general": {
       }

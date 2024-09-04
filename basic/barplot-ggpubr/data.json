@@ -8,7 +8,10 @@
     "config": {
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 4,
           "height": 5
@@ -42,7 +45,10 @@
         "select": "",
         "remove": "",
         "order": "",
-        "add": ["mean_se", "jitter"],
+        "add": [
+          "mean_se",
+          "jitter"
+        ],
         "add.params": [],
         "error.plot": "errorbar",
         "label": true,
@@ -52,7 +58,11 @@
         "lab.vjust": "",
         "lab.hjust": "",
         "lab.nb.digits": "",
-        "sort.val": ["none", "desc", "asc"],
+        "sort.val": [
+          "none",
+          "desc",
+          "asc"
+        ],
         "sort.by.groups": true,
         "top": "infinity",
         "position": "position_stack"

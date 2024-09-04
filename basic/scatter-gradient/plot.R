@@ -22,14 +22,14 @@ pacman::p_load(pkgs, character.only = TRUE)
 ##################################################
 {
   x <- unlist(conf$dataArg[[1]][[1]]$value)
-  data[,x] <- transform_val(conf$general$transformX, data[,x])
+  data[, x] <- transform_val(conf$general$transformX, data[, x])
   y <- unlist(conf$dataArg[[1]][[2]]$value)
-  data[,y] <- transform_val(conf$general$transformY, data[,y])
+  data[, y] <- transform_val(conf$general$transformY, data[, y])
   z <- unlist(conf$dataArg[[1]][[3]]$value)
-  data[,z] <- transform_val(conf$general$transformG, data[,z])
+  data[, z] <- transform_val(conf$general$transformG, data[, z])
   size <- unlist(conf$dataArg[[1]][[4]]$value)
   if (size != "") {
-    data[,size] <- transform_val(conf$general$transformS, data[,size])
+    data[, size] <- transform_val(conf$general$transformS, data[, size])
   }
   facet <- unlist(conf$dataArg[[1]][[5]]$value)
 }
@@ -39,22 +39,24 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   p <- plot_xy_NumGroup_hiplot(data,
-                xcol = x,
-                ycol = y,
-                NumGroup = z,
-                s_alpha = conf$general$alpha,
-                symthick = conf$extra$point_thick,
-                symsize_col = size,
-                symsize = conf$extra$point_size,
-                shape = conf$extra$type) +
-  scale_fill_gradient(low = conf$extra$low_color,
-    high = conf$extra$high_color) +
-  scale_color_gradient(low = conf$extra$low_color,
-    high = conf$extra$high_color)
-  p <- p + xlab(x) + ylab(y) +
-     guides(fill = guide_legend(title = z),
-       size = guide_legend(title = size)) +
-     ggtitle(conf$general$title)
+                               xcol = x,
+                               ycol = y,
+                               NumGroup = z,
+                               s_alpha = conf$general$alpha,
+                               symthick = conf$extra$point_thick,
+                               symsize_col = size,
+                               symsize = conf$extra$point_size,
+                               shape = conf$extra$type) +
+    scale_fill_gradient(low = conf$extra$low_color,
+                        high = conf$extra$high_color) +
+    scale_color_gradient(low = conf$extra$low_color,
+                         high = conf$extra$high_color)
+  p <- p +
+    xlab(x) +
+    ylab(y) +
+    guides(fill = guide_legend(title = z),
+           size = guide_legend(title = size)) +
+    ggtitle(conf$general$title)
   if (facet != "") {
     p <- p + facet_wrap(facet)
   }

@@ -21,12 +21,12 @@ pacman::p_load(pkgs, character.only = TRUE)
 # input options, data and configuration section
 ##################################################
 {
-  conf$extra$shade <- get_hiplot_color(conf$general$palette, 3, 
-    conf$general$paletteCustom)
+  conf$extra$shade <- get_hiplot_color(conf$general$palette, 3,
+                                       conf$general$paletteCustom)
   data2 <- eval(parse(text =
-    sprintf("escalc(measure=conf$extra$measure, %s, data = data)",
-      paste0(conf$extra$exprs, collapse = ","))))
-  res <- rma(yi, vi, data = data2) 
+                        sprintf("escalc(measure=conf$extra$measure, %s, data = data)",
+                                paste0(conf$extra$exprs, collapse = ","))))
+  res <- rma(yi, vi, data = data2)
 }
 
 ############# Section 2 #############
@@ -34,7 +34,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   params <- list(x = res,
-    main = conf$general$title)
+                 main = conf$general$title)
   for (i in names(conf$extra)) {
     params[[i]] <- conf$extra[[i]]
     if (i %in% c("refline", "level")) {
@@ -43,7 +43,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       params[[i]] <- unlist(params[[i]])
     }
   }
-  p <- as.ggplot(function(){
+  p <- as.ggplot(function() {
     do.call(funnel, params)
   })
 }

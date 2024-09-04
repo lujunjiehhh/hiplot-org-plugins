@@ -1,23 +1,43 @@
 # MSpectraAI<img src="www/MSpectraAI_logotizuo.jpg" align="right" height="190" width="190"/>
+
 #### A powerful software for deciphering proteome profiling of multi-tumour mass spectrometry data using deep neural networks
 
 ## Brief Description
-**<font size='5'> MSpectraAI </font>** is a free, user-friendly and comprehensive software for mining and classifying raw LC-MS<sup>2</sup>-based proteomics or metabolomics data of different samples using deep learning models. Users can also built your own deep neural network model in this software. It is developed with [R](https://www.r-project.org/) and an example is shown here: [https://www.omicsolution.org/wukong/MSpectraAI/](https://www.omicsolution.org/wukong/MSpectraAI/).
+
+**<font size='5'> MSpectraAI </font>** is a free, user-friendly and comprehensive software for mining and classifying
+raw LC-MS<sup>2</sup>-based proteomics or metabolomics data of different samples using deep learning models. Users can
+also built your own deep neural network model in this software. It is developed with [R](https://www.r-project.org/) and
+an example is shown
+here: [https://www.omicsolution.org/wukong/MSpectraAI/](https://www.omicsolution.org/wukong/MSpectraAI/).
 
 ## Cite this article
-Wang, S., Zhu, H., Zhou, H. et al. MSpectraAI: a powerful platform for deciphering proteome profiling of multi-tumor mass spectrometry data by using deep neural networks. BMC Bioinformatics 21, 439 (2020). [https://doi.org/10.1186/s12859-020-03783-0](https://doi.org/10.1186/s12859-020-03783-0).
+
+Wang, S., Zhu, H., Zhou, H. et al. MSpectraAI: a powerful platform for deciphering proteome profiling of multi-tumor
+mass spectrometry data by using deep neural networks. BMC Bioinformatics 21, 439 (
+2020). [https://doi.org/10.1186/s12859-020-03783-0](https://doi.org/10.1186/s12859-020-03783-0).
 
 ## Friendly Tips
-* **Run this tool locally**. As we know, the raw data from mass spectrometer are usually very large. You can analyze your data on our web server, but the analysis speed will be slower. Therefore, we recomand you run this tool locally on a high configuration computer. The entire analysis time will be much shorter.
-* **Be familiar with the basic usage of R language**. This web tool is developed with R, therefore, if you know some basic knowledge about R, it will help you understand this tool better. However, you need not worry if you know nothing about R, and you can learn to use our tool expertly as well after reading our manual.
+
+* **Run this tool locally**. As we know, the raw data from mass spectrometer are usually very large. You can analyze
+  your data on our web server, but the analysis speed will be slower. Therefore, we recomand you run this tool locally
+  on a high configuration computer. The entire analysis time will be much shorter.
+* **Be familiar with the basic usage of R language**. This web tool is developed with R, therefore, if you know some
+  basic knowledge about R, it will help you understand this tool better. However, you need not worry if you know nothing
+  about R, and you can learn to use our tool expertly as well after reading our manual.
 
 ## Preparation
+
 - **Install R**. You can download R from here: [https://www.r-project.org/](https://www.r-project.org/).
-- **Install RStudio** (Recommendatory but not necessary). You can download RStudio from here: [https://www.rstudio.com/](https://www.rstudio.com/).
-- **Install Anaconda** (For Windows users). You can download Anaconda from here: [https://www.anaconda.com/download/](https://www.anaconda.com/download/).
+- **Install RStudio** (Recommendatory but not necessary). You can download RStudio from
+  here: [https://www.rstudio.com/](https://www.rstudio.com/).
+- **Install Anaconda** (For Windows users). You can download Anaconda from
+  here: [https://www.anaconda.com/download/](https://www.anaconda.com/download/).
 
 ## Install Packages
-We recommend the R version >= 3.5.0. Particularly, if you use unix-like systems, you may need install some dependent packages in advance, for example, on CentOS 7:
+
+We recommend the R version >= 3.5.0. Particularly, if you use unix-like systems, you may need install some dependent
+packages in advance, for example, on CentOS 7:
+
 ```r
 sudo yum -y install libxml2-devel igraph-devel libxslt-devel netcdf-devel libcurl-devel openssl-devel cairo-devel
 
@@ -51,23 +71,29 @@ install_keras()
 ```
 
 ## Download and Run Locally
+
 You can download our tool from this github and unzip the file, then run:
+
 ```r
 #Find the file path and run 
 library(shiny)
 runApp(".../MSpectraAI")
 ```
+
 Then you can start your own analysis:
 <img src="figs/homepage1.jpg" align="center" height="400" width="800"/>
 
 ## Detailed Introduction
+
 The usage about this tool can be found here:
 [https://github.com/wangshisheng/MSpectraAI/blob/master/SupportingNotes.pdf](https://github.com/wangshisheng/MSpectraAI/blob/master/SupportingNotes.pdf).
 
 ## Graphic Abstract
+
 <img src="figs/TOC_MSpectraAI.jpg" align="center" height="400" width="800"/>
 
 ## Information About the Current R Session
+
 ```r
 > sessionInfo()
 R version 3.5.1 (2018-07-02)
@@ -106,5 +132,7 @@ loaded via a namespace (and not attached):
 ```
 
 ## Contact
-You could push an issue on this github. And optionally, please feel free to sent me an e-mail if you have any question or find a bug about this tool. Thank you^_^
+
+You could push an issue on this github. And optionally, please feel free to sent me an e-mail if you have any question
+or find a bug about this tool. Thank you^_^
 Email: wssdandan2009@outlook.com

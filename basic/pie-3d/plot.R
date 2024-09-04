@@ -32,8 +32,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   colors <- get_hiplot_color(conf$general$palette,
-        length(unique(data$Group)), conf$general$paletteCustom)
+                             length(unique(data$Group)), conf$general$paletteCustom)
   conf$extra$colors <- colors
+
   p <- function() {
     pie3D(
       data$Value,
@@ -57,6 +58,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       col = conf$extra$colors
     )
   }
+
 }
 
 ############# Section 3 #############
@@ -64,9 +66,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   outfn <- paste0(opt$outputFilePrefix, ".pdf")
-  cairo_pdf(outfn, 
-    width = conf$general$size$width, height = conf$general$size$height,
-    family = conf$general$font)
+  cairo_pdf(outfn,
+            width = conf$general$size$width, height = conf$general$size$height,
+            family = conf$general$font)
   p()
   dev.off()
   pdfs2image(outfn)

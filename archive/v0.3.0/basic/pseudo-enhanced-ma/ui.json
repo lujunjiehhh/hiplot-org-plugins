@@ -11,11 +11,25 @@
       "type": "combobox",
       "label": "messages.basic.volcano.pCutoff",
       "class": "col-12 col-md-4",
-      "items": ["0.5", "0.4", "0.3", "0.2", "0.1",
-                "0.05", "0.01", "0.001", "1e-04", "1e-05",
-                "1e-06", "1e-07", "1e-08",
-                "1e-09", "1e-10", "1e-11",
-                "1e-12"]
+      "items": [
+        "0.5",
+        "0.4",
+        "0.3",
+        "0.2",
+        "0.1",
+        "0.05",
+        "0.01",
+        "0.001",
+        "1e-04",
+        "1e-05",
+        "1e-06",
+        "1e-07",
+        "1e-08",
+        "1e-09",
+        "1e-10",
+        "1e-11",
+        "1e-12"
+      ]
     },
     "subtitle": {
       "type": "text-field",
@@ -29,7 +43,12 @@
         "zh_cn": "图例位置"
       },
       "class": "col-12 col-md-4",
-      "items": ["left", "right", "top", "bottom"]
+      "items": [
+        "left",
+        "right",
+        "top",
+        "bottom"
+      ]
     },
     "fc_cutoff": {
       "type": "slider",
@@ -45,8 +64,7 @@
       },
       "step": 0.1,
       "class": "col-12 col-md-6"
-    }
-    ,
+    },
     "labSize": {
       "type": "slider",
       "label": {

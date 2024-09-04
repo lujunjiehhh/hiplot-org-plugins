@@ -84,7 +84,10 @@
         "en": "Co",
         "zh_cn": "点大小"
       },
-      "items": ["t.test", "wilcox.test"],
+      "items": [
+        "t.test",
+        "wilcox.test"
+      ],
       "class": "col-12 col-md-6"
     },
     "scales": {
@@ -93,7 +96,10 @@
         "en": "Scale",
         "zh_cn": "标尺"
       },
-      "items": ["free", "fixed"],
+      "items": [
+        "free",
+        "fixed"
+      ],
       "class": "col-12 col-md-6"
     },
     "ref_group": {

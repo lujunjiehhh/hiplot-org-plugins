@@ -3,7 +3,9 @@
     "zh_cn": "SVG 转换器",
     "en": "SVG Convertor"
   },
-  "alias": ["SVG-Convertor"],
+  "alias": [
+    "SVG-Convertor"
+  ],
   "intro": {
     "zh_cn": "图片格式转换",
     "en": "Covertor of image format"

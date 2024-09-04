@@ -12,7 +12,10 @@
   },
   "src": "",
   "href": "/basic/interval-bar-chart",
-  "tag": ["vue", "lxs"],
+  "tag": [
+    "vue",
+    "lxs"
+  ],
   "meta": {
     "score": 5,
     "author": "Xiaosheng",

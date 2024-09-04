@@ -3,7 +3,9 @@
     "zh_cn": "EnhancedMA",
     "en": "EnhancedMA"
   },
-  "alias": ["M-versusA"],
+  "alias": [
+    "M-versusA"
+  ],
   "intro": {
     "zh_cn": "差异表达基因可视化",
     "en": "Display the variables"

@@ -32,7 +32,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -58,7 +60,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   if (conf$extra$labelcol) {
     mypal <- add_alpha(
       get_hiplot_color(conf$general$palette, conf$extra$clade,
-        conf$general$paletteCustom),
+                       conf$general$paletteCustom),
       alpha_usr
     )
   } else {
@@ -72,9 +74,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   p <- as.ggplot(function() {
     par(mar = c(5, 5, 10, 5), mgp = c(2.5, 1, 0))
     plot(as.phylo(hc),
-      type = conf$extra$type,
-      tip.color = mypal[clus], label.offset = 1,
-      cex = 1, font = 2, use.edge.length = T
+         type = conf$extra$type,
+         tip.color = mypal[clus], label.offset = 1,
+         cex = 1, font = 2, use.edge.length = T
     )
     title(conf$general$title, line = 1)
   })

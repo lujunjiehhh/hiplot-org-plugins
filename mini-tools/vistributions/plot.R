@@ -20,21 +20,25 @@
   paramsPlot$type <- conf$extra$probsType
 
   f <- sprintf("vdist_%s_%s", conf$extra$type,
-    conf$extra$plot)
+               conf$extra$plot)
 
-  if (conf$extra$type == "normal" && conf$extra$plot == "prob"
-    && conf$extra$probsType == "both") {
+  if (conf$extra$type == "normal" &&
+    conf$extra$plot == "prob"
+    &&
+    conf$extra$probsType == "both") {
     paramsPlot$perc <- unlist(conf$extra$percRange)
   }
-  if (conf$extra$type == "binom" && conf$extra$plot == "prob"
-    && conf$extra$probsType == "interval") {
+  if (conf$extra$type == "binom" &&
+    conf$extra$plot == "prob"
+    &&
+    conf$extra$probsType == "interval") {
     paramsPlot$s <- unlist(conf$extra$sRange)
   }
   paramsPlot <- paramsPlot[names(paramsPlot) %in% formalArgs(f)]
 
 
   p <- do.call(sprintf("vdist_%s_%s", conf$extra$type,
-    conf$extra$plot), paramsPlot) +
+                       conf$extra$plot), paramsPlot) +
     ggtitle(conf$general$title)
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

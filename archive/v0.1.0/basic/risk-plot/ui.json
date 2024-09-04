@@ -43,7 +43,12 @@
       "type": "select",
       "label": "messages.basic.common.cutoff",
       "class": "col-12",
-      "items": ["median", "roc", "cutoff", "user_define"]
+      "items": [
+        "median",
+        "roc",
+        "cutoff",
+        "user_define"
+      ]
     },
     "user_define": {
       "type": "slider",

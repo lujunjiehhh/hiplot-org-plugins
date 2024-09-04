@@ -2,14 +2,26 @@
   "module": "basic",
   "tool": "easy-pairs",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": [] }, { "value": "" }]
+        "datTable": [
+          {
+            "value": []
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 8,
           "height": 8
@@ -40,8 +52,16 @@
         },
         "dataArg": {
           "datTable": [
-            { "value": ["total_bill", "time", "tip"] },
-            { "value": "gender" }
+            {
+              "value": [
+                "total_bill",
+                "time",
+                "tip"
+              ]
+            },
+            {
+              "value": "gender"
+            }
           ]
         }
       },
@@ -60,8 +80,12 @@
         },
         "dataArg": {
           "datTable": [
-            { "value": [] },
-            { "value": "" }
+            {
+              "value": []
+            },
+            {
+              "value": ""
+            }
           ]
         }
       }

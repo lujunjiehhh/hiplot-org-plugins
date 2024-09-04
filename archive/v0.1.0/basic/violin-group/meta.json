@@ -3,7 +3,9 @@
     "zh_cn": "双分组小提琴图",
     "en": "Violin Group"
   },
-  "alias": ["Grouped-Violin"],
+  "alias": [
+    "Grouped-Violin"
+  ],
   "intro": {
     "zh_cn": "用于展示数据分布",
     "en": "Display the data distribution"

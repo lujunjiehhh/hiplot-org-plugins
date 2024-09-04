@@ -38,7 +38,8 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
-  p <- ggdag(data) + ggtitle(conf$general$title) +
+  p <- ggdag(data) +
+    ggtitle(conf$general$title) +
     theme(plot.title = element_text(hjust = 0.5))
   theme <- conf$general$theme
   if (theme != "default") {

@@ -3,7 +3,9 @@
     "zh_cn": "中国地图 (县)",
     "en": "China Map (County)"
   },
-  "alias": ["China-County"],
+  "alias": [
+    "China-County"
+  ],
   "intro": {
     "zh_cn": "用于展示中国地图 (县级)",
     "en": "Display the map of China county"

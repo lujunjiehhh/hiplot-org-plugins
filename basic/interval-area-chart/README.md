@@ -2,13 +2,15 @@
 
 - Case Data Analysis
 
-  The case data consists of the highest and lowest temperatures for each of the twelve months in a year, along with the corresponding abbreviated month names.
+  The case data consists of the highest and lowest temperatures for each of the twelve months in a year, along with the
+  corresponding abbreviated month names.
 
   Based on the case data, temperature intervals and average temperature lines have been plotted for each month.
 
 - Special Parameters
 
-  need_mean_line: Whether to plot the mean line. If mean data is not provided, the mean will be calculated as (max value + min value) / 2 by default.
+  need_mean_line: Whether to plot the mean line. If mean data is not provided, the mean will be calculated as (max
+  value + min value) / 2 by default.
 
   title: Title of the plot.
 

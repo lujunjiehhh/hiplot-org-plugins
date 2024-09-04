@@ -21,7 +21,11 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["pdf", "png", "html"]
+        "imageExportType": [
+          "pdf",
+          "png",
+          "html"
+        ]
       },
       "extra": {
         "symbol": "warning",

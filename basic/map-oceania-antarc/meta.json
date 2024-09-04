@@ -3,7 +3,9 @@
     "zh_cn": "大洋洲/南极洲地图",
     "en": "Oceania/Antarc Map"
   },
-  "alias": ["Oceania-Antarc"],
+  "alias": [
+    "Oceania-Antarc"
+  ],
   "intro": {
     "zh_cn": "用于展式大洋洲/南极洲地图",
     "en": "Display the map of the Oceania/Antarc"

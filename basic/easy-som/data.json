@@ -3,7 +3,9 @@
   "tool": "easy-som",
   "maxPlex": 1,
   "params": {
-    "textarea": { "1-datTable": ""},
+    "textarea": {
+      "1-datTable": ""
+    },
     "config": {
       "data": {
         "1-datTable": {
@@ -13,7 +15,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 8,
           "height": 8

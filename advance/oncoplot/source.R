@@ -1,13 +1,13 @@
-get_variant_group_freq <- function (data, params, mutdat) {
+get_variant_group_freq <- function(data, params, mutdat) {
   if (is.null(params$column_split)) {
     params$column_split <- rep("ALL", nrow(data2))
   }
   if (length(unique(params$column_split)) == 1) {
-    df <- data.frame(df=rep(NA, nrow(mutdat)))
+    df <- data.frame(df = rep(NA, nrow(mutdat)))
     df <- t(df)
   } else {
     df <- matrix(NA, ncol = nrow(mutdat),
-      nrow=length(unique(params$column_split)))
+                 nrow = length(unique(params$column_split)))
   }
   colnames(df) <- row.names(mutdat)
   row.names(df) <- unique(params$column_split)
@@ -34,24 +34,25 @@ get_variant_group_freq <- function (data, params, mutdat) {
   return(df)
 }
 
-draw_pie_matrix <- function (df, cols_label, cols) {
+draw_pie_matrix <- function(df, cols_label, cols) {
   df <- as.matrix(df)
-  p <- df %>% as.table() %>%
+  p <- df %>%
+    as.table() %>%
     as.data.frame() %>%
-    mutate(Freq = str_split(Freq,",")) %>%
+    mutate(Freq = str_split(Freq, ",")) %>%
     unnest(Freq) %>%
     mutate(Freq = as.integer(Freq)) %>%
     # Convert the values to a percentage (which adds up to 1 for each graph)
     group_by(Var1, Var2) %>%
     mutate(Freq = ifelse(is.na(Freq), NA, Freq / sum(Freq)),
-          color = row_number()) %>%
+           color = row_number()) %>%
     ungroup() %>%
     # Plot
-    ggplot(aes("", Freq, fill=factor(color,
-      labels = cols_label))) + 
+    ggplot(aes("", Freq, fill = factor(color,
+                                       labels = cols_label))) +
     geom_bar(width = 2, stat = "identity") +
     coord_polar("y") +       # Make it a pie chart
-    facet_wrap(~Var1+Var2, ncol = ncol(df)) + # Break it down into 9 charts
+    facet_wrap(~Var1 + Var2, ncol = ncol(df)) + # Break it down into 9 charts
     # Below is just aesthetics
     theme(axis.text = element_blank(),
           axis.ticks = element_blank(),
@@ -60,9 +61,10 @@ draw_pie_matrix <- function (df, cols_label, cols) {
     guides(fill = FALSE)
   p <- p + theme_void()
   p <- p + scale_fill_manual(values = cols)
-  p <- p + theme(legend.position = "bottom") +
-      theme(legend.direction = "horizontal") +
-      guides(fill = guide_legend(nrow = 1, title = "Variant Class"),  )
+  p <- p +
+    theme(legend.position = "bottom") +
+    theme(legend.direction = "horizontal") +
+    guides(fill = guide_legend(nrow = 1, title = "Variant Class"),)
 
-  return (p)
+  return(p)
 }

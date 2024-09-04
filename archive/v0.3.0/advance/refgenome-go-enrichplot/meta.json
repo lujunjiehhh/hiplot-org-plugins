@@ -3,7 +3,9 @@
     "zh_cn": "参考基因组 Shiny GO (富集)",
     "en": "Ref Shiny GO (Enrich)"
   },
-  "alias": ["RefGenome-GO"],
+  "alias": [
+    "RefGenome-GO"
+  ],
   "intro": {
     "zh_cn": "GO 富集分析",
     "en": "GO enrichment analysis"

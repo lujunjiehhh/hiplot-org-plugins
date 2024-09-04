@@ -3,7 +3,9 @@
     "zh_cn": "Shiny UpSetR",
     "en": "Shiny UpSetR"
   },
-  "alias": ["ShinyUpSet-Topology"],
+  "alias": [
+    "ShinyUpSet-Topology"
+  ],
   "intro": {
     "zh_cn": "用于展示数据集间交叉关系",
     "en": "Data sets cross-relationships"

@@ -32,20 +32,24 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   top_number <- conf$extra$topnum
 
-  data <- data[!is.na(data[, 1]) & !is.na(data[, 2]) &
-    !is.na(data[, 3]) & !is.na(data[, 4]), ]
-  data <- data[!is.null(data[, 1]) & !is.null(data[, 2]) &
-    !is.null(data[, 3]) & !is.null(data[, 4]), ]
+  data <- data[!is.na(data[, 1]) &
+                 !is.na(data[, 2]) &
+                 !is.na(data[, 3]) &
+                 !is.na(data[, 4]),]
+  data <- data[!is.null(data[, 1]) &
+                 !is.null(data[, 2]) &
+                 !is.null(data[, 3]) &
+                 !is.null(data[, 4]),]
   if (top_number >= nrow(data)) {
     top_number <- nrow(data)
   }
 
   # deal with data
-  dat1 <- data[c(1:top_number), ]
+  dat1 <- data[c(1:top_number),]
   # remove unnecessary words
   dat1[, term] <- capitalize(str_remove(dat1[, term], pattern = "\\w+:\\d+\\W"))
   dat1[, term] <- factor(dat1[, term],
-    levels = dat1[, term][length(dat1[, term]):1]
+                         levels = dat1[, term][length(dat1[, term]):1]
   )
   cols <- c(term, pval, count, ratio)
   dat1 <- dat1[, cols]
@@ -76,14 +80,14 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   if (is.character(conf$extra$transform) && conf$extra$transform != "") {
     cleg <- sprintf("%s (%s)", conf$extra$transform,
-        conf$extra$pq_value)
+                    conf$extra$pq_value)
   } else {
     cleg <- conf$extra$pq_value
   }
   p <- ggplot(dat1, aes(ratio, term)) +
     geom_point(aes(size = count, colour = pval)) +
     scale_colour_gradient(low = conf$extra$low_color,
-    high = conf$extra$high_color) +
+                          high = conf$extra$high_color) +
     labs(
       colour = cleg,
       size = count,
@@ -95,7 +99,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     guides(
       color = guide_colorbar(order = 1),
       size = guide_legend(order = 2)) +
-      scale_y_discrete(labels = function(x) {str_wrap(x, width = 65)})
+    scale_y_discrete(labels = function(x) { str_wrap(x, width = 65) })
 
   ## add theme
   theme <- conf$general$theme

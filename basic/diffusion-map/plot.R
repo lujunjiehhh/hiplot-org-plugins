@@ -43,7 +43,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     colorBy <- sample.info[match(colnames(data), sample.info[, 1]), axis[1]]
     colorBy <- factor(colorBy,
-    level = colorBy[!duplicated(colorBy)])
+                      level = colorBy[!duplicated(colorBy)])
     dm_data$colorBy = colorBy
   }
   if (is.null(axis[2]) ||
@@ -62,7 +62,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 {
   if (!conf$extra$three_dim) {
     params <- list(data = dm_data, x = "DC1", y = "DC2",
-      size = 2, palette = "lancet", alpha = conf$general$alpha)
+                   size = 2, palette = "lancet", alpha = conf$general$alpha)
     if (!is.null(axis[1]) && axis[1] != "") {
       params$color = "colorBy"
     }
@@ -73,10 +73,11 @@ pacman::p_load(pkgs, character.only = TRUE)
       labs(color = axis[1], shape = axis[2]) +
       ggtitle(conf$general$title)
     ## add color palette
-    p <- p + return_hiplot_palette_color(conf$general$palette,
-        conf$general$paletteCustom) +
+    p <- p +
+      return_hiplot_palette_color(conf$general$palette,
+                                  conf$general$paletteCustom) +
       return_hiplot_palette(conf$general$palette,
-        conf$general$paletteCustom)
+                            conf$general$paletteCustom)
     ## set theme
     theme <- conf$general$theme
     p <- choose_ggplot_theme(p, theme)
@@ -86,23 +87,23 @@ pacman::p_load(pkgs, character.only = TRUE)
     names(group.color) <- unique(dm_data$colorBy)
     group.color <- group.color[!is.na(names(group.color))]
     if (length(group.color) == 0) {
-      group.color <- c(Default="black")
+      group.color <- c(Default = "black")
       dm_data$colorBy <- "Default"
     }
-    p <- as.ggplot(function(){
+    p <- as.ggplot(function() {
       scatterplot3d(x = dm_data$DC1, y = dm_data$DC2, z = dm_data$DC3,
-                    color =  alpha(group.color[dm_data$colorBy], conf$general$alpha),
-                    xlim=c(min(dm_data$DC1), max(dm_data$DC1)),
-                    ylim=c(min(dm_data$DC2), max(dm_data$DC2)),
-                    zlim=c(min(dm_data$DC3), max(dm_data$DC3)),
-                    pch = 16, cex.symbols  = 0.6,
+                    color = alpha(group.color[dm_data$colorBy], conf$general$alpha),
+                    xlim = c(min(dm_data$DC1), max(dm_data$DC1)),
+                    ylim = c(min(dm_data$DC2), max(dm_data$DC2)),
+                    zlim = c(min(dm_data$DC3), max(dm_data$DC3)),
+                    pch = 16, cex.symbols = 0.6,
                     scale.y = 0.8,
                     xlab = "DC1", ylab = "DC2", zlab = "DC3",
                     angle = conf$extra$angle,
                     main = conf$general$title,
                     col.axis = "#444444", col.grid = "#CCCCCC")
       legend("right", legend = names(group.color),
-            col = alpha(group.color, 0.8), pch = 16)
+             col = alpha(group.color, 0.8), pch = 16)
     })
     theme <- conf$general$theme
     p <- choose_ggplot_theme(p, theme)

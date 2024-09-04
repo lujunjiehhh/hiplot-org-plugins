@@ -25,7 +25,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   ## check conf
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     stop("Error, alpha should be a decimal between 0-1")
@@ -56,8 +58,8 @@ pacman::p_load(pkgs, character.only = TRUE)
       data[, 3] <- factor(data[, 3], levels = unique(data[, 3]))
     }
     data_sd <- summarySE(data,
-      measurevar = colnames(data)[1],
-      groupvars = colnames(data)[2:3]
+                         measurevar = colnames(data)[1],
+                         groupvars = colnames(data)[2:3]
     )
     p <- ggplot(
       data_sd,
@@ -81,26 +83,26 @@ pacman::p_load(pkgs, character.only = TRUE)
         width = conf$extra$errorbar_width,
         position = position_dodge(0.9)
       )
-      if (!is.null(conf$extra$point) && conf$extra$point) {
-        p <- p + geom_point(data = data, aes(data[, 2], data[, 1], fill = data[, 3], color = data[, 3]), size = 2, fill = "black",
-        pch = 19)
-      }
-      if (pval != "none") {
-        if (pval == "") pval <- "p"
-        p <- p + stat_compare_means(data = data, aes(data[, 2], data[, 1], fill = data[, 3], color = data[, 3]),
-        label = pval, vjust = -2, method = conf$extra$stat_method)
-      }
-      p <- p + labs(
-        title = conf$general$title,
-        x = colnames(data_sd)[1],
-        y = colnames(data_sd)[4],
-        fill = colnames(data_sd)[2],
-        color = colnames(data_sd)[2]
-      )
+    if (!is.null(conf$extra$point) && conf$extra$point) {
+      p <- p + geom_point(data = data, aes(data[, 2], data[, 1], fill = data[, 3], color = data[, 3]), size = 2, fill = "black",
+                          pch = 19)
+    }
+    if (pval != "none") {
+      if (pval == "") pval <- "p"
+      p <- p + stat_compare_means(data = data, aes(data[, 2], data[, 1], fill = data[, 3], color = data[, 3]),
+                                  label = pval, vjust = -2, method = conf$extra$stat_method)
+    }
+    p <- p + labs(
+      title = conf$general$title,
+      x = colnames(data_sd)[1],
+      y = colnames(data_sd)[4],
+      fill = colnames(data_sd)[2],
+      color = colnames(data_sd)[2]
+    )
   } else {
     data_sd <- summarySE(data,
-      measurevar = colnames(data)[1],
-      groupvars = colnames(data)[2]
+                         measurevar = colnames(data)[1],
+                         groupvars = colnames(data)[2]
     )
     p <- ggplot(
       data_sd,
@@ -130,21 +132,22 @@ pacman::p_load(pkgs, character.only = TRUE)
         y = colnames(data_sd)[3],
         fill = colnames(data_sd)[1]
       )
-      if (!is.null(conf$extra$point) && conf$extra$point) {
-        p <- p + geom_jitter(data = data, aes(data[, 2], data[, 1], fill = data[, 2]), size = 2, fill = "black",
-        pch = 19, width = 0.2)
-      }
-      if (pval != "none") {
-        if (pval == "") pval <- "p"
-        p <- p + stat_compare_means(data = data, aes(data[, 2], data[, 1], fill = data[, 2]),
-        label = pval, ref.group = ".all.", vjust = -2, method = conf$extra$stat_method)
-      }
+    if (!is.null(conf$extra$point) && conf$extra$point) {
+      p <- p + geom_jitter(data = data, aes(data[, 2], data[, 1], fill = data[, 2]), size = 2, fill = "black",
+                           pch = 19, width = 0.2)
+    }
+    if (pval != "none") {
+      if (pval == "") pval <- "p"
+      p <- p + stat_compare_means(data = data, aes(data[, 2], data[, 1], fill = data[, 2]),
+                                  label = pval, ref.group = ".all.", vjust = -2, method = conf$extra$stat_method)
+    }
   }
 
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

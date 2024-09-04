@@ -3,7 +3,9 @@
     "zh_cn": "哑铃图",
     "en": "Dumbbell Chart"
   },
-  "alias": ["Basic-Dumbbell"],
+  "alias": [
+    "Basic-Dumbbell"
+  ],
   "intro": {
     "zh_cn": "用于展示数据变化",
     "en": "Display the data change"

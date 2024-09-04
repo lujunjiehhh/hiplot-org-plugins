@@ -8,7 +8,10 @@
     "config": {
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 10,
           "height": 4
@@ -40,8 +43,17 @@
     "config": {
       "general": {
         "title": "Fishplot",
-        "paletteCustom": ["#FFE4C4", "#B8860B", "#FF8C00"],
-        "paletteCustom2": ["#888888", "#EF0000","#FF0000", "#511F90"]
+        "paletteCustom": [
+          "#FFE4C4",
+          "#B8860B",
+          "#FF8C00"
+        ],
+        "paletteCustom2": [
+          "#888888",
+          "#EF0000",
+          "#FF0000",
+          "#511F90"
+        ]
       }
     },
     "textarea": {

@@ -5,11 +5,11 @@
 # Translational Medicine·Shanghai                     #
 # All rights reserved.                                #
 #######################################################
-check_encoding <- function (x) {
+check_encoding <- function(x) {
   res <- system(sprintf("file -bi %s", x), intern = TRUE)
   if (stringr::str_detect(res, "utf-16le")) {
-    stop(sprintf("Please convert file encoding of %s from UTF-16 to UTF-8", 
-      basename(x)))
+    stop(sprintf("Please convert file encoding of %s from UTF-16 to UTF-8",
+                 basename(x)))
   }
 }
 
@@ -24,7 +24,8 @@ check_encoding <- function (x) {
   ref_vars <- c("in_exp", "in_cls", "in_gmt")
   in_vars <- c("1-expmat", "2-cls", "3-gmt")
   for (i in seq_len(length(in_vars))) {
-    if ("data" %in% names(conf) && in_vars[i] %in% names(conf$data) &&
+    if ("data" %in% names(conf) &&
+      in_vars[i] %in% names(conf$data) &&
       conf$data[[in_vars[i]]]$link != "") {
       assign(ref_vars[i], parse_file_link(conf$data[[in_vars[i]]]$link))
     }
@@ -33,7 +34,7 @@ check_encoding <- function (x) {
     conf$extra$cli_version <- "4.1.0"
   }
   gsea_root <- sprintf("/cluster/home/public/opt/bio/gsea/%s/",
-          conf$extra$cli_version)
+                       conf$extra$cli_version)
   if (conf$extra$cli_version == "4.2.3") {
     jdk11_root <- getOption("hiplot.jdk11_bin")
     gsea_root <- sprintf("export PATH=%s:$PATH && %s", jdk11_root, gsea_root)
@@ -101,7 +102,7 @@ check_encoding <- function (x) {
         "-num", conf$extra$num, "-plot_top_x", conf$extra$plot_top_x,
         "-rnd_seed", conf$extra$rnd_seed,
         "-save_rnd_lists", ifelse(conf$extra$save_rnd_lists,
-          "true", "false"
+                                  "true", "false"
         ),
         "-set_max", conf$extra$set_max,
         "-set_min", conf$extra$set_min,
@@ -116,7 +117,7 @@ check_encoding <- function (x) {
       system_safe(cmd)
       outdir_tmp_sub <- dir(outdir_tmp)
       outdir_tmp_sub <- outdir_tmp_sub[str_detect(outdir_tmp_sub,
-        fixed(sprintf("%s_vs_%s", case, ctr)))]
+                                                  fixed(sprintf("%s_vs_%s", case, ctr)))]
       gsea_out_dir <- file.path(outdir_tmp, outdir_tmp_sub)
       if (length(conf$general$imageExportType) > 0) {
         cmd <- paste(
@@ -152,7 +153,7 @@ check_encoding <- function (x) {
   setwd(outdir)
   if (length(conf$general$imageExportType) > 0) {
     unlink(file.path(gsea_out_dir, "GSEApy_reports"),
-      recursive = TRUE)
+           recursive = TRUE)
   }
   system_safe(sprintf(
     "tar -czv * -f %s.addition.tar.gz",

@@ -27,7 +27,8 @@
       "type": "select",
       "label": "messages.basic.common.flip",
       "items": [
-        "hor", "ver"
+        "hor",
+        "ver"
       ],
       "class": "col-12 col-md-6"
     },

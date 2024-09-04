@@ -1,7 +1,7 @@
 library(ggplot2)
 
 pareto_chart <- function(data, x, y) {
-  data <- data[order(-data[[y]]), ]
+  data <- data[order(-data[[y]]),]
   data[[x]] <- factor(data[[x]], levels = data[[x]])
 
   # calculate percentage number
@@ -14,7 +14,7 @@ pareto_chart <- function(data, x, y) {
     geom_bar(stat = "identity") +
     geom_line(aes(y = accumulating), group = 1) +
     geom_point(aes(y = accumulating), show.legend = FALSE) +
-    scale_y_continuous(sec.axis = sec_axis(trans = ~ . / max_y * 100, name = "Percentage"))
+    scale_y_continuous(sec.axis = sec_axis(trans = ~. / max_y * 100, name = "Percentage"))
 
   return(p)
 }

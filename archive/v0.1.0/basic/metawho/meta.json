@@ -3,14 +3,21 @@
     "zh_cn": "元分析亚组比较",
     "en": "Meta-Subgroup Analysis"
   },
-  "alias": ["Meta-Subgroup"],
+  "alias": [
+    "Meta-Subgroup"
+  ],
   "intro": {
     "zh_cn": "确定谁从治疗中获益最大的元分析方法",
     "en": "Identify Who Benefits Most from Treatments"
   },
   "src": "https://s1.imagehub.cc/images/2021/03/08/metawho-0.dtz3ulo8gxo-1-tuya.jpg",
   "href": "/basic/metawho",
-  "tag": ["vue", "meta", "comparison", "forestplot"],
+  "tag": [
+    "vue",
+    "meta",
+    "comparison",
+    "forestplot"
+  ],
   "meta": {
     "score": 4,
     "author": "Hiplot team | Shixiang Wang",

@@ -3,7 +3,9 @@
     "zh_cn": "双序列比对",
     "en": "Pairwise Alignment"
   },
-  "alias": ["Pairwise-Alignment"],
+  "alias": [
+    "Pairwise-Alignment"
+  ],
   "intro": {
     "zh_cn": "序列操作",
     "en": "Sequence Operation"

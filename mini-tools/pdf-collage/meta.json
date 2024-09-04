@@ -3,7 +3,9 @@
     "zh_cn": "拼图工具",
     "en": "PDF Collage Maker"
   },
-  "alias": ["PDF-Operation"],
+  "alias": [
+    "PDF-Operation"
+  ],
   "intro": {
     "zh_cn": "Hiplot 结果拼图",
     "en": "Hiplot PDF Collage Maker"

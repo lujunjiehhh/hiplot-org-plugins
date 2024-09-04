@@ -3,7 +3,9 @@
     "zh_cn": "表格长数据转宽数据",
     "en": "Table Cast"
   },
-  "alias": ["Table-Cast"],
+  "alias": [
+    "Table-Cast"
+  ],
   "intro": {
     "zh_cn": "表格操作",
     "en": "Table Operation"

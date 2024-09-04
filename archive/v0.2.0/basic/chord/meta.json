@@ -3,7 +3,9 @@
     "zh_cn": "弦图",
     "en": "Chord Plot"
   },
-  "alias": ["Chord-Chart"],
+  "alias": [
+    "Chord-Chart"
+  ],
   "intro": {
     "zh_cn": "关联可视化",
     "en": "Corelation visualization"

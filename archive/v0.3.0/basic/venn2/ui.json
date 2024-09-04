@@ -14,8 +14,15 @@
         "en": "Border Type",
         "zh_cn": "描边类型"
       },
-      "items": ["blank", "solid", "dashed", "dotted",
-          "dotdash", "longdash", "twodash"],
+      "items": [
+        "blank",
+        "solid",
+        "dashed",
+        "dotted",
+        "dotdash",
+        "longdash",
+        "twodash"
+      ],
       "class": "col-12"
     },
     "ilcs": {

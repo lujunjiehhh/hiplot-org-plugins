@@ -3,7 +3,9 @@
     "zh_cn": "数据概览图",
     "en": "Visdat"
   },
-  "alias": ["Stats-PreVisual"],
+  "alias": [
+    "Stats-PreVisual"
+  ],
   "intro": {
     "zh_cn": "初步探索数据",
     "en": "Preliminary exploratory visualisation of data"

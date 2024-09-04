@@ -3,7 +3,9 @@
     "zh_cn": "诺莫图",
     "en": "Nomogram"
   },
-  "alias": ["Nomo-Diagram"],
+  "alias": [
+    "Nomo-Diagram"
+  ],
   "intro": {
     "zh_cn": "Cox 生存分析结果可视化",
     "en": "COX result visualization"

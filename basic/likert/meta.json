@@ -3,7 +3,9 @@
     "zh_cn": "李克特图",
     "en": "Likert Plot"
   },
-  "alias": ["Likert-Chart"],
+  "alias": [
+    "Likert-Chart"
+  ],
   "intro": {
     "zh_cn": "展示数据值",
     "en": "Display data values"

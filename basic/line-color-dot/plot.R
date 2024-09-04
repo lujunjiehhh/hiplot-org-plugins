@@ -32,7 +32,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   if (facet != "") {
     data[, facet] <- factor(data[, facet], levels = unique(data[, facet]))
   }
-  data[,y] <- transform_val(conf$general$transformY, data[,y])
+  data[, y] <- transform_val(conf$general$transformY, data[, y])
 }
 
 ############# Section 2 #############
@@ -40,23 +40,26 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   p <- plot_befafter_colours(data = data,
-                      xcol = get(x),
-                      ycol = get(y),
-                      match = get(group),
-                      symsize = conf$extra$point_size,
-                      symthick = conf$extra$point_thick,
-                      s_alpha = conf$general$alpha) +
-  ggtitle(conf$general$title)
+                             xcol = get(x),
+                             ycol = get(y),
+                             match = get(group),
+                             symsize = conf$extra$point_size,
+                             symthick = conf$extra$point_thick,
+                             s_alpha = conf$general$alpha) +
+    ggtitle(conf$general$title)
   if (facet != "") {
     p <- p + facet_wrap(facet)
   }
-  p <- p + xlab(x) + ylab(y) +
+  p <- p +
+    xlab(x) +
+    ylab(y) +
     guides(fill = guide_legend(title = group))
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## set theme
   theme <- conf$general$theme

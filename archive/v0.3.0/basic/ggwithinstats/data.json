@@ -2,10 +2,22 @@
   "module": "basic",
   "tool": "ggwithinstats",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
@@ -38,7 +50,17 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "condition" }, { "value": "desire" }, { "value": "region" }]
+        "datTable": [
+          {
+            "value": "condition"
+          },
+          {
+            "value": "desire"
+          },
+          {
+            "value": "region"
+          }
+        ]
       },
       "general": {
         "title": ""

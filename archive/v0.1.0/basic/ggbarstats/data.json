@@ -2,10 +2,22 @@
   "module": "basic",
   "tool": "ggbarstats",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
@@ -32,7 +44,17 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "relig" }, { "value": "partyid" }, { "value": "race" }]
+        "datTable": [
+          {
+            "value": "relig"
+          },
+          {
+            "value": "partyid"
+          },
+          {
+            "value": "race"
+          }
+        ]
       },
       "general": {
         "title": ""

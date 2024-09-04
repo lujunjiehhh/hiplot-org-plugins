@@ -10,7 +10,10 @@
     "data_format": {
       "type": "select",
       "label": "messages.basic.common.data_format",
-      "items": ["wide", "long"],
+      "items": [
+        "wide",
+        "long"
+      ],
       "class": "col-12"
     }
   }

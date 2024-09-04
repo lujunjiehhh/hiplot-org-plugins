@@ -14,31 +14,31 @@ pacman::p_load(pkgs, character.only = TRUE)
       "Surv(time, status) ~ ",
       paste(colnames(data)[3:length(colnames(data))], collapse = "+")
     )),
-    data = data,
-    surv = T,
-    x = TRUE,
-    y = TRUE,
-    time.inc = conf$extra$time_day
+                   data = data,
+                   surv = T,
+                   x = TRUE,
+                   y = TRUE,
+                   time.inc = conf$extra$time_day
     )
 
     ## 构建校正曲线
     ## calibrate函数适用于ols, lrm, cph or psm返回对象
     res.cal <- calibrate(res.cox,
-      cmethod = conf$extra$cmethod,
-      method = conf$extra$method,
-      u = conf$extra$time_day,
-      m = length(rownames(data)) / 6,
-      B = length(rownames(data))
+                         cmethod = conf$extra$cmethod,
+                         method = conf$extra$method,
+                         u = conf$extra$time_day,
+                         m = length(rownames(data)) / 6,
+                         B = length(rownames(data))
     )
     p <- as.ggplot(function() {
       plot(res.cal,
-        lwd = 1,
-        lty = 1,
-        errbar.col = "blue",
-        xlab = "Nomogram Predicted Survival",
-        ylab = "Actual Survival",
-        main = conf$general$title,
-        col = "red"
+           lwd = 1,
+           lty = 1,
+           errbar.col = "blue",
+           xlab = "Nomogram Predicted Survival",
+           ylab = "Actual Survival",
+           main = conf$general$title,
+           col = "red"
       )
     })
   } else if (conf$extra$model == "lrm") {
@@ -46,20 +46,20 @@ pacman::p_load(pkgs, character.only = TRUE)
       "status ~ ",
       paste(colnames(data)[3:length(colnames(data))], collapse = "+")
     )),
-    data = data,
-    x = TRUE,
-    y = TRUE
+                   data = data,
+                   x = TRUE,
+                   y = TRUE
     )
 
     lrm.cal <- calibrate(res.lrm,
-      method = conf$extra$method,
-      B = length(rownames(data))
+                         method = conf$extra$method,
+                         B = length(rownames(data))
     )
     p <- as.ggplot(function() {
       plot(lrm.cal,
-        xlab = "Nomogram Predicted Survival",
-        ylab = "Actual Survival",
-        main = conf$general$title
+           xlab = "Nomogram Predicted Survival",
+           ylab = "Actual Survival",
+           main = conf$general$title
       )
     })
   }

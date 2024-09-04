@@ -31,7 +31,9 @@
       "extra": {
         "add_overall": true,
         "add_p": true,
-        "table_theme": [""]
+        "table_theme": [
+          ""
+        ]
       }
     }
   },

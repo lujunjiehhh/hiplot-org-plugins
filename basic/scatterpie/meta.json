@@ -3,7 +3,9 @@
     "zh_cn": "散点饼图",
     "en": "Scatterpie"
   },
-  "alias": ["Scatter-Pie"],
+  "alias": [
+    "Scatter-Pie"
+  ],
   "intro": {
     "zh_cn": "以点图的形式展示分类数据占比",
     "en": "Proportion under different groups"

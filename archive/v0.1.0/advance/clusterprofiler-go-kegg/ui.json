@@ -13,7 +13,9 @@
         "zh_cn": "KEGG 数据库"
       },
       "icon": "mdi-file",
-      "exts": ["rds"],
+      "exts": [
+        "rds"
+      ],
       "enable-download": true,
       "enable-preview": true,
       "enable-upload": true
@@ -22,7 +24,28 @@
       "type": "combobox",
       "required": true,
       "label": "Org DB",
-      "items": ["org.Ag.eg.db", "org.At.tair.db", "org.Bt.eg.db", "org.Ce.eg.db", "org.Cf.eg.db", "org.Dm.eg.db", "org.Dr.eg.db", "org.EcK12.eg.db", "org.EcSakai.eg.db", "org.Gg.eg.db", "org.Hs.eg.db", "org.Mm.eg.db", "org.Mmu.eg.db", "org.Mxanthus.db", "org.Pf.plasmo.db", "org.Pt.eg.db", "org.Rn.eg.db", "org.Sc.sgd.db", "org.Ss.eg.db", "org.Xl.eg.db"],
+      "items": [
+        "org.Ag.eg.db",
+        "org.At.tair.db",
+        "org.Bt.eg.db",
+        "org.Ce.eg.db",
+        "org.Cf.eg.db",
+        "org.Dm.eg.db",
+        "org.Dr.eg.db",
+        "org.EcK12.eg.db",
+        "org.EcSakai.eg.db",
+        "org.Gg.eg.db",
+        "org.Hs.eg.db",
+        "org.Mm.eg.db",
+        "org.Mmu.eg.db",
+        "org.Mxanthus.db",
+        "org.Pf.plasmo.db",
+        "org.Pt.eg.db",
+        "org.Rn.eg.db",
+        "org.Sc.sgd.db",
+        "org.Ss.eg.db",
+        "org.Xl.eg.db"
+      ],
       "prepend-icon": "mdi-file"
     }
   },
@@ -36,7 +59,13 @@
       "type": "select",
       "label": "messages.common.mode",
       "items": [
-        "BP", "MF", "CC", "KEGG", "DO", "NCG", "DGN"
+        "BP",
+        "MF",
+        "CC",
+        "KEGG",
+        "DO",
+        "NCG",
+        "DGN"
       ],
       "multiple": true,
       "class": "col-12 col-md-6",
@@ -46,7 +75,13 @@
       "type": "select",
       "label": "messages.advance.clusterprofiler.pAdjustMethod",
       "items": [
-        "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr"
+        "holm",
+        "hochberg",
+        "hommel",
+        "bonferroni",
+        "BH",
+        "BY",
+        "fdr"
       ],
       "class": "col-12 col-md-6"
     },

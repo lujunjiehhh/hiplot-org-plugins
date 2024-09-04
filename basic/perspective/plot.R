@@ -32,14 +32,14 @@ pacman::p_load(pkgs, character.only = TRUE)
 {
   p <- as.ggplot(function() {
     persp(as.matrix(data),
-      theta = 45, phi = 20,
-      expand = 0.5,
-      r = 180, col = col,
-      ltheta = 120,
-      shade = 0.5,
-      ticktype = "detailed",
-      xlab = "X", ylab = "Y", zlab = "Z",
-      border = "black" # could be NA
+          theta = 45, phi = 20,
+          expand = 0.5,
+          r = 180, col = col,
+          ltheta = 120,
+          shade = 0.5,
+          ticktype = "detailed",
+          xlab = "X", ylab = "Y", zlab = "Z",
+          border = "black" # could be NA
     )
     title(conf$general$title, line = 0)
   })

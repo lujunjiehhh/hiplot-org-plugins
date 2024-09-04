@@ -2,11 +2,17 @@
   "module": "basic",
   "tool": "gene-density",
   "params": {
-    "textarea": { "1-chromInfo": "", "2-geneInfo": "" },
+    "textarea": {
+      "1-chromInfo": "",
+      "2-geneInfo": ""
+    },
     "config": {
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 7,
           "height": 3

@@ -15,7 +15,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 10,
           "height": 20
@@ -29,7 +32,9 @@
         "qvalueCutoff": 0.05,
         "minGSSize": 10,
         "maxGSSize": 500,
-        "mode": ["BP"],
+        "mode": [
+          "BP"
+        ],
         "pAdjustMethod": "BH",
         "hclustMethod": "ward.D",
         "doseBackground": false,
@@ -61,7 +66,12 @@
         },
         "general": {},
         "extra": {
-          "mode": ["BP", "MF", "CC", "KEGG"]
+          "mode": [
+            "BP",
+            "MF",
+            "CC",
+            "KEGG"
+          ]
         }
       }
     },

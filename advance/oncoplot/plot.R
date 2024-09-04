@@ -16,8 +16,8 @@
 #######################################################
 
 pkgs <- c("ComplexHeatmap", "circlize",
-  "ggplotify", "randomcoloR", "cowplot", "ggplot2", "tidyverse", "dplyr",
-  "patchwork", "openxlsx")
+          "ggplotify", "randomcoloR", "cowplot", "ggplot2", "tidyverse", "dplyr",
+          "patchwork", "openxlsx")
 pacman::p_load(pkgs, character.only = TRUE)
 
 ############# Section 1 ##########################
@@ -27,17 +27,17 @@ pacman::p_load(pkgs, character.only = TRUE)
   cols <- c()
   geneclass <- unlist(conf$dataArg[[1]][[1]]$value)
   sampleclass <- unlist(conf$dataArg[[2]][[1]]$value)
-  data[,"Hugo_Symbol"] <- data[,unlist(conf$dataArg[[1]][[2]]$value)]
-  data[,"Variant_Classification"] <- data[,unlist(conf$dataArg[[1]][[3]]$value)]
+  data[, "Hugo_Symbol"] <- data[, unlist(conf$dataArg[[1]][[2]]$value)]
+  data[, "Variant_Classification"] <- data[, unlist(conf$dataArg[[1]][[3]]$value)]
 
   data <- data[!data$Variant_Classification %in% conf$extra$omit_classification,]
-  data <- data[data$Tumor_Sample_Barcode %in% data2[,1],]
-  data$idx <- paste(data[,1], data[,2], data[,3], sep = "_")
+  data <- data[data$Tumor_Sample_Barcode %in% data2[, 1],]
+  data$idx <- paste(data[, 1], data[, 2], data[, 3], sep = "_")
   conf$extra$gene_class_order <- unlist(conf$extra$gene_class_order)
   conf$extra$white_genes <- unlist(conf$extra$white_genes)
 
   for (i in 1:nrow(data3)) {
-    cols[data3[i,1]] <- data3[i,2]
+    cols[data3[i, 1]] <- data3[i, 2]
   }
   x <- paste0(data$Tumor_Sample_Barcode, data$Hugo_Symbol)
   x <- !duplicated(x)
@@ -45,9 +45,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   res <- names(fil)[(fil >= conf$extra$min_mut_num) | (names(fil) %in% conf$extra$white_genes)]
   has_sampleclass <- length(sampleclass) > 0 && sampleclass != ""
   has_geneclass <- length(geneclass) > 0 && geneclass != ""
-  
+
   genes <- res
-  samples <- data2[,1]
+  samples <- data2[, 1]
 
   mutdat <- NULL
   smap <- c("two_hit", "three_hit", "four_hit", "more_than_four_hit")
@@ -55,8 +55,8 @@ pacman::p_load(pkgs, character.only = TRUE)
   for (i in genes) {
     tmp <- rep(0, length(samples))
     tmp_mut <- data[data$Hugo_Symbol == i,]
-    for(k in 1:length(samples)) {
-      s <- paste0(tmp_mut$Variant_Classification[tmp_mut$Tumor_Sample_Barcode == samples[k]], 
+    for (k in 1:length(samples)) {
+      s <- paste0(tmp_mut$Variant_Classification[tmp_mut$Tumor_Sample_Barcode == samples[k]],
                   collapse = '/')
       x <- str_count(s, "/")
       if (conf$extra$merge_multi_hit && x != 0) {
@@ -76,7 +76,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   mutdat <- as.data.frame(mutdat)
   colnames(mutdat) <- samples
-  row.names(data2) <- data2[,1]
+  row.names(data2) <- data2[, 1]
 
   col_meta <- list()
   col_meta_pre <- list()
@@ -84,8 +84,8 @@ pacman::p_load(pkgs, character.only = TRUE)
     ref <- unique(data2[, i])
     ref <- ref[!is.na(ref) & ref != ""]
     if (any(is.numeric(ref)) & length(ref) > 2) {
-      data2[is.infinite(data2[,i]) ,i] <- NA
-      col_meta_pre[[colnames(data2)[i]]] <- col_fun_cont(data2[,i])
+      data2[is.infinite(data2[, i]), i] <- NA
+      col_meta_pre[[colnames(data2)[i]]] <- col_fun_cont(data2[, i])
     } else if (length(ref) == 2 & any(is.numeric(ref))) {
       col_meta_pre[[colnames(data2)[i]]] <- col_tag
       names(col_meta_pre[[colnames(data2)[i]]]) <- sort(ref)
@@ -101,15 +101,15 @@ pacman::p_load(pkgs, character.only = TRUE)
     }
     x <- names(col_meta_pre[[colnames(data2)[i]]])
     x <- is.na(x)
-    if(any(x)) {
+    if (any(x)) {
       col_meta_pre[[colnames(data2)[i]]] <- col_meta_pre[[colnames(data2)[i]]][!x]
     }
     x <- col_meta_pre[[colnames(data2)[i]]]
-    if (is.character(x) && any(names(x) %in% data3[,1])) {
-      idx <- match(names(x), data3[,1])
+    if (is.character(x) && any(names(x) %in% data3[, 1])) {
+      idx <- match(names(x), data3[, 1])
       idx <- idx[!is.na(idx)]
       if (length(idx) > 0)
-        col_meta_pre[[colnames(data2)[i]]][!is.na(idx)] <- data3[idx,2]
+        col_meta_pre[[colnames(data2)[i]]][!is.na(idx)] <- data3[idx, 2]
     }
   }
 }
@@ -120,16 +120,16 @@ pacman::p_load(pkgs, character.only = TRUE)
 {
   mutdat_tmp <- NULL
   if (str_detect(conf$extra$order_mode, "pathway_first")) {
-    data[is.na(data[,geneclass]),geneclass] <- "Other"
+    data[is.na(data[, geneclass]), geneclass] <- "Other"
     if (length(conf$extra$gene_class_order) > 0) {
       for (i in conf$extra$gene_class_order) {
-        idx <- data[,geneclass] == i
+        idx <- data[, geneclass] == i
         fil <- row.names(mutdat)[row.names(mutdat) %in% data[idx, "Hugo_Symbol"]]
         mutdat_tmp <- rbind(mutdat_tmp, mutdat[fil,])
       }
     } else {
-      for (i in unique(data[,geneclass])) {
-        idx <- data[,geneclass] == i
+      for (i in unique(data[, geneclass])) {
+        idx <- data[, geneclass] == i
         fil <- row.names(mutdat)[row.names(mutdat) %in% data[idx, "Hugo_Symbol"]]
         mutdat_tmp <- rbind(mutdat_tmp, mutdat[fil,])
       }
@@ -142,8 +142,8 @@ pacman::p_load(pkgs, character.only = TRUE)
   mutdat2 <- mutdat
   if (!str_detect(conf$extra$order_mode, "simple")) {
     for (i in 1:ncol(mutdat2)) {
-      mutdat2[,i] <- sapply(strsplit(mutdat2[,i], "/"), function(x) {
-        if (x == "0") return (0)
+      mutdat2[, i] <- sapply(strsplit(mutdat2[, i], "/"), function(x) {
+        if (x == "0") return(0)
         y <- cols[names(cols) %in% unique(mutdat)]
         x <- sort(unique(x), decreasing = TRUE)
         sum(match(x, names(y))^2, na.rm = TRUE)
@@ -168,15 +168,15 @@ pacman::p_load(pkgs, character.only = TRUE)
   mutdat <- eval(parse(text = cmd))
   mutdat <- as.data.frame(mutdat)
   if (conf$extra$add_pathway_row) {
-    if(length(conf$extra$gene_class_order) > 0) {
+    if (length(conf$extra$gene_class_order) > 0) {
       x <- conf$extra$gene_class_order
     } else {
-      x <- unique(data[,geneclass])
+      x <- unique(data[, geneclass])
     }
     for (i in x) {
-      idx <- data[,geneclass] == i
+      idx <- data[, geneclass] == i
       tmp <- as.matrix(mutdat[unique(data[idx, "Hugo_Symbol"]),])
-      tmp <- tmp[!is.na(tmp[,1]),]
+      tmp <- tmp[!is.na(tmp[, 1]),]
       tmp[tmp != "0"] <- 1
       storage.mode(tmp) <- "numeric"
       if (is.null(nrow(tmp))) {
@@ -197,29 +197,29 @@ pacman::p_load(pkgs, character.only = TRUE)
   mutdat <- as.matrix(mutdat)
 
   if (has_geneclass) {
-    x <- data[!duplicated(paste0(data$Hugo_Symbol, data[,geneclass])), ]
+    x <- data[!duplicated(paste0(data$Hugo_Symbol, data[, geneclass])),]
     x <- x[x$Hugo_Symbol %in% rownames(mutdat),]
     x <- x[match(rownames(mutdat), x$Hugo_Symbol),]
     if (length(conf$extra$gene_class_order) > 0) {
-      x[,geneclass] <- factor(x[,geneclass], unique(c(conf$extra$gene_class_order, "Other", "Pathway")))
+      x[, geneclass] <- factor(x[, geneclass], unique(c(conf$extra$gene_class_order, "Other", "Pathway")))
     } else {
-      x[,geneclass] <- factor(x[,geneclass], unique(c(x[,geneclass], "Other", "Pathway")))
+      x[, geneclass] <- factor(x[, geneclass], unique(c(x[, geneclass], "Other", "Pathway")))
     }
-    row_split <- x[,geneclass]
-    row_split[is.na(row_split) & row.names(mutdat) %in% unique(data[,geneclass])] <- "Pathway"
+    row_split <- x[, geneclass]
+    row_split[is.na(row_split) & row.names(mutdat) %in% unique(data[, geneclass])] <- "Pathway"
     row_split[is.na(row_split)] <- "Other"
   }
   params <- list(mutdat,
-              get_type = function(x) {if (x != "0") strsplit(x, "/")[[1]]},
-              alter_fun = alter_fun, col = cols, row_order = 1:nrow(mutdat),
-              column_order = 1:ncol(mutdat), show_column_names = TRUE,
-              show_pct = conf$extra$show_pct,
-              border = conf$extra$border,
-              #column_labels = rep("", ncol(mutdat)),
-              show_heatmap_legend = FALSE,
-              pct_gp = gpar(fontsize = conf$extra$fontsizePct),
-              column_names_gp = gpar(fontsize = conf$general$fontsizeCol),
-              row_names_gp = gpar(fontsize = conf$general$fontsizeRow)
+                 get_type = function(x) { if (x != "0") strsplit(x, "/")[[1]] },
+                 alter_fun = alter_fun, col = cols, row_order = 1:nrow(mutdat),
+                 column_order = 1:ncol(mutdat), show_column_names = TRUE,
+                 show_pct = conf$extra$show_pct,
+                 border = conf$extra$border,
+                 #column_labels = rep("", ncol(mutdat)),
+                 show_heatmap_legend = FALSE,
+                 pct_gp = gpar(fontsize = conf$extra$fontsizePct),
+                 column_names_gp = gpar(fontsize = conf$general$fontsizeCol),
+                 row_names_gp = gpar(fontsize = conf$general$fontsizeRow)
   )
   if (has_sampleclass) {
     params$column_split = data2[colnames(mutdat), sampleclass]
@@ -233,7 +233,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     params$row_split = row_split
   }
   if (conf$extra$order_mode == "raw") {
-    params$column_order <- match(data2[,1], colnames(mutdat))
+    params$column_order <- match(data2[, 1], colnames(mutdat))
   }
   if (conf$extra$symbol_side == "left") {
     params$row_names_side <- "left"
@@ -250,7 +250,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   params2 <- list()
   for (i in 2:ncol(data2)) {
-    params2[[colnames(data2)[i]]] <- data2[colnames(mutdat),i]
+    params2[[colnames(data2)[i]]] <- data2[colnames(mutdat), i]
   }
   params2$col <- col_meta_pre
   params2$show_legend <- FALSE
@@ -267,7 +267,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     p1 <- as.ggplot(function() {
       draw(ocp, annotation_legend_side = "bottom", heatmap_legend_side = "bottom")
     })
-    
+
     p2 <- as.ggplot(function() {
       legend_tmp <- list()
       for (i in names(col_meta_pre)) {
@@ -292,7 +292,7 @@ pacman::p_load(pkgs, character.only = TRUE)
         }
       }
       ref_mut <- unique(unlist(str_split(mutdat, "/")))
-      ref_mut <- ref_mut[ref_mut!= "0" & ref_mut != "" & ref_mut != "NANA"]
+      ref_mut <- ref_mut[ref_mut != "0" & ref_mut != "" & ref_mut != "NANA"]
       ref_mut <- ref_mut[!is.na(ref_mut)]
       idx <- match(rev(names(cols)), ref_mut)
       ref_mut <- ref_mut[idx[!is.na(idx)]]
@@ -309,7 +309,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       p <- do.call(packLegend, legend_tmp)
       ggdraw(draw(p))
     })
-  
+
     p <- plot_grid(p1, p2, ncol = 1, rel_heights = c(4, 1))
   }
 }
@@ -319,7 +319,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   export_single(p)
-  df <- cbind(df, variant_class=NA)
+  df <- cbind(df, variant_class = NA)
   df[1, "variant_class"] <- paste0(cols_label, collapse = ",")
   out_xlsx <- paste(opt$outputFilePrefix, ".xlsx", sep = "")
   wb <- createWorkbook()

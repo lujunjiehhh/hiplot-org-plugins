@@ -3,7 +3,9 @@
     "zh_cn": "Community Shiny",
     "en": "Community Shiny"
   },
-  "alias": ["Molecular-Community"],
+  "alias": [
+    "Molecular-Community"
+  ],
   "intro": {
     "zh_cn": "社群网络分析",
     "en": "Community Network Analysis"

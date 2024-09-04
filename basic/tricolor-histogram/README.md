@@ -2,7 +2,8 @@
 
 - Introduction
 
-  The tricolored histogram divides the histogram into three regions: low-value zone, middle-value zone, and high-value zone, using three different colors.
+  The tricolored histogram divides the histogram into three regions: low-value zone, middle-value zone, and high-value
+  zone, using three different colors.
 
 - Special Parameters
 

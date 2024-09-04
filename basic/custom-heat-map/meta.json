@@ -12,7 +12,11 @@
   },
   "src": "",
   "href": "/basic/custom-heat-map",
-  "tag": ["vue", "heatmap", "lxs"],
+  "tag": [
+    "vue",
+    "heatmap",
+    "lxs"
+  ],
   "meta": {
     "score": 5,
     "author": "Xiaosheng",

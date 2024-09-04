@@ -12,7 +12,10 @@
   },
   "src": "",
   "href": "/basic/multiple-histograms",
-  "tag": ["vue", "lxs"],
+  "tag": [
+    "vue",
+    "lxs"
+  ],
   "meta": {
     "score": 5,
     "author": "Xiaosheng",

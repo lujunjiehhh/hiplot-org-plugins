@@ -3,7 +3,9 @@
     "zh_cn": "Shiny GO (非富集)",
     "en": "Shiny GO (Noenrich)"
   },
-  "alias": ["GOwithoutEnrichment"],
+  "alias": [
+    "GOwithoutEnrichment"
+  ],
   "intro": {
     "zh_cn": "GO 分析 (非富集)",
     "en": "GO analysis (Noenrich)"

@@ -3,7 +3,9 @@
     "zh_cn": "无基因组 Shiny KEGG (富集)",
     "en": "Nonegenome Shiny KEGG (Enrich)"
   },
-  "alias": ["Denovo-KEGG"],
+  "alias": [
+    "Denovo-KEGG"
+  ],
   "intro": {
     "zh_cn": "非参 KEGG 富集分析",
     "en": "Nonegenome KEGG analysis"

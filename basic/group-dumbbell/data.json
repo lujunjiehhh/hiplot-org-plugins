@@ -24,7 +24,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["pdf", "jpeg"],
+        "imageExportType": [
+          "pdf",
+          "jpeg"
+        ],
         "palette": "npg",
         "theme": "theme_bw",
         "size": {

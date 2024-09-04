@@ -60,7 +60,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   windows <- conf$extra$windows * 1000 # default:100kb window size
   gene_density <- genomicDensity(data2, window.size = windows)
   gene_density$chr <- factor(gene_density$chr,
-    levels =  paste0("Chr", chrNum)
+                             levels = paste0("Chr", chrNum)
   )
 
   if (palettes != "custom") {
@@ -77,22 +77,22 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # 设置图例
   lgd <- color_mapping_legend(cm,
-    plot = TRUE,
-    title = "density", color_bar = "continuous"
+                              plot = TRUE,
+                              title = "density", color_bar = "continuous"
   )
   # 绘制基因密度分布热图
   p <- as.ggplot(function() {
     gtrellis_layout(data,
-      n_track = 2, ncol = 1, byrow = FALSE,
-      track_axis = FALSE, add_name_track = FALSE,
-      xpadding = c(0.1, 0), gap = unit(1, "mm"),
-      track_height = unit.c(unit(1, "null"), unit(4, "mm")),
-      track_ylim = c(0, max(gene_density[[4]]), 0, 1),
-      border = FALSE, asist_ticks = FALSE, legend = lgd
+                    n_track = 2, ncol = 1, byrow = FALSE,
+                    track_axis = FALSE, add_name_track = FALSE,
+                    xpadding = c(0.1, 0), gap = unit(1, "mm"),
+                    track_height = unit.c(unit(1, "null"), unit(4, "mm")),
+                    track_ylim = c(0, max(gene_density[[4]]), 0, 1),
+                    border = FALSE, asist_ticks = FALSE, legend = lgd
     )
     # 添加基因面积图track
     add_lines_track(gene_density, gene_density[[4]],
-      area = TRUE, gp = gpar(fill = "pink")
+                    area = TRUE, gp = gpar(fill = "pink")
     )
     # 添加基因密度热图track
     add_heatmap_track(gene_density, gene_density[[4]], fill = col_fun)
@@ -100,7 +100,7 @@ pacman::p_load(pkgs, character.only = TRUE)
       chr <- get_cell_meta_data("name")
       if (chr == paste("Chr", length(chrNum), sep = "")) {
         grid.lines(get_cell_meta_data("xlim"), unit(c(0, 0), "npc"),
-          default.units = "native"
+                   default.units = "native"
         )
       }
       grid.text(chr, x = 0.01, y = 0.38, just = c("left", "bottom"))

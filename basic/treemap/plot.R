@@ -30,7 +30,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # check conf
   colors <- get_hiplot_color(conf$general$palette, nrow(data),
-        conf$general$paletteCustom)
+                             conf$general$paletteCustom)
   keep_vars <- c(keep_vars, "colors")
 }
 
@@ -38,26 +38,28 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
+
   p <- function() {
-      treemap(data,
-      index = colnames(data)[1],
-      vSize = colnames(data)[2],
-      vColor = colnames(data)[1],
-      type = "index",
-      title = conf$general$title,
-      algorithm = "pivotSize",
-      sortID = colnames(data)[1],
-      border.lwds = 1,
-      fontcolor.labels = conf$extra$labelcol,
-      inflate.labels = conf$extra$labelsize,
-      overlap.labels = 0.5,
-      fontfamily.title = conf$general$font,
-      fontfamily.legend = conf$general$font,
-      fontfamily.labels = conf$general$font,
-      palette = colors,
-      aspRatio = conf$general$size$height / conf$general$size$width
+    treemap(data,
+            index = colnames(data)[1],
+            vSize = colnames(data)[2],
+            vColor = colnames(data)[1],
+            type = "index",
+            title = conf$general$title,
+            algorithm = "pivotSize",
+            sortID = colnames(data)[1],
+            border.lwds = 1,
+            fontcolor.labels = conf$extra$labelcol,
+            inflate.labels = conf$extra$labelsize,
+            overlap.labels = 0.5,
+            fontfamily.title = conf$general$font,
+            fontfamily.legend = conf$general$font,
+            fontfamily.labels = conf$general$font,
+            palette = colors,
+            aspRatio = conf$general$size$height / conf$general$size$width
     )
   }
+
 }
 
 ############# Section 3 #############
@@ -65,9 +67,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   outfn <- paste0(opt$outputFilePrefix, ".pdf")
-  cairo_pdf(outfn, 
-    width = conf$general$size$width, height = conf$general$size$height,
-    family = conf$general$font)
+  cairo_pdf(outfn,
+            width = conf$general$size$width, height = conf$general$size$height,
+            family = conf$general$font)
   p()
   dev.off()
   pdfs2image(outfn)

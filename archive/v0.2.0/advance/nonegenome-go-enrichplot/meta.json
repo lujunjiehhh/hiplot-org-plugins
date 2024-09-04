@@ -3,7 +3,9 @@
     "zh_cn": "无基因组 Shiny GO (富集)",
     "en": "Nonegenome Shiny GO (Enrich)"
   },
-  "alias": ["Denovo-GO"],
+  "alias": [
+    "Denovo-GO"
+  ],
   "intro": {
     "zh_cn": "GO 富集分析",
     "en": "GO enrichment analysis"

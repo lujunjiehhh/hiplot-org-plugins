@@ -3,7 +3,9 @@
     "zh_cn": "倾向得分匹配",
     "en": "Propensity Score Matching Shiny"
   },
-  "alias": ["PSM-Analysis"],
+  "alias": [
+    "PSM-Analysis"
+  ],
   "intro": {
     "zh_cn": "倾向得分匹配，基于 MatchIt 和 cabalt 包",
     "en": "Propensity Score Matching (MatchIt and cabalt)"

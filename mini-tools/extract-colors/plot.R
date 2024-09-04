@@ -39,10 +39,10 @@ pacman::p_load(pkgs, character.only = TRUE)
     addWorksheet(wb, sname)
     cols[[i]] <- extract_colours(images[i], num_col = conf$extra$num_col)
 
-    ptmp <- as.ggplot(function(){
+    ptmp <- as.ggplot(function() {
       pie(rep(1, length(cols[[i]])),
-      labels = cols[[i]],
-      col = cols[[i]] , main = basename(images[i]))
+          labels = cols[[i]],
+          col = cols[[i]], main = basename(images[i]))
     })
     if (is.null(p)) {
       p <- ptmp
@@ -51,7 +51,9 @@ pacman::p_load(pkgs, character.only = TRUE)
     }
     writeData(wb, sname, cols[[i]])
   }
-  p <- p + plot_layout(ncol = 2) + plot_annotation(tag_level = "A")
+  p <- p +
+    plot_layout(ncol = 2) +
+    plot_annotation(tag_level = "A")
 }
 
 ############# Section 3 #############

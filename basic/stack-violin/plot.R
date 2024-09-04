@@ -24,11 +24,11 @@ pacman::p_load(pkgs, character.only = TRUE)
     colnames(exp)
   )
   data <- matrix(as.numeric(as.matrix(exp)),
-    nrow = nrow(exp),
-    dimnames = dimnames
+                 nrow = nrow(exp),
+                 dimnames = dimnames
   )
   data <- avereps(data,
-    ID = rownames(data)
+                  ID = rownames(data)
   )
   # 将矩阵转换为Seurat对象，并对数据进行过滤
   pbmc <- CreateSeuratObject(
@@ -104,16 +104,17 @@ pacman::p_load(pkgs, character.only = TRUE)
     as.vector(pbmc_markers$avg_logFC)
   )) > log_fc_filter &
     as.numeric(as.vector(pbmc_markers$p_val_adj)) <
-      adj_pval_filter), ]
+      adj_pval_filter),]
+
   modify_vlnplot <- function(obj,
                              feature,
                              pt.size = 0,
                              plot.margin = unit(c(-0.75, 0, -0.75, 0), "cm"),
                              ...) {
     p <- VlnPlot(obj,
-      features = feature,
-      pt.size = pt.size,
-      ...
+                 features = feature,
+                 pt.size = pt.size,
+                 ...
     )
     theme <- conf$general$theme
     p <- choose_ggplot_theme(p, theme)
@@ -149,18 +150,18 @@ pacman::p_load(pkgs, character.only = TRUE)
         )
       ) +
       return_hiplot_palette_color(conf$general$palette,
-        conf$general$paletteCustom) +
+                                  conf$general$paletteCustom) +
       return_hiplot_palette(conf$general$palette,
-        conf$general$paletteCustom)
+                            conf$general$paletteCustom)
     return(p)
   }
 
   ## main function
   stacked_vln_plot <- function(obj,
-                             features,
-                             pt.size = 0,
-                             plot.margin = unit(c(-0.75, 0, -0.75, 0), "cm"),
-                             ...) {
+                               features,
+                               pt.size = 0,
+                               plot.margin = unit(c(-0.75, 0, -0.75, 0), "cm"),
+                               ...) {
     plot_list <- purrr::map(
       features,
       function(x) {

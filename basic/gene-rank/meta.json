@@ -3,7 +3,9 @@
     "zh_cn": "基因差异表达排序图",
     "en": "Gene Ranking Dotplot"
   },
-  "alias": ["Gene-Rank"],
+  "alias": [
+    "Gene-Rank"
+  ],
   "intro": {
     "zh_cn": "基因表达排序可视化",
     "en": "Gene expression ranking visualization"

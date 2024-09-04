@@ -34,7 +34,8 @@
         "images": {
           "value": [
             "/public/demo/extract-colors/network-igraph.jpg",
-            "/public/demo/extract-colors/likert-demo.jpg"],
+            "/public/demo/extract-colors/likert-demo.jpg"
+          ],
           "link": []
         }
       }

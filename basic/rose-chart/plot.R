@@ -34,17 +34,18 @@ pacman::p_load(pkgs, character.only = TRUE)
 {
   p <- ggplot(data, aes(x = Sample, y = Freq)) +
     geom_col(aes(fill = Group),
-      width = 0.9, size = 0, 
-      alpha = conf$general$alpha
+             width = 0.9, size = 0,
+             alpha = conf$general$alpha
     ) +
     coord_polar() +
     ggtitle(conf$general$title)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(
-    conf$general$palette,
-    conf$general$paletteCustom
-  ) +
+  p <- p +
+    return_hiplot_palette_color(
+      conf$general$palette,
+      conf$general$paletteCustom
+    ) +
     return_hiplot_palette(
       conf$general$palette,
       conf$general$paletteCustom

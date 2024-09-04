@@ -25,7 +25,10 @@
   "extra": {
     "query_mode": {
       "type": "select",
-      "items": ["and", "or"],
+      "items": [
+        "and",
+        "or"
+      ],
       "label": "messages.common.mode",
       "class": "col-12 col-md-6"
     },

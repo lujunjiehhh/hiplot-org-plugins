@@ -3,7 +3,9 @@
     "zh_cn": "WGCNA",
     "en": "WGCNA"
   },
-  "alias": ["WGCNA-Analysis"],
+  "alias": [
+    "WGCNA-Analysis"
+  ],
   "intro": {
     "zh_cn": "基因共表达网络分析",
     "en": "Co-expression network analysis"

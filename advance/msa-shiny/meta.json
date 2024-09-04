@@ -3,7 +3,9 @@
     "zh_cn": "MSA Shiny",
     "en": "MSA Shiny"
   },
-  "alias": ["MSA-Online"],
+  "alias": [
+    "MSA-Online"
+  ],
   "intro": {
     "zh_cn": "多重序列比对可视化",
     "en": "Multiple sequence alignment"

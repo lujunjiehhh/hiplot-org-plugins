@@ -10,6 +10,7 @@
 
 - Interpretation of case statistics graphics
 
-  The graph shows that if the variable x&lt;10, a =1, if the variable x&GT;10, a = 2;If a is equal to 2, then c is equal to d, if a is not equal to 2, then d is equal to a.
+  The graph shows that if the variable x&lt;10, a =1, if the variable x&GT;10, a = 2;If a is equal to 2, then c is equal
+  to d, if a is not equal to 2, then d is equal to a.
 
 

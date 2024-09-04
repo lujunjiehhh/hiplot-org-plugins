@@ -38,14 +38,14 @@
 #           plot section
 #####################################
 {
-  count <- table(data[,gene])
-  data <- data[data[,gene] %in% names(count)[count > 2],]
-  genes <- unique(data[,gene])
-  samples <- unique(data2[,1])
+  count <- table(data[, gene])
+  data <- data[data[, gene] %in% names(count)[count > 2],]
+  genes <- unique(data[, gene])
+  samples <- unique(data2[, 1])
   dat <- NULL
   for (i in genes) {
     tmp <- rep(0, length(samples))
-    tmp_mut <- data[data[,gene] == i, samplename]
+    tmp_mut <- data[data[, gene] == i, samplename]
     idx <- samples %in% tmp_mut
     tmp[idx] <- 1
     dat <- rbind(dat, tmp)
@@ -80,7 +80,7 @@
   genes <- unique(genes)
   print(res)
   print(res2)
- 
+
   len <- length(genes)
   q2 <- as.data.frame(matrix(1, len, len))
   rownames(q2) <- genes
@@ -94,8 +94,8 @@
   }
   if (nrow(res2) > 0) {
     for (i in 1:nrow(res2)) {
-        q2[res2$gene1[i], res2$gene2[i]] <- res2$q.value[i]
-        q2[res2$gene2[i], res2$gene1[i]] <- res2$q.value[i]
+      q2[res2$gene1[i], res2$gene2[i]] <- res2$q.value[i]
+      q2[res2$gene2[i], res2$gene1[i]] <- res2$q.value[i]
     }
   }
   q <- log10(q2)
@@ -114,21 +114,23 @@
   if (all(q >= 0)) {
     col <- col[round(length(col) / 2):length(col)]
   }
-  p <- as.ggplot(function(){
+  p <- as.ggplot(function() {
     print(
       corrplot(q, order = "hclust", type = "lower",
-            is.corr = FALSE,
-            diag = FALSE, tl.col = 'black',
-            col = col,
-            p.mat = q2,
-            sig.level = c(0.001, 0.01),
-            pch.cex = 0.9, insig = 'label_sig',
-            mar = c(2,2,2,2)
-        )
+               is.corr = FALSE,
+               diag = FALSE, tl.col = 'black',
+               col = col,
+               p.mat = q2,
+               sig.level = c(0.001, 0.01),
+               pch.cex = 0.9, insig = 'label_sig',
+               mar = c(2, 2, 2, 2)
       )
-    }) + ggtitle("Discover test (Q value)") + theme(plot.margin = unit(rep(1,4), 'lines'))
+    )
+  }) +
+    ggtitle("Discover test (Q value)") +
+    theme(plot.margin = unit(rep(1, 4), 'lines'))
 
-  p2 <- as.ggplot(function(){
+  p2 <- as.ggplot(function() {
     print(plot(events[genes,]))
   })
 }
@@ -137,10 +139,12 @@
 #          output section
 #####################################
 {
-   if (conf$extra$waterfall) {
-    p <- p + p2 + plot_layout(ncol = 2, widths = c(1, 1.3)) + 
+  if (conf$extra$waterfall) {
+    p <- p +
+      p2 +
+      plot_layout(ncol = 2, widths = c(1, 1.3)) +
       plot_annotation(tag_level = "A")
-   }
-   export_single(p)
-   saveWorkbook(wb, paste0(opt$outputFilePrefix, ".xlsx"), overwrite = TRUE)
+  }
+  export_single(p)
+  saveWorkbook(wb, paste0(opt$outputFilePrefix, ".xlsx"), overwrite = TRUE)
 }

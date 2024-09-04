@@ -10,7 +10,10 @@
       "general": {
         "cmds": "",
         "taskname": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "cliMode": true,
         "size": {
           "width": 6,
@@ -21,7 +24,10 @@
       },
       "extra": {
         "dataset_type": "tpm",
-        "model_type": ["all", "top"]
+        "model_type": [
+          "all",
+          "top"
+        ]
       }
     }
   },

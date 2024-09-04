@@ -21,7 +21,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "cliMode": true
       },
       "extra": {
@@ -48,7 +51,10 @@
         "4-org_db": "org.Hs.eg.db"
       },
       "extra": {
-        "pathways": ["p53 signaling pathway", "Cell cycle"]
+        "pathways": [
+          "p53 signaling pathway",
+          "Cell cycle"
+        ]
       }
     }
   }

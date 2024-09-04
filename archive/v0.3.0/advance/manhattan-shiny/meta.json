@@ -3,7 +3,9 @@
     "zh_cn": "Manhattan Shiny",
     "en": "Manhattan Shiny"
   },
-  "alias": ["Manhattan-Plus"],
+  "alias": [
+    "Manhattan-Plus"
+  ],
   "intro": {
     "zh_cn": "曼哈顿图可视化",
     "en": "Manhattan Plots"

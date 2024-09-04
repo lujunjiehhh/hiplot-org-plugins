@@ -11,11 +11,11 @@
       "type": "select",
       "label": "messages.basic.corHeatmap.correlation",
       "items": [
-        "row", "col"
+        "row",
+        "col"
       ],
       "class": "col-12 col-md-4"
     },
-    
     "order_method": {
       "type": "select",
       "label": {
@@ -23,7 +23,11 @@
         "zh_cn": "排序方法"
       },
       "items": [
-        "original", "hclust", "AOE", "FPC", "alphabet"
+        "original",
+        "hclust",
+        "AOE",
+        "FPC",
+        "alphabet"
       ],
       "class": "col-12 col-md-4"
     },
@@ -49,7 +53,9 @@
         "zh_cn": "相关计算方法"
       },
       "items": [
-        "pearson", "spearman", "kendall"
+        "pearson",
+        "spearman",
+        "kendall"
       ],
       "class": "col-12 col-md-4"
     },

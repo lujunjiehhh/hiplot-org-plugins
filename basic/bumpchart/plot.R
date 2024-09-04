@@ -26,7 +26,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 {
   keep_vars <- c(keep_vars, "colors")
   if (conf$general$palette == "null") {
-    colors <- grDevices::colorRampPalette(get_hiplot_color(conf$general$paletteCont, -1, conf$general$paletteContCustom))(length(unique(data[,3])))
+    colors <- grDevices::colorRampPalette(get_hiplot_color(conf$general$paletteCont, -1, conf$general$paletteContCustom))(length(unique(data[, 3])))
   } else {
     colors <- get_hiplot_color(conf$general$palette, -1, conf$general$paletteCustom)
   }

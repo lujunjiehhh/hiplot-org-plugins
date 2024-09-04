@@ -27,7 +27,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   ## check conf
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     stop("Error, alpha should be a decimal between 0-1")
@@ -63,49 +65,52 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   if (ncol(data) == 2) {
     p <- plot_scatterbar_sd(data,
-                   ycol = get(colnames(data)[1]),
-                   xcol = get(colnames(data)[2]),
-                   b_alpha = alpha_usr,
-                   ewid = conf$extra$errorbar_width,
-                   jitter = conf$extra$jitter)
+                            ycol = get(colnames(data)[1]),
+                            xcol = get(colnames(data)[2]),
+                            b_alpha = alpha_usr,
+                            ewid = conf$extra$errorbar_width,
+                            jitter = conf$extra$jitter)
     if (pval != "none") {
       if (pval == "") pval <- "p"
       if (length(conf$extra$test_groups) > 1) {
         p <- p + stat_compare_means(data = data,
-          aes(data[, 2], data[, 1], fill = data[, 2]),
-          comparisons = my_comparisons,
-          label = pval, vjust = -2, method = conf$extra$stat_method)
+                                    aes(data[, 2], data[, 1], fill = data[, 2]),
+                                    comparisons = my_comparisons,
+                                    label = pval, vjust = -2, method = conf$extra$stat_method)
       } else {
         p <- p + stat_compare_means(data = data,
-          aes(data[, 2], data[, 1], fill = data[, 2]), label = pval, ref.group = ".all.", vjust = -2, method = conf$extra$stat_method)
+                                    aes(data[, 2], data[, 1], fill = data[, 2]), label = pval, ref.group = ".all.", vjust = -2, method = conf$extra$stat_method)
       }
     }
-    p <- p + guides(fill=guide_legend(title=colnames(data)[2]))
+    p <- p + guides(fill = guide_legend(title = colnames(data)[2]))
   } else {
     p <- plot_4d_scatterbar(data,
-                   get(colnames(data)[2]),
-                   get(colnames(data)[1]),
-                   get(colnames(data)[3]),
-                   get(colnames(data)[2]),
-                   b_alpha = alpha_usr,
-                   ewid = conf$extra$errorbar_width,
-                   jitter = conf$extra$jitter) +
-                   scale_shape_manual(values = rep(20, length(unique(data[,2]))))
+                            get(colnames(data)[2]),
+                            get(colnames(data)[1]),
+                            get(colnames(data)[3]),
+                            get(colnames(data)[2]),
+                            b_alpha = alpha_usr,
+                            ewid = conf$extra$errorbar_width,
+                            jitter = conf$extra$jitter) +
+      scale_shape_manual(values = rep(20, length(unique(data[, 2]))))
     if (pval != "none") {
       if (pval == "") pval <- "p"
       p <- p + stat_compare_means(data = data, aes(data[, 2], data[, 1], fill = data[, 3], color = data[, 3]),
-        label = pval, vjust = -2, method = conf$extra$stat_method)
+                                  label = pval, vjust = -2, method = conf$extra$stat_method)
     }
-    p <- p + guides(fill=guide_legend(title=colnames(data)[3]), shape = FALSE)
+    p <- p + guides(fill = guide_legend(title = colnames(data)[3]), shape = FALSE)
   }
   if (facet != "") {
     p <- p + facet_wrap(facet)
   }
-  p <- p + xlab(colnames(data)[2]) + ylab(colnames(data)[1])
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    xlab(colnames(data)[2]) +
+    ylab(colnames(data)[1])
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

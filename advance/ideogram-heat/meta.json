@@ -3,7 +3,9 @@
     "zh_cn": "染色体热图",
     "en": "Ideogram-Heat"
   },
-  "alias": ["Ideogram-Heat"],
+  "alias": [
+    "Ideogram-Heat"
+  ],
   "intro": {
     "zh_cn": "染色体可视化",
     "en": "Visualization of chromsomes"

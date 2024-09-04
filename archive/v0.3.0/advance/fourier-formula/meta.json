@@ -3,7 +3,9 @@
     "zh_cn": "傅里叶正弦变换",
     "en": "Online Fourier Series"
   },
-  "alias": ["Fourier-Formula"],
+  "alias": [
+    "Fourier-Formula"
+  ],
   "intro": {
     "zh_cn": "傅里叶正弦变换",
     "en": "Online Fourier Series"

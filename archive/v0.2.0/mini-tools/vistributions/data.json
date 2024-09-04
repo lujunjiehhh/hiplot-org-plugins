@@ -13,7 +13,10 @@
       "general": {
         "cmds": "",
         "taskname": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "theme": "theme_bw",
         "size": {
           "width": 4,
@@ -31,15 +34,21 @@
         "df": 3,
         "n": 10,
         "p": 0.3,
-        "num_df":4,
+        "num_df": 4,
         "den_df": 30,
         "normal": false,
         "probs": 0.95,
         "probsType": "both",
         "perc": 1,
-        "percRange": [-1, 1],
+        "percRange": [
+          -1,
+          1
+        ],
         "s": 4,
-        "sRange": [4, 10],
+        "sRange": [
+          4,
+          10
+        ],
         "tp": 0.4
       }
     }

@@ -3,7 +3,9 @@
     "zh_cn": "GGMSA",
     "en": "GGMSA"
   },
-  "alias": ["GGMSA"],
+  "alias": [
+    "GGMSA"
+  ],
   "intro": {
     "zh_cn": "多重序列比对可视化",
     "en": "Visualization of MSA"

@@ -3,7 +3,9 @@
     "zh_cn": "气泡图",
     "en": "Bubble"
   },
-  "alias": ["GO-KEGG-Bubble"],
+  "alias": [
+    "GO-KEGG-Bubble"
+  ],
   "intro": {
     "zh_cn": "可用于展示三个变量之间的关系",
     "en": "Display the variables"

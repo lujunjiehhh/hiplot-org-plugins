@@ -35,57 +35,59 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   col <- get_hiplot_color(conf$general$palette, -1,
-    conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
-  df <- matrix(NA, nrow = length(unique(data[,axis[2]])),
-    ncol = length(unique(data[,axis[1]])))
-  row.names(df) <- unique(data[,axis[2]])
-  colnames(df) <- unique(data[,axis[1]])
+  df <- matrix(NA, nrow = length(unique(data[, axis[2]])),
+               ncol = length(unique(data[, axis[1]])))
+  row.names(df) <- unique(data[, axis[2]])
+  colnames(df) <- unique(data[, axis[1]])
 
   for (i in 1:nrow(df)) {
     for (j in 1:ncol(df)) {
-      for (k in unique(data[,axis[3]])) {
+      for (k in unique(data[, axis[3]])) {
         if (is.na(df[i, j])) {
-          df[i, j] <- sum(data[,axis[1]] == unique(data[,axis[1]])[j] &
-            data[,axis[2]] == unique(data[,axis[2]])[i] &
-            data[,axis[3]] == k)
+          df[i, j] <- sum(data[, axis[1]] == unique(data[, axis[1]])[j] &
+                            data[, axis[2]] == unique(data[, axis[2]])[i] &
+                            data[, axis[3]] == k)
         } else {
-          df[i, j] <- paste0(df[i, j], ",", 
-            sum(data[,axis[1]] == unique(data[,axis[1]])[j] &
-              data[,axis[2]] == unique(data[,axis[2]])[i] &
-              data[,axis[3]] == k))
+          df[i, j] <- paste0(df[i, j], ",",
+                             sum(data[, axis[1]] == unique(data[, axis[1]])[j] &
+                                   data[, axis[2]] == unique(data[, axis[2]])[i] &
+                                   data[, axis[3]] == k))
         }
       }
     }
   }
   df <- as.matrix(df)
   print(df)
-  p <- df %>% as.table() %>%
-      as.data.frame() %>%
-      mutate(Freq = str_split(Freq,",")) %>%
-      unnest(Freq) %>%
-      mutate(Freq = as.integer(Freq)) %>%
-      # Convert the values to a percentage (which adds up to 1 for each graph)
-      group_by(Var1, Var2) %>%
-      mutate(Freq = ifelse(is.na(Freq), NA, Freq / sum(Freq)),
-            color = row_number()) %>%
-      ungroup() %>%
-      # Plot
-      ggplot(aes("", Freq, fill=factor(color,
-        labels = unique(data[,axis[3]])))) + 
-      geom_bar(width = 2, stat = "identity") +
-      coord_polar("y") +       # Make it a pie chart
-      facet_wrap(~Var1+Var2, ncol = ncol(df)) + # Break it down into 9 charts
-      # Below is just aesthetics
-      theme(axis.text = element_blank(),
-            axis.ticks = element_blank(),
-            panel.grid = element_blank(),
-            axis.title = element_blank()) +
-      guides(fill = FALSE)
-    p <- set_palette_theme(p, conf)
-    p <- p + theme(legend.position = "bottom") +
-        theme(legend.direction = "horizontal") +
-        guides(fill = guide_legend(nrow = 1, title = axis[3]))
+  p <- df %>%
+    as.table() %>%
+    as.data.frame() %>%
+    mutate(Freq = str_split(Freq, ",")) %>%
+    unnest(Freq) %>%
+    mutate(Freq = as.integer(Freq)) %>%
+    # Convert the values to a percentage (which adds up to 1 for each graph)
+    group_by(Var1, Var2) %>%
+    mutate(Freq = ifelse(is.na(Freq), NA, Freq / sum(Freq)),
+           color = row_number()) %>%
+    ungroup() %>%
+    # Plot
+    ggplot(aes("", Freq, fill = factor(color,
+                                       labels = unique(data[, axis[3]])))) +
+    geom_bar(width = 2, stat = "identity") +
+    coord_polar("y") +       # Make it a pie chart
+    facet_wrap(~Var1 + Var2, ncol = ncol(df)) + # Break it down into 9 charts
+    # Below is just aesthetics
+    theme(axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          panel.grid = element_blank(),
+          axis.title = element_blank()) +
+    guides(fill = FALSE)
+  p <- set_palette_theme(p, conf)
+  p <- p +
+    theme(legend.position = "bottom") +
+    theme(legend.direction = "horizontal") +
+    guides(fill = guide_legend(nrow = 1, title = axis[3]))
 
 }
 

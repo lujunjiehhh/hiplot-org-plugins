@@ -45,8 +45,8 @@ pacman::p_load(pkgs, character.only = TRUE)
   print(head(int_df))
 
   cem <- cemitool(expr0, sample_annot, gmt_in,
-    interactions = int_df,
-    filter = TRUE, plot = TRUE, verbose = TRUE
+                  interactions = int_df,
+                  filter = TRUE, plot = TRUE, verbose = TRUE
   )
 }
 
@@ -92,12 +92,12 @@ pacman::p_load(pkgs, character.only = TRUE)
   unlink(sprintf("%s/report", outdir))
 
   pdfs <- list.files(sprintf("%s/plots", outdir),
-    full.names = TRUE
+                     full.names = TRUE
   )
   pdfs2image(pdfs)
 
   tb <- list.files(sprintf("%s/tables", outdir),
-    full.names = TRUE
+                   full.names = TRUE
   )
   wb <- createWorkbook()
   for (i in tb) {

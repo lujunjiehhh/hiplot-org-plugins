@@ -3,7 +3,9 @@
     "zh_cn": "Maftools 变异位点简单统计",
     "en": "Maftools Summary Plots"
   },
-  "alias": ["Maf-Summary"],
+  "alias": [
+    "Maf-Summary"
+  ],
   "intro": {
     "zh_cn": "突变数据可视化应用",
     "en": "Genetic Mutations Visualization"

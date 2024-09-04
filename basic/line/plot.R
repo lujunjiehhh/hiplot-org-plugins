@@ -28,7 +28,9 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -44,9 +46,9 @@ pacman::p_load(pkgs, character.only = TRUE)
     print("Error: Input data should be 2 or 3 columns!")
   }
 
-  data[,1] <- transform_val(conf$general$transformX, data[,1])
-  data[,2] <- transform_val(conf$general$transformY, data[,2])
-  data[,3] <- factor(data[,3], levels = unique(data[,3]))
+  data[, 1] <- transform_val(conf$general$transformX, data[, 1])
+  data[, 2] <- transform_val(conf$general$transformY, data[, 2])
+  data[, 3] <- factor(data[, 3], levels = unique(data[, 3]))
 }
 
 ############# Section 2 #############
@@ -54,7 +56,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   if (!is.numeric(data[, 1])) {
-    data[, 1] <- factor(data[, 1], level = unique(data[,1]))
+    data[, 1] <- factor(data[, 1], level = unique(data[, 1]))
   }
   if (ncol(data) == 2) {
     if (line_type) {
@@ -88,9 +90,9 @@ pacman::p_load(pkgs, character.only = TRUE)
           )
         ) +
         ggtitle(conf$general$title)
-      
+
       if (nlevels(data[[3]]) > 6) {
-        p <- p + scale_shape_manual(values=0:25)
+        p <- p + scale_shape_manual(values = 0:25)
       }
 
       if (add_point) {
@@ -118,7 +120,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   ## add color palette
   p <- p + return_hiplot_palette_color(conf$general$palette,
-    conf$general$paletteCustom)
+                                       conf$general$paletteCustom)
 
   ## add theme
   theme <- conf$general$theme

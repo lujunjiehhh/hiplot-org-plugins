@@ -3,7 +3,9 @@
     "zh_cn": "ggplot2 词云",
     "en": "ggwordcloud"
   },
-  "alias": ["Words-Shape"],
+  "alias": [
+    "Words-Shape"
+  ],
   "intro": {
     "zh_cn": "文云文本展示",
     "en": "Display the wordcloud"

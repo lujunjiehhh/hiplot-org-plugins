@@ -42,7 +42,10 @@
         }
       },
       "extra": {
-        "test_groups": ["MUT", "WT"]
+        "test_groups": [
+          "MUT",
+          "WT"
+        ]
       }
     }
   }

@@ -3,7 +3,9 @@
     "zh_cn": "风险因子分析",
     "en": "Risk Factor Analysis"
   },
-  "alias": ["Risk-Factor"],
+  "alias": [
+    "Risk-Factor"
+  ],
   "intro": {
     "zh_cn": "生存数据分析",
     "en": "Survival data analysis"

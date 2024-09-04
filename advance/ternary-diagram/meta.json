@@ -3,7 +3,9 @@
     "zh_cn": "三元图",
     "en": "Ternary Diagram"
   },
-  "alias": ["Ternary-Diagram"],
+  "alias": [
+    "Ternary-Diagram"
+  ],
   "intro": {
     "zh_cn": "描述三个变量之和为常数的质心图",
     "en": "Describe the Three Variables"

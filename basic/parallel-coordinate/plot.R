@@ -51,15 +51,15 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   if (!is.numeric(data[, ncol(data)])) {
     data[, ncol(data)] <- factor(data[, ncol(data)],
-      levels = unique(data[, ncol(data)]))
+                                 levels = unique(data[, ncol(data)]))
   }
   p <- ggparcoord(data,
-    columns = 2:(ncol(data) - 1), groupColumn = ncol(data),
-    title = conf$general$title,
-    alphaLines = conf$general$alpha,
-    scale = scale.method,
-    showPoints = as.logical(conf$extra$show_points),
-    boxplot = as.logical(conf$extra$box)
+                  columns = 2:(ncol(data) - 1), groupColumn = ncol(data),
+                  title = conf$general$title,
+                  alphaLines = conf$general$alpha,
+                  scale = scale.method,
+                  showPoints = as.logical(conf$extra$show_points),
+                  boxplot = as.logical(conf$extra$box)
   ) +
     theme_ipsum() +
     scale_color_viridis(discrete = TRUE) +
@@ -73,7 +73,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   ## add color palette
   if (conf$general$palette != "default") {
     p <- p + return_hiplot_palette_color(conf$general$palette,
-    conf$general$paletteCustom)
+                                         conf$general$paletteCustom)
   }
 
   # change theme

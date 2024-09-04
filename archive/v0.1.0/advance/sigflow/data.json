@@ -12,7 +12,10 @@
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "cliMode": true
       },
       "extra": {
@@ -28,7 +31,9 @@
     "config": {
       "data": {
         "input": {
-          "value": ["public/demo/tcga_laml.maf.gz"],
+          "value": [
+            "public/demo/tcga_laml.maf.gz"
+          ],
           "link": ""
         }
       }

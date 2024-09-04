@@ -3,7 +3,9 @@
     "zh_cn": "标准化均数差",
     "en": "Standardized Mean Differences"
   },
-  "alias": ["Prettify-SMD"],
+  "alias": [
+    "Prettify-SMD"
+  ],
   "intro": {
     "zh_cn": "统计参数可视化",
     "en": "Visualization of Statistical Parameters"

@@ -40,7 +40,10 @@
         "en": "Y-Intercept",
         "zh_cn": "Y 轴指示线"
       },
-      "items": ["mean", "median"],
+      "items": [
+        "mean",
+        "median"
+      ],
       "class": "col-12"
     },
     "point_size": {

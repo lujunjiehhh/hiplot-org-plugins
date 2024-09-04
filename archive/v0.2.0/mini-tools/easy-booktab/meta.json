@@ -3,7 +3,9 @@
     "zh_cn": "简易三线表",
     "en": "Easy Booktab"
   },
-  "alias": ["GTSummary"],
+  "alias": [
+    "GTSummary"
+  ],
   "intro": {
     "zh_cn": "表格概貌整理",
     "en": "Publication-ready tables"

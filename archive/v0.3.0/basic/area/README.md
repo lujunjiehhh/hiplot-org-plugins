@@ -2,7 +2,8 @@
 
 - Introduction
 
-  The area chart displays graphically quantitative data. It is based on the line chart. The area between axis and line are commonly emphasized with colors, textures and hatchings.
+  The area chart displays graphically quantitative data. It is based on the line chart. The area between axis and line
+  are commonly emphasized with colors, textures and hatchings.
 
 - Analysis of case data
 

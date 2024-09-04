@@ -3,7 +3,9 @@
     "zh_cn": "AML-G1-G6",
     "en": "AML-G1-G6"
   },
-  "alias": ["ClinAML-GEP"],
+  "alias": [
+    "ClinAML-GEP"
+  ],
   "intro": {
     "zh_cn": "预测基因表达亚型",
     "en": "Predict GEP-defined subtypes"

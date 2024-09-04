@@ -3,7 +3,9 @@
     "zh_cn": "中国地图 (市)",
     "en": "China Map (City)"
   },
-  "alias": ["China-City"],
+  "alias": [
+    "China-City"
+  ],
   "intro": {
     "zh_cn": "用于展示中国地图 (市级)",
     "en": "Display the map of China city"

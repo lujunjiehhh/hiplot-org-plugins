@@ -3,7 +3,9 @@
     "zh_cn": "反向互补序列",
     "en": "Reverse & Complement"
   },
-  "alias": ["Reverse-Complement"],
+  "alias": [
+    "Reverse-Complement"
+  ],
   "intro": {
     "zh_cn": "序列操作",
     "en": "Sequence Operation"

@@ -34,7 +34,7 @@ if (is.character(axis[2]) && axis[2] != "") {
       label_type = "horizon", label_size = 8,
       label_info = "all",
       label_pos = "out") + ggtitle(j)
-    if (is.null(p)) {p <- ptmp} else {p <- p + ptmp}
+    if (is.null(p)) { p <- ptmp } else { p <- p + ptmp }
   }
 } else {
   p <- ggpie(
@@ -45,10 +45,11 @@ if (is.character(axis[2]) && axis[2] != "") {
     label_pos = "out")
 }
 
-p <- p + return_hiplot_palette_color(
-  conf$general$palette,
-  conf$general$paletteCustom
-) +
+p <- p +
+  return_hiplot_palette_color(
+    conf$general$palette,
+    conf$general$paletteCustom
+  ) +
   return_hiplot_palette(
     conf$general$palette,
     conf$general$paletteCustom

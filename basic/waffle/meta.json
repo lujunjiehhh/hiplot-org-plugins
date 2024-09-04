@@ -3,7 +3,9 @@
     "zh_cn": "华夫饼图",
     "en": "Waffle Plot"
   },
-  "alias": ["Waffle-Graph"],
+  "alias": [
+    "Waffle-Graph"
+  ],
   "intro": {
     "zh_cn": "展示数据占比",
     "en": "Display the data percent"

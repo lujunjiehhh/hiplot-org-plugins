@@ -3,7 +3,9 @@
     "zh_cn": "D3 词云",
     "en": "D3 Wordcloud"
   },
-  "alias": ["Word-Cloud"],
+  "alias": [
+    "Word-Cloud"
+  ],
   "intro": {
     "zh_cn": "文云文本展示",
     "en": "Display the wordcloud"

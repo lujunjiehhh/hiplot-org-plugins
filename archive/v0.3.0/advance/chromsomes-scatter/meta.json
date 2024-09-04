@@ -3,7 +3,9 @@
     "zh_cn": "染色体散点图",
     "en": "Chromsomes-Scatter"
   },
-  "alias": ["Chromsomes-Scatter"],
+  "alias": [
+    "Chromsomes-Scatter"
+  ],
   "intro": {
     "zh_cn": "染色体可视化",
     "en": "Visualization of chromsomes"

@@ -3,7 +3,9 @@
   "tool": "network-neural",
   "maxPlex": 1,
   "params": {
-    "textarea": { "netData": ""},
+    "textarea": {
+      "netData": ""
+    },
     "config": {
       "data": {
         "netData": {
@@ -12,11 +14,21 @@
         }
       },
       "dataArg": {
-        "netData": [{ "value": [] }, { "value": [] }]
+        "netData": [
+          {
+            "value": []
+          },
+          {
+            "value": []
+          }
+        ]
       },
       "general": {
         "cmd": "",
-        "imageExportType": ["jpeg", "pdf"],
+        "imageExportType": [
+          "jpeg",
+          "pdf"
+        ],
         "size": {
           "width": 12,
           "height": 10
@@ -41,7 +53,20 @@
         }
       },
       "dataArg": {
-        "netData": [{ "value": ["Y1"] }, { "value": ["X1", "X2", "X3"] }]
+        "netData": [
+          {
+            "value": [
+              "Y1"
+            ]
+          },
+          {
+            "value": [
+              "X1",
+              "X2",
+              "X3"
+            ]
+          }
+        ]
       },
       "general": {
         "title": "Network1"

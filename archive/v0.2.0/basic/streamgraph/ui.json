@@ -13,7 +13,7 @@
       "eps": false,
       "tif": false
     }
- },
+  },
   "extra": {
     "offset": {
       "type": "select",
@@ -21,7 +21,12 @@
         "en": "Offset",
         "zh_cn": "偏移模式"
       },
-      "items": ["silhouette", "wiggle", "expand", "zero"],
+      "items": [
+        "silhouette",
+        "wiggle",
+        "expand",
+        "zero"
+      ],
       "class": "col-12 col-md-6"
     },
     "interpolate": {
@@ -30,7 +35,13 @@
         "en": "Type",
         "zh_cn": "绘图类型"
       },
-      "items": ["cardinal", "linear", "step", "basis", "monotone"],
+      "items": [
+        "cardinal",
+        "linear",
+        "step",
+        "basis",
+        "monotone"
+      ],
       "class": "col-12 col-md-6"
     }
   }

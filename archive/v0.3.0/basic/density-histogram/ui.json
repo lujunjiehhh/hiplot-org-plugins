@@ -40,7 +40,11 @@
         "en": "X-Intercept",
         "zh_cn": "X 轴指示线"
       },
-      "items": ["mean", "median", "none"],
+      "items": [
+        "mean",
+        "median",
+        "none"
+      ],
       "class": "col-12"
     },
     "histogram": {

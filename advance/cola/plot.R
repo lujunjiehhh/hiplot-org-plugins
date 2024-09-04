@@ -22,7 +22,7 @@
   pkgs <- c("cola")
   pacman::p_load(pkgs, character.only = TRUE)
 
-  data <- data[!is.na(data[, 1]), ]
+  data <- data[!is.na(data[, 1]),]
   idx <- duplicated(data[, 1])
   data[idx, 1] <- paste0(data[idx, 1], "--dup-", cumsum(idx)[idx])
   for (i in 2:ncol(data)) {
@@ -40,9 +40,9 @@
 {
   data = adjust_matrix(data)
   params <- list(data, cores = 4, max_k = conf$extra$max_k,
-    scale_rows = conf$extra$scale_rows,
-    p_sampling = conf$extra$p_sampling,
-    partition_repeat = conf$extra$partition_repeat
+                 scale_rows = conf$extra$scale_rows,
+                 p_sampling = conf$extra$p_sampling,
+                 partition_repeat = conf$extra$partition_repeat
   )
   if (nrow(data2) > 0) {
     params$anno = data2

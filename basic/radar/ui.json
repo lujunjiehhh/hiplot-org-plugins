@@ -42,8 +42,15 @@
         "en": "Type (Gridline Min)",
         "zh_cn": "网格类型 (最小)"
       },
-      "items": ["blank", "solid", "dashed", "dotted", "dotdash",
-        "longdash", "twodash"],
+      "items": [
+        "blank",
+        "solid",
+        "dashed",
+        "dotted",
+        "dotdash",
+        "longdash",
+        "twodash"
+      ],
       "class": "col-12 col-md-4"
     },
     "gridline.mid.linetype": {
@@ -52,8 +59,15 @@
         "en": "Type (Gridline Mid)",
         "zh_cn": "网格类型 (中间)"
       },
-      "items": ["blank", "solid", "dashed", "dotted", "dotdash",
-        "longdash", "twodash"],
+      "items": [
+        "blank",
+        "solid",
+        "dashed",
+        "dotted",
+        "dotdash",
+        "longdash",
+        "twodash"
+      ],
       "class": "col-12 col-md-4"
     },
     "gridline.max.linetype": {
@@ -62,8 +76,15 @@
         "en": "Type (Gridline Max)",
         "zh_cn": "网格类型 (最大)"
       },
-      "items": ["blank", "solid", "dashed", "dotted", "dotdash",
-        "longdash", "twodash"],
+      "items": [
+        "blank",
+        "solid",
+        "dashed",
+        "dotted",
+        "dotdash",
+        "longdash",
+        "twodash"
+      ],
       "class": "col-12 col-md-4"
     },
     "background.circle.transparency": {

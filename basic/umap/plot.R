@@ -40,7 +40,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   } else {
     colorBy <- sample.info[match(colnames(data), sample.info[, 1]), axis[1]]
     colorBy <- factor(colorBy,
-    level = colorBy[!duplicated(colorBy)])
+                      level = colorBy[!duplicated(colorBy)])
     umap_data$colorBy = colorBy
   }
   if (is.null(axis[2]) ||
@@ -59,7 +59,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   params <- list(data = umap_data, x = "UMAP_1", y = "UMAP_2",
-    size = 2, palette = "lancet")
+                 size = 2, palette = "lancet")
 
   if (!is.null(axis[1]) && axis[1] != "") {
     params$color = "colorBy"
@@ -72,10 +72,11 @@ pacman::p_load(pkgs, character.only = TRUE)
     ggtitle(conf$general$title)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## set theme
   theme <- conf$general$theme

@@ -28,7 +28,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   cutoff_value <- conf$extra[["cutoff"]]
   size_points <- conf$extra[["size_points"]]
   size_dashline <- conf$extra[["size_dashline"]]
-  user_define<- conf$extra[["user_define"]]
+  user_define <- conf$extra[["user_define"]]
 
   data[["time"]] <- data[, time]
   data[["event"]] <- data[, event]
@@ -49,7 +49,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
 ##################################################################################
 {
-  data <- data[order(data[, "riskscore"], decreasing = F), ]
+  data <- data[order(data[, "riskscore"], decreasing = F),]
 
   ############### 设定cutoff值
 
@@ -77,7 +77,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     if (length(cutoff_point) > 1) cutoff_point <- cutoff_point[1]
   } else if (cutoff_value == "user_define") {
     cutoff_point <- as.numeric(user_define)
-  } 
+  }
 
   #################### 分组
 
@@ -244,7 +244,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   if (conf$extra$show_heatmap) {
     # 提取基因名
     heatmap_genes <- set::not(colnames(data),
-    c("time", "event", "Group", "riskscore"))
+                              c("time", "event", "Group", "riskscore"))
     data3 <- data[, heatmap_genes]
 
     if (length(heatmap_genes) == 1) {
@@ -254,7 +254,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     # 归一化
     for (i in 1:ncol(data3)) {
       data3[, i] <- (data3[, i] - mean(data3[, i], na.rm = TRUE)) /
-      sd(data3[, i], na.rm = TRUE)
+        sd(data3[, i], na.rm = TRUE)
     }
     data4 <- cbind(id = 1:nrow(data3), data3)
     data5 <- reshape2::melt(data4, id.vars = "id")
@@ -283,15 +283,23 @@ pacman::p_load(pkgs, character.only = TRUE)
       ) +
       scale_x_continuous(expand = c(0, 3))
 
-    p <- fA + fB + middle + fC + plot_layout(
-      ncol = 1,
-      heights = c(0.1, 0.1, 0.01, 0.15)
-    )
+    p <- fA +
+      fB +
+      middle +
+      fC +
+      plot_layout(
+        ncol = 1,
+        heights = c(0.1, 0.1, 0.01, 0.15)
+      )
   } else {
-    p <- fA + fB + middle + NULL + plot_layout(
-      ncol = 1,
-      heights = c(0.1, 0.1, 0.01, 0.02)
-    )
+    p <- fA +
+      fB +
+      middle +
+      NULL +
+      plot_layout(
+        ncol = 1,
+        heights = c(0.1, 0.1, 0.01, 0.02)
+      )
   }
 
   p

@@ -110,7 +110,11 @@
         "en": "Corelation Method",
         "zh_cn": "相关性计算方法"
       },
-      "items": ["pearson", "spearman", "kendall"],
+      "items": [
+        "pearson",
+        "spearman",
+        "kendall"
+      ],
       "class": "col-12 col-md-6"
     },
     "corUSE": {
@@ -119,7 +123,13 @@
         "en": "Method for Missing Values",
         "zh_cn": "相关性计算缺失值处理"
       },
-      "items": ["everything", "all.obs", "complete.obs", "na.or.complete", "pairwise.complete.obs"],
+      "items": [
+        "everything",
+        "all.obs",
+        "complete.obs",
+        "na.or.complete",
+        "pairwise.complete.obs"
+      ],
       "class": "col-12 col-md-6"
     },
     "screeplotColBar": {

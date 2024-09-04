@@ -44,17 +44,18 @@ pacman::p_load(pkgs, character.only = TRUE)
 #           plot section
 #####################################
 {
-p <- ggseqlogo(data,
-  ncol = conf$extra$ncol,
-  col_scheme = conf$extra$col_scheme,
-  seq_type = conf$extra$seq_type,
-  method = conf$extra$method
-) + labs(title = conf$general$title) +
-  theme(plot.title = element_text(hjust = 0.5))
+  p <- ggseqlogo(data,
+                 ncol = conf$extra$ncol,
+                 col_scheme = conf$extra$col_scheme,
+                 seq_type = conf$extra$seq_type,
+                 method = conf$extra$method
+  ) +
+    labs(title = conf$general$title) +
+    theme(plot.title = element_text(hjust = 0.5))
 
-## set theme
-theme <- conf$general$theme
-p <- choose_ggplot_theme(p, theme)
+  ## set theme
+  theme <- conf$general$theme
+  p <- choose_ggplot_theme(p, theme)
 }
 
 ############# Section 3 #############

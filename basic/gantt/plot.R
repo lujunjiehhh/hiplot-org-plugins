@@ -31,7 +31,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   data_gather <- gather(data, "state", "date", 3:4)
   sample <- levels(data_gather$sample)
   data_gather$sample <- factor(data_gather$sample,
-    levels = rev(unique(data_gather$sample))
+                               levels = rev(unique(data_gather$sample))
   )
   print(data_gather)
 }
@@ -50,10 +50,11 @@ pacman::p_load(pkgs, character.only = TRUE)
     ylab(usr_ylab)
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## set theme
   theme <- conf$general$theme

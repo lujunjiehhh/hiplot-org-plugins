@@ -3,7 +3,9 @@
     "zh_cn": "生存分析",
     "en": "Survival Analysis"
   },
-  "alias": ["Survival-Analysis"],
+  "alias": [
+    "Survival-Analysis"
+  ],
   "intro": {
     "zh_cn": "用于生存数据展示",
     "en": "Used for survival data display"

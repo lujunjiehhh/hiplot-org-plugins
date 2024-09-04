@@ -3,7 +3,9 @@
     "zh_cn": "简易配对图",
     "en": "Easy Pairs"
   },
-  "alias": ["Easy-Pairs"],
+  "alias": [
+    "Easy-Pairs"
+  ],
   "intro": {
     "zh_cn": "展示数据相关性和分布",
     "en": "Display the correlation and distribution of data"

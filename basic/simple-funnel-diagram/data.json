@@ -9,7 +9,11 @@
       "dataArg": [],
       "general": {
         "cmd": "",
-        "imageExportType": ["pdf", "png", "html"]
+        "imageExportType": [
+          "pdf",
+          "png",
+          "html"
+        ]
       },
       "extra": {
         "title": "Funnel",

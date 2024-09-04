@@ -2,7 +2,8 @@
 
 * Introduction
 
-  Used to visualize changes in data, with the difference from version 1 being the ability to customize the colors for upward and downward values.
+  Used to visualize changes in data, with the difference from version 1 being the ability to customize the colors for
+  upward and downward values.
 
 - Special Parameters
 

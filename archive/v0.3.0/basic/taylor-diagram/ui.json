@@ -35,7 +35,19 @@
         "en": "Split Type",
         "zh_cn": "分割类型"
       },
-      "items": ["default", "year", "hour", "month", "season", "weekday", "site", "weekend", "monthyear", "daylight", "dst"],
+      "items": [
+        "default",
+        "year",
+        "hour",
+        "month",
+        "season",
+        "weekday",
+        "site",
+        "weekend",
+        "monthyear",
+        "daylight",
+        "dst"
+      ],
       "class": "col-12"
     },
     "annotate": {

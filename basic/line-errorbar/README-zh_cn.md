@@ -10,7 +10,8 @@
 
 - 案例统计图形分析
 
-  low 类型中的红色上线表示 treat1 中 low 类型中数值最大值，红色下线表示 treat1 中 low 类型中数值最小值，其他以此类推。分别对treat1 和 treat2 按照 low，mid，high 类型进行秩和检验，显示 P 值于图形上方。
+  low 类型中的红色上线表示 treat1 中 low 类型中数值最大值，红色下线表示 treat1 中 low 类型中数值最小值，其他以此类推。分别对treat1
+  和 treat2 按照 low，mid，high 类型进行秩和检验，显示 P 值于图形上方。
 
 - 特殊参数
 

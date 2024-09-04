@@ -30,15 +30,15 @@ pacman::p_load(pkgs, character.only = TRUE)
   }
   if (facet != "") {
     data[, facet] <- factor(data[, facet], levels = unique(data[, facet]))
-      data <- eval(parse(text = sprintf("data %%>%% group_by(%s) %%>%%
+    data <- eval(parse(text = sprintf("data %%>%% group_by(%s) %%>%%
     mutate(median = median(get(y), na.rm = TRUE),
     mean = mean(get(y), na.rm = TRUE))", facet)))
   } else {
-    data <- data %>% 
+    data <- data %>%
       mutate(median = median(get(y), na.rm = TRUE),
-      mean = mean(get(y), na.rm = TRUE))
+             mean = mean(get(y), na.rm = TRUE))
   }
-  data[,y] <- transform_val(conf$general$transformY, data[,y])
+  data[, y] <- transform_val(conf$general$transformY, data[, y])
   if (conf$extra$yintercept == "mean") {
     yintercept <- "mean"
   } else if (conf$extra$yintercept == "median") {
@@ -54,28 +54,32 @@ pacman::p_load(pkgs, character.only = TRUE)
 #####################################
 {
   p <- plot_point_sd(data = data,
-    get(group), get(y),
-    symsize = conf$extra$point_size,
-    symthick = conf$extra$point_thick,
-    s_alpha = conf$general$alpha,
-    ewid = 0)
-  
+                     get(group), get(y),
+                     symsize = conf$extra$point_size,
+                     symthick = conf$extra$point_thick,
+                     s_alpha = conf$general$alpha,
+                     ewid = 0)
+
   p <- p + ggtitle(conf$general$title)
   if (facet != "") {
-    p <- p + facet_wrap(facet) +
+    p <- p +
+      facet_wrap(facet) +
       geom_hline(aes_string(yintercept = yintercept, group = facet),
-        colour = 'black', linetype = 2, size = 0.5)
+                 colour = 'black', linetype = 2, size = 0.5)
   } else {
     p <- p + geom_hline(aes_string(yintercept = yintercept),
-        colour = 'black', linetype = 2, size = 0.5)
+                        colour = 'black', linetype = 2, size = 0.5)
   }
-  p <- p + xlab(group) + ylab(y) + 
+  p <- p +
+    xlab(group) +
+    ylab(y) +
     guides(fill = guide_legend(title = group))
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   ## set theme
   theme <- conf$general$theme

@@ -47,7 +47,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   for (i in 3:5) {
     fit <- coxph(as.formula(paste0("Surv(time, event) ~ rcs(main, nk = i, inclx = T)+", ex, collapse = "+")),
-      data = data, x = TRUE
+                 data = data, x = TRUE
     )
     tmp <- extractAIC(fit)
     if (i == 3) {
@@ -60,7 +60,7 @@ pacman::p_load(pkgs, character.only = TRUE)
     }
   }
   fit <- cph(as.formula(paste0("Surv(time, event) ~ rcs(main, nk = nk, inclx = T)+", ex, collapse = "+")),
-    data = data, x = TRUE
+             data = data, x = TRUE
   )
   # cutoff_value = "Median"
   # 设定参考值 默认Median

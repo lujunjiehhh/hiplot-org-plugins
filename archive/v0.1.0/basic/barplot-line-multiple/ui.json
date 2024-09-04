@@ -18,7 +18,10 @@
         "en": "Plot Type",
         "zh_cn": "绘图类型"
       },
-      "items": ["line", "barplot"],
+      "items": [
+        "line",
+        "barplot"
+      ],
       "class": "col-12"
     },
     "line_size": {

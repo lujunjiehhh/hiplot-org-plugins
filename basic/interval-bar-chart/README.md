@@ -2,13 +2,16 @@
 
 - Case Data Analysis
 
-  The case data consists of the highest and lowest temperatures for each of the twelve months along with their corresponding abbreviated month names.
+  The case data consists of the highest and lowest temperatures for each of the twelve months along with their
+  corresponding abbreviated month names.
 
-  An interval bar chart has been created using the case data, showing the temperature ranges for each month and the mean temperature line.
+  An interval bar chart has been created using the case data, showing the temperature ranges for each month and the mean
+  temperature line.
 
 - Special Parameters
 
-  need_mean_line: Whether to include the mean temperature line. If mean data is not provided, the mean will be calculated as (max temperature + min temperature) / 2 by default.
+  need_mean_line: Whether to include the mean temperature line. If mean data is not provided, the mean will be
+  calculated as (max temperature + min temperature) / 2 by default.
 
   title: Title of the chart.
 

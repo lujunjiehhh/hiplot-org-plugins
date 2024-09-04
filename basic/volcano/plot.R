@@ -37,32 +37,32 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   # Up and down
   data$Group[which((data[, pvalue] < conf$extra$p_cutoff) &
-    (data$logFC >= conf$extra$fc_cutoff))] <- "Up-regulated"
+                     (data$logFC >= conf$extra$fc_cutoff))] <- "Up-regulated"
   data$Group[which((data[, pvalue] < conf$extra$p_cutoff) &
-    (data$logFC <= conf$extra$fc_cutoff * -1))] <- "Down-regulated"
+                     (data$logFC <= conf$extra$fc_cutoff * -1))] <- "Down-regulated"
 
   # 新加一列Label
   data[["Label"]] <- ""
 
   # 对差异表达基因的p值进行从小到大排序
-  data <- data[order(data[, pvalue]), ]
+  data <- data[order(data[, pvalue]),]
 
   # 高表达的基因中，选择adj.P.Val最小的10个
   if (length(conf$extra$selected_genes) == 0) {
     up_genes <- head(data[, gene][which(data$Group == "Up-regulated")],
-      conf$extra$show_genes_num)
+                     conf$extra$show_genes_num)
     down_genes <- head(data[, gene][which(data$Group == "Down-regulated")],
-    conf$extra$show_genes_num)
+                       conf$extra$show_genes_num)
     not_sig_genes <- NA
   } else {
-    tmp <- data[data[, gene] %in% conf$extra$selected_genes, ]
+    tmp <- data[data[, gene] %in% conf$extra$selected_genes,]
     up_genes <- tmp[, gene][which(tmp$Group == "Up-regulated")]
     not_sig_genes <- tmp[, gene][which(tmp$Group == "not-significant")]
     down_genes <- tmp[, gene][which(tmp$Group == "Down-regulated")]
   }
   # 将up_genes和down_genes合并，并加入到Label中
   deg_top_genes <- c(as.character(up_genes), as.character(not_sig_genes),
-  as.character(down_genes))
+                     as.character(down_genes))
   deg_top_genes <- deg_top_genes[!is.na(deg_top_genes)]
   data$Label[match(deg_top_genes, data[, gene])] <- deg_top_genes
 
@@ -89,17 +89,17 @@ pacman::p_load(pkgs, character.only = TRUE)
   if (conf$extra$show_top) {
     options(ggrepel.max.overlaps = 100)
     p <- ggscatter(data,
-      x = "logFC", y = "logP",
-      color = "Group",
-      palette = palette,
-      size = 1,
-      alpha = conf$general$alpha,
-      font.label = 8,
-      repel = TRUE,
-      label=data$Label,
-      #xlab = expression(log[2]("Fold Change")),
-      #ylab = expression(-log[10]("P Value")),
-      show.legend.text = FALSE
+                   x = "logFC", y = "logP",
+                   color = "Group",
+                   palette = palette,
+                   size = 1,
+                   alpha = conf$general$alpha,
+                   font.label = 8,
+                   repel = TRUE,
+                   label = data$Label,
+                   #xlab = expression(log[2]("Fold Change")),
+                   #ylab = expression(-log[10]("P Value")),
+                   show.legend.text = FALSE
     ) +
       ggtitle(conf$general$title) +
       geom_hline(
@@ -112,15 +112,15 @@ pacman::p_load(pkgs, character.only = TRUE)
       ), linetype = "dashed")
   } else {
     p <- ggscatter(data,
-      x = "logFC", y = "logP",
-      color = "Group",
-      palette = palette,
-      alpha = conf$general$alpha,
-      size = 1,
-      repel = FALSE,
-      #xlab = expression(log[2]("Fold Change")),
-      #ylab = expression(-log[10]("P Value")),
-      show.legend.text = FALSE
+                   x = "logFC", y = "logP",
+                   color = "Group",
+                   palette = palette,
+                   alpha = conf$general$alpha,
+                   size = 1,
+                   repel = FALSE,
+                   #xlab = expression(log[2]("Fold Change")),
+                   #ylab = expression(-log[10]("P Value")),
+                   show.legend.text = FALSE
     ) +
       ggtitle(conf$general$title) +
       geom_hline(

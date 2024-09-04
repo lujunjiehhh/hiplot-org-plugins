@@ -3,7 +3,9 @@
     "zh_cn": "有向无环图",
     "en": "Directed Acyclic Graphs"
   },
-  "alias": ["Directed-Acyclic"],
+  "alias": [
+    "Directed-Acyclic"
+  ],
   "intro": {
     "zh_cn": "有向无环图可视化",
     "en": "Visualizing directed acyclic graphs"

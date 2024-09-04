@@ -3,7 +3,9 @@
     "zh_cn": "网路图 (D3.js)",
     "en": "Network (D3.js)"
   },
-  "alias": ["Basic-NetworkD3"],
+  "alias": [
+    "Basic-NetworkD3"
+  ],
   "intro": {
     "zh_cn": "拓扑学网路图",
     "en": "Topological and network"

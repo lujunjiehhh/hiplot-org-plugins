@@ -3,7 +3,9 @@
     "zh_cn": "法国地图",
     "en": "France Map"
   },
-  "alias": ["France-Map"],
+  "alias": [
+    "France-Map"
+  ],
   "intro": {
     "zh_cn": "用于展示法国地图",
     "en": "Display the map of France"

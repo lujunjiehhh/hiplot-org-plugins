@@ -21,19 +21,21 @@ pacman::p_load(pkgs, character.only = TRUE)
 # input options, data and configuration section
 ##################################################
 {
+
   autocut <- function(x) {
     cut(x, breaks = pretty(x), right = TRUE, include.lowest = TRUE)
   }
+
   age <- conf$dataArg[[1]][[1]]$value
   color_col <- conf$dataArg[[1]][[2]]$value
   stack_col <- conf$dataArg[[1]][[3]]$value
 
   if (is.null(conf$extra$age_breaks) | length(conf$extra$age_breaks) == 0) {
-    data$age_group <- autocut(as.integer(data[,age]))
+    data$age_group <- autocut(as.integer(data[, age]))
   } else {
     age_breaks <- as.numeric(conf$extra$age_breaks)
-    data$age_group <- cut(as.integer(data[,age]), breaks = age_breaks,
-      right = TRUE, include.lowest = TRUE)
+    data$age_group <- cut(as.integer(data[, age]), breaks = age_breaks,
+                          right = TRUE, include.lowest = TRUE)
   }
 }
 
@@ -44,13 +46,16 @@ pacman::p_load(pkgs, character.only = TRUE)
   params <- list(data, "age_group", split_by = color_col)
   if (!is.null(stack_col) && stack_col != "") params$stack_by <- stack_col
   p <- do.call(age_pyramid, params)
-  p <- p + xlab("Age group") + ylab(colnames(data[color_col]))
+  p <- p +
+    xlab("Age group") +
+    ylab(colnames(data[color_col]))
 
   ## add color palette
-  p <- p + return_hiplot_palette_color(conf$general$palette,
-      conf$general$paletteCustom) +
+  p <- p +
+    return_hiplot_palette_color(conf$general$palette,
+                                conf$general$paletteCustom) +
     return_hiplot_palette(conf$general$palette,
-      conf$general$paletteCustom)
+                          conf$general$paletteCustom)
 
   theme <- conf$general$theme
   p <- choose_ggplot_theme(p, theme)

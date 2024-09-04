@@ -3,7 +3,9 @@
     "zh_cn": "贡献表生成器",
     "en": "Tiny Contribution Table Generator"
   },
-  "alias": ["Table-Generator"],
+  "alias": [
+    "Table-Generator"
+  ],
   "intro": {
     "zh_cn": "表格操作",
     "en": "Table Operation"

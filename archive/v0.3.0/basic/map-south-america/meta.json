@@ -3,7 +3,9 @@
     "zh_cn": "南美洲地图",
     "en": "South America Map"
   },
-  "alias": ["South-America"],
+  "alias": [
+    "South-America"
+  ],
   "intro": {
     "zh_cn": "用于展示南美洲国家地图",
     "en": "Display the map of the South America"

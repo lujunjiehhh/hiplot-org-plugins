@@ -31,7 +31,9 @@ pacman::p_load(pkgs, character.only = TRUE)
   # check conf arguments
   # check alpha
   alpha_usr <- conf$general$alpha
-  if (is.numeric(alpha_usr) & alpha_usr >= 0 & alpha_usr <= 1) {
+  if (is.numeric(alpha_usr) &
+    alpha_usr >= 0 &
+    alpha_usr <= 1) {
     # nothing
   } else {
     print("Error, alpha should be a decimal between 0-1")
@@ -111,8 +113,8 @@ pacman::p_load(pkgs, character.only = TRUE)
   # label
   if (label) {
     p <- p + geom_text(aes(label = data[, 1]),
-      position = position_type(type),
-      vjust = 1.6, color = "white", size = 3.5
+                       position = position_type(type),
+                       vjust = 1.6, color = "white", size = 3.5
     )
   }
 

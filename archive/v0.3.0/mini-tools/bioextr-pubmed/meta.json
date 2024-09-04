@@ -3,7 +3,9 @@
     "zh_cn": "Pubmed 文本提取",
     "en": "Pubmed Text-Extract"
   },
-  "alias": ["Pubmed-Search"],
+  "alias": [
+    "Pubmed-Search"
+  ],
   "intro": {
     "zh_cn": "Pubmed 摘要文本挖掘",
     "en": "Pubmed abstract text mining"

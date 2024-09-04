@@ -3,7 +3,9 @@
     "zh_cn": "GISTIC2",
     "en": "GISTIC2"
   },
-  "alias": ["Custom-GISTIC"],
+  "alias": [
+    "Custom-GISTIC"
+  ],
   "intro": {
     "zh_cn": "拷贝数变异分析",
     "en": "Copy number data analysis"

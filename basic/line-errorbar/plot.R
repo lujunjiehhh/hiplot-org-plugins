@@ -45,7 +45,7 @@ pacman::p_load(pkgs, character.only = TRUE)
   if (ncol(data) == 3 && !is.numeric(data[, 3])) {
     data[, 3] <- factor(data[, 3], levels = unique(data[, 3]))
   }
-  data[,1] <- transform_val(conf$general$transformY, data[,1])
+  data[, 1] <- transform_val(conf$general$transformY, data[, 1])
 }
 
 ############# Section 2 #############
@@ -63,10 +63,10 @@ pacman::p_load(pkgs, character.only = TRUE)
     }
 
     p <- ggline(data,
-      x = usr_cname[2], y = usr_cname[1],
-      add = "mean_se",
-      xlab = usr_cname[2], ylab = usr_cname[1],
-      title = conf$general$title
+                x = usr_cname[2], y = usr_cname[1],
+                add = "mean_se",
+                xlab = usr_cname[2], ylab = usr_cname[1],
+                title = conf$general$title
     )
 
     if (pval != "none") {
@@ -74,17 +74,17 @@ pacman::p_load(pkgs, character.only = TRUE)
     }
   } else {
     p <- ggline(data, usr_cname[3],
-      y = usr_cname[1],
-      add = "mean_se", color = usr_cname[2],
-      xlab = usr_cname[3], ylab = usr_cname[1],
-      title = conf$general$title,
-      palette = "npg"
+                y = usr_cname[1],
+                add = "mean_se", color = usr_cname[2],
+                xlab = usr_cname[3], ylab = usr_cname[1],
+                title = conf$general$title,
+                palette = "npg"
     )
     if (pval == "") {
       p <- p + stat_compare_means(aes_(group = as.name(usr_cname[2])))
     } else if (pval == "p.signif") {
       p <- p + stat_compare_means(aes_(group = as.name(usr_cname[2])),
-        label = pval
+                                  label = pval
       )
     } else {
       # nothing
@@ -93,7 +93,7 @@ pacman::p_load(pkgs, character.only = TRUE)
 
   ## add color palette
   p <- p + return_hiplot_palette_color(conf$general$palette,
-    conf$general$paletteCustom)
+                                       conf$general$paletteCustom)
 
   ## set theme
   theme <- conf$general$theme

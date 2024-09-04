@@ -2,10 +2,22 @@
   "module": "basic",
   "tool": "ggbetweenstats",
   "params": {
-    "textarea": { "datTable": "" },
+    "textarea": {
+      "datTable": ""
+    },
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "" }, { "value": "" }, { "value": "" }]
+        "datTable": [
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          },
+          {
+            "value": ""
+          }
+        ]
       },
       "general": {
         "cmd": "",
@@ -38,7 +50,17 @@
   "exampleData": {
     "config": {
       "dataArg": {
-        "datTable": [{ "value": "mpaa" }, { "value": "length" }, {"value": "genre"}]
+        "datTable": [
+          {
+            "value": "mpaa"
+          },
+          {
+            "value": "length"
+          },
+          {
+            "value": "genre"
+          }
+        ]
       },
       "general": {
         "title": ""

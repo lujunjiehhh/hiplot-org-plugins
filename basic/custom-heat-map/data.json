@@ -9,7 +9,10 @@
       "dataArg": [],
       "general": {
         "cmd": "",
-        "imageExportType": ["pdf", "jpeg"],
+        "imageExportType": [
+          "pdf",
+          "jpeg"
+        ],
         "size": {
           "width": 25,
           "height": 15

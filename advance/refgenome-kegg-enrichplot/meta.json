@@ -3,7 +3,9 @@
     "zh_cn": "参考基因组 Shiny KEGG (富集)",
     "en": "Ref Shiny KEGG (Enrich)"
   },
-  "alias": ["RefGenome-KEGG"],
+  "alias": [
+    "RefGenome-KEGG"
+  ],
   "intro": {
     "zh_cn": "KEGG 富集分析",
     "en": "KEGG enrichment analysis"

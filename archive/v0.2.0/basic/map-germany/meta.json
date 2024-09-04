@@ -3,7 +3,9 @@
     "zh_cn": "德国地图",
     "en": "Germany Map"
   },
-  "alias": ["Germany-Map"],
+  "alias": [
+    "Germany-Map"
+  ],
   "intro": {
     "zh_cn": "用于展示德国地图",
     "en": "Display the map of Germany"

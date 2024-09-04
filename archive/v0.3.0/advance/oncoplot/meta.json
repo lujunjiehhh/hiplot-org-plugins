@@ -3,7 +3,9 @@
     "zh_cn": "突变全景图",
     "en": "Oncoplot"
   },
-  "alias": ["Oncoplot"],
+  "alias": [
+    "Oncoplot"
+  ],
   "intro": {
     "zh_cn": "癌症队列突变全景分析",
     "en": "Mutation analysis of cancer cohort"

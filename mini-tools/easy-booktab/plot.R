@@ -21,14 +21,14 @@
   vars <- unlist(conf$dataArg[[1]][[1]]$value)
   by <- unlist(conf$dataArg[[1]][[2]]$value)
   set_flextable_defaults(font.family = conf$general$font,
-    table.layout = "autofit")
+                         table.layout = "autofit")
 
   pr_section <- prop_section(
     page_size = page_size(
-      width = conf$general$size$width/2.54,
-                          height = conf$general$size$height/2.54),
-      type = "continuous",
-      page_margins = page_mar()
+      width = conf$general$size$width / 2.54,
+      height = conf$general$size$height / 2.54),
+    type = "continuous",
+    page_margins = page_mar()
   )
 
   if (length(conf$extra$table_theme) > 0) {
@@ -38,7 +38,7 @@
         j <- str_remove(x, ".*journal_")
         x <- str_replace(x, "journal_.*", "journal")
         do.call(x, list(journal = j))
-        return ("")
+        return("")
       }
     })
   }
@@ -49,22 +49,26 @@
 #####################################
 {
   params <- list(data = data,
-      include = vars,
-      by = by,
-      missing_text = "NA")
+                 include = vars,
+                 by = by,
+                 missing_text = "NA")
   if (by == "") {
     params$by <- NULL
     conf$extra$add_p = FALSE
     conf$extra$add_overall = FALSE
   }
   p <- do.call(tbl_summary, params) %>%
-      tbl_summary_style(add_p = conf$extra$add_p,
-        add_overall = conf$extra$add_overall)
+    tbl_summary_style(add_p = conf$extra$add_p,
+                      add_overall = conf$extra$add_overall)
 
   p_flex <- p %>% as_flex_table()
-  p_gt <- p %>% as_gt() %>% tab_options(table.font.size = px(6)) %>%
-  opt_table_font(font = conf$general$font)
-  p_gt_extra <- p %>% as_kable_extra(booktabs = TRUE, escape = TRUE, addtl_fmt = FALSE, keep_tex = TRUE) %>% kableExtra::kable_styling(font_size = 6)
+  p_gt <- p %>%
+    as_gt() %>%
+    tab_options(table.font.size = px(6)) %>%
+    opt_table_font(font = conf$general$font)
+  p_gt_extra <- p %>%
+    as_kable_extra(booktabs = TRUE, escape = TRUE, addtl_fmt = FALSE, keep_tex = TRUE) %>%
+    kableExtra::kable_styling(font_size = 6)
 }
 
 ############# Section 3 #############
@@ -82,7 +86,7 @@
     p_flex %>% save_as_pptx(path = paste0(outprefix, ".pptx"))
   }
   if (any(sapply(c("pdf", "png", "jpg", "tiff", "svg"),
-    function(x) x %in% conf$general$imageExportType))) {
+                 function(x) x %in% conf$general$imageExportType))) {
     html2pdf(paste0(outprefix, ".html"), paste0(outprefix, ".pdf"))
     pdfs2image(paste0(outprefix, ".pdf"))
   }

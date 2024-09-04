@@ -3,7 +3,9 @@
     "zh_cn": "Network Shiny",
     "en": "Network Shiny"
   },
-  "alias": ["Molecular-Network"],
+  "alias": [
+    "Molecular-Network"
+  ],
   "intro": {
     "zh_cn": "网络图绘制",
     "en": "Network Plot"

@@ -18,7 +18,10 @@
         "en": "Data Normalization",
         "zh_cn": "数据标准化方法"
       },
-      "items": ["deseq2", "log2tpm"],
+      "items": [
+        "deseq2",
+        "log2tpm"
+      ],
       "class": "col-12 col-md-4"
     },
     "model": {
@@ -28,7 +31,10 @@
         "en": "Model",
         "zh_cn": "模型"
       },
-      "items": ["xgboost", "autogluon"],
+      "items": [
+        "xgboost",
+        "autogluon"
+      ],
       "class": "col-12 col-md-4"
     },
     "model_sva": {
@@ -38,7 +44,10 @@
         "en": "Model (SVA)",
         "zh_cn": "模型 (SVA)"
       },
-      "items": ["yes", "no"],
+      "items": [
+        "yes",
+        "no"
+      ],
       "class": "col-12 col-md-4"
     },
     "model_counter": {
@@ -48,7 +57,12 @@
         "zh_cn": "模型计数器"
       },
       "multiple": true,
-      "items": ["featurecounts", "htseq", "kallisto", "salmon"],
+      "items": [
+        "featurecounts",
+        "htseq",
+        "kallisto",
+        "salmon"
+      ],
       "class": "col-12 col-md-6"
     },
     "model_folds": {
@@ -58,7 +72,18 @@
         "en": "Model Folds",
         "zh_cn": "模型编号"
       },
-      "items": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "items": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
       "class": "col-12 col-md-6"
     }
   }

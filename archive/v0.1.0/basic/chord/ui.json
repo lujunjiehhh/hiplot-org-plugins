@@ -46,7 +46,8 @@
       "type": "select",
       "label": "messages.basic.chord.data_stru",
       "items": [
-        "matrix", "frame"
+        "matrix",
+        "frame"
       ],
       "class": "col-12 col-md-6"
     },

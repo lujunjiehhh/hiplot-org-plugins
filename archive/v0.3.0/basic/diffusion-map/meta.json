@@ -3,7 +3,9 @@
     "zh_cn": "扩散映射",
     "en": "Diffusion Map"
   },
-  "alias": ["Basic-Diffusion-MAP"],
+  "alias": [
+    "Basic-Diffusion-MAP"
+  ],
   "intro": {
     "zh_cn": "降维方法",
     "en": "Dimension reduction methods"

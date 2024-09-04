@@ -15,7 +15,11 @@
     "pval": {
       "type": "select",
       "label": "messages.basic.common.pval",
-      "items": ["value", "signif", "no"]
+      "items": [
+        "value",
+        "signif",
+        "no"
+      ]
     }
   }
 }

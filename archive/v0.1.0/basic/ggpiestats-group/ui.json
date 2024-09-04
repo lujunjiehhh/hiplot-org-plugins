@@ -7,7 +7,14 @@
     }
   },
   "dataArg": {
-    "datTable": [{"label": "X"}, {"label": "Group"}]
+    "datTable": [
+      {
+        "label": "X"
+      },
+      {
+        "label": "Group"
+      }
+    ]
   },
   "extra": {
     "ncol": {
